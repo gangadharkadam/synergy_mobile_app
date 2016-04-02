@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- values-xhdpi -->
+    
+    <dimen name="dimen_5">4dp</dimen>
+    <dimen name="dimen_8">7dp</dimen>
+    <dimen name="dimen_10">8dp</dimen>
+    <dimen name="dimen_15">13dp</dimen>
+    <dimen name="dimen_20">18dp</dimen>
+    
+    <dimen name="textsize_12">11sp</dimen>
+    <dimen name="textsize_14">12sp</dimen>
+    <dimen name="textsize_16">14sp</dimen>
+    <dimen name="textsize_18">16sp</dimen>
+    <dimen name="textsize_20">18sp</dimen>
+    <dimen name="textsize_24">20sp</dimen>
+    
+    <dimen name="drawer_image_size">25dp</dimen>
+    <dimen name="dashboard_image_size">50dp</dimen>
+    <dimen name="dashboard_box_size">220dp</dimen>
+    
+</resources>

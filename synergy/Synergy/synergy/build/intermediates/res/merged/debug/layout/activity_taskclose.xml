@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Task Details"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtTaskDetailsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Due Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtDueDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Priority"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <!-- <Spinner
+                            android:id="@+id/spnPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background_greyborder"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_16" /> -->
+                        
+                         <EditText
+                    android:id="@+id/txtPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Status"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnTaskStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="PCF"
+                    android:visibility="gone"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <!-- <Spinner
+                    android:id="@+id/spnTaskPCF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" /> -->
+                
+                <EditText
+                    android:id="@+id/txtTaskPCF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Senior Cell"
+                    android:visibility="gone"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <!-- <Spinner -->
+                <!-- android:id="@+id/spnTaskSrCell" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginBottom="@dimen/dimen_10" -->
+                <!-- android:layout_marginLeft="@dimen/dimen_10" -->
+                <!-- android:layout_marginRight="@dimen/dimen_10" -->
+                <!-- android:background="@drawable/text_background_greyborder" -->
+                <!-- android:maxLines="1" -->
+                <!-- android:padding="@dimen/dimen_10" -->
+                <!-- android:singleLine="true" -->
+                <!-- android:textSize="@dimen/textsize_16" /> -->
+                
+
+                <EditText
+                    android:id="@+id/txtTaskSrCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Cell"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <!--
+                     <Spinner
+                    android:id="@+id/spnTaskCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:hint="Lorem"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                -->
+
+                <EditText
+                    android:id="@+id/txtTaskCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Assignee"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtAssignee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Assigned To"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+               <!--  <TextView
+                    android:id="@+id/spnAssignedTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle"
+                    android:hint="Lorem"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" /> -->
+                    
+                     <RelativeLayout
+       					 android:layout_width="match_parent"
+       					 android:layout_height="wrap_content" >
+
+			       	<Spinner
+			            android:id="@+id/AssignedTo"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_marginBottom="@dimen/dimen_5"
+			            android:layout_marginLeft="@dimen/dimen_10"
+			            android:layout_marginRight="@dimen/dimen_10"
+			            android:background="@drawable/rectangle"
+			            android:maxLines="1"
+			            android:padding="@dimen/dimen_8"
+			            android:singleLine="true" 
+			            android:layout_centerInParent="true"
+			            android:layout_centerHorizontal="true"
+			            android:layout_centerVertical="true"
+			            android:visibility="gone"
+			            />
+			
+			        <TextView
+			            android:id="@+id/spnAssignedTo"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:padding="10dp"
+			            android:textColor="@android:color/black"
+			        	android:layout_marginLeft="@dimen/dimen_10"
+			        	android:layout_marginRight="@dimen/dimen_10"
+			            android:textStyle="bold" 
+			            android:background="@drawable/rectangle1"
+			            />
+			
+			    </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/lblFollowUpTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Follow Up Task"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtFollowUpTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+                
+                <TextView
+                 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Comment"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtcomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnAttachPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_20"
+                    android:background="@drawable/rectangle1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="Attach Photos"
+                    android:textSize="@dimen/textsize_20"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llImgsAdded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpdateTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20"
+            android:background="#03afef"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:singleLine="true"
+            android:text="UPDATE"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_20" />
+    </LinearLayout>
+
+</ScrollView><!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@drawable/text_background_greyborder"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/actionbarcolor" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Due Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/dueDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background_greyborder"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Priority"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/txtPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background_greyborder"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Task Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Call/Group"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtCallGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Assignee"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtAssignee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Action Remarks"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtActionRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Follow-Up Task"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtFollowUpTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_weight="0.49"
+                    android:text="Follow-Up Task Due Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtFollowUpTaskDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Assigned To"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtAssignedTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnAttachPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:background="@drawable/text_background_greyborder"
+                    android:gravity="left|center_vertical"
+                    android:padding="@dimen/dimen_10"
+                    android:text="Attach Photos"
+                    android:textSize="@dimen/textsize_12" />
+
+                <Button
+                    android:id="@+id/btnReAssign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:background="@drawable/text_background_greyborder"
+                    android:gravity="left|center_vertical"
+                    android:padding="@dimen/dimen_10"
+                    android:text="Re-Assign"
+                    android:textSize="@dimen/textsize_12" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveMettingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_20"
+        android:background="@color/parrot_green"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10"
+        android:singleLine="true"
+        android:text="SAVE"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_20" />
+
+</RelativeLayout>
+
+
+-->

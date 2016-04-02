@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/bg"
+      android:orientation="vertical"
+     >
+     
+    
+     <RelativeLayout
+            android:id="@+id/layoutone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbarcolor"
+            
+             >
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView"-->
+                <!--android:layout_width="35dp"-->
+        		<!--android:layout_height="35dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:src="@drawable/icon" -->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--/>-->
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="New Pledge"
+                android:textColor="#fff"
+                android:textSize="@dimen/textsize_24"
+                 />
+            
+            <!--   <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="35dp"
+        		android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/filtericon" 
+                android:layout_marginLeft="10dp"/> -->
+
+        </RelativeLayout>
+     
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+    android:orientation="vertical" >
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        	<!-- 	<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="New Partnership Record"
+                    android:textColor="@color/actionbarcolor"
+                    android:textSize="@dimen/textsize_20" /> -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Partnership Arm"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <Spinner
+                    android:id="@+id/spPartnershipArm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                  
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Partner ID"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtmember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                 
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Partner "
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtPartnercategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                   android:visibility="gone"
+                    android:text="Ministry Year"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtMinistryYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                     android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16"
+                     android:visibility="gone"
+                     />
+          
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <TextView
+                    android:id="@+id/txtdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Amount"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+                
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Giving or Pledge"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <Spinner
+                    android:id="@+id/txtGiving_Pledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                  
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+           <LinearLayout
+                  		android:id="@+id/pledge"
+            			android:layout_width="match_parent"
+            			android:layout_height="wrap_content"
+            			android:layout_margin="@dimen/dimen_10"
+            			android:background="@null"
+            			android:orientation="vertical" >
+                
+              <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Type of Pledge"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <Spinner
+                    android:id="@+id/spplagetype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+            </LinearLayout>
+			
+			<LinearLayout
+                  		android:id="@+id/giving"
+            			android:layout_width="match_parent"
+            			android:layout_height="wrap_content"
+            			android:layout_margin="@dimen/dimen_10"
+            			android:background="@null"
+            			android:orientation="vertical" >
+                
+              <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Type of giving"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtgivingtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+					
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Instrument No"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtInstrumentNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+				 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Instrument Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtInstrumentdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                	
+				<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Bank Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtbankname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+				<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Branch"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtbranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+                
+                
+            </LinearLayout>
+                   
+         <Button
+                    android:id="@+id/btnPartnerSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="#03afef"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="SAVE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_20" /> 
+        
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

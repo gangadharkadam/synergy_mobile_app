@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mutech.synergy.MyPartnershipAdpter" >
+
+    <item
+        android:id="@+id/action_create"
+        android:orderInCategory="100"
+        android:title="@string/action_create"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/allartnership"
+        android:orderInCategory="100"
+        android:title="@string/allpartnership"
+        app:showAsAction="never"/>
+
+</menu>

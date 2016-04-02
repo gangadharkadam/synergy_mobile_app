@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mutech.synergy"
+    android:versionCode="3"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission
+        android:name="com.mutech.synergy.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.mutech.synergy.permission.C2D_MESSAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.mutech.synergy.App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name="com.mutech.synergy.activities.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mutech.synergy.activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.CreatePcfMasterFormActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.CreateCellMasterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.CreateSeniorCellMasterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.task.ToDoTaskActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.MasterSelectorScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.CreateEventActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.CreateCellMeetingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.task.CreateTaskActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.task.CloseTaskActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.MeetingListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.MyMeetingListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.MarkMyAttendanceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.MarkMemberAttendanceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.meeting.SingleMeetingDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.EventListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.MarkMemberEventAttendanceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.MarkMyEventAttendanceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.MyEventListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.event.SingleEventDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.profile.MyProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.AllMemberListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.MemberInfoActivtiy"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.DisplayMastersListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.PledgeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.SearchFunctionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.ShowSearchResultFunctionality"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.MemberStrengthMutliBarChart"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.GivingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.PartnerShipRecord"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.PartnerRecordInformation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.MessageBroadcastActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.synergy.activities.LogoutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.mutech.synergy.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.mutech.synergy.GcmIntentService" />
+
+        <activity
+            android:name="com.mutech.messagebraudcast.MessageBroadcastActivity"
+            android:label="@string/title_activity_message_broadcast"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.databasedetails.PcfDetailsActivity"
+            android:label="@string/title_activity_pcf_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mutech.databasedetails.CellDetailsActivity"
+            android:label="@string/title_activity_cell_details" />
+        <activity
+            android:name="com.mutech.databasedetails.SrCellDetailsActivity"
+            android:label="@string/title_activity_sr_cell_details" />
+        <activity
+            android:name="com.mutech.filter.FilterActivity"
+            android:label="@string/title_activity_filter" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.NewConvertsYearActivity"
+            android:label="@string/title_activity_new_converts_year" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.FirstTimesWeekActivity"
+            android:label="@string/title_activity_first_times_week" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.InviteesandContactsYearActivity"
+            android:label="@string/title_activity_inviteesand_contacts_year" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.DashboardListDetailsActivity"
+            android:label="@string/title_activity_dashboard_list_details" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.InviteesandContacts_ListDetailsActivity"
+            android:label="@string/title_activity_inviteesand_contacts" />
+        <activity
+            android:name="com.mutech.partnershiprecord.PledgeActivity"
+            android:label="@string/title_activity_pledge" />
+        <activity
+            android:name="com.mutech.partnershiprecord.GivingActivity"
+            android:label="@string/title_activity_giving" />
+        <activity
+            android:name="com.mutech.partnershiprecord.Giving_or_pledge_DetailsActivity"
+            android:label="@string/title_activity_giving_or_pledge__details" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.NewConvertsWeekActivity"
+            android:label="@string/title_activity_new_converts_week" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.NewConvertsMonthActivity"
+            android:label="@string/title_activity_new_converts_month" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity"
+            android:label="@string/title_activity_first_time_month" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.FirstTimersYearActivity"
+            android:label="@string/title_activity_first_timers_year" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.InviteesandContactsweekActivity"
+            android:label="@string/title_activity_inviteesand_contactsweek" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.InviteeandContactsMonthActivity"
+            android:label="@string/title_activity_inviteeand_contacts_month" />
+        <activity
+            android:name="com.mutech.partnershiprecord.MyPartnershipAdpter"
+            android:label="@string/title_activity_my_partnership_adpter" />
+        <activity
+            android:name="com.mutech.partnershiprecord.MyPartnershipActivity"
+            android:label="@string/title_activity_my_partnership" />
+        <activity
+            android:name="com.mutech.partnershiprecord.MyPartnershipGivingActivity"
+            android:label="@string/title_activity_my_partnership_giving" />
+        <activity
+            android:name="com.mutech.partnershiprecord.MypartnershipPledgeActivity"
+            android:label="@string/title_activity_mypartnership_pledge" />
+        <activity
+            android:name="com.mutech.synergy.fragments.task.TeamTaskDetailsActivity"
+            android:label="@string/title_activity_team_task_details" />
+        <activity
+            android:name="com.mutech.partnershiprecord.CreatePartnershipActivity"
+            android:label="@string/title_activity_create_partnership" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.MembershipStrengthDetailsActivity"
+            android:label="@string/title_activity_membership_strength_details" />
+        <activity
+            android:name="com.mutech.synergy.ShowMessageActivity"
+            android:label="@string/title_activity_show_message" />
+        <activity
+            android:name="com.mutech.synergy.GraphTestActivity"
+            android:label="@string/title_activity_graph_test" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.TotalMemberListActivity"
+            android:label="@string/title_activity_total_member_list" />
+        <activity
+            android:name="com.mutech.synergy.activities.cellMasters.NewCreateCellMasterActivity"
+            android:label="@string/title_activity_new_create_cell_master" />
+        <activity
+            android:name="com.mutech.databasedetails.FirstTimerInDatabaseActivity"
+            android:label="@string/title_activity_first_timer_in_database" />
+        <activity
+            android:name="com.mutech.databasedetails.CreateNewMemberActivity"
+            android:label="@string/title_activity_create_new_member" />
+        <activity
+            android:name="com.mutech.databasedetails.ZoneDetailsActivity"
+            android:label="@string/title_activity_zone_details" />
+        <activity
+            android:name="com.mutech.databasedetails.GroupChurch"
+            android:label="@string/title_activity_group_church" />
+        <activity
+            android:name="com.mutech.databasedetails.ChurchDetail"
+            android:label="@string/title_activity_church_detail" />
+        <activity
+            android:name="com.mutech.databasedetails.RegionActivity"
+            android:label="@string/title_activity_region" />
+        <activity
+            android:name="com.mutech.databasedetails.CreateFirstTimerActivity"
+            android:label="@string/title_activity_create_first_timer" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.DashboardListDetailsConvertsActivity"
+            android:label="@string/title_activity_dashboard_list_details_converts" />
+        <activity
+            android:name="com.mutech.synergy.activities.dashboard.DashboardListDetailsFirstTimersActivity"
+            android:label="@string/title_activity_dashboard_list_details_first_timers" />
+        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
+            android:theme="@style/Theme.IAPTheme" />
+        <activity
+            android:name="com.google.android.gms.appinvite.PreviewActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppInvite.Preview" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="com.mutech.synergy.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

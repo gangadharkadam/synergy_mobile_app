@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Meeting Category"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtMeetingCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Meeting Subject"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtMeetingSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" >
+                </EditText>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="From:"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtFromDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="to:"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtToDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Venue"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Attended?"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <RadioGroup
+                        android:id="@+id/grgpAttended"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rbtnYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:text="Yes"
+                            android:textSize="@dimen/textsize_14" />
+
+                        <RadioButton
+                            android:id="@+id/rbtnNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textSize="@dimen/textsize_14" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSaveMettingAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="#03afef"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="SAVE"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_20" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

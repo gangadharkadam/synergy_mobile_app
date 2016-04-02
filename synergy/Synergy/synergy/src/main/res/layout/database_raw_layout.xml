@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rectangle" >
+    
+   <!--  <View
+        android:id="@+id/view"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/actionbarcolor" />
+ -->
+ 
+   
+   
+    <TextView
+        android:id="@+id/txtMasterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_16"
+        android:text=""
+        />
+   
+    <TextView
+        android:id="@+id/txtMasterName1"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_20"
+        android:text=""
+      
+        />
+    
+     <TextView
+        android:id="@+id/txtuserid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_16"
+        android:text=""
+        />
+
+   <TextView
+        android:id="@+id/txtid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_20"
+        android:text=""
+        />
+     
+     
+</LinearLayout>

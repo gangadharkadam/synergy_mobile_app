@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layoutone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbarcolor"
+            
+             >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="35dp"
+        		android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/icon" 
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="PCF"
+                android:textColor="#fff"
+                android:textSize="@dimen/textsize_24"
+                 />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/actionbarcolor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="PCF Code"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtPCFCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="PCF Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtPCFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Zone"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spnPCFZone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background_greyborder"
+                            android:hint="Lorem"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_16"
+                            android:visibility="gone"/>
+                            
+                             <EditText
+			                    android:id="@+id/txtPCFZone"
+			                    android:layout_width="match_parent"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginBottom="@dimen/dimen_10"
+			                    android:layout_marginLeft="@dimen/dimen_10"
+			                    android:layout_marginRight="@dimen/dimen_10"
+			                    android:background="@drawable/text_background_greyborder"
+			                    android:maxLines="1"
+			                    android:padding="@dimen/dimen_10"
+			                    android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Region"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spnPCFRegion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background_greyborder"
+                            android:hint="Ipsum"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_16" 
+                            android:visibility="gone"
+                            />
+                        
+                         <EditText
+			                    android:id="@+id/txtPCFRegion"
+			                    android:layout_width="match_parent"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginBottom="@dimen/dimen_10"
+			                    android:layout_marginLeft="@dimen/dimen_10"
+			                    android:layout_marginRight="@dimen/dimen_10"
+			                    android:background="@drawable/text_background_greyborder"
+			                    android:maxLines="1"
+			                    android:padding="@dimen/dimen_10"
+			                    android:singleLine="true" />
+                        
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Group Church"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnPCFChurch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                     />
+                
+                 <EditText
+                    android:id="@+id/txtGroupChurch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+                
+                 
+                  <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Church"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+                  
+                   <EditText
+                    android:id="@+id/txtChurch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+                 
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Phone no."
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtPCFContactPhn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:maxLength="11"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:padding="@dimen/dimen_8"
+                    android:singleLine="true" />
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Email Id"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtPCFContactEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dimen_8"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnSavePCF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="@color/parrot_green"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="SAVE"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_20" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

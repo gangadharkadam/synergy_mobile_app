@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <RelativeLayout
+            android:id="@+id/layoutone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbarcolor"
+            
+             >
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView1"-->
+                <!--android:layout_width="35dp"-->
+        		<!--android:layout_height="35dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:src="@drawable/icon" -->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--/>-->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#fff"
+                android:textSize="@dimen/textsize_24"
+                 />
+             
+
+        </RelativeLayout>
+    
+    
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            android:background="@null"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_10"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/memInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Personal Information"
+                    android:textColor="#24248F"
+                    android:textSize="@dimen/textsize_20" />
+                
+              <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:orientation="vertical" >
+                  
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Membership No"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" 
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:id="@+id/txtMembershipNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:enabled="false"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" 
+                    android:visibility="gone"
+                    
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <Spinner
+                    android:id="@+id/sptitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16"/>
+
+                
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Invitee/Contact Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtMemberlName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                     android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Date of Birth"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <TextView
+                    android:id="@+id/txtMemberDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Invited By"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+               <EditText
+                    android:id="@+id/txtInvitedby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+               
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Phone Number"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/txtMemberPhone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:maxLength="11"
+                    android:background="@drawable/rectangle1"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                     android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Date of Conversion To FT"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                <TextView
+                     android:visibility="gone"
+                    android:id="@+id/txtDateOfConvert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16"/>
+      
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Email Address"
+                    android:textColor="@color/darkgrey_textcolor"
+                    android:textSize="@dimen/textsize_18" />
+
+              
+
+                    <EditText
+                        android:id="@+id/txtEmailID1"
+                        android:layout_width="match_parent"
+                   		android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_weight="0.9"
+                        android:enabled="false"
+                        android:hint="email id"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_16" />
+
+                   
+                
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Source Of Invitation"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+                
+                 <Spinner
+                    android:id="@+id/spSourceOfInvite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16"/>
+                
+             
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Age Group"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18" />
+
+               
+
+                <Spinner
+                    android:id="@+id/spAgegroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_16"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/text_background_greyborder"
+                    android:padding="@dimen/dimen_10"
+                    android:text="Pick My Location"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_18"
+                    android:visibility="gone" />
+
+
+               <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+                  
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_weight="0.9"
+                        android:layout_height="wrap_content"
+                        android:text="Convert Invitee Contact To Ft"
+                        android:textColor="@android:color/black"
+                       android:textSize="@dimen/textsize_18" />
+
+                    <CheckBox
+                        android:id="@+id/chkConvertInviteeContactToFt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                         />
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+     
+        <Button
+                    android:id="@+id/btnSaveMemberInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="#03afef"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="SAVE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_20" />
+        
+    </LinearLayout>
+
+</ScrollView>
+    
+
+</LinearLayout>

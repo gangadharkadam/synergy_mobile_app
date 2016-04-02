@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:background="@drawable/bg" >
+
+
+    <LinearLayout
+        android:id="@+id/llLoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+        
+         <TextView
+            android:id="@+id/lblLoginButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view"
+            android:gravity="center"
+            android:text="LOGOUT"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+         
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/lbl1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Are You Sure You Want To Exit?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/llL2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:background="@drawable/rectangle"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                 android:padding="10dp"
+                android:text="No" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

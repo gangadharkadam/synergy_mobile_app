@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboard_box_size">200dp</dimen>
+    <dimen name="dashboard_image_size">45dp</dimen>
+    <dimen name="dimen_10">6dp</dimen>
+    <dimen name="dimen_15">12dp</dimen>
+    <dimen name="dimen_20">15dp</dimen>
+    <dimen name="dimen_5">3dp</dimen>
+    <dimen name="dimen_8">6dp</dimen>
+    <dimen name="drawer_image_size">25dp</dimen>
+    <dimen name="textsize_12">10sp</dimen>
+    <dimen name="textsize_14">11sp</dimen>
+    <dimen name="textsize_16">12sp</dimen>
+    <dimen name="textsize_18">14sp</dimen>
+    <dimen name="textsize_20">16sp</dimen>
+    <dimen name="textsize_24">18sp</dimen>
+    <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle.Common">
+          <item name="barLength">18.66dp</item>
+          <item name="gapBetweenBars">3.33dp</item>
+          <item name="drawableSize">24dp</item>
+     </style>
+</resources>

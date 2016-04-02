@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lblMeetingReasonHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="Meeting Subject:"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_20"
+            android:textStyle="bold" />
+        
+      <!--    <CheckBox
+        android:id="@+id/chkEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email" 
+        android:textSize="15dp"/>
+ 
+    <CheckBox
+        android:id="@+id/chkSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sms"
+         android:textSize="15dp" />
+ 
+    <CheckBox
+        android:id="@+id/chkPush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push notification" 
+         android:textSize="15dp"/> -->
+
+        <TextView
+            android:id="@+id/lblMeetingReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:padding="@dimen/dimen_10"
+            android:text="Reason for meeting goes here"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_16"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkMarkAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:text="Mark Attendance for all" />
+
+    <ListView
+        android:id="@+id/lvMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3dp" >
+    </ListView>
+
+</LinearLayout>
