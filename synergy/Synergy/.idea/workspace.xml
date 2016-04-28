@@ -9,7 +9,133 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dadc7ef-4ea4-4d58-a2e1-313e09460efa" name="Default" comment="" />
+    <list default="true" id="8dadc7ef-4ea4-4d58-a2e1-313e09460efa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$3$1.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$3.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$4.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$5.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$6.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$7.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$8.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$9.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.class" afterPath="$PROJECT_DIR$/synergy/build/intermediates/classes/debug/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/synergy/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/volley/build/intermediates/bundles/release/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/intermediates/pre-dexed/debug/debug_d6cee4b44740d32929a733373fcbe4a0bef7b8aa.jar" afterPath="$PROJECT_DIR$/synergy/build/intermediates/pre-dexed/debug/debug_d6cee4b44740d32929a733373fcbe4a0bef7b8aa.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/outputs/apk/synergy-debug-unaligned.apk" afterPath="$PROJECT_DIR$/synergy/build/outputs/apk/synergy-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synergy/build/outputs/apk/synergy-debug.apk" afterPath="$PROJECT_DIR$/synergy/build/outputs/apk/synergy-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/outputs/aar/volley-release.aar" afterPath="$PROJECT_DIR$/volley/build/outputs/aar/volley-release.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Synergy.iml" afterPath="$PROJECT_DIR$/Synergy.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/anim.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/anim.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/color.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/color.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/drawable.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="$PROJECT_DIR$/gradlew.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/import-summary.txt" afterPath="$PROJECT_DIR$/import-summary.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout-v11.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout-v11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout-v14.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_23_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/menu.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterPath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseResources/merger.xml" afterPath="$PROJECT_DIR$/volley/build/intermediates/incremental/mergeReleaseResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/incremental/packageReleaseResources/merger.xml" afterPath="$PROJECT_DIR$/volley/build/intermediates/incremental/packageReleaseResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_ads_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_auth_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_auth_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_games_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_games_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_location_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_location_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_vision_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_vision_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-af.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-af.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-am.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-am.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ar.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ar.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-bg.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-bg.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ca.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ca.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-cs.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-cs.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-da.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-da.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-de.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-de.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-el.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-el.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-en-rGB.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-en-rGB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-en-rIN.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-en-rIN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-es-rUS.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-es-rUS.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-es.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-es.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-et-rEE.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-et-rEE.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fa.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fa.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fi.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fr-rCA.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fr-rCA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fr.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-fr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hi.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hr.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hu.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hy-rAM.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-hy-rAM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-in.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-in.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-it.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-it.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-iw.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-iw.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ja.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ja.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ka-rGE.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ka-rGE.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-km-rKH.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-km-rKH.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ko.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ko.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-land.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-land.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-large-v14.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-large-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-large-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-large-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lo-rLA.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lo-rLA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lt.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lt.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lv.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-lv.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-mn-rMN.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-mn-rMN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ms-rMY.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ms-rMY.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-nb.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-nb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-nl.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-nl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pl.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pt-rPT.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pt-rPT.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pt.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-pt.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ro.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ro.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ru.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-ru.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sk.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sk.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sl.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sr.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sv.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sv.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sw.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sw.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sw600dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-sw600dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-th.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-th.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-tl.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-tl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-tr.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-tr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-uk.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-uk.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-v11.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-v11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-v14.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-vi.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-vi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w360dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w360dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w480dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w480dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w500dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w500dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w600dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w600dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w720dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w720dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w820dp-v13.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-w820dp-v13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-xlarge-v4.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-xlarge-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rCN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rHK.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rHK.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zh-rTW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zu.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values-zu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values.json" afterPath="$PROJECT_DIR$/volley/build/intermediates/blame/res/release/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/volley.iml" afterPath="$PROJECT_DIR$/volley/volley.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Synergy.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,9 +160,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="816" column="59" selection-start-line="816" selection-start-column="59" selection-end-line="816" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,11 +175,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SynergyValues.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SynergyValues.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartnerRecordInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InviteesandContacts_ListDetailsActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.20304568">
+              <caret line="185" column="8" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partnership_record.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/partnership_record.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="221" column="40" selection-start-line="221" selection-start-column="34" selection-end-line="221" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -80,6 +237,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -2670,7 +2830,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/Giving_or_pledge_DetailsActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/LoginActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/FirstTimesWeekActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_dashboard_list_details_converts.xml" />
@@ -2684,7 +2843,6 @@
         <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_zone_details.xml" />
         <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_group_church.xml" />
         <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_church_detail.xml" />
-        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/profile/MyProfileActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/RegionActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/ZoneDetailsActivity.java" />
@@ -2721,6 +2879,8 @@
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/NewCreateCellMasterActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/CreatePcfMasterFormActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.java" />
       </list>
     </option>
   </component>
@@ -2739,7 +2899,7 @@
     <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -2750,7 +2910,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2764,6 +2924,17 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2802,44 +2973,8 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snippet" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2861,32 +2996,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mutech" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2942,7 +3051,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
+              <option name="myItemId" value="dashboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2962,129 +3071,15 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="mutech" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mutech" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meeting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mutech" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cellMasters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mutech" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synergy" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mutech" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="databasedetails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -3271,6 +3266,13 @@
       <option name="number" value="Default" />
       <updated>1455203561519</updated>
     </task>
+    <task id="LOCAL-00001" summary="First IssueFix Commit&#10;Issue #11: Source of Invitation field is showing 'Personal Evangelism' even though nothing was selected while creating the record in the web app&#10;Issues #13: When viewing a Partnership Record in the 'Partnership Record' screen, 'Type of Pledge' field is showing as a plain text field instead of a Select field&#10;Issue #14: Change title 'PartnerShip Record' to 'Partnership Record'&#10;">
+      <created>1461826875990</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1461826875990</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3297,7 +3299,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329849" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -3311,8 +3313,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30197445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3333,6 +3335,8 @@
     <ignored-roots>
       <path value="$USER_HOME$" />
     </ignored-roots>
+    <MESSAGE value="First IssueFix Commit&#10;Issue #11: Source of Invitation field is showing 'Personal Evangelism' even though nothing was selected while creating the record in the web app&#10;Issues #13: When viewing a Partnership Record in the 'Partnership Record' screen, 'Type of Pledge' field is showing as a plain text field instead of a Select field&#10;Issue #14: Change title 'PartnerShip Record' to 'Partnership Record'&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="First IssueFix Commit&#10;Issue #11: Source of Invitation field is showing 'Personal Evangelism' even though nothing was selected while creating the record in the web app&#10;Issues #13: When viewing a Partnership Record in the 'Partnership Record' screen, 'Type of Pledge' field is showing as a plain text field instead of a Select field&#10;Issue #14: Change title 'PartnerShip Record' to 'Partnership Record'&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3341,39 +3345,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/ZoneDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42663658">
-          <caret line="86" column="63" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/GroupChurch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42663658">
-          <caret line="86" column="67" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/ChurchDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42663658">
-          <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/ShowSearchResultFunctionality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5349887">
-          <caret line="234" column="99" selection-start-line="234" selection-start-column="99" selection-end-line="234" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/SearchFunctionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46726862">
           <caret line="705" column="61" selection-start-line="705" selection-start-column="49" selection-end-line="705" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3448,35 +3423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="565" column="0" selection-start-line="565" selection-start-column="0" selection-end-line="565" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#22148#23892#0" expanded="false" />
-            <element signature="e#23891#23892#0" expanded="false" />
-            <element signature="e#23936#24092#0" expanded="false" />
-            <element signature="e#24091#24092#0" expanded="false" />
-            <element signature="e#24138#24299#0" expanded="false" />
-            <element signature="e#24298#24299#0" expanded="false" />
-            <element signature="e#24350#24510#0" expanded="false" />
-            <element signature="e#24509#24510#0" expanded="false" />
-            <element signature="e#24558#24999#0" expanded="false" />
-            <element signature="e#24998#24999#0" expanded="false" />
-            <element signature="e#28788#29270#0" expanded="false" />
-            <element signature="e#29269#29270#0" expanded="false" />
-            <element signature="e#29327#30016#0" expanded="false" />
-            <element signature="e#30015#30016#0" expanded="false" />
-            <element signature="e#30063#30800#0" expanded="false" />
-            <element signature="e#30799#30800#0" expanded="false" />
-            <element signature="e#30842#31542#0" expanded="false" />
-            <element signature="e#31541#31542#0" expanded="false" />
-            <element signature="e#31593#32239#0" expanded="false" />
-            <element signature="e#32238#32239#0" expanded="false" />
-            <element signature="e#32284#33004#0" expanded="false" />
-            <element signature="e#33003#33004#0" expanded="false" />
-            <element signature="e#44285#44301#0" expanded="false" />
-            <element signature="e#47297#47305#0" expanded="false" />
-            <element signature="e#47572#47580#0" expanded="false" />
-            <element signature="e#47856#47864#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3484,28 +3430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="280" column="25" selection-start-line="280" selection-start-column="25" selection-end-line="280" selection-end-column="25" />
-          <folding>
-            <element signature="e#11814#13054#0" expanded="false" />
-            <element signature="e#13053#13054#0" expanded="false" />
-            <element signature="e#13930#14353#0" expanded="false" />
-            <element signature="e#14352#14353#0" expanded="false" />
-            <element signature="e#14393#14961#0" expanded="false" />
-            <element signature="e#14960#14961#0" expanded="false" />
-            <element signature="e#15002#15196#0" expanded="false" />
-            <element signature="e#15195#15196#0" expanded="false" />
-            <element signature="e#16767#16977#0" expanded="false" />
-            <element signature="e#16976#16977#0" expanded="false" />
-            <element signature="e#17034#17853#0" expanded="false" />
-            <element signature="e#17852#17853#0" expanded="false" />
-            <element signature="e#18004#18210#0" expanded="false" />
-            <element signature="e#18209#18210#0" expanded="false" />
-            <element signature="e#18268#18561#0" expanded="false" />
-            <element signature="e#18560#18561#0" expanded="false" />
-            <element signature="e#18713#18920#0" expanded="false" />
-            <element signature="e#18919#18920#0" expanded="false" />
-            <element signature="e#18978#20165#0" expanded="false" />
-            <element signature="e#20164#20165#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3520,7 +3444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1353" column="30" selection-start-line="1353" selection-start-column="30" selection-end-line="1353" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3685,7 +3608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.169448">
           <caret line="936" column="5" selection-start-line="936" selection-start-column="5" selection-end-line="936" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3693,7 +3615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40672782">
           <caret line="911" column="45" selection-start-line="911" selection-start-column="45" selection-end-line="911" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3701,7 +3622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6131498">
           <caret line="173" column="95" selection-start-line="173" selection-start-column="95" selection-end-line="173" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3709,7 +3629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36085626">
           <caret line="594" column="23" selection-start-line="594" selection-start-column="19" selection-end-line="594" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3717,7 +3636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5933014">
           <caret line="583" column="61" selection-start-line="583" selection-start-column="61" selection-end-line="583" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3732,7 +3650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63144964">
           <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3740,9 +3657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6756757">
           <caret line="743" column="72" selection-start-line="743" selection-start-column="72" selection-end-line="743" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3764,7 +3678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0695066">
           <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3772,21 +3685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5035461">
           <caret line="131" column="74" selection-start-line="131" selection-start-column="74" selection-end-line="131" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4801#6165#0" expanded="true" />
-            <element signature="e#6164#6165#0" expanded="true" />
-            <element signature="e#9567#10042#0" expanded="true" />
-            <element signature="e#10041#10042#0" expanded="true" />
-            <element signature="e#10096#10769#0" expanded="true" />
-            <element signature="e#10768#10769#0" expanded="true" />
-            <element signature="e#10814#11539#0" expanded="true" />
-            <element signature="e#11538#11539#0" expanded="true" />
-            <element signature="e#11579#12345#0" expanded="true" />
-            <element signature="e#12344#12345#0" expanded="true" />
-            <element signature="e#12394#13051#0" expanded="true" />
-            <element signature="e#13050#13051#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3794,9 +3692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="816" column="59" selection-start-line="816" selection-start-column="59" selection-end-line="816" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3819,7 +3715,41 @@
     <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/partnership_record.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="40" selection-start-line="221" selection-start-column="34" selection-end-line="221" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/InviteesandContactsweekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="199" column="98" selection-start-line="199" selection-start-column="98" selection-end-line="199" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/InviteesandContacts_ListDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20304568">
+          <caret line="185" column="8" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="8" />
           <folding />
         </state>
       </provider>
