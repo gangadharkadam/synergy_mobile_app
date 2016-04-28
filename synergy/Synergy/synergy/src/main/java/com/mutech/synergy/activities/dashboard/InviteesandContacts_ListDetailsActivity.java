@@ -160,7 +160,8 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 		spAgegroup.setAdapter(adapterAgeGroup);
 		
 		SourceofInvitationList=new ArrayList<String>();
-		
+
+		SourceofInvitationList.add("");
 		SourceofInvitationList.add("Personal Evangelism");
 		SourceofInvitationList.add("Church/Cell Evangelism");
 		SourceofInvitationList.add("Reach Out Campaign");

@@ -72,7 +72,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 		getSupportActionBar().setHomeButtonEnabled(false);
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
-		tvTitle.setText("PartnerShip Record  ");
+		tvTitle.setText("Partnership Record  ");
 		
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
 		
@@ -94,7 +94,10 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 		Amount=(TextView) findViewById(R.id.txtAmount);
 		Giving_Pledge=(Spinner) findViewById(R.id.txtGiving_Pledge);
 		txtPartner=(EditText) findViewById(R.id.txtPartner);
-		
+
+		txt_typeofpledge.setEnabled(false);
+		Amount.setEnabled(false);
+
 		Giving_Pledge.setEnabled(false);
 		mPartnerSubModel=new ArrayList<PartnerModel>();
 		
