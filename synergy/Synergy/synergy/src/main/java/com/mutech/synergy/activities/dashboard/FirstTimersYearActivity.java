@@ -416,13 +416,13 @@ public class FirstTimersYearActivity extends ActionBarActivity {
 			
 			btn.setVisibility(View.GONE);
 			try {
-				
+
+				String str=(jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname");
 				name.setText(jsonarray.getJSONObject(position).getString("name"));
 				email.setText(jsonarray.getJSONObject(position).getString("email_id"));
-				ftv_name.setText(jsonarray.getJSONObject(position).getString("ftv_name"));
+				ftv_name.setText(jsonarray.getJSONObject(position).getString("ftv_name") +" "+str);
 				sex.setText(jsonarray.getJSONObject(position).getString("sex"));
-				
-			
+
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

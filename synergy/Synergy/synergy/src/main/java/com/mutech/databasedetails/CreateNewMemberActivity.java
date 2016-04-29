@@ -563,7 +563,9 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 							InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
 							InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
 							InputValidation.hasText(txtEmailID1) &&
-							InputValidation.hasText(txtMemberName)) {
+							InputValidation.hasText(txtMemberName) &&
+							InputValidation.hasText(txtMemberPhone1) &&
+							InputValidation.hasText(txtMemberPhone2))  {
 						if(InputValidation.spnHasText(txtAgeGroup, "AgeGroup") &&
 								InputValidation.spnHasText(txtGender, "Gender") &&
 								InputValidation.spnHasText(spnCellRegion, "Region") &&

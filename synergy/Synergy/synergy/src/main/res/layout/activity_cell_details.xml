@@ -8,24 +8,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@null"
-        android:orientation="vertical" >   
-        
+        android:orientation="vertical" >
+
         <RelativeLayout
             android:id="@+id/layoutone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/actionbarcolor"
-            
-             >
+
+            >
 
             <!--<ImageView-->
-                <!--android:id="@+id/imageView1"-->
-                <!--android:layout_width="35dp"-->
-        		<!--android:layout_height="35dp"-->
-                <!--android:layout_alignParentLeft="true"-->
-                <!--android:src="@drawable/icon" -->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--/>-->
+            <!--android:id="@+id/imageView1"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:src="@drawable/icon" -->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--/>-->
 
             <TextView
                 android:id="@+id/textView1"
@@ -38,11 +38,11 @@
                 android:text="cell"
                 android:textColor="#fff"
                 android:textSize="@dimen/textsize_24"
-                 />
-          </RelativeLayout>
-        
-        
-        
+                />
+        </RelativeLayout>
+
+
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -52,9 +52,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_margin="@dimen/dimen_10"
-                
-                 android:background="@null"
+                android:layout_margin="@dimen/dimen_10"
+
+                android:background="@null"
                 android:orientation="vertical" >
 
                 <TextView
@@ -88,7 +88,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Cell Name"
+                    android:text="Cell Name (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />
@@ -127,10 +127,10 @@
                     android:background="@drawable/rectangle"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_8"
-                    android:singleLine="true" 
-                   
+                    android:singleLine="true"
+
                     />
-                
+
                 <EditText
                     android:id="@+id/txtScniorCellName"
                     android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
-                
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -167,8 +167,8 @@
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true"
                     android:visibility="gone"
-                     />
-                
+                    />
+
                 <EditText
                     android:id="@+id/txtPCF"
                     android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
-                
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -218,7 +218,7 @@
                             android:singleLine="true"
                             android:textSize="@dimen/textsize_16"
                             android:visibility="gone"/>
-                        
+
                         <EditText
                             android:id="@+id/txtCellZone"
                             android:layout_width="match_parent"
@@ -228,8 +228,8 @@
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
                             android:textSize="@dimen/textsize_16" />
-                        
-                        
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -256,9 +256,9 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" 
+                            android:textSize="@dimen/textsize_16"
                             android:visibility="gone"/>
-                        
+
                         <EditText
                             android:id="@+id/txtCellRegion"
                             android:layout_width="match_parent"
@@ -268,9 +268,9 @@
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
                             android:textSize="@dimen/textsize_16" />
-                        
+
                     </LinearLayout>
-                    
+
                 </LinearLayout>
 
                 <TextView
@@ -297,8 +297,8 @@
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true"
                     android:visibility="gone"/>
-                
-                 <EditText
+
+                <EditText
                     android:id="@+id/txtCellChurch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -311,9 +311,9 @@
                     android:imeOptions="actionNext"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
-                
-                
-                 <TextView
+
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/dimen_5"
@@ -337,8 +337,8 @@
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
                     android:visibility="gone"
-                     />
-                
+                    />
+
                 <EditText
                     android:id="@+id/txtCellChurchgroup"
                     android:layout_width="match_parent"
@@ -352,7 +352,7 @@
                     android:imeOptions="actionNext"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
-                
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -360,7 +360,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Contact Phone Number"
+                    android:text="Contact Phone Number (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />
@@ -379,7 +379,7 @@
                     android:imeOptions="actionNext"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
-                
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

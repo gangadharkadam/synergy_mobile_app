@@ -10,11 +10,14 @@ import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -981,7 +984,7 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.d("droid","get all regions ---------------"+ response);
+				Log.d("droid", "get all regions ---------------" + response);
 
 				try {
 					JSONObject jsonObjectZones=new JSONObject(response);
@@ -1026,7 +1029,7 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			@Override
 			public void onResponse(String response) {
 				//Methods.closeProgressDialog();
-				Log.d("droid","get all Churches ---------------"+ response);
+				Log.d("droid", "get all Churches ---------------" + response);
 
 				try {
 					JSONObject jsonObjectZones=new JSONObject(response);
@@ -1296,6 +1299,28 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 		App.getInstance().addToRequestQueue(reqgetTopHierarchy, "reqgetTopHierarchy");
 		reqgetTopHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 
+	}
+
+	public void onBackPressed() {
+		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+		if (drawer.isDrawerOpen(GravityCompat.START)) {
+			drawer.closeDrawer(GravityCompat.START);
+		} else {
+			new AlertDialog.Builder(this)
+					.setIcon(android.R.drawable.ic_dialog_alert)
+					.setTitle("Closing Activity")
+					.setMessage("Are you sure you want to exit?")
+					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
+					{
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							moveTaskToBack(true);
+						}
+
+					})
+					.setNegativeButton("No", null)
+					.show();
+		}
 	}
 
 }

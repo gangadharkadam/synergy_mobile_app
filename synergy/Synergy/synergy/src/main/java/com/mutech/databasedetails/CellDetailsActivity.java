@@ -117,7 +117,8 @@ public class CellDetailsActivity extends AppCompatActivity {
 		
 				if(NetworkHelper.isOnline(CellDetailsActivity.this)){
 					if(InputValidation.isPhoneNumber(txtCellContactPhn, false) &&
-							InputValidation.hasText(txtCellName)) {
+							InputValidation.hasText(txtCellName) &&
+							InputValidation.hasText(txtCellContactPhn)){
 						Methods.showProgressDialog(CellDetailsActivity.this);
 						UpdateDashboardDataService();
 					} else {

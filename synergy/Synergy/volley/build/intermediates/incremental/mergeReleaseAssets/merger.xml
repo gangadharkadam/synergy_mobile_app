@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/src/main/assets"/></dataSet><dataSet config="release"><source path="/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/src/release/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/src/main/assets"/></dataSet><dataSet config="release"><source path="/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/src/release/assets"/></dataSet></merger>

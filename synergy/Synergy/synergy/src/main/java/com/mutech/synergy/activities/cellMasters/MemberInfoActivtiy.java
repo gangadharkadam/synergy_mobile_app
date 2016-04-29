@@ -273,7 +273,9 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 							InputValidation.isEmailAddress(txtYookosID, false) &&
 							InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
 							InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-							InputValidation.hasText(txtMemberfName)) {
+							InputValidation.hasText(txtMemberfName) &&
+							InputValidation.hasText(txtMemberPhone1) &&
+							InputValidation.hasText(txtMemberPhone2)) {
 						if(InputValidation.spnHasText(txtAgeGroup, "AgeGroup") &&
 							InputValidation.spnHasText(txtGender, "Gender")) {
 							Methods.showProgressDialog(MemberInfoActivtiy.this);
