@@ -275,8 +275,9 @@ public class HomeActivity extends AppCompatActivity {
 		XAxis x = mChart.getXAxis();
 
 		YAxis leftAxis1 = mChart.getAxisLeft();
-		leftAxis1.setValueFormatter(new LargeValueFormatter());
-		leftAxis1.setDrawGridLines(false);
+//		leftAxis1.setValueFormatter(new MyYAxis);
+//		leftAxis1.setValueFormatter(new LargeValueFormatter());
+        leftAxis1.setDrawGridLines(false);
 		leftAxis1.setSpaceTop(25f);
 
 		mChart.getAxisRight().setEnabled(false);
@@ -1167,7 +1168,7 @@ public class HomeActivity extends AppCompatActivity {
 		} else {
 			new AlertDialog.Builder(this)
 					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Closing Activity")
+					.setTitle("Closing Synergy")
 					.setMessage("Are you sure you want to exit?")
 					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
 					{
