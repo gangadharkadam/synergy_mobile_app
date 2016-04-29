@@ -557,41 +557,11 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 				//createNewMember();
 
 				if(NetworkHelper.isOnline(CreateNewMemberActivity.this)){
-					if(InputValidation.isEmailAddress(txtEmailID1, false) &&
-							InputValidation.isEmailAddress(txtEmailID2, false) &&
-							InputValidation.isEmailAddress(txtYookosID, false) &&
-							InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-							InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-							InputValidation.hasText(txtEmailID1) &&
-							InputValidation.hasText(txtMemberName) &&
-							InputValidation.hasText(txtMemberPhone1) &&
-							InputValidation.hasText(txtMemberPhone2))  {
-						if(InputValidation.spnHasText(txtAgeGroup, "AgeGroup") &&
-								InputValidation.spnHasText(txtGender, "Gender") &&
-								InputValidation.spnHasText(spnCellRegion, "Region") &&
-								InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup") &&
-								InputValidation.spnHasText(spnCellChurch, "Church") &&
-								InputValidation.spnHasText(txtPCF, "PCF") &&
-								InputValidation.spnHasText(spnSeniorCell, "SeniorCell") &&
-								InputValidation.spnHasText(spnCell, "Cell")) {
+					if (isValid()) {
 							Methods.showProgressDialog(CreateNewMemberActivity.this);
 							createNewMember();
 						}
 					}
-					else {
-						new AlertDialog.Builder(CreateNewMemberActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
-					}
-				}
 				else
 					Methods.longToast("Please connect to Internet", CreateNewMemberActivity.this);
 			}
@@ -1579,5 +1549,136 @@ private void getLowerHierarchy(){
 
 
 }
+
+	public boolean isValid() {
+
+		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
+				return false;
+		}
+		if (!InputValidation.isEmailAddress(txtEmailID2, true)) {
+			return false;
+		}
+		if (!InputValidation.isEmailAddress(txtYookosID, true)) {
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone1, true)) {
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone2, true)) {
+			return false;
+		}
+		if (!InputValidation.hasText(txtMemberName)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter first name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.hasText(txtEmailID1)) {
+				return false;
+		}
+		if (!InputValidation.hasText(txtMemberPhone1)) {
+			return false;
+		}
+		if (!InputValidation.hasText(txtMemberPhone2)) {
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
+		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select age group")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtGender, "Gender"))
+		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select gender")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(spnCellRegion, "Region"))
+		{
+			return false;
+		}
+		if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup"))
+		{
+			return false;
+		}
+		if(!InputValidation.spnHasText(spnCellChurch, "Church") )
+		{
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtPCF, "PCF"))
+		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select PCF")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(spnSeniorCell, "SeniorCell"))
+		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select senior cell")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(spnCell, "Cell"))
+		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select cell")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+
+		return true;
+	}
 	
 }

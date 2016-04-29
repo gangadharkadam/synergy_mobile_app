@@ -116,23 +116,9 @@ public class CellDetailsActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 		
 				if(NetworkHelper.isOnline(CellDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtCellContactPhn, false) &&
-							InputValidation.hasText(txtCellName) &&
-							InputValidation.hasText(txtCellContactPhn)){
+					if (isValid()) {
 						Methods.showProgressDialog(CellDetailsActivity.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(CellDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					
@@ -261,7 +247,7 @@ private void UpdateDashboardDataService() {
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.e("droid","get all NewConvertYeardetails----------"+ response);
+				Log.e("droid", "get all NewConvertYeardetails----------" + response);
 
 				if(response.contains("status"))
 				{
@@ -334,7 +320,7 @@ private void UpdateDashboardDataService() {
 				String dataString=jsonobj.toString();
 			//	String dataString=gson.toJson(model, MeetingListRequestModel.class);
 
-				Log.e("Request droid","data passed is ::::::::"+dataString);
+				Log.e("Request droid", "data passed is ::::::::" + dataString);
 				params.put(DashboardDataService.DATA, dataString);
 				return params; 
 			}
@@ -344,5 +330,29 @@ private void UpdateDashboardDataService() {
 		reqDashboard.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 
+	public boolean isValid() {
+
+		if (!InputValidation.isPhoneNumber(txtCellContactPhn, true)) {
+			return false;
+		}
+		if (!InputValidation.hasText(txtCellName)) {
+			new AlertDialog.Builder(CellDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter cell name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.hasText(txtCellContactPhn)) {
+			return false;
+		}
+		return true;
+	}
 
 }

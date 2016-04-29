@@ -269,31 +269,10 @@ public class MemberInfoActivtiy extends ActionBarActivity{
             @Override
             public void onClick(View view) {
                 if(NetworkHelper.isOnline(MemberInfoActivtiy.this)){
-					if(InputValidation.isEmailAddress(txtEmailID2, false) &&
-							InputValidation.isEmailAddress(txtYookosID, false) &&
-							InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-							InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-							InputValidation.hasText(txtMemberfName) &&
-							InputValidation.hasText(txtMemberPhone1) &&
-							InputValidation.hasText(txtMemberPhone2)) {
-						if(InputValidation.spnHasText(txtAgeGroup, "AgeGroup") &&
-							InputValidation.spnHasText(txtGender, "Gender")) {
+					if (isValid()) {
 							Methods.showProgressDialog(MemberInfoActivtiy.this);
 							updateProfile();
-						}
-					}
-					else {
-						new AlertDialog.Builder(MemberInfoActivtiy.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
 
-									}
-								})
-								.show();
 					}
 				}
                 else
@@ -1385,5 +1364,73 @@ public class MemberInfoActivtiy extends ActionBarActivity{
         App.getInstance().addToRequestQueue(reqGetProfile, "reqGetProfile");
         reqGetProfile.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
     }
-    
+
+	public boolean isValid() {
+
+		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
+			return false;
+		}
+		if (!InputValidation.isEmailAddress(txtYookosID, true)) {
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone1, true)) {
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone2, true)) {
+			return false;
+		}
+		if (!InputValidation.hasText(txtMemberfName)) {
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter first name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.hasText(txtMemberPhone1)) {
+			return false;
+		}
+		if (!InputValidation.hasText(txtMemberPhone2)) {
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
+		{
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select age group")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtGender, "Gender"))
+		{
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please select gender")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+
+		return true;
+	}
+
 }
