@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_weight="0.5"
         android:text="Name"
-        android:textSize="@dimen/textsize_16" />
+        android:textSize="@dimen/font_size_medium" />
 
     <TextView
         android:id="@+id/lblType"
@@ -22,7 +22,7 @@
         android:layout_gravity="center"
         android:layout_weight="0.25"
         android:text="Type"
-        android:textSize="@dimen/textsize_16" />
+        android:textSize="@dimen/font_size_medium" />
 
     <TextView
         android:id="@+id/lblAttendanceStatus"
@@ -31,6 +31,6 @@
         android:layout_gravity="center"
         android:layout_weight="0.25"
         android:text="Present/Absent"
-        android:textSize="@dimen/textsize_16" />
+        android:textSize="@dimen/font_size_medium" />
 
 </LinearLayout>

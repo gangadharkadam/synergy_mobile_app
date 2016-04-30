@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text=""
+        android:textSize="@dimen/font_size_medium"
         android:paddingLeft="10dp"
         android:padding="1dp" />
     
@@ -21,6 +22,7 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_gravity="center_vertical"
+         android:textSize="@dimen/font_size_small"
          android:text=""
          android:paddingLeft="10dp"
          android:padding="1dp"
@@ -33,6 +35,7 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
           android:text=""
+          android:textSize="@dimen/font_size_small"
           android:textStyle="bold"
           android:paddingLeft="10dp"
           android:padding="1dp"

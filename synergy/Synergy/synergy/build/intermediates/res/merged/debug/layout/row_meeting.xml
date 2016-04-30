@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Meeting Name"
             android:textColor="@android:color/black"
-             android:textSize="@dimen/textsize_16"
+            android:textSize="@dimen/font_size_medium"
           
              />
         
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Subject"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16"
+             android:textSize="@dimen/font_size_small"
              />
 
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16" />
+            android:textSize="@dimen/font_size_small" />
 
         <TextView
             android:id="@+id/lblMeetingTime"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:text="Date MM-DD-YYYY|Time HH:MM"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_14" />
+            android:textSize="@dimen/font_size_small" />
     </LinearLayout>
 
     <Button
