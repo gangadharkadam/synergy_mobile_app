@@ -71,7 +71,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_20"
-                    android:text="Task Details"
+                    android:text="Task Details (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />

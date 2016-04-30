@@ -251,23 +251,9 @@ public class DashboardListDetailsConvertsActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 if(NetworkHelper.isOnline(DashboardListDetailsConvertsActivity.this)){
-                    if(InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-                            InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-                            InputValidation.hasText(txtMemberfName)) {
+                    if(isValid()) {
                         Methods.showProgressDialog(DashboardListDetailsConvertsActivity.this);
                         UpdateDashboardDataService();
-                    } else {
-                        new AlertDialog.Builder(DashboardListDetailsConvertsActivity.this)
-                                .setCancelable(false)
-                                .setTitle("Invalid Input")
-                                .setMessage("Please enter valid value in the field marked red")
-                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                                    }
-                                })
-                                .show();
                     }
                 }
                 else
@@ -278,7 +264,66 @@ public class DashboardListDetailsConvertsActivity extends AppCompatActivity {
 
     }
 
+    public boolean isValid() {
 
+        if(!InputValidation.hasText(txtMemberfName)) {
+            new AlertDialog.Builder(DashboardListDetailsConvertsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter First Name")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(txtGender, "Gender")) {
+            new AlertDialog.Builder(DashboardListDetailsConvertsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Gender")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+            new AlertDialog.Builder(DashboardListDetailsConvertsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+            new AlertDialog.Builder(DashboardListDetailsConvertsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        return true;
+    }
     private void getDashboardDataService() {
         StringRequest reqDashboard=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {
 

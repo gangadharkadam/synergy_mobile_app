@@ -332,13 +332,10 @@ private void UpdateDashboardDataService() {
 
 	public boolean isValid() {
 
-		if (!InputValidation.isPhoneNumber(txtCellContactPhn, true)) {
-			return false;
-		}
 		if (!InputValidation.hasText(txtCellName)) {
 			new AlertDialog.Builder(CellDetailsActivity.this)
 					.setCancelable(false)
-					.setTitle("Invalid Input")
+					.setTitle("Mandatory Input")
 					.setMessage("Please enter cell name")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
@@ -349,7 +346,32 @@ private void UpdateDashboardDataService() {
 					.show();
 			return false;
 		}
-		if (!InputValidation.hasText(txtCellContactPhn)) {
+		if (!InputValidation.isPhoneNumber(txtCellContactPhn, false)) {
+			new AlertDialog.Builder(CellDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isEmailAddress(txtCellContactEmailId, false)) {
+			new AlertDialog.Builder(CellDetailsActivity.this)
+				.setCancelable(false)
+				.setTitle("Invalid Input")
+				.setMessage("Please enter a valid email id")
+				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialogInterface, int i) {
+
+					}
+				})
+				.show();
 			return false;
 		}
 		return true;

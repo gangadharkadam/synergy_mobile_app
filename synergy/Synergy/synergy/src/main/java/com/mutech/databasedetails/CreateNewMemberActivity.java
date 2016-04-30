@@ -1552,21 +1552,6 @@ private void getLowerHierarchy(){
 
 	public boolean isValid() {
 
-		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
-				return false;
-		}
-		if (!InputValidation.isEmailAddress(txtEmailID2, true)) {
-			return false;
-		}
-		if (!InputValidation.isEmailAddress(txtYookosID, true)) {
-			return false;
-		}
-		if (!InputValidation.isPhoneNumber(txtMemberPhone1, true)) {
-			return false;
-		}
-		if (!InputValidation.isPhoneNumber(txtMemberPhone2, true)) {
-			return false;
-		}
 		if (!InputValidation.hasText(txtMemberName)) {
 			new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
@@ -1582,12 +1567,17 @@ private void getLowerHierarchy(){
 			return false;
 		}
 		if (!InputValidation.hasText(txtEmailID1)) {
-				return false;
-		}
-		if (!InputValidation.hasText(txtMemberPhone1)) {
-			return false;
-		}
-		if (!InputValidation.hasText(txtMemberPhone2)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email address")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
@@ -1622,14 +1612,47 @@ private void getLowerHierarchy(){
 		}
 		if(!InputValidation.spnHasText(spnCellRegion, "Region"))
 		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a Region")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup"))
 		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a ChurchGroup")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnCellChurch, "Church") )
 		{
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a Church")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtPCF, "PCF"))
@@ -1667,7 +1690,7 @@ private void getLowerHierarchy(){
 			new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
-					.setMessage("Please select cell")
+					.setMessage("Please select a Cell")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialogInterface, int i) {
@@ -1677,6 +1700,82 @@ private void getLowerHierarchy(){
 					.show();
 			return false;
 		}
+		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email id")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+				return false;
+		}
+		if (!InputValidation.isEmailAddress(txtEmailID2, false)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email id")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isEmailAddress(txtYookosID, false)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email id")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+			new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+//		if (!InputValidation.hasText(txtMemberPhone1)) {
+//			return false;
+//		}
+//		if (!InputValidation.hasText(txtMemberPhone2)) {
+//			return false;
+//		}
 
 		return true;
 	}

@@ -360,7 +360,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Contact Phone Number (Mandatory)"
+                    android:text="Contact Phone Number"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />

@@ -83,22 +83,9 @@ public class GroupChurch extends AppCompatActivity {
 				// TODO Auto-generated method stub
 			
 				if(NetworkHelper.isOnline(GroupChurch.this)){
-					if(InputValidation.isPhoneNumber(txtGrChurchContactPhone, false) &&
-							InputValidation.hasText(txtGrChurchName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(GroupChurch.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(GroupChurch.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					Methods.longToast("Please connect to Internet", GroupChurch.this);
@@ -116,10 +103,41 @@ public class GroupChurch extends AppCompatActivity {
 		}else{
 			Methods.longToast("Please connect to Internet", this);
 		}
-		
-		
-		
 	}
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtGrChurchName)) {
+			new AlertDialog.Builder(GroupChurch.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Group Church Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtGrChurchContactPhone, false)) {
+			new AlertDialog.Builder(GroupChurch.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+
 	private void getGrChurchDetails() {
 
 		StringRequest reqgetCellDetails=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {

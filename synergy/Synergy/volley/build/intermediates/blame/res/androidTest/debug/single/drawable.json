@@ -56,12 +56,12 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/androidTest/debug/drawable/abc_search_dropdown_light.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_light.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/androidTest/debug/drawable/abc_search_dropdown_light.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_light.xml"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/androidTest/debug/drawable/abc_search_dropdown_light.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/androidTest/debug/drawable/abc_textfield_searchview_right_holo_light.xml",

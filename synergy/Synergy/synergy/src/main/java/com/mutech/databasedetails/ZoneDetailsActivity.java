@@ -83,22 +83,9 @@ public class ZoneDetailsActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 			
 				if(NetworkHelper.isOnline(ZoneDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtzoneContactPhone, false) &&
-							InputValidation.hasText(txtzoneName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(ZoneDetailsActivity.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(ZoneDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					Methods.longToast("Please connect to Internet", ZoneDetailsActivity.this);
@@ -116,6 +103,39 @@ public class ZoneDetailsActivity extends AppCompatActivity {
 			Methods.longToast("Please connect to Internet", this);
 		}
 		
+	}
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtzoneName)) {
+			new AlertDialog.Builder(ZoneDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Zone Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtzoneContactPhone, false)) {
+			new AlertDialog.Builder(ZoneDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
 	}
 
 	private void getZoneDetails() {

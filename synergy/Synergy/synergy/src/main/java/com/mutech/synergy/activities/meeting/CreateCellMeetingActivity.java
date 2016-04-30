@@ -620,31 +620,50 @@ private void getCellMaster1() {
 	}
 	private void saveCellMeeting()
 	{
-		if(validateFields()){
-			if(NetworkHelper.isOnline(this)){
-				if(InputValidation.hasText(txtFromDate) &&
-						InputValidation.hasText(txtToDate)) {
-					Methods.showProgressDialog(this);
-					getHigherHierarchyService();
-				} else {
-					new AlertDialog.Builder(CreateCellMeetingActivity.this)
-							.setCancelable(false)
-							.setTitle("Invalid Input")
-							.setMessage("Please enter valid value in the field marked red")
-							.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialogInterface, int i) {
-
-								}
-							})
-							.show();
-				}
+//		if(validateFields()){
+		if(NetworkHelper.isOnline(this)){
+			if(isValid()) {
+				Methods.showProgressDialog(this);
+				getHigherHierarchyService();
 			}
-			else
-				Methods.longToast("Please connect to Internet", this);
 		}
+		else
+			Methods.longToast("Please connect to Internet", this);
+//		}
 	}
 
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtFromDate)) {
+			new AlertDialog.Builder(CreateCellMeetingActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter valid value in the 'From Date'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.hasText(txtToDate)) {
+			new AlertDialog.Builder(CreateCellMeetingActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter valid value in the 'To Date'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
 	private void getHigherHierarchyService() {
 		StringRequest reqsaveMeeting=new StringRequest(Method.POST,GetHigherHierarchyService.SERVICE_URL,new Listener<String>() {
 

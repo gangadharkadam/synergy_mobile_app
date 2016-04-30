@@ -266,25 +266,10 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 			
 				if(NetworkHelper.isOnline(DashboardListDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-							InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-							InputValidation.hasText(txtMemberfName)) {
-						if(InputValidation.spnHasText(txtGender, "Gender")) {
-							Methods.showProgressDialog(DashboardListDetailsActivity.this);
-							UpdateDashboardDataService();
-						}
-					} else {
-						new AlertDialog.Builder(DashboardListDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
+					if (isValid()) {
+						Methods.showProgressDialog(DashboardListDetailsActivity.this);
+						UpdateDashboardDataService();
 
-									}
-								})
-								.show();
 					}
 				}
 				else
@@ -295,8 +280,70 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
 		
 	}
 
-	
-private void getDashboardDataService() {
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtMemberfName)) {
+			new AlertDialog.Builder(DashboardListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter first name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(txtGender, "Gender")){
+			new AlertDialog.Builder(DashboardListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter first name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+            new AlertDialog.Builder(DashboardListDetailsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+            new AlertDialog.Builder(DashboardListDetailsActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+		}
+
+		return true;
+	}
+
+
+		private void getDashboardDataService() {
 		StringRequest reqDashboard=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {
 
 			@Override

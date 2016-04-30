@@ -125,7 +125,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_10"
-                            android:text="First Name"
+                            android:text="First Name (Mandatory)"
                             android:textColor="@android:color/black"
                             android:textSize="@dimen/textsize_18" />
 
@@ -230,7 +230,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_10"
-                            android:text="Gender"
+                            android:text="Gender (Mandatory)"
                             android:textColor="@android:color/black"
                             android:textSize="@dimen/textsize_18" />
 

@@ -40,6 +40,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -58,6 +59,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetAllMastersService;
@@ -411,8 +413,152 @@ private void getList(final String tbl){
 		App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
 		reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
-	
-private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+
+
+	private void getListNew2(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate, final String name){
+
+		//	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
+		StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST, SynergyValues.Web.SearchService.SERVICE_URL,new Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+				Log.e("droid get reqResponce ---------------", response);
+
+
+
+				if(response.contains("status"))
+				{
+					ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
+					if(respModel.getMessage().getStatus()=="401"){
+						Methods.longToast("User name or Password is incorrect", AllMemberListActivity.this);
+					}else{
+						Methods.longToast(respModel.getMessage().getMessage(), AllMemberListActivity.this);
+					}
+				}else{
+
+
+					try {
+
+						jsonobj=new JSONObject(response);
+						jsonobj.getJSONObject("message");
+
+						int i=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+						TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+						Btnfooter();
+						txtcount.setText("Members ("+i+")");
+						jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
+
+						if(jsonarray.length()>0){
+
+
+							DetailAdapter adapter=new DetailAdapter(AllMemberListActivity.this,jsonarray);
+							lvAllMembers.setAdapter(adapter);
+							adapter.notifyDataSetChanged();
+
+
+						}else{
+
+							DetailAdapter adapter=new DetailAdapter(AllMemberListActivity.this,jsonarray);
+							lvAllMembers.setAdapter(adapter);
+							adapter.notifyDataSetChanged();
+
+							Methods.longToast("No results found", AllMemberListActivity.this);
+						}
+
+
+
+
+
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+
+
+
+				}
+
+
+			}
+		},new ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
+
+				if(error!=null) {
+					if(error.networkResponse.statusCode==403){
+						//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+					}
+				}
+				//else
+				//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+
+			}
+
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError{
+				Map<String, String> params = new HashMap<String, String>();
+
+			    /*model=new MeetingListRequestModel();
+				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
+				model.setTbl(tbl);
+		//		model.setRecord_name(tbl);
+				model.setPage_no(pageno);
+			*/
+				//model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
+				try{
+
+					jsonobj=new JSONObject();
+
+					jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
+					jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
+
+					jsonobj.put("search", "member");
+                    if(!church.equals(""))
+                        jsonobj.put("church", church);
+                    if(!gchurch.equals(""))
+                        jsonobj.put("group_church", gchurch);
+                    if(!zone.equals(""))
+                        jsonobj.put("zone", zone);
+                    if(!resion.equals(""))
+                        jsonobj.put("region", resion);
+                    if(!name.equals(""))
+                        jsonobj.put("member", name);
+
+					JSONObject jsonfilter=new JSONObject();
+
+					if(!fdate.equals(""))
+						jsonfilter.put("from_date", fdate);
+					if(!todate.equals(""))
+						jsonfilter.put("to_date", todate);
+                    if(!fdate.equals("") || !todate.equals(""))
+					    jsonobj.put("filters", jsonfilter);
+
+				}catch(Exception ex){
+
+				}
+
+				String dataString=jsonobj.toString();//gson.toJson(model, MeetingListRequestModel.class);
+
+				Log.e("Request droid", dataString);
+				params.put(GetHigherHierarchyService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
+		reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+	}
+
+	private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
 
 	//	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllListMastersService.SERVICE_URL,new Listener<String>() {
@@ -523,6 +669,7 @@ private void getListNew(final String tbl,final String pageno,final String resion
 				
 					
 					JSONObject jsonfilter=new JSONObject();
+
 					if(!resion.equals(""))
 						jsonfilter.put("region", resion);
 					
@@ -698,12 +845,20 @@ public class DetailAdapter extends BaseAdapter {
 		membername.setVisibility(View.GONE);
 
 		try {
-			
-			String str=(jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname");
-			name.setText(jsonarray.getJSONObject(position).getString("member_name")+" "+str);
-			emailid.setText(jsonarray.getJSONObject(position).getString("email_id"));
-			
-			//id.setText(jsonarray.getJSONObject(position).getString("name"));
+
+            String str = "";
+			if(jsonarray.getJSONObject(position).has("surname"))
+                str=(jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname");
+            if(jsonarray.getJSONObject(position).has("member_name"))
+    			name.setText(jsonarray.getJSONObject(position).getString("member_name")+" "+str);
+            else
+                name.setText(jsonarray.getJSONObject(position).getString("name")+" "+str);
+            if(jsonarray.getJSONObject(position).has("email_id"))
+			    emailid.setText(jsonarray.getJSONObject(position).getString("email_id"));
+            else
+                emailid.setText(jsonarray.getJSONObject(position).getString("contact_email_id"));
+
+            //id.setText(jsonarray.getJSONObject(position).getString("name"));
 			
 		//	surname.setText((jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname"));
 		//	name.setText(jsonarray.getJSONObject(position).getString("email_id"));
@@ -806,9 +961,10 @@ public void showDialog(){
 	LinearLayout layoutzone=(LinearLayout) promptView.findViewById(R.id.layoutzone);
 	LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 	LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
-	
-	
-	
+	LinearLayout layoutname=(LinearLayout) promptView.findViewById(R.id.nameLayout);
+
+
+
 	final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 	final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
 	final TextView spgroupchurchTextView=(TextView) promptView.findViewById(R.id.spgroupchurchTextView);
@@ -816,7 +972,8 @@ public void showDialog(){
 	final TextView sppcfTextView=(TextView) promptView.findViewById(R.id.sppcfTextView);
 	final TextView spSeniorCellTextView=(TextView) promptView.findViewById(R.id.spSeniorCellTextView);
 	final TextView spCellTextView=(TextView) promptView.findViewById(R.id.spCellTextView);
-	
+	final TextView nameET =(TextView) promptView.findViewById(R.id.etName);
+
 	txtFromDate=(TextView) promptView.findViewById(R.id.txtFromDate);
 	txtToDate=(TextView) promptView.findViewById(R.id.txtToDate);
 	spresion=(Spinner) promptView.findViewById(R.id.spresion);
@@ -1343,8 +1500,6 @@ public void showDialog(){
 		layoutchurch.setVisibility(View.GONE);
 		pcflayout.setVisibility(View.GONE);
 		srlayout.setVisibility(View.GONE);
-	
-	
 	}
 	
 	
@@ -1377,15 +1532,17 @@ public void showDialog(){
 	
 	public void onClick(DialogInterface dialog, int id) {
 		
-		String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
-		
+		String name="", resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+
+		name = nameET.getText().toString();
+
 		try{
 			if(spresionTextView.getVisibility()==View.GONE)
-			resion=spresion.getSelectedItem().toString();
+				resion=spresion.getSelectedItem().toString();
 		}catch(Exception ex){
 			resion="";
 		}
-		
+
 		try{
 			if(spzoneTextView.getVisibility()==View.GONE)
 		 zone=spzone.getSelectedItem().toString();
@@ -1432,29 +1589,32 @@ public void showDialog(){
 		 fdate=txtFromDate.getText().toString();
 		 tdate=txtToDate.getText().toString();
 				
-		 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate)){
+		 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate, name)){
 				
 			 Methods.longToast("Please select any Filter",AllMemberListActivity.this);
 			 
 		 }else{	
 			if(NetworkHelper.isOnline(AllMemberListActivity.this)){
 				Methods.showProgressDialog(AllMemberListActivity.this);
-				getListNew("Member","1",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
-			
+                if(name.equals(""))
+				    getListNew("Member","1",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+                else
+                    getListNew2("Member", "1", resion, zone, groupchurch,church,pcf,srcell,cell,fdate,tdate, name);
+
 				dialog.cancel();
 	
 				
 			}else{
 			
-				Methods.longToast("Please connect to Internet",AllMemberListActivity.this);
-			
-			}
-	 }
-	}
- })
-   .setNegativeButton("Cancel",  new DialogInterface.OnClickListener() {
-	
-	   public void onClick(DialogInterface dialog, int id) {
+				Methods.longToast("Please connect to Internet", AllMemberListActivity.this);
+
+            }
+         }
+    }
+    })
+            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                public void onClick(DialogInterface dialog, int id) {
 	
 		   dialog.cancel();
 		   
@@ -1466,7 +1626,7 @@ public void showDialog(){
 
 }
 
-boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate){
+boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate, String name){
 	if(resion.equals("")){
 		if(zone.equals("")){
 			if(groupchurch.equals("")){
@@ -1475,7 +1635,11 @@ boolean checkValidation(String resion,String zone,String groupchurch,String chur
 						if(srcell.equals("")){
 							if(cell.equals("")){
 								if(fdate.equals("") && tdate.equals("")){
-										return false;
+										if(name.equals("")) {
+											return false;
+										} else {
+											return true;
+										}
 									}else{
 										return true;
 									}

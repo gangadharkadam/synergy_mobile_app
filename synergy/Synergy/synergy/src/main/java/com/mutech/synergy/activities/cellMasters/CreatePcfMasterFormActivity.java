@@ -72,8 +72,112 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 	String defKey,defVal,defRole;
 	TextView lblzone,lblgroupchurch,lblchurch;
 	OnItemSelectedListener myListener;
-	
-	@Override
+
+    public boolean isValid() {
+
+        if(!InputValidation.hasText(txtPCFCode)) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Senior Cell Code")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.hasText(txtPCFName)) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Senior Cell Name")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnPCFZone, "Zone")) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Zone")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnPCFRegion, "Region")) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Region")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "Group Church")) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Group Church")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnCellChurch, "Church")) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Church")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtPCFContactPhn, false)) {
+            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_pcf);
@@ -349,33 +453,15 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btnSavePCF:
-			if(InputValidation.isPhoneNumber(txtPCFContactPhn, false) &&
-					InputValidation.hasText(txtPCFCode) &&
-					InputValidation.hasText(txtPCFName)) {
-				if(InputValidation.spnHasText(spnPCFRegion, "Region") &&
-						InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup") &&
-						InputValidation.spnHasText(spnCellChurch, "Church")) {
-//					if(validateFields()){
-						if(NetworkHelper.isOnline(this)){
-							Methods.showProgressDialog(this);
-							savePCFMaster();
-						}else{
-							Methods.longToast("Please connect to Internet", this);
-						}
-//					}
-				}
-			} else {
-				new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
-						.setCancelable(false)
-						.setTitle("Invalid Input")
-						.setMessage("Please enter valid value in the field marked red")
-						.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-							@Override
-							public void onClick(DialogInterface dialogInterface, int i) {
-
-							}
-						})
-						.show();
+			if(isValid()) {
+                if(validateFields()){
+                    if(NetworkHelper.isOnline(this)){
+                        Methods.showProgressDialog(this);
+                        savePCFMaster();
+                    }else{
+                        Methods.longToast("Please connect to Internet", this);
+                    }
+                }
 			}
 			break;
 		default:
@@ -463,10 +549,10 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 				Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
 
 				if(error.networkResponse.statusCode==403){
-					//		Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+					//		Methods.longToast("Access Denied", CreatePcfMasterFormActivity.this);
 				}
 				//else
-					//		Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+					//		Methods.longToast("Some Error Occured,please try again later", CreatePcfMasterFormActivity.this);
 
 				//	Methods.showProgressDialog(CreateCellMasterActivity.this);
 				getLowerHierarchy();
@@ -599,10 +685,10 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 				Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
 
 				if(error.networkResponse.statusCode==403){
-					//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+					//	Methods.longToast("Access Denied", CreatePcfMasterFormActivity.this);
 				}
 				//else
-				//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+				//	Methods.longToast("Some Error Occured,please try again later", CreatePcfMasterFormActivity.this);
 				setAdapters();
 			}
 
@@ -792,10 +878,10 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 				Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
 
 				if(error.networkResponse.statusCode==403){
-					//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+					//	Methods.longToast("Access Denied", CreatePcfMasterFormActivity.this);
 				}
 				//else
-				//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+				//	Methods.longToast("Some Error Occured,please try again later", CreatePcfMasterFormActivity.this);
 				//setAdapters();
 			}
 

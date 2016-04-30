@@ -438,7 +438,53 @@
     
 
   </LinearLayout>
-  
+
+    <LinearLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by Name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_16"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/rectangle"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_8"
+                android:singleLine="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 <LinearLayout
     android:id="@+id/eventtypeLayout"
     android:layout_width="match_parent"
@@ -617,12 +663,9 @@
     </RelativeLayout>
     
 
-  </LinearLayout>  
+</LinearLayout>
 
-
-
-  
- 			<LinearLayout
+    <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen_10"

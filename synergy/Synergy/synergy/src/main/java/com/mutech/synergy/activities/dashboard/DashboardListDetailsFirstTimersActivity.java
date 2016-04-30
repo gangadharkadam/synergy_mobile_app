@@ -114,6 +114,68 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
     private Spinner txtGender;
     private ArrayList<String> genderList;
 
+
+    public boolean isValid() {
+
+        if(!InputValidation.hasText(txtMemberfName)) {
+            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter First Name")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(txtGender, "Gender")) {
+            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Gender")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        return true;
+    }
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -252,25 +314,9 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 if(NetworkHelper.isOnline(DashboardListDetailsFirstTimersActivity.this)){
-                    if(InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-                            InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-                            InputValidation.hasText(txtMemberfName)) {
-                        if(InputValidation.spnHasText(txtGender, "Gender")) {
-                            Methods.showProgressDialog(DashboardListDetailsFirstTimersActivity.this);
-                            UpdateDashboardDataService();
-                        }
-                    } else {
-                        new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
-                                .setCancelable(false)
-                                .setTitle("Invalid Input")
-                                .setMessage("Please enter valid value in the field marked red")
-                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                                    }
-                                })
-                                .show();
+                    if(isValid()) {
+                        Methods.showProgressDialog(DashboardListDetailsFirstTimersActivity.this);
+                        UpdateDashboardDataService();
                     }
                 }
                 else

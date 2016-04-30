@@ -1644,7 +1644,7 @@ private void selectItem(int position) {
 //					Methods.smallToast("Please enter Member Date of Birth", this);
 			}		
 			else
-				Methods.smallToast("Please enter Member Name", this);
+				Methods.smallToast("Please enter First Name", this);
 		//}		
 		//else
 		//	Methods.smallToast("Please enter Member Surname", this);

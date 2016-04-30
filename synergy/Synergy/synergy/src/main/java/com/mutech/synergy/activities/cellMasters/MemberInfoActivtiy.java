@@ -1367,22 +1367,10 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 
 	public boolean isValid() {
 
-		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
-			return false;
-		}
-		if (!InputValidation.isEmailAddress(txtYookosID, true)) {
-			return false;
-		}
-		if (!InputValidation.isPhoneNumber(txtMemberPhone1, true)) {
-			return false;
-		}
-		if (!InputValidation.isPhoneNumber(txtMemberPhone2, true)) {
-			return false;
-		}
 		if (!InputValidation.hasText(txtMemberfName)) {
 			new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
-					.setTitle("Invalid Input")
+					.setTitle("Mandatory Input")
 					.setMessage("Please enter first name")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
@@ -1393,17 +1381,11 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 					.show();
 			return false;
 		}
-		if (!InputValidation.hasText(txtMemberPhone1)) {
-			return false;
-		}
-		if (!InputValidation.hasText(txtMemberPhone2)) {
-			return false;
-		}
 		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
 		{
 			new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
-					.setTitle("Invalid Input")
+					.setTitle("Mandatory Input")
 					.setMessage("Please select age group")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
@@ -1418,7 +1400,7 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 		{
 			new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
-					.setTitle("Invalid Input")
+					.setTitle("Mandatory Input")
 					.setMessage("Please select gender")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
@@ -1429,7 +1411,68 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 					.show();
 			return false;
 		}
+		if (!InputValidation.isEmailAddress(txtEmailID1, false)) {
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email id")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
 
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isEmailAddress(txtYookosID, false)) {
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid email id")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+			new AlertDialog.Builder(MemberInfoActivtiy.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+//		if (!InputValidation.hasText(txtMemberPhone1)) {
+//			return false;
+//		}
+//		if (!InputValidation.hasText(txtMemberPhone2)) {
+//			return false;
+//		}
 		return true;
 	}
 

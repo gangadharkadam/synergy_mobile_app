@@ -782,13 +782,13 @@ public class HomeActivity extends AppCompatActivity {
 			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm);
 			finish();
-			
 			break;
 //		case 2:
 //			break;
 //		case 3:
 //			break;
 		case 3:
+            Log.d("NonStop", "Going to Partnership Record");
 			Intent partner=new Intent(this,PartnerShipRecord.class);
 			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(partner);
@@ -805,12 +805,14 @@ public class HomeActivity extends AppCompatActivity {
 		case 4:
 		//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
 			//startActivity(intMeeting);
+            Log.d("NonStop", "Going to Attendance");
 			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
 			intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intMyMeetings);	
 			finish();
 			break;
 		case 5:
+            Log.d("NonStop", "Going to Calendar");
 			Intent intEvents=new Intent(this,MyEventListActivity.class);
 			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intEvents);
@@ -818,6 +820,7 @@ public class HomeActivity extends AppCompatActivity {
 
 			break;
 		case 6:
+            Log.d("NonStop", "Going to ToDo");
 			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
 			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intentTODO);
@@ -832,6 +835,7 @@ public class HomeActivity extends AppCompatActivity {
 			break;
 			
 		case 8:
+            Log.d("NonStop", "Going to Search");
 			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
 			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intSearchMembers);

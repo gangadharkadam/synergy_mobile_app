@@ -108,7 +108,7 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 		btnUpdateTask.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 
-				if(InputValidation.hasText(txtTaskDetailsName)) {
+				if(isValid()) {
 					try {
 						if(txtDueDate.getText().toString().contentEquals("")) {
 							Methods.showProgressDialog(TeamTaskDetailsActivity.this);
@@ -132,18 +132,6 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 					} catch (ParseException e) {
 						e.printStackTrace();
 					}
-				} else {
-					new AlertDialog.Builder(TeamTaskDetailsActivity.this)
-							.setCancelable(false)
-							.setTitle("Invalid Input")
-							.setMessage("Please enter valid value in the field marked red")
-							.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialogInterface, int i) {
-
-								}
-							})
-							.show();
 				}
 			}
 		});
@@ -200,7 +188,27 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 		});
 
 	}
-	
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtTaskDetailsName)) {
+			new AlertDialog.Builder(TeamTaskDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter 'Task Details'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+
+
 	private void getMembersOfSelectedCell() {
 		StringRequest reqGetCellMember = new StringRequest(Method.POST,GetAllTasksService.FETCH_DATA, new Listener<String>() {
 			@Override

@@ -83,22 +83,9 @@ public class ChurchDetail extends AppCompatActivity {
 				// TODO Auto-generated method stub
 			
 				if(NetworkHelper.isOnline(ChurchDetail.this)){
-					if(InputValidation.isPhoneNumber(txtChurchContactPhone, false) &&
-							InputValidation.hasText(txtChurchName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(ChurchDetail.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(ChurchDetail.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					Methods.longToast("Please connect to Internet", ChurchDetail.this);
@@ -117,6 +104,39 @@ public class ChurchDetail extends AppCompatActivity {
 		}
 		
 		
+	}
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtChurchName)) {
+			new AlertDialog.Builder(ChurchDetail.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Church Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtChurchContactPhone, false)) {
+			new AlertDialog.Builder(ChurchDetail.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
 	}
 
 	private void getChurchDetails() {

@@ -260,13 +260,31 @@ public class CloseTaskActivity extends AppCompatActivity implements OnClickListe
 		}
 	}
 
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtTaskDetailsName)) {
+			new AlertDialog.Builder(CloseTaskActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter 'Task Details'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.btnUpdateTask:
 				if(NetworkHelper.isOnline(this)){
 
-					if(InputValidation.hasText(txtTaskDetailsName)) {
+					if(isValid()) {
 						try {
 							if(txtDueDate.getText().toString().contentEquals("")) {
 								Methods.showProgressDialog(this);
@@ -290,18 +308,6 @@ public class CloseTaskActivity extends AppCompatActivity implements OnClickListe
 						} catch (ParseException e) {
 							e.printStackTrace();
 						}
-					} else {
-						new AlertDialog.Builder(CloseTaskActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					Methods.longToast("Please connect to Internet", this);

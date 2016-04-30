@@ -115,22 +115,9 @@ public class PcfDetailsActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				if(NetworkHelper.isOnline(PcfDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtPCFContactPhn, false) &&
-							InputValidation.hasText(txtPCFName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(PcfDetailsActivity.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(PcfDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}else{
 					Methods.longToast("Please connect to Internet",PcfDetailsActivity.this);
@@ -141,8 +128,40 @@ public class PcfDetailsActivity extends AppCompatActivity {
 		
 	}
 
-	
-private void updatePcfDetails() {
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtPCFName)) {
+			new AlertDialog.Builder(PcfDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter PCF Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtPCFContactPhn, false)) {
+			new AlertDialog.Builder(PcfDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+
+	private void updatePcfDetails() {
 
 		StringRequest reqgetCellDetails=new StringRequest(Method.POST,UpdateAllDetailsService.SERVICE_URL,new Listener<String>() {
 

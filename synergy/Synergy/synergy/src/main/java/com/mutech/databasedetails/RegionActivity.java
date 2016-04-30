@@ -80,24 +80,10 @@ public class RegionActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 			
 				if(NetworkHelper.isOnline(RegionActivity.this)){
-					if(InputValidation.isPhoneNumber(txtregionContactPhone, false) &&
-							InputValidation.hasText(txtregionName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(RegionActivity.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(RegionActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
-
 				}else{
 					Methods.longToast("Please connect to Internet", RegionActivity.this);
 				}
@@ -115,7 +101,40 @@ public class RegionActivity extends AppCompatActivity {
 		}
 		
 	}
-	
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtregionName)) {
+			new AlertDialog.Builder(RegionActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Region Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtregionContactPhone, false)) {
+			new AlertDialog.Builder(RegionActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+
 	private void getRegionDetails() {
 
 		StringRequest reqgetCellDetails=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {

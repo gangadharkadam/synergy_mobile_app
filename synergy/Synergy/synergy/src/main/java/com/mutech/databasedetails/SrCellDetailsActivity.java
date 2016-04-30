@@ -96,24 +96,10 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				
 				if(NetworkHelper.isOnline(SrCellDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtSrCellContactPhn, false) &&
-							InputValidation.hasText(txtSeniorCellName)) {
+					if(isValid()) {
 						Methods.showProgressDialog(SrCellDetailsActivity.this);
 						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(SrCellDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
-
 				}else{
 					Methods.longToast("Please connect to Internet",SrCellDetailsActivity.this);
 				}
@@ -129,12 +115,41 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 		}else{
 			Methods.longToast("Please connect to Internet", this);
 		}
-		
-		
-		
-		
 	}
-	
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtSeniorCellName)) {
+			new AlertDialog.Builder(SrCellDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Sr Cell Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtSrCellContactPhn, false)) {
+			new AlertDialog.Builder(SrCellDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+
 	private void getCellDetails() {
 
 		StringRequest reqgetCellDetails=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {

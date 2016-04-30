@@ -87,7 +87,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Senior Cell Name"
+                    android:text="Senior Cell Name (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />

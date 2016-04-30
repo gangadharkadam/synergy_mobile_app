@@ -663,30 +663,13 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 					//createNewMember();
 					if(validateField()){
 						if(NetworkHelper.isOnline(CreateFirstTimerActivity.this)){
-							if(InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-									InputValidation.isPhoneNumber(txtMemberPhone2, false) &&
-									InputValidation.hasText(txtMemberName)) {
-								if(InputValidation.spnHasText(txtGender, "Gender") &&
-										InputValidation.spnHasText(txtAgeGroup, "AgeGroup")) {
-									Methods.showProgressDialog(CreateFirstTimerActivity.this);
-									createFtv();
-								}
-							} else {
-								new AlertDialog.Builder(CreateFirstTimerActivity.this)
-										.setCancelable(false)
-										.setTitle("Invalid Input")
-										.setMessage("Please enter valid value in the field marked red")
-										.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-											@Override
-											public void onClick(DialogInterface dialogInterface, int i) {
-
-											}
-										})
-										.show();
+							if(isValid()) {
+								Methods.showProgressDialog(CreateFirstTimerActivity.this);
+								createFtv();
 							}
-						}
-						else
+						} else {
 							Methods.longToast("Please connect to Internet", CreateFirstTimerActivity.this);
+						}
 					}
 				}
 			});
@@ -733,7 +716,80 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //			});
 	}
 
-	
+	public boolean isValid() {
+        if(!InputValidation.hasText(txtMemberName)) {
+            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter first name")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(txtGender, "Gender")) {
+            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter Gender")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup")) {
+            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter Age Group")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter a valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+		}
+		return true;
+	}
+
 	public void fillSpinner(){
 		
 		

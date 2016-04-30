@@ -27,6 +27,7 @@ import com.mutech.synergy.R;
 import com.mutech.synergy.R.id;
 import com.mutech.synergy.R.layout;
 import com.mutech.synergy.R.menu;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.DashboardDataService;
 import com.mutech.synergy.SynergyValues.Web.GetCellDetailsService;
@@ -66,18 +67,72 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
 	ImageView imgProfilePic;
-	EditText txtnamenumber,txtinvitee_contact_name,txtMemberPhone1,txtEmailID1,txtInvitedby;
+	EditText txtnamenumber,txtinvitee_contact_name,txtMemberPhone1,txtEmailID1;
+//	EditText txtInvitedby;
 	TextView txtMemberDateOfBirth,txtdate_of_convert;
 	Spinner txtMemberMartialInfo;
 	TextView txtheadtitle;
 	Button btnSaveMemberInfo;
-	Spinner spConvertInvitee,spAgegroup,spSourceOfInvite,sptitle;
+	Spinner spConvertInvitee,spAgegroup,spSourceOfInvite,sptitle, spInvitedBy;
 	private ArrayList<String> titleList,agegroupList,SourceofInvitationList;
 	ArrayAdapter<String> adapterTitel,adapterAgeGroup,adpterSourceofInvitation;
 	private DatePickerDialog birthDatePickerDialog;
 	private SimpleDateFormat dateFormatter,dateFormatterService;
 	CheckBox chkConvertInviteeContactToFt;
 
+    private ArrayList<String> invitedByAL;
+    ArrayAdapter<String> invitedByAdap;
+    JSONObject jsonobj, respJSON;
+    JSONArray jsonarray;
+    public int TOTAL_LIST_ITEMS;
+
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtinvitee_contact_name)) {
+			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Invitee/Contact Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.spnHasText(spInvitedBy, "Invited By")) {
+			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter 'Invited By'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
+			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -87,14 +142,15 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 		spAgegroup=(Spinner) findViewById(R.id.spAgegroup);
 		spSourceOfInvite=(Spinner) findViewById(R.id.spSourceOfInvite);
 		sptitle=(Spinner) findViewById(R.id.sptitle);
-		
+		spInvitedBy = (Spinner) findViewById(id.spInvitedby);
+
 		txtnamenumber=(EditText) findViewById(R.id.txtMembershipNo);
 		
 		txtinvitee_contact_name=(EditText) findViewById(R.id.txtMemberlName);
 		txtMemberPhone1=(EditText) findViewById(R.id.txtMemberPhone1);
 		txtdate_of_convert=(TextView) findViewById(R.id.txtDateOfConvert);
 		txtEmailID1=(EditText) findViewById(R.id.txtEmailID1);
-		txtInvitedby=(EditText) findViewById(R.id.txtInvitedby);
+//		txtInvitedby=(EditText) findViewById(R.id.txtInvitedby);
 		txtMemberDateOfBirth=(TextView) findViewById(R.id.txtMemberDateOfBirth);
 		txtheadtitle=(TextView)findViewById(R.id.textView1);
 		btnSaveMemberInfo=(Button) findViewById(R.id.btnSaveMemberInfo);
@@ -120,8 +176,23 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 			}
 
 		},newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-		
-		txtMemberDateOfBirth.setOnClickListener(new OnClickListener() {
+
+        invitedByAL = new ArrayList<String>();
+        if(NetworkHelper.isOnline(this)){
+            Methods.showProgressDialog(this);
+            Log.d("NonStop", "Getting Member list");
+            getListNew("Member", "1", "", "", "", "", "", "", "", "", "");
+//            Log.d("NonStop", "Setting Invited By dropdown. AL size: " + invitedByAL.size());
+//            invitedByAdap = new ArrayAdapter<String>(InviteesandContacts_ListDetailsActivity.this, android.R.layout.simple_spinner_item, invitedByAL);
+//            invitedByAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//            spInvitedBy.setAdapter(invitedByAdap);
+//            Log.d("NonStop", "Zeroth Entry: " + spInvitedBy.getSelectedItem());
+            Methods.closeProgressDialog();
+        }
+        else
+            Methods.longToast("Please connect to Internet", this);
+
+        txtMemberDateOfBirth.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -191,36 +262,155 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				
 				if(NetworkHelper.isOnline(InviteesandContacts_ListDetailsActivity.this)){
-					if(InputValidation.isPhoneNumber(txtMemberPhone1, false) &&
-							InputValidation.hasText(txtinvitee_contact_name) &&
-							InputValidation.hasText(txtInvitedby)) {
-						Methods.showProgressDialog(InviteesandContacts_ListDetailsActivity.this);
-						UpdateDashboardDataService();
-					} else {
-						new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
-					}
+                    if(isValid()) {
+                        Methods.showProgressDialog(InviteesandContacts_ListDetailsActivity.this);
+                        UpdateDashboardDataService();
+                    }
 				}
 				else
 					Methods.longToast("Please connect to Internet", InviteesandContacts_ListDetailsActivity.this);
-				
 			}
 		});
-		
-		
 	}
 
-	
-private void getDashboardDataService() {
+    private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+
+        //	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
+        StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST, SynergyValues.Web.GetAllListMastersService.SERVICE_URL,new Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Methods.closeProgressDialog();
+                Log.e("droid get reqResponce ---------------", response);
+                if(response.contains("status"))
+                {
+                    ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
+                    if(respModel.getMessage().getStatus()=="401"){
+                        Methods.longToast("User name or Password is incorrect", InviteesandContacts_ListDetailsActivity.this);
+                    }else{
+                        Methods.longToast(respModel.getMessage().getMessage(), InviteesandContacts_ListDetailsActivity.this);
+                    }
+                }else{
+
+
+                    try {
+
+                        jsonobj=new JSONObject(response);
+                        jsonobj.getJSONObject("message");
+
+                        int i=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+                        TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+                        jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
+
+                        invitedByAL = new ArrayList<String>();
+                        for(int respCnt = 0; respCnt < jsonarray.length(); respCnt++) {
+                            String respName = jsonarray.getJSONObject(respCnt).getString("name");
+                            invitedByAL.add(respName);
+                            Log.d("NonStop", "Added " + respName + " to ArrayList");
+                            Log.d("NonStop", "Setting Invited By dropdown. AL size: " + invitedByAL.size());
+                            Log.d("NonStop", "Zeroth Entry: " + spInvitedBy.getSelectedItem());
+                            invitedByAdap = new ArrayAdapter<String>(InviteesandContacts_ListDetailsActivity.this, android.R.layout.simple_spinner_item, invitedByAL);
+                            invitedByAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            spInvitedBy.setAdapter(invitedByAdap);
+                        }
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            }
+        },new ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Methods.closeProgressDialog();
+                Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
+
+                if(error!=null) {
+                    if(error.networkResponse.statusCode==403){
+                        //	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+                    }
+                }
+                //else
+                //	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+
+            }
+
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError{
+                Map<String, String> params = new HashMap<String, String>();
+
+			    /*model=new MeetingListRequestModel();
+				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
+				model.setTbl(tbl);
+		//		model.setRecord_name(tbl);
+				model.setPage_no(pageno);
+			*/
+                //model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
+                try{
+
+                    jsonobj=new JSONObject();
+
+                    jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
+                    jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
+
+                    jsonobj.put("tbl",tbl);
+                    jsonobj.put("page_no",pageno);
+
+
+                    JSONObject jsonfilter=new JSONObject();
+
+                    if(!resion.equals(""))
+                        jsonfilter.put("region", resion);
+
+                    if(!zone.equals(""))
+                        jsonfilter.put("zone", zone);
+
+                    if(!gchurch.equals(""))
+                        jsonfilter.put("group_church", gchurch);
+
+                    if(!church.equals(""))
+                        jsonfilter.put("church", church);
+
+                    if(!pcf.equals(""))
+                        jsonfilter.put("pcf", pcf);
+
+                    if(!srcell.equals(""))
+                        jsonfilter.put("senior_cell", srcell);
+
+                    if(!cell.equals(""))
+                        jsonfilter.put("cell", cell);
+
+                    if(!fdate.equals(""))
+                        jsonfilter.put("from_date", fdate);
+
+                    if(!todate.equals(""))
+                        jsonfilter.put("to_date", todate);
+
+
+                    jsonobj.put("filters", jsonfilter);
+
+                }catch(Exception ex){
+
+                }
+
+                String dataString=jsonobj.toString();//gson.toJson(model, MeetingListRequestModel.class);
+
+                Log.e("Request droid", dataString);
+                params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
+                return params;
+            }
+        };
+
+        App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
+        reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+    }
+
+    private void getDashboardDataService() {
 		StringRequest reqDashboard=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {
 
 			@Override
@@ -277,11 +467,15 @@ private void getDashboardDataService() {
 							
 							
 						
-							txtdate_of_convert.setText((obj.getJSONObject(0).getString("date_of_convert").equals("null"))?"":obj.getJSONObject(0).getString("date_of_convert"));
+							txtdate_of_convert.setText((obj.getJSONObject(0).getString("date_of_convert").equals("null")) ? "" : obj.getJSONObject(0).getString("date_of_convert"));
 							//txtsource_of_invitation.setText(obj.getJSONObject(0).getString("source_of_invitation"));
 							spSourceOfInvite.setSelection(adpterSourceofInvitation.getPosition(obj.getJSONObject(0).getString("source_of_invitation")));
-							
-							txtInvitedby.setText(obj.getJSONObject(0).getString("invited_by").equals("null")?"":obj.getJSONObject(0).getString("invited_by"));
+
+                            Log.d("NonStop", "Invited By AL item: " + invitedByAL.size());
+                            Log.d("NonStop", "Invited by: " + obj.getJSONObject(0).getString("invited_by"));
+                            spInvitedBy.setSelection(invitedByAdap.getPosition(obj.getJSONObject(0).getString("invited_by")));
+
+//							txtInvitedby.setText(obj.getJSONObject(0).getString("invited_by").equals("null")?"":obj.getJSONObject(0).getString("invited_by"));
 
 						
 						} catch (JSONException e) {
@@ -436,7 +630,8 @@ private void UpdateDashboardDataService() {
 				
 				obj.put("date_of_convert", txtdate_of_convert.getText().toString());
 				obj.put("source_of_invitation", spSourceOfInvite.getSelectedItem().toString());
-				obj.put("invited_by", txtInvitedby.getText().toString());
+                obj.put("invited_by", spInvitedBy.getSelectedItem().toString());
+//				obj.put("invited_by", txtInvitedby.getText().toString());
 				
 				jsonobj.put("records", obj);
 				

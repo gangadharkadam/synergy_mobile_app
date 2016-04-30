@@ -249,7 +249,7 @@ OnClickListener, OnItemSelectedListener {
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.d("droid","get reqgetLowerHierarchy ---------------"+ response);
+				Log.d("droid", "get reqgetLowerHierarchy ---------------" + response);
 
 				if(response.contains("status"))
 				{
@@ -553,6 +553,25 @@ OnClickListener, OnItemSelectedListener {
 
 	}
 
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtTaskDetailsName)) {
+			new AlertDialog.Builder(CreateTaskActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter a value for 'Task Details'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return  true;
+	}
+
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -562,22 +581,10 @@ OnClickListener, OnItemSelectedListener {
 			break;
 		case R.id.btnSaveTask:
 			if(NetworkHelper.isOnline(this)){
-				if(validateFields()){
-					if(InputValidation.hasText(txtTaskDetailsName)) {
+				if(isValid()) {
+					if (validateFields()) {
 						Methods.showProgressDialog(this);
 						saveTask();
-					} else {
-						new AlertDialog.Builder(CreateTaskActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}
 			}else{

@@ -132,7 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen_10"
-                    android:text="Invitee/Contact Name"
+                    android:text="Invitee/Contact Name (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_18" />
 
@@ -174,22 +174,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen_10"
-                    android:text="Invited By"
+                    android:text="Invited By (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_18" />
 
-               <EditText
-                    android:id="@+id/txtInvitedby"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_10"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                  <Spinner
+                      android:id="@+id/spInvitedby"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="@dimen/dimen_10"
+                      android:layout_marginLeft="@dimen/dimen_10"
+                      android:layout_marginRight="@dimen/dimen_10"
+                      android:background="@drawable/rectangle1"
+                      android:maxLines="1"
+                      android:padding="@dimen/dimen_10"
+                      android:singleLine="true"
+                      android:textSize="@dimen/textsize_16"/>
+               <!--<EditText-->
+                    <!--android:id="@+id/txtInvitedby"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="@dimen/dimen_10"-->
+                    <!--android:layout_marginLeft="@dimen/dimen_10"-->
+                    <!--android:layout_marginRight="@dimen/dimen_10"-->
+                    <!--android:background="@drawable/rectangle1"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:padding="@dimen/dimen_10"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textSize="@dimen/textsize_16" />-->
                
                 <TextView
                     android:layout_width="match_parent"

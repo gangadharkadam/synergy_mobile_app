@@ -89,7 +89,7 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_10"
-                    android:text="Church Name"
+                    android:text="Church Name (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/textsize_16"
                     android:textStyle="bold" />

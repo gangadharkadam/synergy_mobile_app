@@ -96,7 +96,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 		txtPartner=(EditText) findViewById(R.id.txtPartner);
 
 		txt_typeofpledge.setEnabled(false);
-		Amount.setEnabled(false);
+//		Amount.setEnabled(false);
 
 		Giving_Pledge.setEnabled(false);
 		mPartnerSubModel=new ArrayList<PartnerModel>();
@@ -114,7 +114,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 		btnPartnerSave=(Button) findViewById(R.id.btnPartnerSave);
 		btnPartnerSave.setOnClickListener(this);
 			
-		btnPartnerSave.setVisibility(View.GONE);
+//		btnPartnerSave.setVisibility(View.GONE);
 		
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);

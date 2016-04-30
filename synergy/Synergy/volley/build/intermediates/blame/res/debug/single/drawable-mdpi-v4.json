@@ -4,16 +4,16 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_ic_clear_search_api_holo_light.png"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_normal.png",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_ic_clear_normal.png"
+        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_unselected_pressed_holo.9.png",
+        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_bottom_transparent_dark_holo.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_ab_bottom_transparent_dark_holo.9.png"
     },
     {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_unselected_pressed_holo.9.png",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_tab_unselected_pressed_holo.9.png"
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_normal.png",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_ic_clear_normal.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_holo_dark.png",
@@ -132,12 +132,12 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_ic_commit_search_api_holo_dark.png"
     },
     {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_dropdown_panel_holo_light.9.png",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_menu_dropdown_panel_holo_light.9.png"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_ab_default_holo_dark.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_spinner_ab_default_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_dropdown_panel_holo_light.9.png",
+        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable-mdpi/abc_menu_dropdown_panel_holo_light.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_bottom_holo_dark.9.png",

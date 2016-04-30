@@ -74,6 +74,137 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 	Boolean zonesp=false,gpchurchsp=false,churchsp=false,pcfsp=false;
 	OnItemSelectedListener myListener;
 
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtCellCode)) {
+			new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Cell Code")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.hasText(txtCellName)) {
+			new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Cell Name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+        if(!InputValidation.spnHasText(spnCellZone, "Zone")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Zone")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnCellRegion, "Region")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Region")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "Group Church")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Group Church")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnCellChurch, "Church")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Church")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(txtPCF, "PCF")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter PCF")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.spnHasText(spnSeniorCell, "Senior Cell")) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Mandatory Input")
+                    .setMessage("Please enter Senior Cell")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        if(!InputValidation.isPhoneNumber(txtCellContactPhn, false)) {
+            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter valid phone number")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            return false;
+        }
+        return true;
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -122,14 +253,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if(InputValidation.isPhoneNumber(txtCellContactPhn, false) &&
-						InputValidation.hasText(txtCellCode) &&
-						InputValidation.hasText(txtCellName)) {
-					if(InputValidation.spnHasText(spnCellRegion, "Region") &&
-						InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup") &&
-						InputValidation.spnHasText(spnCellChurch, "Church") &&
-						InputValidation.spnHasText(txtPCF, "PCF") &&
-						InputValidation.spnHasText(spnSeniorCell, "Senior Cell")) {
+                    if(isValid()) {
 						if(validateFields()){
 							if(NetworkHelper.isOnline(NewCreateCellMasterActivity.this)){
 								Methods.showProgressDialog(NewCreateCellMasterActivity.this);
@@ -140,19 +264,6 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 							}
 						}
 					}
-				} else {
-					new AlertDialog.Builder(NewCreateCellMasterActivity.this)
-							.setCancelable(false)
-							.setTitle("Invalid Input")
-							.setMessage("Please enter valid value in the field marked red")
-							.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialogInterface, int i) {
-
-								}
-							})
-							.show();
-				}
 			}
 		});
 		

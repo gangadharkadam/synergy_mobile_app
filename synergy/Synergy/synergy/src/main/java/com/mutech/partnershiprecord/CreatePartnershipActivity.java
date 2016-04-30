@@ -158,30 +158,18 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				
 				
-				if(validatefield()){
-					if (NetworkHelper.isOnline(CreatePartnershipActivity.this)) {
-						if(InputValidation.hasText(txtamount)) {
-							if(InputValidation.spnHasText(spPartnershipArm, "PartnerShip ARM")) {
-								Methods.showProgressDialog(CreatePartnershipActivity.this);
-								getPledge();
-							}
-						} else {
-							new AlertDialog.Builder(CreatePartnershipActivity.this)
-									.setCancelable(false)
-									.setTitle("Invalid Input")
-									.setMessage("Please enter valid value in the field marked red")
-									.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-										@Override
-										public void onClick(DialogInterface dialogInterface, int i) {
-
-										}
-									})
-									.show();
-						}
-					} else {
-						Methods.longToast("Please connect to Internet", CreatePartnershipActivity.this);
-					}
-				}
+//				if(validatefield()){
+                if (NetworkHelper.isOnline(CreatePartnershipActivity.this)) {
+                    if(isValid()) {
+        				if(validatefield()) {
+                            Methods.showProgressDialog(CreatePartnershipActivity.this);
+                            getPledge();
+                        }
+                    }
+                } else {
+                    Methods.longToast("Please connect to Internet", CreatePartnershipActivity.this);
+                }
+//				}
 			}
 		});
 		
@@ -242,7 +230,39 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 		});
 		
 	}
-	
+
+	public boolean isValid() {
+
+		if(!InputValidation.spnHasText(spPartnershipArm, "Partnership ARM")) {
+			new AlertDialog.Builder(CreatePartnershipActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory field cannot be blank")
+					.setMessage("Please enter Partnership ARM")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.hasText(txtamount)) {
+			new AlertDialog.Builder(CreatePartnershipActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory field cannot be blank")
+					.setMessage("Please enter an amount")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
 	private void getPledge() {
 
 		StringRequest reqTasksList=new StringRequest(Method.POST,CreatePartnershipRecord.SERVICE_URL,new Listener<String>() {

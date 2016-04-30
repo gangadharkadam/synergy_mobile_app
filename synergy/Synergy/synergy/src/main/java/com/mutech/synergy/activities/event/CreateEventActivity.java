@@ -442,35 +442,69 @@ public class CreateEventActivity extends AppCompatActivity implements OnClickLis
 	}
 
 
+	public boolean isValid() {
+
+		if(!InputValidation.hasText(txtEventName)) {
+			new AlertDialog.Builder(CreateEventActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter an event name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.hasText(txtFromDate)) {
+			new AlertDialog.Builder(CreateEventActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter 'From Date")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		if(!InputValidation.hasText(txtToDate)) {
+			new AlertDialog.Builder(CreateEventActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter 'To Date'")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			return false;
+		}
+		return true;
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btnSaveMettingDetails:
 
-			if(validateFields()){
-				if(NetworkHelper.isOnline(this)){
-					if(InputValidation.hasText(txtEventName) &&
-							InputValidation.hasText(txtFromDate) &&
-							InputValidation.hasText(txtToDate)) {
+//			if(validateFields()){
+			if(NetworkHelper.isOnline(this)){
+				if(isValid()) {
+					if(validateFields()) {
 						Methods.showProgressDialog(this);
 						saveEventService();
-					} else {
-						new AlertDialog.Builder(CreateEventActivity.this)
-								.setCancelable(false)
-								.setTitle("Invalid Input")
-								.setMessage("Please enter valid value in the field marked red")
-								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialogInterface, int i) {
-
-									}
-								})
-								.show();
 					}
 				}
-				else
-					Methods.longToast("Please connect to Internet", this);
 			}
+			else
+				Methods.longToast("Please connect to Internet", this);
+//			}
 
 
 			break;
