@@ -283,7 +283,7 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtMemberfName)) {
-			new AlertDialog.Builder(DashboardListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(DashboardListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter first name")
@@ -294,10 +294,12 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtGender, "Gender")){
-			new AlertDialog.Builder(DashboardListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(DashboardListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter first name")
@@ -308,10 +310,12 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-            new AlertDialog.Builder(DashboardListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(DashboardListDetailsActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -322,10 +326,12 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
-            new AlertDialog.Builder(DashboardListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(DashboardListDetailsActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -336,6 +342,8 @@ public class DashboardListDetailsActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
 		}
 
@@ -643,6 +651,7 @@ private void selectImage()
 		}
 	});
 	builder.show();
+
 }
 
 @Override

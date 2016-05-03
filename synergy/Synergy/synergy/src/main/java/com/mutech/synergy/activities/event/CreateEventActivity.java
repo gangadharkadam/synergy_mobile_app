@@ -445,7 +445,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnClickLis
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtEventName)) {
-			new AlertDialog.Builder(CreateEventActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateEventActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter an event name")
@@ -456,10 +456,12 @@ public class CreateEventActivity extends AppCompatActivity implements OnClickLis
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtFromDate)) {
-			new AlertDialog.Builder(CreateEventActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateEventActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter 'From Date")
@@ -470,10 +472,12 @@ public class CreateEventActivity extends AppCompatActivity implements OnClickLis
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtToDate)) {
-			new AlertDialog.Builder(CreateEventActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateEventActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter 'To Date'")
@@ -484,6 +488,8 @@ public class CreateEventActivity extends AppCompatActivity implements OnClickLis
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

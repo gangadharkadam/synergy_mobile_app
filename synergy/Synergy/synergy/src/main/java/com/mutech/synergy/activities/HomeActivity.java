@@ -1170,7 +1170,7 @@ public class HomeActivity extends AppCompatActivity {
 		if (drawer.isDrawerOpen(GravityCompat.START)) {
 			drawer.closeDrawer(GravityCompat.START);
 		} else {
-			new AlertDialog.Builder(this)
+			AlertDialog dialog =  new AlertDialog.Builder(this)
 					.setIcon(android.R.drawable.ic_dialog_alert)
 					.setTitle("Closing Synergy")
 					.setMessage("Are you sure you want to exit?")
@@ -1184,6 +1184,9 @@ public class HomeActivity extends AppCompatActivity {
 					})
 					.setNegativeButton("No", null)
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+
 		}
 	}
 

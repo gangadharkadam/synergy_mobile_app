@@ -115,7 +115,7 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 							updateTask();
 						} else {
 							if(System.currentTimeMillis() > dateFormatter01.parse(txtDueDate.getText().toString()).getTime()) {
-								new AlertDialog.Builder(TeamTaskDetailsActivity.this)
+								AlertDialog dialog =  new AlertDialog.Builder(TeamTaskDetailsActivity.this)
 										.setMessage("Due date can not be smaller than today")
 										.setCancelable(false)
 										.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -124,6 +124,8 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 											}
 										})
 										.show();
+								TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+								textView.setTextSize(18);
 							} else {
 								Methods.showProgressDialog(TeamTaskDetailsActivity.this);
 								updateTask();
@@ -192,7 +194,7 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtTaskDetailsName)) {
-			new AlertDialog.Builder(TeamTaskDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(TeamTaskDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter 'Task Details'")
@@ -203,6 +205,8 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

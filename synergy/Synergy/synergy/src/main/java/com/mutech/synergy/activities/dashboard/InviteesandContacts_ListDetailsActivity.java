@@ -89,7 +89,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtinvitee_contact_name)) {
-			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Invitee/Contact Name")
@@ -100,10 +100,12 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spInvitedBy, "Invited By")) {
-			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter 'Invited By'")
@@ -114,10 +116,12 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-			new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -128,6 +132,8 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

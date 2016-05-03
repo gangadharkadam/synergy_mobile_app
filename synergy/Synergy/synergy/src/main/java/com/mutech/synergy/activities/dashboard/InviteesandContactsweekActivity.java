@@ -1110,17 +1110,19 @@ public void showDialog(){
 			 }
 		}
 	 })
-	   .setNegativeButton("Cancel",  new DialogInterface.OnClickListener() {
-		
+	   .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
 		   public void onClick(DialogInterface dialog, int id) {
-		
+
 			   dialog.cancel();
-			   
+
 		   }
-		
-     });
+
+	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
+		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+		textView.setTextSize(18);
 
 }
 

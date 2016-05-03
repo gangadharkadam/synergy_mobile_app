@@ -1112,17 +1112,19 @@ public void showDialog(){
 			 
 		}
 	 })
-	   .setNegativeButton("Cancel",  new DialogInterface.OnClickListener() {
-		
+	   .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
 		   public void onClick(DialogInterface dialog, int id) {
-		
+
 			   dialog.cancel();
-			   
+
 		   }
-		
-     });
+
+	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
+		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+		textView.setTextSize(18);
 
 	}
 boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate){

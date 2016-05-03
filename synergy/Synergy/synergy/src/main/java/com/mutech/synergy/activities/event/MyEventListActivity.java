@@ -1583,6 +1583,8 @@ public void showDialog(){
      });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
+		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+		textView.setTextSize(18);
 
 	}
 private void getUpdatedSpinnerData(final String tblname,final String name) {

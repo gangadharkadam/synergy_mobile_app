@@ -118,7 +118,7 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
     public boolean isValid() {
 
         if(!InputValidation.hasText(txtMemberfName)) {
-            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+            AlertDialog dialog =  new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter First Name")
@@ -129,10 +129,12 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(txtGender, "Gender")) {
-            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+            AlertDialog dialog =   new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Gender")
@@ -143,10 +145,12 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+            AlertDialog dialog =  new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -157,10 +161,12 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
-            new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
+            AlertDialog dialog =   new AlertDialog.Builder(DashboardListDetailsFirstTimersActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -171,6 +177,8 @@ public class DashboardListDetailsFirstTimersActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
             return false;
         }
         return true;

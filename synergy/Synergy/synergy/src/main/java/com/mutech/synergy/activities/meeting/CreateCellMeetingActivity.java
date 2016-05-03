@@ -636,7 +636,7 @@ private void getCellMaster1() {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtFromDate)) {
-			new AlertDialog.Builder(CreateCellMeetingActivity.this)
+			AlertDialog dialog =  new AlertDialog.Builder(CreateCellMeetingActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter valid value in the 'From Date'")
@@ -647,10 +647,12 @@ private void getCellMaster1() {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtToDate)) {
-			new AlertDialog.Builder(CreateCellMeetingActivity.this)
+			AlertDialog dialog =  new AlertDialog.Builder(CreateCellMeetingActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter valid value in the 'To Date'")
@@ -661,6 +663,8 @@ private void getCellMaster1() {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

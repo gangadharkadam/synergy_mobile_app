@@ -1248,7 +1248,7 @@ private void selectItem(int position) {
 						Methods.showProgressDialog(this);
 						saveMemberInfo();
 					} else {
-						new AlertDialog.Builder(MyProfileActivity.this)
+						AlertDialog dialog =  new AlertDialog.Builder(MyProfileActivity.this)
 								.setCancelable(false)
 								.setTitle("Invalid Input")
 								.setMessage("Please enter valid value in the field marked red")
@@ -1259,6 +1259,8 @@ private void selectItem(int position) {
 									}
 								})
 								.show();
+						TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+						textView.setTextSize(18);
 					}
 				}
 				else
@@ -1840,7 +1842,7 @@ try {
 		if (drawer.isDrawerOpen(GravityCompat.START)) {
 			drawer.closeDrawer(GravityCompat.START);
 		} else {
-			new AlertDialog.Builder(this)
+			AlertDialog dialog =  new AlertDialog.Builder(this)
 					.setIcon(android.R.drawable.ic_dialog_alert)
 					.setTitle("Closing Activity")
 					.setMessage("Are you sure you want to exit?")
@@ -1854,6 +1856,8 @@ try {
 					})
 					.setNegativeButton("No", null)
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 		}
 	}
 
