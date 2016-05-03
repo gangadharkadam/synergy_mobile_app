@@ -34,7 +34,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="PCF Code"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -47,6 +47,7 @@
                     android:background="@drawable/text_background_greyborder"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -58,7 +59,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="PCF Name"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -71,6 +72,7 @@
                     android:background="@drawable/text_background_greyborder"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <LinearLayout
@@ -92,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:text="Zone"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
                         
                         <TextView
@@ -102,6 +104,7 @@
                             android:background="@drawable/rectangle"
                             android:padding="15dp"
                             android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small"
                             android:text="Select" />
                         
 
@@ -113,7 +116,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone" />
                         
                     </LinearLayout>
@@ -130,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:text="Region"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <Spinner
@@ -141,7 +144,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
                     </LinearLayout>
                 </LinearLayout>
                 
@@ -154,7 +157,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Group Church"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                     android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -167,6 +170,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true"
                     android:visibility="gone"
                     />
@@ -181,6 +185,7 @@
                     android:layout_marginBottom="@dimen/dimen_5"
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
+                       android:textSize="@dimen/font_size_small"
                     android:textColor="@android:color/black"
                       />
 
@@ -195,7 +200,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Church"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -209,6 +214,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone"
                     />
 
@@ -219,6 +225,7 @@
                     android:background="@drawable/rectangle1"
                     android:padding="10dp"
                     android:text="Select"
+                     android:textSize="@dimen/font_size_small"
                     android:layout_marginBottom="@dimen/dimen_5"
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
@@ -234,7 +241,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Phone no."
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -249,6 +256,7 @@
                     android:inputType="number"
                     android:imeOptions="actionNext"
                     android:padding="@dimen/dimen_8"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
                 
                 <TextView
@@ -260,7 +268,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Email Id"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -275,6 +283,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/dimen_8"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <Button

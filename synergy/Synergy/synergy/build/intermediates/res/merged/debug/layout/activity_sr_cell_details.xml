@@ -37,7 +37,7 @@
                 android:layout_centerVertical="true"
                 android:text="Senior Cells"
                 android:textColor="#fff"
-                android:textSize="@dimen/textsize_24"
+                android:textSize="@dimen/font_size_large"
                  />
 
         </RelativeLayout>
@@ -65,7 +65,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Senior Cell Code"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -78,6 +78,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -89,7 +90,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Senior Cell Name (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -102,6 +103,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <LinearLayout
@@ -122,21 +124,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Zone"
-                           android:textColor="@android:color/darker_gray"
-                            android:textSize="@dimen/textsize_16"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <EditText
-                    android:id="@+id/txtZone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true" />
+                            android:id="@+id/txtZone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
+                            android:singleLine="true" />
 
                     </LinearLayout>
 
@@ -152,7 +155,7 @@
                             android:layout_height="wrap_content"
                             android:text="Region"
                             android:textColor="@android:color/darker_gray"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
                     
                         	<EditText
@@ -164,6 +167,7 @@
 				                    android:layout_marginRight="@dimen/dimen_10"
 				                    android:background="@drawable/rectangle1"
 				                    android:maxLines="1"
+                                    android:textSize="@dimen/font_size_small"
 				                    android:padding="@dimen/dimen_10"
 				                    android:singleLine="true" />
 
@@ -180,72 +184,75 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="PCF"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 
                   <EditText
-                    android:id="@+id/txtpcf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true" />
+                        android:id="@+id/txtpcf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:background="@drawable/rectangle1"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_size_small"
+                        android:padding="@dimen/dimen_10"
+                        android:singleLine="true" />
                 
                 
                  <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Group Church"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/textsize_16"
-                    android:textStyle="bold" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="Group Church"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/font_size_small"
+                        android:textStyle="bold" />
 
                
                   <EditText
-                    android:id="@+id/txtChurchgroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true" />
-                  
+                        android:id="@+id/txtChurchgroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:background="@drawable/rectangle1"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10"
+                        android:textSize="@dimen/font_size_small"
+                        android:singleLine="true" />
+
                   
                    <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:layout_marginTop="@dimen/dimen_5"
-                    android:text="Church"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/textsize_16"
-                    android:textStyle="bold" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="Church"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/font_size_small"
+                        android:textStyle="bold" />
 
                   <EditText
-                    android:id="@+id/txtChurch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true" />
+                        android:id="@+id/txtChurch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:background="@drawable/rectangle1"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_size_small"
+                        android:padding="@dimen/dimen_10"
+                        android:singleLine="true" />
 
                
                 <TextView
@@ -257,7 +264,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Phone no."
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -272,6 +279,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="number"
                     android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
 
@@ -284,7 +292,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Email Id"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -298,6 +306,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
                     android:padding="@dimen/dimen_8"
                     android:singleLine="true" />
 
@@ -310,7 +319,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Meeting location"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -323,6 +332,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <Button

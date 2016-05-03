@@ -45,6 +45,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class SrCellDetailsActivity extends AppCompatActivity {
 	
@@ -120,7 +121,7 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtSeniorCellName)) {
-			new AlertDialog.Builder(SrCellDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(SrCellDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Sr Cell Name")
@@ -131,10 +132,12 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtSrCellContactPhn, false)) {
-			new AlertDialog.Builder(SrCellDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(SrCellDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -145,6 +148,8 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

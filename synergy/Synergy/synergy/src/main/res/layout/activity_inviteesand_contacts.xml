@@ -30,7 +30,7 @@
                 android:paddingBottom="15dp"
                 android:paddingTop="15dp"
                 android:textColor="#fff"
-                android:textSize="@dimen/textsize_24"
+                android:textSize="@dimen/font_size_large"
                  />
              
 
@@ -85,7 +85,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Membership No"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" 
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone"
                     />
 
@@ -101,7 +101,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" 
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone"
                     
                     />
@@ -112,7 +112,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Title"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <Spinner
                     android:id="@+id/sptitle"
@@ -125,7 +125,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16"/>
+                    android:textSize="@dimen/font_size_small"/>
 
                 
                  <TextView
@@ -134,7 +134,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Invitee/Contact Name (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                     android:textSize="@dimen/font_size_small"/>
 
                 <EditText
                     android:id="@+id/txtMemberlName"
@@ -147,7 +147,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Date of Birth"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small"/>
 
                 <TextView
                     android:id="@+id/txtMemberDateOfBirth"
@@ -168,7 +168,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -176,7 +176,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Invited By (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                   <Spinner
                       android:id="@+id/spInvitedby"
@@ -189,7 +189,7 @@
                       android:maxLines="1"
                       android:padding="@dimen/dimen_10"
                       android:singleLine="true"
-                      android:textSize="@dimen/textsize_16"/>
+                      android:textSize="@dimen/font_size_small"/>
                <!--<EditText-->
                     <!--android:id="@+id/txtInvitedby"-->
                     <!--android:layout_width="match_parent"-->
@@ -209,7 +209,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Phone Number"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtMemberPhone1"
@@ -224,7 +224,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                      android:visibility="gone"
@@ -233,7 +233,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Date of Conversion To FT"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                      android:visibility="gone"
@@ -247,7 +247,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16"/>
+                    android:textSize="@dimen/font_size_small"/>
       
 
                 <TextView
@@ -256,7 +256,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Email Address"
                     android:textColor="@color/darkgrey_textcolor"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
               
 
@@ -273,7 +273,7 @@
                         android:maxLines="1"
                         android:padding="@dimen/dimen_10"
                         android:singleLine="true"
-                        android:textSize="@dimen/textsize_16" />
+                        android:textSize="@dimen/font_size_small" />
 
                    
                 
@@ -284,7 +284,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Source Of Invitation"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small"/>
 
                 
                  <Spinner
@@ -298,7 +298,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16"/>
+                     android:textSize="@dimen/font_size_small"/>
                 
              
 
@@ -308,7 +308,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Age Group"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                
 
@@ -323,7 +323,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16"/>
+                    android:textSize="@dimen/font_size_small"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -335,7 +335,7 @@
                     android:padding="@dimen/dimen_10"
                     android:text="Pick My Location"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone" />
 
 
@@ -352,7 +352,7 @@
                         android:layout_height="wrap_content"
                         android:text="Convert Invitee Contact To Ft"
                         android:textColor="@android:color/black"
-                       android:textSize="@dimen/textsize_18" />
+                        android:textSize="@dimen/font_size_small" />
 
                     <CheckBox
                         android:id="@+id/chkConvertInviteeContactToFt"

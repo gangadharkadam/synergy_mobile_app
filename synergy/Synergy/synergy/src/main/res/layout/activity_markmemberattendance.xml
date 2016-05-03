@@ -22,7 +22,7 @@
             android:layout_marginTop="@dimen/dimen_20"
             android:text="Meeting Subject:"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_20"
+            android:textSize="@dimen/font_size_small"
             android:textStyle="bold" />
         
       <!--    <CheckBox

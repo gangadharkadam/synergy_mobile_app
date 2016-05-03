@@ -412,7 +412,7 @@ public class MemberInfoActivtiy extends ActionBarActivity{
                 dob = newDate;
 				Calendar today = Calendar.getInstance();
 				if(dob.after(today)) {
-					new AlertDialog.Builder(MemberInfoActivtiy.this)
+					AlertDialog dialog =  new AlertDialog.Builder(MemberInfoActivtiy.this)
 							.setCancelable(false)
 							.setTitle("Incorrect Date of Birth")
 							.setMessage("Date of Birth can not be a future date!")
@@ -423,6 +423,8 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 								}
 							})
 							.show();
+					TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+					textView.setTextSize(18);
 				} else {
 					txtMemberDateOfBirth.setText(dateFormatter.format(newDate.getTime()));
 				}
@@ -468,7 +470,7 @@ public class MemberInfoActivtiy extends ActionBarActivity{
                 if(doj.after(dob) && doj.before(today)) {
                     txtDateofJoining.setText(dateFormatter.format(newDate.getTime()));
                 } else {
-                    new AlertDialog.Builder(MemberInfoActivtiy.this)
+					AlertDialog dialog =  new AlertDialog.Builder(MemberInfoActivtiy.this)
                             .setCancelable(false)
                             .setTitle("Incorrect Date of joining")
                             .setMessage("Date of Joining should be greater than the Date of Birth, " +
@@ -480,6 +482,9 @@ public class MemberInfoActivtiy extends ActionBarActivity{
                                 }
                             })
                             .show();
+					TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+					textView.setTextSize(18);
+
                 }
 			}
 
@@ -553,13 +558,11 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 				if (items[item].equals("Take Photo")) {
 					Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 					startActivityForResult(intent, REQUEST_CAMERA);
-				} 
-				else if (items[item].equals("Choose from Gallery")) {
-					Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+				} else if (items[item].equals("Choose from Gallery")) {
+					Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 					intent.setType("image/*");
-					startActivityForResult(Intent.createChooser(intent, "Select File"),SELECT_FILE);
-				} 
-				else if (items[item].equals("Cancel")) {
+					startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
+				} else if (items[item].equals("Cancel")) {
 					dialog.dismiss();
 				}
 			}
@@ -1368,7 +1371,7 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 	public boolean isValid() {
 
 		if (!InputValidation.hasText(txtMemberfName)) {
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter first name")
@@ -1379,11 +1382,13 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
 		{
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please select age group")
@@ -1394,11 +1399,13 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtGender, "Gender"))
 		{
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please select gender")
@@ -1409,10 +1416,12 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isEmailAddress(txtEmailID1, false)) {
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email id")
@@ -1423,10 +1432,12 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isEmailAddress(txtYookosID, false)) {
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email id")
@@ -1437,10 +1448,12 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -1451,10 +1464,12 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
-			new AlertDialog.Builder(MemberInfoActivtiy.this)
+			AlertDialog dialog = new AlertDialog.Builder(MemberInfoActivtiy.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -1465,6 +1480,8 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 //		if (!InputValidation.hasText(txtMemberPhone1)) {

@@ -100,7 +100,7 @@
             android:layout_marginTop="@dimen/dimen_5"
             android:text="Region"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16"
+             android:textSize="@dimen/font_size_small"
             android:textStyle="bold" />
 
      <!--    <Spinner
@@ -137,6 +137,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:visibility="gone"
+            android:textSize="@dimen/font_size_small"
             />
 
         <TextView
@@ -149,7 +150,8 @@
             android:textColor="@android:color/black"
         	android:layout_marginLeft="@dimen/dimen_10"
         	android:layout_marginRight="@dimen/dimen_10"
-            android:textStyle="bold" 
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_small"
             android:background="@drawable/rectangle1"
             />
 
@@ -166,7 +168,7 @@
             android:layout_marginTop="@dimen/dimen_5"
             android:text="Zone"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16"
+             android:textSize="@dimen/font_size_small"
             android:textStyle="bold" />
 
         <!-- <Spinner
@@ -200,6 +202,7 @@
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_small"
             android:visibility="gone"
             />
 
@@ -212,7 +215,8 @@
             android:textColor="@android:color/black"
         	android:layout_marginLeft="@dimen/dimen_10"
         	android:layout_marginRight="@dimen/dimen_10"
-            android:textStyle="bold" 
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_small"
             android:background="@drawable/rectangle1"
             />
 
@@ -229,7 +233,7 @@
             android:layout_marginTop="@dimen/dimen_5"
             android:text="Group Church"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16"
+            android:textSize="@dimen/font_size_small"
             android:textStyle="bold" />
 
         <!-- <Spinner
@@ -263,6 +267,7 @@
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_small"
             android:visibility="gone"
             />
 
@@ -275,7 +280,8 @@
             android:textColor="@android:color/black"
         	android:layout_marginLeft="@dimen/dimen_10"
         	android:layout_marginRight="@dimen/dimen_10"
-            android:textStyle="bold" 
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_small"
             android:background="@drawable/rectangle1"
             />
 
@@ -292,7 +298,7 @@
             android:layout_marginTop="@dimen/dimen_5"
             android:text="Church"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textsize_16"
+            android:textSize="@dimen/font_size_small"
             android:textStyle="bold" />
 
         <!-- <Spinner
@@ -326,6 +332,7 @@
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_small"
             android:visibility="gone"
             />
 
@@ -338,7 +345,8 @@
             android:textColor="@android:color/black"
         	android:layout_marginLeft="@dimen/dimen_10"
         	android:layout_marginRight="@dimen/dimen_10"
-            android:textStyle="bold" 
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_small"
             android:background="@drawable/rectangle1"
             />
 
@@ -351,7 +359,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dimen_10"
             android:background="@drawable/rectangle1"
-           
+            android:textSize="@dimen/font_size_small"
             android:inputType="text"
             android:padding="@dimen/dimen_10" />
 

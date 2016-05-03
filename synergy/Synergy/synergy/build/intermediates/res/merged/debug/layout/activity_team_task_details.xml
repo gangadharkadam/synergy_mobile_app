@@ -31,7 +31,7 @@
                 android:paddingBottom="15dp"
                 android:text="Update Team Task"
                 android:textColor="#fff"
-                android:textSize="@dimen/textsize_24"
+                android:textSize="@dimen/font_size_large"
                  />
             
           
@@ -73,7 +73,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Task Details (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -86,6 +86,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <LinearLayout
@@ -108,7 +109,7 @@
                             android:layout_height="wrap_content"
                             android:text="Due Date"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -119,7 +120,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -134,7 +135,7 @@
                             android:layout_height="wrap_content"
                             android:text="Priority"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <!-- <Spinner
@@ -148,16 +149,17 @@
                             android:textSize="@dimen/textsize_16" /> -->
                         
                          <EditText
-                    android:id="@+id/txtPriority"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_10"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true" />
+                            android:id="@+id/txtPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                             android:textSize="@dimen/font_size_small"
+                            android:singleLine="true" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -170,7 +172,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Status"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -184,7 +186,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -196,7 +198,7 @@
                     android:text="PCF"
                     android:visibility="gone"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <!-- <Spinner
@@ -223,6 +225,7 @@
                     android:maxLines="1"
                     android:visibility="gone"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -235,7 +238,7 @@
                     android:text="Senior Cell"
                     android:visibility="gone"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <!-- <Spinner -->
@@ -260,6 +263,7 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true" />
@@ -273,7 +277,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Cell"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <!--
@@ -303,6 +307,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -314,7 +319,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Assignee"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -327,6 +332,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -338,7 +344,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Assigned To"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -353,7 +359,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/lblFollowUpTask"
@@ -365,7 +371,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Follow Up Task"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -378,6 +384,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
                 
                  <TextView
@@ -390,7 +397,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Comment"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                     android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -403,6 +410,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <Button
@@ -415,7 +423,7 @@
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
                     android:text="Attach Photos"
-                    android:textSize="@dimen/textsize_20"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone" />
 
                 <LinearLayout

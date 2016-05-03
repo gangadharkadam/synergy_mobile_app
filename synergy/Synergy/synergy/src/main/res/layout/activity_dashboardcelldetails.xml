@@ -28,7 +28,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Meeting Name:"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_20" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/lblMeetingName"
@@ -37,7 +37,7 @@
                     android:padding="10dp"
                     android:background="@drawable/rectangle1"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                    
                     
                      />
@@ -49,7 +49,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Meeting Subject:"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_20" />
+                     android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/lblMeetingsubject1"
@@ -58,7 +58,7 @@
                    	android:padding="10dp"
                     android:background="@drawable/rectangle1"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Date and Time:"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/lblMeetingDateTime"
@@ -76,7 +76,7 @@
                     android:padding="10dp"
                     android:textColor="@android:color/black"
                     android:background="@drawable/rectangle1"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Venue:"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/lblMeetingVenue"
@@ -93,7 +93,7 @@
                     android:padding="10dp"
                     android:background="@drawable/rectangle1"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="PCF Leader"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone" />
 
                  <HorizontalScrollView 
@@ -118,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimen_10"
                     android:background="@drawable/rectangle"
+                    android:textSize="@dimen/font_size_small"
                     android:layout_marginBottom="@dimen/dimen_20" >
                 </TableLayout>
                 

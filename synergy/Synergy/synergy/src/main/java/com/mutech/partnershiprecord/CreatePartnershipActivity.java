@@ -234,7 +234,7 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.spnHasText(spPartnershipArm, "Partnership ARM")) {
-			new AlertDialog.Builder(CreatePartnershipActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreatePartnershipActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory field cannot be blank")
 					.setMessage("Please enter Partnership ARM")
@@ -245,10 +245,12 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtamount)) {
-			new AlertDialog.Builder(CreatePartnershipActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreatePartnershipActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory field cannot be blank")
 					.setMessage("Please enter an amount")
@@ -259,6 +261,8 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

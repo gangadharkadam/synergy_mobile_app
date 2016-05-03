@@ -32,7 +32,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Meeting Category"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -45,6 +45,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" >
                 </EditText>
 
@@ -57,7 +58,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Meeting Subject"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -70,6 +71,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" >
                 </EditText>
 
@@ -92,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:text="From:"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -102,6 +104,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true" />
                     </LinearLayout>
 
@@ -117,7 +120,7 @@
                             android:layout_height="wrap_content"
                             android:text="to:"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -127,6 +130,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true" />
                     </LinearLayout>
                 </LinearLayout>
@@ -140,7 +144,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Venue"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -153,6 +157,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -164,7 +169,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Attended?"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -188,14 +193,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="@dimen/dimen_10"
                             android:text="Yes"
-                            android:textSize="@dimen/textsize_14" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <RadioButton
                             android:id="@+id/rbtnNo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="No"
-                            android:textSize="@dimen/textsize_14" />
+                            android:textSize="@dimen/font_size_small"/>
                     </RadioGroup>
                 </LinearLayout>
 

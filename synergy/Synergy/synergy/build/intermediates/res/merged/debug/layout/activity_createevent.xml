@@ -32,7 +32,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Event Subject (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                   android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -45,6 +45,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" >
                 </EditText>
                 
@@ -57,7 +58,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Event Type"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                     android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -71,6 +72,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone">
                 </EditText>
                 
@@ -84,6 +86,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true"/>
                 
                 
@@ -96,7 +99,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Event Group"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                      android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
           		
           		<Spinner
@@ -109,6 +112,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     />
           		
           		<LinearLayout
@@ -128,7 +132,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Value"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                     android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
                  
                  <Spinner
@@ -140,6 +144,7 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
+                     android:textSize="@dimen/font_size_small"
                     android:padding="@dimen/dimen_10"
                     />
        
@@ -162,7 +167,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Participants Roll"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                     android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
                     
                    <!-- <ListView
@@ -186,6 +191,7 @@
         			 android:layout_marginBottom="@dimen/dimen_5"
                      android:layout_marginLeft="@dimen/dimen_10"
                    	 android:layout_marginRight="@dimen/dimen_10"
+                        android:textSize="@dimen/font_size_small"
                    	 android:layout_marginTop="@dimen/dimen_10"/>
                    
                    </LinearLayout>
@@ -199,7 +205,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Event Description"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                      android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -211,7 +217,9 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
                     android:padding="@dimen/dimen_10"
+
                     android:singleLine="true" >
                 </EditText>
           		
@@ -234,7 +242,7 @@
                             android:layout_height="wrap_content"
                             android:text="From Date (Mandatory):"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <EditText
@@ -244,6 +252,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true" />
 
                         <TextView
@@ -254,6 +263,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true" />
                     </LinearLayout>
 
@@ -269,7 +279,7 @@
                             android:layout_height="wrap_content"
                             android:text="To Date (Mandatory):"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <EditText
@@ -278,6 +288,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
+                            android:textSize="@dimen/font_size_small"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true" />
 
@@ -288,6 +299,7 @@
                             android:layout_marginTop="@dimen/dimen_5"
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
+                            android:textSize="@dimen/font_size_small"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -302,7 +314,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Venue"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -314,6 +326,7 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true" />
 
@@ -326,7 +339,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Event Manager"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -339,6 +352,7 @@
                     android:background="@drawable/rectangle1"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <Button

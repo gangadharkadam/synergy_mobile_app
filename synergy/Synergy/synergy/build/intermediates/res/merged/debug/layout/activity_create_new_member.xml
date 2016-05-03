@@ -33,7 +33,7 @@
             android:paddingBottom="15dp"
             android:paddingTop="15dp"
             android:textColor="#fff"
-            android:textSize="@dimen/textsize_24"
+            android:textSize="@dimen/font_size_large"
             android:text="Member"
             />
 
@@ -90,7 +90,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Attach photo/image"
                             android:textColor="@color/darkgrey_textcolor"
-                            android:textSize="@dimen/textsize_20" />
+                            android:textSize="@dimen/font_size_small" />
 
 
                         <ImageView
@@ -109,7 +109,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Title"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txttitle"
@@ -122,7 +122,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16"/>
+                            android:textSize="@dimen/font_size_small"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="First Name (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtMemberfName"
@@ -143,7 +143,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Surname"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtMemberlName"
@@ -164,7 +164,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Short Bio"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtShortbio"
@@ -184,7 +184,7 @@
                             android:background="@drawable/rectangle1"
                             android:padding="@dimen/dimen_10"
                             android:inputType="textMultiLine"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Date of Birth"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:id="@+id/txtMemberDateOfBirth"
@@ -205,7 +205,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
 
                         <TextView
@@ -214,7 +214,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Date of Joining"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:id="@+id/txtDateofJoining"
@@ -227,7 +227,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -235,7 +235,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Marital Info"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtMemberMartialInfo"
@@ -248,7 +248,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -256,7 +256,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Gender (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtGender"
@@ -269,7 +269,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -277,7 +277,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Age Group (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <Spinner
                             android:id="@+id/txtAgeGroup"
@@ -290,7 +290,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -298,7 +298,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Phone Number"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtMemberPhone1"
@@ -313,7 +313,7 @@
                             android:maxLength="11"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -321,7 +321,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Alternate Phone Number"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtMemberPhone2"
@@ -336,7 +336,7 @@
                             android:maxLength="11"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
 
                         <TextView
@@ -345,7 +345,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Email Address (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -366,7 +366,7 @@
                                 android:maxLines="1"
                                 android:padding="@dimen/dimen_10"
                                 android:singleLine="true"
-                                android:textSize="@dimen/textsize_16" />
+                                android:textSize="@dimen/font_size_small" />
 
                             <ImageView
                                 android:id="@+id/editEmailId1"
@@ -382,7 +382,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Alternate Email Address"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -403,7 +403,7 @@
                                 android:padding="@dimen/dimen_10"
                                 android:singleLine="true"
                                 android:textColor="@android:color/black"
-                                android:textSize="@dimen/textsize_16" />
+                                android:textSize="@dimen/font_size_small" />
 
                             <!-- <ImageView
                                 android:id="@+id/editEmailId2"
@@ -418,7 +418,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Yookos ID"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -438,8 +438,7 @@
                                 android:inputType="textEmailAddress"
                                 android:maxLines="1"
                                 android:padding="@dimen/dimen_10"
-                                android:singleLine="true"
-                                android:textSize="@dimen/textsize_16" />
+                                android:textSize="@dimen/font_size_small"/>
 
 
                         </LinearLayout>
@@ -461,7 +460,7 @@
                                 android:textColor="@android:color/black"
 
 
-                                android:textSize="@dimen/textsize_18" />
+                                android:textSize="@dimen/font_size_small" />
 
                             <CheckBox
                                 android:id="@+id/txt_is_eligibale_for_follow_up"
@@ -478,7 +477,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Home Address"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
 
 
@@ -491,7 +490,7 @@
                             android:layout_marginRight="@dimen/dimen_10"
                             android:background="@drawable/rectangle1"
                             android:padding="@dimen/dimen_10"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -499,7 +498,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Landmark for Home Address"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <AutoCompleteTextView
                             android:id="@+id/txtLandmarkforHomeAddress"
@@ -510,7 +509,7 @@
                             android:layout_marginRight="@dimen/dimen_10"
                             android:background="@drawable/rectangle1"
                             android:padding="@dimen/dimen_10"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
 
 
@@ -525,7 +524,7 @@
                             android:padding="@dimen/dimen_10"
                             android:text="Pick My Location"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone" />
 
 
@@ -535,7 +534,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Office Address"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <AutoCompleteTextView
                             android:id="@+id/txtOfficeAddress"
@@ -547,7 +546,7 @@
                             android:background="@drawable/rectangle1"
                             android:inputType="textMultiLine"
                             android:padding="@dimen/dimen_10"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -555,7 +554,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Landmark for Office Address"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <AutoCompleteTextView
                             android:id="@+id/txtLandmarkforOfficeAddress"
@@ -567,7 +566,7 @@
                             android:background="@drawable/rectangle1"
                             android:inputType="textMultiLine"
                             android:padding="@dimen/dimen_10"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -591,7 +590,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Zone"
                                     android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_16"
+                                    android:textSize="@dimen/font_size_small"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -601,6 +600,7 @@
                                     android:background="@drawable/rectangle"
                                     android:padding="15dp"
                                     android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small"
                                     android:text="Select" />
 
                                 <Spinner
@@ -611,7 +611,7 @@
                                     android:maxLines="1"
                                     android:padding="@dimen/dimen_8"
                                     android:singleLine="true"
-                                    android:textSize="@dimen/textsize_16"
+                                    android:textSize="@dimen/font_size_small"
                                     android:visibility="gone"
                                     />
                             </LinearLayout>
@@ -628,7 +628,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Region (Mandatory)"
                                     android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_16"
+                                    android:textSize="@dimen/font_size_small"
                                     android:textStyle="bold" />
 
                                 <Spinner
@@ -639,7 +639,7 @@
                                     android:maxLines="1"
                                     android:padding="@dimen/dimen_8"
                                     android:singleLine="true"
-                                    android:textSize="@dimen/textsize_16" />
+                                    android:textSize="@dimen/font_size_small" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -653,7 +653,7 @@
                             android:layout_marginTop="@dimen/dimen_5"
                             android:text="Group Church (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -679,6 +679,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true"
                             android:visibility="gone"
                             />
@@ -695,7 +696,7 @@
                             android:layout_marginTop="@dimen/dimen_5"
                             android:text="Church (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -708,6 +709,7 @@
                             android:layout_marginBottom="@dimen/dimen_5"
                             android:layout_marginLeft="@dimen/dimen_10"
                             android:layout_marginRight="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:textColor="@android:color/black"
                             />
 
@@ -722,6 +724,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
 
@@ -736,7 +739,7 @@
                             android:layout_marginTop="@dimen/dimen_5"
                             android:text="PCF (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -746,6 +749,7 @@
                             android:background="@drawable/rectangle1"
                             android:padding="10dp"
                             android:text="Select"
+                            android:textSize="@dimen/font_size_small"
                             android:layout_marginBottom="@dimen/dimen_5"
                             android:layout_marginLeft="@dimen/dimen_10"
                             android:layout_marginRight="@dimen/dimen_10"
@@ -762,6 +766,7 @@
                             android:background="@drawable/rectangle1"
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
+                            android:textSize="@dimen/font_size_small"
                             android:singleLine="true"
                             android:visibility="gone"
                             />
@@ -776,7 +781,7 @@
                             android:layout_marginTop="@dimen/dimen_5"
                             android:text="Senior Cell (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <TextView
@@ -789,6 +794,7 @@
                             android:layout_marginBottom="@dimen/dimen_5"
                             android:layout_marginLeft="@dimen/dimen_10"
                             android:layout_marginRight="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
                             android:textColor="@android:color/black"
                             />
 
@@ -804,6 +810,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
 
@@ -813,7 +820,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Cell (Mandatory)"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <TextView
                             android:id="@+id/lblcell"
@@ -822,6 +829,7 @@
                             android:background="@drawable/rectangle1"
                             android:padding="10dp"
                             android:text="Select"
+                            android:textSize="@dimen/font_size_small"
                             android:layout_marginBottom="@dimen/dimen_5"
                             android:layout_marginLeft="@dimen/dimen_10"
                             android:layout_marginRight="@dimen/dimen_10"
@@ -840,6 +848,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_8"
                             android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
 
@@ -849,7 +858,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Designation"
                             android:textColor="@color/darkgrey_textcolor"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtDesignation"
@@ -863,7 +872,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -891,7 +900,7 @@
                         android:layout_margin="@dimen/dimen_10"
                         android:text="+ Employment Details"
                         android:textColor="#24248F"
-                        android:textSize="@dimen/textsize_20" />
+                        android:textSize="@dimen/font_size_small" />
 
                     <LinearLayout
                         android:id="@+id/linear3"
@@ -907,7 +916,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Employment  Status"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtEmploymentStatus"
@@ -920,7 +929,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -928,7 +937,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Industry"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtIndustrySegment"
@@ -941,7 +950,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -949,7 +958,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Income Segment"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
 
@@ -965,7 +974,7 @@
                             android:text="0"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
 
@@ -975,7 +984,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Years of Experience"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtExperienceYears"
@@ -989,7 +998,7 @@
                             android:inputType="number"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
 
                             />
 
@@ -999,7 +1008,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Core Competence"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <EditText
                             android:id="@+id/txtCoreCompeteance"
@@ -1013,7 +1022,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1035,7 +1044,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <!-- <Button
                             android:id="@+id/btnSaveMemberInfo"
@@ -1074,7 +1083,7 @@
                         android:layout_margin="@dimen/dimen_10"
                         android:text="+ Foundation School / Baptism  Status"
                         android:textColor="#24248F"
-                        android:textSize="@dimen/textsize_20" />
+                        android:textSize="@dimen/font_size_small" />
 
                     <LinearLayout
                         android:id="@+id/linear4"
@@ -1090,7 +1099,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Baptism Status"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtBaptismStatus"
@@ -1103,7 +1112,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:id="@+id/bapWhnTV"
@@ -1112,7 +1121,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Baptised When ?"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:id="@+id/txtBaptisedWhen"
@@ -1125,7 +1134,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:id="@+id/bapWhrTV"
@@ -1134,7 +1143,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Baptised Where ?"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <EditText
                             android:id="@+id/txtBaptisedWhere"
@@ -1146,15 +1155,14 @@
                             android:background="@drawable/rectangle1"
                             android:padding="@dimen/dimen_10"
                             android:inputType="textMultiLine"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Foundation School Status"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtSchoolstatus"
@@ -1167,7 +1175,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1175,7 +1183,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Born Again ?"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtBornAgain"
@@ -1188,7 +1196,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1196,7 +1204,7 @@
                             android:layout_margin="@dimen/dimen_10"
                             android:text="Filled with the Holy Ghost ?"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/textsize_18" />
+                            android:textSize="@dimen/font_size_small" />
 
                         <Spinner
                             android:id="@+id/txtholyghost"
@@ -1209,7 +1217,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" />
+                            android:textSize="@dimen/font_size_small"/>
 
                     </LinearLayout>
                 </LinearLayout>

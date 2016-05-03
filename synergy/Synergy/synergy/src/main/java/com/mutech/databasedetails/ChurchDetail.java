@@ -44,6 +44,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ChurchDetail extends AppCompatActivity {
 	
@@ -109,7 +110,7 @@ public class ChurchDetail extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtChurchName)) {
-			new AlertDialog.Builder(ChurchDetail.this)
+			AlertDialog dialog =new AlertDialog.Builder(ChurchDetail.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Church Name")
@@ -120,10 +121,13 @@ public class ChurchDetail extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtChurchContactPhone, false)) {
-			new AlertDialog.Builder(ChurchDetail.this)
+			AlertDialog dialog =new AlertDialog.Builder(ChurchDetail.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -134,6 +138,8 @@ public class ChurchDetail extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

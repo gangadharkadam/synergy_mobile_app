@@ -34,7 +34,7 @@
                 android:paddingBottom="15dp"
                 android:text="New Pledge"
                 android:textColor="#fff"
-                android:textSize="@dimen/textsize_24"
+                android:textSize="@dimen/font_size_large"
                  />
             
             <!--   <ImageView
@@ -71,7 +71,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Partnership Arm (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <Spinner
                     android:id="@+id/spPartnershipArm"
@@ -81,11 +81,11 @@
                     android:layout_marginLeft="@dimen/dimen_10"
                     android:layout_marginRight="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
+                    android:textSize="@dimen/font_size_small"
                     android:maxLines="1"
                   
                     android:padding="@dimen/dimen_10"
-                    android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:singleLine="true" />
                 
                 <TextView
                     android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Partner ID"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtmember"
@@ -106,7 +106,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
                  
 
                 <TextView
@@ -115,7 +115,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Partner "
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtPartnercategory"
@@ -128,7 +128,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 
                 
                 
@@ -139,7 +139,7 @@
                    android:visibility="gone"
                     android:text="Ministry Year"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtMinistryYear"
@@ -153,7 +153,7 @@
                     android:padding="@dimen/dimen_10"
                      android:inputType="number"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                      android:visibility="gone"
                      />
           
@@ -163,7 +163,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Date"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <TextView
                     android:id="@+id/txtdate"
@@ -177,7 +177,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Amount (Mandatory)"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtamount"
@@ -199,7 +199,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
                 
                 
                 
@@ -209,7 +209,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Giving or Pledge"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <Spinner
                     android:id="@+id/txtGiving_Pledge"
@@ -223,7 +223,7 @@
                   
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
                 
            <LinearLayout
                   		android:id="@+id/pledge"
@@ -239,7 +239,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Type of Pledge"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                  android:textSize="@dimen/font_size_small" />
 
                 <Spinner
                     android:id="@+id/spplagetype"
@@ -252,7 +252,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
                 
             </LinearLayout>
 			
@@ -270,7 +270,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Type of giving"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                  android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtgivingtype"
@@ -284,7 +284,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
 					
                 <TextView
                     android:layout_width="match_parent"
@@ -292,7 +292,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Instrument No"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtInstrumentNo"
@@ -306,7 +306,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
                 
 				 <TextView
                     android:layout_width="match_parent"
@@ -314,7 +314,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Instrument Date"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                     android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtInstrumentdate"
@@ -328,7 +328,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small" />
                 	
 				<TextView
                     android:layout_width="match_parent"
@@ -336,7 +336,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Bank Name"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtbankname"
@@ -350,7 +350,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
                 
 				<TextView
                     android:layout_width="match_parent"
@@ -358,7 +358,7 @@
                     android:layout_margin="@dimen/dimen_10"
                     android:text="Branch"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_18" />
+                    android:textSize="@dimen/font_size_small" />
 
                 <EditText
                     android:id="@+id/txtbranch"
@@ -372,7 +372,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
-                    android:textSize="@dimen/textsize_16" />
+                    android:textSize="@dimen/font_size_small"/>
                 
                 
             </LinearLayout>

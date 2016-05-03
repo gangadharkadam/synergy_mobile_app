@@ -79,7 +79,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtSeniorCellCode)) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Senior Cell Code")
@@ -90,10 +90,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtSeniorCellName)) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Senior Cell Name")
@@ -104,10 +106,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellZone, "Zone")) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Zone")
@@ -118,10 +122,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellRegion, "Region")) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Region")
@@ -132,10 +138,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "Group Church")) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Group Church")
@@ -146,10 +154,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellChurch, "Church")) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Church")
@@ -160,10 +170,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellPCF, "PCF")) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter PCF")
@@ -174,10 +186,12 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtSrCellContactPhn, false)) {
-			new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter valid phone number")
@@ -188,6 +202,8 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		

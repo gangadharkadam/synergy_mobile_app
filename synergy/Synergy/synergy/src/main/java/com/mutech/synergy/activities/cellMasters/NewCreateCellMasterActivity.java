@@ -77,7 +77,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtCellCode)) {
-			new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Cell Code")
@@ -88,10 +88,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.hasText(txtCellName)) {
-			new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Cell Name")
@@ -102,10 +104,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
         if(!InputValidation.spnHasText(spnCellZone, "Zone")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Zone")
@@ -116,10 +120,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnCellRegion, "Region")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Region")
@@ -130,10 +136,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "Group Church")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Group Church")
@@ -144,10 +152,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnCellChurch, "Church")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog =   new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Church")
@@ -158,10 +168,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(txtPCF, "PCF")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog =  new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter PCF")
@@ -172,10 +184,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnSeniorCell, "Senior Cell")) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog =  new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Senior Cell")
@@ -186,10 +200,12 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.isPhoneNumber(txtCellContactPhn, false)) {
-            new AlertDialog.Builder(NewCreateCellMasterActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter valid phone number")
@@ -200,6 +216,8 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         return true;

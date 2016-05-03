@@ -245,7 +245,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 				dob = newDate;
 				Calendar today = Calendar.getInstance();
 				if(dob.after(today)) {
-					new AlertDialog.Builder(CreateNewMemberActivity.this)
+					AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 							.setCancelable(false)
 							.setTitle("Incorrect Date of Birth")
 							.setMessage("Date of Birth can not be a future date!")
@@ -256,6 +256,8 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 								}
 							})
 							.show();
+					TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+					textView.setTextSize(18);
 				} else {
 					txtMemberDateOfBirth.setText(dateFormatter.format(newDate.getTime()));
 				}
@@ -301,7 +303,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 				if(doj.after(dob) && doj.before(today)) {
 					txtDateofJoining.setText(dateFormatter.format(newDate.getTime()));
 				} else {
-					new AlertDialog.Builder(CreateNewMemberActivity.this)
+					AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 							.setCancelable(false)
 							.setTitle("Incorrect Date of joining")
 							.setMessage("Date of Joining should be greater than the Date of Birth, " +
@@ -313,6 +315,8 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 								}
 							})
 							.show();
+					TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+					textView.setTextSize(18);
 				}
 
 			}
@@ -1553,7 +1557,7 @@ private void getLowerHierarchy(){
 	public boolean isValid() {
 
 		if (!InputValidation.hasText(txtMemberName)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter first name")
@@ -1564,10 +1568,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.hasText(txtEmailID1)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email address")
@@ -1578,11 +1584,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please select age group")
@@ -1593,11 +1601,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtGender, "Gender"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please select gender")
@@ -1608,11 +1618,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnCellRegion, "Region"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a Region")
@@ -1623,11 +1635,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "ChurchGroup"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a ChurchGroup")
@@ -1638,11 +1652,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnCellChurch, "Church") )
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a Church")
@@ -1653,11 +1669,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(txtPCF, "PCF"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please select PCF")
@@ -1668,11 +1686,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnSeniorCell, "SeniorCell"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please select senior cell")
@@ -1683,11 +1703,13 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.spnHasText(spnCell, "Cell"))
 		{
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please select a Cell")
@@ -1698,10 +1720,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isEmailAddress(txtEmailID1, true)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email id")
@@ -1712,10 +1736,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 				return false;
 		}
 		if (!InputValidation.isEmailAddress(txtEmailID2, false)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email id")
@@ -1726,10 +1752,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isEmailAddress(txtYookosID, false)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid email id")
@@ -1740,10 +1768,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -1754,10 +1784,12 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
-			new AlertDialog.Builder(CreateNewMemberActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -1768,6 +1800,8 @@ private void getLowerHierarchy(){
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 //		if (!InputValidation.hasText(txtMemberPhone1)) {

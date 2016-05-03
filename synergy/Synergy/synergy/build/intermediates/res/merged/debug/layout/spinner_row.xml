@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:background="@drawable/rectangle"
      >
+
     <TextView 
         android:id="@+id/txtid"
         android:textSize="@dimen/font_size_small"
@@ -13,9 +14,10 @@
 
     <TextView 
         android:id="@+id/txtname"
-        android:textSize="@dimen/font_size_medium"
+        android:textSize="@dimen/font_size_large"
     	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"/>
+    	android:layout_height="wrap_content"
+        android:textStyle="bold" />
     
     <TextView 
         android:id="@+id/txtemail"

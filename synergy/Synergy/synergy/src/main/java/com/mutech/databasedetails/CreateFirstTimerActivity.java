@@ -718,7 +718,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 
 	public boolean isValid() {
         if(!InputValidation.hasText(txtMemberName)) {
-            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateFirstTimerActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter first name")
@@ -729,10 +729,12 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(txtGender, "Gender")) {
-            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateFirstTimerActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter Gender")
@@ -743,10 +745,12 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(txtAgeGroup, "AgeGroup")) {
-            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreateFirstTimerActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter Age Group")
@@ -757,10 +761,12 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
 		if(!InputValidation.isPhoneNumber(txtMemberPhone1, false)) {
-            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateFirstTimerActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -771,10 +777,12 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
-            new AlertDialog.Builder(CreateFirstTimerActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreateFirstTimerActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter a valid phone number")
@@ -785,6 +793,8 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
 		}
 		return true;

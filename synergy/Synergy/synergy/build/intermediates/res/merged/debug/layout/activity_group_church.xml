@@ -35,7 +35,7 @@
                 android:layout_centerVertical="true"
                 android:text="Group Chruch"
                 android:textColor="#fff"
-                android:textSize="@dimen/textsize_24"
+                android:textSize="@dimen/font_size_large"
                  />
 
         </RelativeLayout>
@@ -66,7 +66,7 @@
                     android:layout_marginTop="@dimen/dimen_20"
                     android:text="Group Chruch Code"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -80,6 +80,7 @@
                     android:maxLines="1"
                     android:enabled="false"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <TextView
@@ -91,7 +92,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:text="Group Church Name"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -104,6 +105,7 @@
                     android:background="@drawable/text_background_greyborder"
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <LinearLayout
@@ -125,7 +127,7 @@
                             android:layout_height="wrap_content"
                             android:text="Zone"
                             android:textColor="@android:color/darker_gray"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <Spinner
@@ -137,7 +139,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"/>
                             
                              <EditText
@@ -150,6 +152,7 @@
 			                    android:background="@drawable/text_background_greyborder"
 			                    android:maxLines="1"
 			                    android:enabled="false"
+                                 android:textSize="@dimen/font_size_small"
 			                    android:padding="@dimen/dimen_10"
 			                    android:singleLine="true" />
                     </LinearLayout>
@@ -166,7 +169,7 @@
                             android:layout_height="wrap_content"
                             android:text="Region"
                             android:textColor="@android:color/darker_gray"
-                            android:textSize="@dimen/textsize_16"
+                            android:textSize="@dimen/font_size_small"
                             android:textStyle="bold" />
 
                         <Spinner
@@ -178,7 +181,7 @@
                             android:maxLines="1"
                             android:padding="@dimen/dimen_10"
                             android:singleLine="true"
-                            android:textSize="@dimen/textsize_16" 
+                            android:textSize="@dimen/font_size_small"
                             android:visibility="gone"
                             />
                         
@@ -193,6 +196,7 @@
 			                    android:maxLines="1"
 			                    android:enabled="false"
 			                    android:padding="@dimen/dimen_10"
+                             android:textSize="@dimen/font_size_small"
 			                    android:singleLine="true" />
                         
                     </LinearLayout>
@@ -209,6 +213,7 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
+                    android:textSize="@dimen/font_size_small"
                     android:visibility="gone"
                      />
                  
@@ -222,7 +227,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Phone no."
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -238,6 +243,7 @@
                     android:inputType="number"
                     android:imeOptions="actionNext"
                     android:padding="@dimen/dimen_8"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
                 
                 <TextView
@@ -249,7 +255,7 @@
                     android:layout_marginTop="@dimen/dimen_5"
                     android:text="Email Id"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_16"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <EditText
@@ -264,6 +270,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/dimen_8"
+                    android:textSize="@dimen/font_size_small"
                     android:singleLine="true" />
 
                 <Button

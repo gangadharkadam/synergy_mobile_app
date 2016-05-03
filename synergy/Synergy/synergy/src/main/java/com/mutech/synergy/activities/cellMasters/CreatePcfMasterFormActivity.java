@@ -76,7 +76,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
     public boolean isValid() {
 
         if(!InputValidation.hasText(txtPCFCode)) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Senior Cell Code")
@@ -87,10 +87,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.hasText(txtPCFName)) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Senior Cell Name")
@@ -101,10 +103,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnPCFZone, "Zone")) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Zone")
@@ -115,10 +119,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnPCFRegion, "Region")) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Region")
@@ -129,10 +135,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnSeniorCellChurchgroup, "Group Church")) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Group Church")
@@ -143,10 +151,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.spnHasText(spnCellChurch, "Church")) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog =  new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
                     .setMessage("Please enter Church")
@@ -157,10 +167,12 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
         if(!InputValidation.isPhoneNumber(txtPCFContactPhn, false)) {
-            new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Invalid Input")
                     .setMessage("Please enter valid phone number")
@@ -171,6 +183,8 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
                         }
                     })
                     .show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
             return false;
         }
 

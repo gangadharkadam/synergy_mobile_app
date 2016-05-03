@@ -44,6 +44,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class RegionActivity extends AppCompatActivity {
 	
@@ -105,7 +106,7 @@ public class RegionActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtregionName)) {
-			new AlertDialog.Builder(RegionActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(RegionActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Region Name")
@@ -116,10 +117,12 @@ public class RegionActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtregionContactPhone, false)) {
-			new AlertDialog.Builder(RegionActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(RegionActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -130,6 +133,8 @@ public class RegionActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

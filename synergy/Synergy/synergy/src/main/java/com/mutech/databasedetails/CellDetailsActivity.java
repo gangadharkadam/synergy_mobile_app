@@ -53,6 +53,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CellDetailsActivity extends AppCompatActivity {
 
@@ -333,7 +334,7 @@ private void UpdateDashboardDataService() {
 	public boolean isValid() {
 
 		if (!InputValidation.hasText(txtCellName)) {
-			new AlertDialog.Builder(CellDetailsActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CellDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter cell name")
@@ -344,10 +345,12 @@ private void UpdateDashboardDataService() {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isPhoneNumber(txtCellContactPhn, false)) {
-			new AlertDialog.Builder(CellDetailsActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CellDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -358,10 +361,12 @@ private void UpdateDashboardDataService() {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if (!InputValidation.isEmailAddress(txtCellContactEmailId, false)) {
-			new AlertDialog.Builder(CellDetailsActivity.this)
+			AlertDialog dialog =new AlertDialog.Builder(CellDetailsActivity.this)
 				.setCancelable(false)
 				.setTitle("Invalid Input")
 				.setMessage("Please enter a valid email id")
@@ -372,6 +377,8 @@ private void UpdateDashboardDataService() {
 					}
 				})
 				.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;

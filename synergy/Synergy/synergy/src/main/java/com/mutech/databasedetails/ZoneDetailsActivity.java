@@ -44,6 +44,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ZoneDetailsActivity extends AppCompatActivity {
 	
@@ -108,7 +109,7 @@ public class ZoneDetailsActivity extends AppCompatActivity {
 	public boolean isValid() {
 
 		if(!InputValidation.hasText(txtzoneName)) {
-			new AlertDialog.Builder(ZoneDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(ZoneDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
 					.setMessage("Please enter Zone Name")
@@ -119,10 +120,12 @@ public class ZoneDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		if(!InputValidation.isPhoneNumber(txtzoneContactPhone, false)) {
-			new AlertDialog.Builder(ZoneDetailsActivity.this)
+			AlertDialog dialog = new AlertDialog.Builder(ZoneDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
@@ -133,6 +136,8 @@ public class ZoneDetailsActivity extends AppCompatActivity {
 						}
 					})
 					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
 			return false;
 		}
 		return true;
