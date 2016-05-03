@@ -839,7 +839,9 @@ public class DetailAdapter extends BaseAdapter {
 		TextView membername=(TextView) row.findViewById(R.id.lblMeetingTime);
 		TextView emailid=(TextView) row.findViewById(R.id.lblMeetingVenue);
 		TextView name=(TextView) row.findViewById(R.id.lblMeetingsubject);
-		
+
+		membername.setTextSize(18);
+		name.setTextSize(18);
 		btn.setVisibility(View.GONE);
 		id.setVisibility(View.GONE);
 		membername.setVisibility(View.GONE);

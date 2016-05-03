@@ -5,21 +5,21 @@
      <item
         android:id="@+id/menu_addTo"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
+         android:showAsAction="always"
          android:textSize="@dimen/font_size_medium"
         android:title="Create Event"/>
     
     <item
         android:id="@+id/menu_option2"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
+        android:showAsAction="always"
         android:textSize="@dimen/font_size_medium"
         android:title="My Events"/>
     
       <item
         android:id="@+id/filter"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
+          android:showAsAction="always"
           android:textSize="@dimen/font_size_medium"
         android:title="My Events"/>
 

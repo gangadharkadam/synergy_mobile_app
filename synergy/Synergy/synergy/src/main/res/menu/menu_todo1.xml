@@ -5,13 +5,13 @@
      <item
         android:id="@+id/menu_addTo"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
+         android:showAsAction="always"
          android:textSize="@dimen/font_size_medium"
         android:title="Add ToDo"/>
     <item
         android:id="@+id/menu_filter"
         android:icon="@drawable/ic_launcher"
-        app:showAsAction="always"
+        android:showAsAction="always"
         android:textSize="@dimen/font_size_medium"
         android:title="Filter Records"/>
 

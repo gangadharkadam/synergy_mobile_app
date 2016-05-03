@@ -120,6 +120,7 @@ public class CreateCellMeetingActivity extends ActionBarActivity implements OnCl
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 		tvTitle.setText("Create Meeting");
+		tvTitle.setTextSize(22);
 		
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
 		

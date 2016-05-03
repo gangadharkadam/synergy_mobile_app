@@ -4,16 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/rectangle" >
-    
-   <!--  <View
-        android:id="@+id/view"
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="@color/actionbarcolor" />
- -->
- 
-   
-   
+
+    <!--  <View
+         android:id="@+id/view"
+         android:layout_width="2dp"
+         android:layout_height="match_parent"
+         android:background="@color/actionbarcolor" />
+  -->
+
+
+
     <TextView
         android:id="@+id/txtMasterName"
         android:layout_width="match_parent"
@@ -22,10 +22,10 @@
         android:gravity="center_vertical"
         android:textColor="@android:color/black"
         android:layout_margin="@dimen/dimen_10"
-        android:textSize="@dimen/font_size_large"
+        android:textSize="@dimen/font_size_medium"
         android:text=""
-        android:textStyle="bold" />
-   
+        />
+
     <TextView
         android:id="@+id/txtMasterName1"
         android:layout_width="match_parent"
@@ -38,8 +38,8 @@
         android:text=""
         android:visibility="gone"
         />
-    
-     <TextView
+
+    <TextView
         android:id="@+id/txtuserid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,11 +47,11 @@
         android:gravity="center_vertical"
         android:textColor="@android:color/black"
         android:layout_margin="@dimen/dimen_10"
-         android:textSize="@dimen/font_size_small"
+        android:textSize="@dimen/font_size_small"
         android:text=""
         />
 
-   <TextView
+    <TextView
         android:id="@+id/txtid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,9 +59,9 @@
         android:gravity="center_vertical"
         android:textColor="@android:color/black"
         android:layout_margin="@dimen/dimen_10"
-       android:textSize="@dimen/font_size_small"
+        android:textSize="@dimen/font_size_small"
         android:text=""
         />
-     
-     
+
+
 </LinearLayout>

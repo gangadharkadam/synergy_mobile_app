@@ -8,20 +8,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/menu/create_partnership.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/create_first_timer.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/menu/create_first_timer.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/menu/group_church.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/menu/group_church.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/region.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/menu/region.xml"
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/create_first_timer.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/menu/create_first_timer.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/message_broadcast.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/menu/message_broadcast.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/region.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/menu/region.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/menu/new_converts_week.xml",
