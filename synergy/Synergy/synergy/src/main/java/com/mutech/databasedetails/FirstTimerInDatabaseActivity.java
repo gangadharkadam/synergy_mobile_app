@@ -421,11 +421,20 @@ private class EventListAdapter extends BaseAdapter{
 		TextView name=(TextView) convertView.findViewById(R.id.lblMeetingsubject);
 		
 		btn.setVisibility(View.GONE);
+		surname.setVisibility(View.GONE);
 		try {
 
 			id.setText((jsonarray.getJSONObject(position).getString("name").equals("null"))?"":jsonarray.getJSONObject(position).getString("name"));
-			name.setText((jsonarray.getJSONObject(position).getString("ftv_name").equals("null"))?"":jsonarray.getJSONObject(position).getString("ftv_name"));
-			surname.setText((jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname"));
+			String fullName = "";
+			String firstName = "";
+			String lastName = "";
+			firstName = jsonarray.getJSONObject(position).getString("ftv_name").equals("null")?"":jsonarray.getJSONObject(position).getString("ftv_name");
+			lastName = jsonarray.getJSONObject(position).getString("surname").equals("null")?"":jsonarray.getJSONObject(position).getString("surname");
+			fullName = firstName + " " + lastName;
+
+//			name.setText((jsonarray.getJSONObject(position).getString("ftv_name").equals("null"))?"":jsonarray.getJSONObject(position).getString("ftv_name"));
+			name.setText(fullName);
+//			surname.setText((jsonarray.getJSONObject(position).getString("surname").equals("null"))?"":jsonarray.getJSONObject(position).getString("surname"));
 			email.setText((jsonarray.getJSONObject(position).getString("email_id").equals("null"))?"":jsonarray.getJSONObject(position).getString("email_id"));
 //			id.setText(jsonarray.getJSONObject(position).getString("name"));
 //			name.setText(jsonarray.getJSONObject(position).getString("ftv_name"));
@@ -1128,8 +1137,8 @@ public void showDialog(){
    });
 	AlertDialog alertD = alertDialogBuilder.create();
 	alertD.show();
-	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-	textView.setTextSize(18);
+//	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//	textView.setTextSize(18);
 
 }
 

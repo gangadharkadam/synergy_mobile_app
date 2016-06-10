@@ -964,8 +964,7 @@ public void showDialog(){
 	LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 	LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
 	LinearLayout layoutname=(LinearLayout) promptView.findViewById(R.id.nameLayout);
-
-
+	layoutname.setVisibility(View.GONE);
 
 	final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 	final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
@@ -1625,8 +1624,8 @@ public void showDialog(){
 			});
 	AlertDialog alertD = alertDialogBuilder.create();
 	alertD.show();
-	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-	textView.setTextSize(18);
+//	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//	textView.setTextSize(18);
 
 
 }

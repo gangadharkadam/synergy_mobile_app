@@ -128,7 +128,7 @@
                             android:layout_height="wrap_content"
                             android:text="From Date (Mandatory):"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/font_size_small"
+                            android:textSize="@dimen/font_size_small2"
                             android:textStyle="bold" />
 
                         <EditText
@@ -166,7 +166,7 @@
                             android:layout_height="wrap_content"
                             android:text="To Date (Mandatory):"
                             android:textColor="@android:color/black"
-                            android:textSize="@dimen/font_size_small"
+                            android:textSize="@dimen/font_size_small2"
                             android:textStyle="bold" />
 
                         <EditText

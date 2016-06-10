@@ -1561,8 +1561,8 @@ public void showDialog(){
 	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
-		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-		textView.setTextSize(18);
+//		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//		textView.setTextSize(18);
 
 	}
 private void getUpdatedSpinnerData(final String tblname,final String name) {
@@ -1852,9 +1852,10 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 						
 					TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
 					
-						Log.e("totalcount=", ""+TOTAL_LIST_ITEMS);
-					
-					//if(pageflag)
+                    Log.e("totalcount=", ""+TOTAL_LIST_ITEMS);
+                    tvTitle.setText("My Attendance(" + TOTAL_LIST_ITEMS + ")    ");
+
+                    //if(pageflag)
 					 Btnfooter();
 					 
 					 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
@@ -1938,7 +1939,13 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 			
 			if(!cell.equals(""))
 				jsonfilter.put("cell", cell);
-			
+
+			if(!todate.equals(""))
+				jsonfilter.put("to_date", todate);
+
+			if(!fdate.equals(""))
+				jsonfilter.put("from_date", fdate);
+
 			
 			jsonobj.put("filters", jsonfilter);
 			

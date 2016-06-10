@@ -700,7 +700,8 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 				
 				
 					Memberval=txtMember.getText().toString();
-					
+
+					Log.d("NonStop", "Church Val: " + Churchval + " --- Group Church: " + GroupChurchval);
 					intSearch.putExtra("Zone",zoneval);
 					intSearch.putExtra("Region",Regionval);
 					intSearch.putExtra("Church", Churchval);
@@ -1125,8 +1126,8 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.e("droid","get getSpinnerData ---------------"+ response);
-
+				Log.e("droid", "get getSpinnerData ---------------" + response);
+				Log.d("NonStop", "Getting value for : " + tblname);
 				try {
 					JSONObject obj=new JSONObject(response);
 					JSONArray jarray=obj.getJSONArray("message");

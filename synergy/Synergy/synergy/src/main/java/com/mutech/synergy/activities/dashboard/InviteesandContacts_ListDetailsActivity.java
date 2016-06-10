@@ -251,13 +251,13 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 		
 		
 		
-		if(NetworkHelper.isOnline(this)){
-			Methods.showProgressDialog(this);
-			getDashboardDataService();
-	
-		}
-		else
-			Methods.longToast("Please connect to Internet", this);
+//		if(NetworkHelper.isOnline(this)){
+//			Methods.showProgressDialog(this);
+//			getDashboardDataService();
+//
+//		}
+//		else
+//			Methods.longToast("Please connect to Internet", this);
 		
 	
 		
@@ -321,6 +321,9 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
                             invitedByAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                             spInvitedBy.setAdapter(invitedByAdap);
                         }
+
+                        getDashboardDataService();
+
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -459,8 +462,11 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 								txtMemberPhone1.setText(obj.getJSONObject(0).getString("phone_1"));
 							}
 
-							txtEmailID1.setText(obj.getJSONObject(0).getString("email_id"));
-							
+							Log.d("NonStop", "Printing email id");
+							if(!obj.getJSONObject(0).getString("email_id").equals("null") && !obj.getJSONObject(0).getString("email_id").equals("")){
+								txtEmailID1.setText(obj.getJSONObject(0).getString("email_id"));
+							}
+
 							spAgegroup.setSelection(adapterAgeGroup.getPosition(obj.getJSONObject(0).getString("age_group")));
 							
 							
@@ -479,7 +485,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 
                             Log.d("NonStop", "Invited By AL item: " + invitedByAL.size());
                             Log.d("NonStop", "Invited by: " + obj.getJSONObject(0).getString("invited_by"));
-                            spInvitedBy.setSelection(invitedByAdap.getPosition(obj.getJSONObject(0).getString("invited_by")));
+							spInvitedBy.setSelection(invitedByAdap.getPosition(obj.getJSONObject(0).getString("invited_by")));
 
 //							txtInvitedby.setText(obj.getJSONObject(0).getString("invited_by").equals("null")?"":obj.getJSONObject(0).getString("invited_by"));
 

@@ -1120,8 +1120,8 @@ public void showDialog(){
 	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
-		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-		textView.setTextSize(18);
+//		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//		textView.setTextSize(18);
 
 	}
 

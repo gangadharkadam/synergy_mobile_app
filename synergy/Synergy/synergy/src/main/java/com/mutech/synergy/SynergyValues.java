@@ -46,7 +46,7 @@ public class SynergyValues {
 	public static class ImageUrl{
 		public static String imageUrl = "http://loveworldsynergy.org";
 		public static String imageUrl1 = "http://verve.indictranstech.com";
-		public static String imageUrl2 = "http://192.168.5.25:7001";
+		public static String imageUrl2 = "http://192.168.5.25:7001/";
 	}
 	
 	

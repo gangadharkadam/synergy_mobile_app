@@ -419,11 +419,31 @@ public class InviteesandContactsweekActivity extends ActionBarActivity {
 			
 			btn.setVisibility(View.GONE);
 			try {
-				
-				name.setText(jsonarray.getJSONObject(position).getString("name"));
-				email.setText(jsonarray.getJSONObject(position).getString("email_id"));
-				ftv_name.setText(jsonarray.getJSONObject(position).getString("invitee_contact_name"));
-				sex.setText(jsonarray.getJSONObject(position).getString("sex"));
+
+				if(!jsonarray.getJSONObject(position).getString("name").toString().equals("null") && !jsonarray.getJSONObject(position).getString("name").toString().equals("")) {
+					name.setText(jsonarray.getJSONObject(position).getString("name"));
+				} else {
+					name.setText("");
+				}
+				if(!jsonarray.getJSONObject(position).getString("email_id").toString().equals("null") && !jsonarray.getJSONObject(position).getString("email_id").toString().equals("")) {
+					email.setText(jsonarray.getJSONObject(position).getString("email_id"));
+				} else {
+					email.setText("");
+				}
+				if(!jsonarray.getJSONObject(position).getString("invitee_contact_name").toString().equals("null") && !jsonarray.getJSONObject(position).getString("invitee_contact_name").toString().equals("")) {
+					ftv_name.setText(jsonarray.getJSONObject(position).getString("invitee_contact_name"));
+				} else {
+					ftv_name.setText("");
+				}
+				if(!jsonarray.getJSONObject(position).getString("sex").toString().equals("null") && !jsonarray.getJSONObject(position).getString("sex").toString().equals("")) {
+					sex.setText(jsonarray.getJSONObject(position).getString("sex"));
+				} else {
+					sex.setText("");
+				}
+//				name.setText(jsonarray.getJSONObject(position).getString("name"));
+//				email.setText(jsonarray.getJSONObject(position).getString("email_id"));
+//				ftv_name.setText(jsonarray.getJSONObject(position).getString("invitee_contact_name"));
+//				sex.setText(jsonarray.getJSONObject(position).getString("sex"));
 				
 			
 			} catch (JSONException e) {
@@ -1121,8 +1141,8 @@ public void showDialog(){
 	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
-		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-		textView.setTextSize(18);
+//		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//		textView.setTextSize(18);
 
 }
 

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_normal.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
@@ -34,6 +42,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
@@ -72,8 +84,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/icon.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_standard_off_client.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_standard_off_client.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_disabled_mono_dark.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_disabled_mono_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_setting_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_setting_dark.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/first_timer.png",
@@ -120,6 +144,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/new_visitor.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/new_visitor.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
@@ -132,8 +160,16 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_off_mono_dark.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_off_mono_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_0_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_0_mono_dark.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_2.png",
@@ -142,6 +178,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/powered_by_google_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_clear.png",
@@ -160,6 +200,14 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_clear_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
@@ -168,12 +216,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/partnership_record.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/partnership_record.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_pressed.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_2_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_2_mono_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
@@ -188,12 +248,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_2.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_2.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_focused.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png",
@@ -204,12 +272,12 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_disabled_light.png",
@@ -240,12 +308,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/pencil.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_dark.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_dark.png",
@@ -280,6 +356,14 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_on.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_dark.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -292,12 +376,16 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_light.png",
@@ -308,8 +396,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_0.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_0.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_play_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/church_administration.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/church_administration.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/all_members.png",
@@ -324,8 +424,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_focused_holo.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/powered_by_google_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_2_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_2_light.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/search.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/search.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_password.png",
@@ -340,8 +452,16 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_normal.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/my_meetings.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/my_meetings.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/senior_cells.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/senior_cells.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/church_administration.png",
@@ -364,8 +484,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_play_light.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_username.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon_login_username.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ministry_materials.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/ministry_materials.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/msg.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/msg.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_search.png",
@@ -388,12 +520,12 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/database.png"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/add.png",
@@ -402,6 +534,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
@@ -440,6 +576,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_1_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_1_mono_dark.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_pressed.9.png"
     },
@@ -466,6 +606,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_0_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_0_light.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png",
@@ -504,12 +648,20 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_standard_off_client.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/pencil.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/pencil.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/signout.png",
@@ -556,12 +708,32 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/pcfs.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/pcfs.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_pause_dark.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_pause_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_pause.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_pause.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_disabled.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/dashboard.png",
@@ -598,6 +770,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_clear_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png",
@@ -672,6 +848,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_focused_holo.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_switch_track_mtrl_alpha.9.png"
     },
@@ -740,6 +920,14 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/partner.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/partner.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_2_light.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_2_light.png"
     },
@@ -758,6 +946,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_username.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon_login_username.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_play_light.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ministry_materials.png",
@@ -792,12 +984,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_1_mono_dark.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/dashboard.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/dashboard.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_dark.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_pause_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/new_born.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/new_born.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_voice_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
@@ -848,6 +1052,10 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_medium_off_client.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/todo.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/todo.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_on.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_on.png"
     },
@@ -858,6 +1066,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/first_timer.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/first_timer.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/database.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/database.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
@@ -932,8 +1144,16 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_tall_off_client.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_tall_off_client.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_1.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_1.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_off_light.png",
@@ -948,12 +1168,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_mono_dark.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_1_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_1_light.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_dark.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_play_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_1.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_1.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_2.png",
@@ -1000,6 +1228,14 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_play.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_play.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
     },
@@ -1010,6 +1246,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/dashboard.png",
@@ -1030,6 +1270,14 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_search.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/places_ic_search.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png",
@@ -1056,8 +1304,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/pencil.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_full_open_on_phone.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
@@ -1072,16 +1332,36 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/first_timer.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cells.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/cells.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_setting_light.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_setting_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_light.png",
@@ -1104,6 +1384,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_tall_off_client.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_mono_dark.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_mono_dark.png"
     },
@@ -1114,6 +1398,10 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_2_light.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_2_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
@@ -1180,6 +1468,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/my_meetings.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/my_meetings.png"
     },
@@ -1194,6 +1486,10 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/msg.png",
@@ -1220,6 +1516,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_disabled_light.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/search.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/search.png"
     },
@@ -1228,12 +1528,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_normal.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cells.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/cells.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/new_visitor.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/new_visitor.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/all_members.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/all_members.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/add.png",
@@ -1268,6 +1580,26 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_setting_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_setting_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/msg.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/msg.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_button.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon_login_button.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/add.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable-mdpi/add.png"
     },
@@ -1292,6 +1624,14 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/background_splash.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/background_splash.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
@@ -1308,8 +1648,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/carlender.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/carlender.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_clear.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/places_ic_clear.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_focused.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
@@ -1334,6 +1690,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_setting_dark.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_setting_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_disabled.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/dashboard.png",
@@ -1380,6 +1740,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_setting_light.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_setting_light.png"
     },
@@ -1410,6 +1774,14 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_mono_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
@@ -1476,6 +1848,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/pencil.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/pencil.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_pressed.9.png"
     },
@@ -1486,6 +1862,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/Synergy/volley/unspecified/res/drawable-mdpi-v4/ic_launcher.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
@@ -1528,8 +1908,16 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_disabled.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_light.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_focused.9.png",
@@ -1544,12 +1932,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/myprofile.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/myprofile.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/partnership_record.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/partnership_record.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/powered_by_google_light.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png",
@@ -1560,8 +1960,20 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-mdpi/powered_by_google_light.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_medium_off_client.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_medium_off_client.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_light.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_play_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_disabled.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/new_born.png",
@@ -1580,6 +1992,10 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/signout.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/signout.png"
     },
@@ -1596,8 +2012,16 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/signout.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_off_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_off_light.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/database.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/database.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
@@ -1608,8 +2032,16 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_disabled.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/new_born.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/new_born.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_off_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_off_mono_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/first_timer.png",
@@ -1674,6 +2106,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/database.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/database.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png",
@@ -1756,8 +2192,16 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/church_administration.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/church_administration.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_2.png",
@@ -1836,6 +2280,18 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/first_timer.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/first_timer.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/strenght.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/strenght.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_search_api_mtrl_alpha.png"
     },
@@ -1848,8 +2304,28 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_2.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_disabled_light.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_disabled_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_small_off_client.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-mdpi/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_1_mono_dark.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_on_1_mono_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
@@ -1862,6 +2338,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/myprofile.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/myprofile.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png",
@@ -1892,12 +2372,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon_login_password.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/myprofile.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable-mdpi/myprofile.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/signout.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/signout.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_on_2_mono_dark.png",
@@ -1940,12 +2428,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_0_light.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/search.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/search.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_dark.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_pause_dark.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_full_open_on_phone.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
@@ -1956,8 +2452,20 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/add.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/add.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_password.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/icon_login_password.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
@@ -1968,12 +2476,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/partner.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable-mdpi/partner.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
@@ -2010,6 +2526,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_on_0_light.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_cast_on_0_light.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_0.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-mdpi/cast_ic_notification_0.png"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_standard_off_client.png",
@@ -2070,6 +2590,14 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_disabled_mono_dark.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-mdpi/ic_media_route_disabled_mono_dark.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_login_username.png",
@@ -2136,8 +2664,16 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",

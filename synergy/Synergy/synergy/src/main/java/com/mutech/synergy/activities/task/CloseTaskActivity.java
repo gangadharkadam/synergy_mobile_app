@@ -21,6 +21,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -515,5 +517,27 @@ public class MyAdapter extends BaseAdapter {
         return row;
     }
 }
-	
+
+	public void onBackPressed() {
+//		AlertDialog dialog = new AlertDialog.Builder(this)
+//				.setIcon(android.R.drawable.ic_dialog_alert)
+//				.setTitle("Closing Activity")
+//				.setMessage("Are you sure you want to exit?")
+//				.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//					@Override
+//					public void onClick(DialogInterface dialog, int which) {
+//						moveTaskToBack(true);
+//					}
+//
+//				})
+//				.setNegativeButton("No", null)
+//				.show();
+//		TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+//		textView.setTextSize(18);
+        Intent intentTODO = new Intent(CloseTaskActivity.this, ToDoTaskActivity.class);
+        intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intentTODO);
+        finish();
+	}
+
 }

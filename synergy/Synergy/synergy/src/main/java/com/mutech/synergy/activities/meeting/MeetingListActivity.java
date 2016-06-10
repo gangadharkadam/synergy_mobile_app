@@ -233,7 +233,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 			
 		case R.id.menu_option3:
 		
-			showDialog();	
+			showDialog();
 			
 			
 			break;
@@ -644,9 +644,10 @@ public void showDialog(){
 		LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 		LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
 		LinearLayout eventtypeLayout=(LinearLayout) promptView.findViewById(R.id.eventtypeLayout);
-		
-		eventtypeLayout.setVisibility(View.VISIBLE);
-		
+
+//		eventtypeLayout.setVisibility(View.VISIBLE);
+		eventtypeLayout.setVisibility(View.GONE);
+
 		final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 		final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
 		final TextView spgroupchurchTextView=(TextView) promptView.findViewById(R.id.spgroupchurchTextView);
@@ -1267,8 +1268,8 @@ public void showDialog(){
 	   });
 		AlertDialog alertD = alertDialogBuilder.create();
 		alertD.show();
-		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-		textView.setTextSize(18);
+//		TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//		textView.setTextSize(18);
 
 }
 private void getUpdatedSpinnerData(final String tblname,final String name) {
@@ -1644,8 +1645,14 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 			
 			if(!cell.equals(""))
 				jsonfilter.put("cell", cell);
-			
-			jsonfilter.put("event_type", eventtype);
+
+			if(!todate.equals(""))
+				jsonfilter.put("to_date", todate);
+
+			if(!fdate.equals(""))
+				jsonfilter.put("from_date", fdate);
+
+//			jsonfilter.put("event_type", eventtype);
 			
 			jsonobj.put("filters", jsonfilter);
 			

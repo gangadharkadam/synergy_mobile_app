@@ -432,4 +432,11 @@ public class TeamTaskDetailsActivity extends AppCompatActivity {
 		reqCreateTasksList.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 
+	@Override
+	public void onBackPressed() {
+		Intent intentTODO = new Intent(TeamTaskDetailsActivity.this, ToDoTaskActivity.class);
+		intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(intentTODO);
+		finish();
+	}
 }

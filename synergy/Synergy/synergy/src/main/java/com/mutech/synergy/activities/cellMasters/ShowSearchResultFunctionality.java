@@ -428,7 +428,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 				  model.setChurch(church);
 				
 				if(!group_church.equals(""))
-					  model.setChurch(group_church);
+					  model.setGroup_church(group_church);
 					
 				model.setSearch(search);
 				
@@ -1255,8 +1255,8 @@ public void showDialog(){
    });
 	AlertDialog alertD = alertDialogBuilder.create();
 	alertD.show();
-	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
-	textView.setTextSize(18);
+//	TextView textView = (TextView) alertD.findViewById(android.R.id.message);
+//	textView.setTextSize(18);
 
 }
 private void getUpdatedSpinnerData(final String tblname,final String name) {
