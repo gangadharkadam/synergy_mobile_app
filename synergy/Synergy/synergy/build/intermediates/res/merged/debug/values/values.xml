@@ -363,7 +363,9 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <string name="title_activity_attendance_history">View Attendance History</string>
     <string name="title_activity_cell_details">CellDetailsActivity</string>
+    <string name="title_activity_cell_leader_msg">Send Message</string>
     <string name="title_activity_church_detail">ChurchDetail</string>
     <string name="title_activity_create_first_timer">CreateFirstTimerActivity</string>
     <string name="title_activity_create_new_member">CreateNewMemberActivity</string>
@@ -375,6 +377,7 @@
     <string name="title_activity_dashboard_list_details_first_timers">
         DashboardListDetailsFirstTimersActivity
     </string>
+    <string name="title_activity_feedaback">Feedback</string>
     <string name="title_activity_filter">FilterActivity</string>
     <string name="title_activity_first_time_month">FirstTimeMonthActivity</string>
     <string name="title_activity_first_timer_in_database">FirstTimerInDatabaseActivity</string>
@@ -391,6 +394,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_membership_strength_details">MembershipStrengthDetailsActivity</string>
     <string name="title_activity_message_broadcast">MessageBroadcastActivity</string>
+    <string name="title_activity_messages">Messages</string>
     <string name="title_activity_my_partnership">MyPartnershipActivity</string>
     <string name="title_activity_my_partnership_adpter">MyPartnershipAdpter</string>
     <string name="title_activity_my_partnership_giving">MyPartnershipGivingActivity</string>
@@ -402,10 +406,12 @@
     <string name="title_activity_pcf_details">PcfDetailsActivity</string>
     <string name="title_activity_pledge">PledgeActivity</string>
     <string name="title_activity_region">RegionActivity</string>
+    <string name="title_activity_short_bio">Profile</string>
     <string name="title_activity_show_message">ShowMessageActivity</string>
     <string name="title_activity_sr_cell_details">SrCellDetailsActivity</string>
     <string name="title_activity_team_task_details">TeamTaskDetailsActivity</string>
     <string name="title_activity_total_member_list">TotalMemberListActivity</string>
+    <string name="title_activity_view_members">View Members</string>
     <string name="title_activity_zone_details">ZoneDetailsActivity</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

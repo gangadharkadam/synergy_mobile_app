@@ -56,4 +56,10 @@
         DashboardListDetailsFirstTimersActivity
     </string>
     <string name="attach_photo">Click Image to Attach New Photo</string>
+    <string name="title_activity_feedaback">Feedback</string>
+    <string name="title_activity_cell_leader_msg">Send Message</string>
+    <string name="title_activity_attendance_history">View Attendance History</string>
+    <string name="title_activity_short_bio">Profile</string>
+    <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_view_members">View Members</string>
 </resources>

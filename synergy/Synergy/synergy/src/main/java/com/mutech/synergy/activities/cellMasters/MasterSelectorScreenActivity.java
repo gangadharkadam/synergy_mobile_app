@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -68,8 +70,9 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 	private DrawerLayout mDrawerLayout; 
 	private ActionBarDrawerToggle mDrawerToggle;
 	String str;
+	private Dialog dialogPopup=null;
 
-	
+
 	//onCreate method
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +130,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		
 		String str=mPreferenceHelper.getString(Commons.USER_ROLE);
-    
+
 		Log.e(null, "Role--"+str);
 		//Role--Cell Leader,Senior Cell Leader
 //btnAddPCFMaster
@@ -398,6 +401,12 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			break;
 		case R.id.btnCellMaster:
 			Log.d("NonStop", "Going to CellMaster");
+
+			dialogPopup = new Dialog(MasterSelectorScreenActivity.this);
+			dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			dialogPopup.setContentView(R.layout.custom_cell_dialogbox);
+			dialogPopup.show();
+
 			Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
 			intCelllist.putExtra("OptionSelected", "Cell");
 			startActivity(intCelllist);

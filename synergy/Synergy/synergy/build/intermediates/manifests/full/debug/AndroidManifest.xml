@@ -334,7 +334,29 @@
             android:label="@string/title_activity_dashboard_list_details_converts" />
         <activity
             android:name="com.mutech.synergy.activities.dashboard.DashboardListDetailsFirstTimersActivity"
-            android:label="@string/title_activity_dashboard_list_details_first_timers" />
+            android:label="@string/title_activity_dashboard_list_details_first_timers" >
+        </activity>
+        <activity
+            android:name="com.mutech.synergy.activities.Feedback"
+            android:label="@string/title_activity_feedaback" >
+        </activity>
+        <activity
+            android:name="com.mutech.synergy.activities.CellLeaderMsg"
+            android:label="@string/title_activity_cell_leader_msg" />
+        <activity
+            android:name="com.mutech.synergy.activities.AttendanceHistory"
+            android:label="@string/title_activity_attendance_history" />
+        <activity
+            android:name="com.mutech.synergy.activities.ShortBio"
+            android:label="@string/title_activity_short_bio" />
+        <activity
+            android:name="com.mutech.synergy.activities.Messages"
+            android:label="@string/title_activity_messages" >
+        </activity>
+        <activity
+            android:name="com.mutech.synergy.activities.ViewMembers"
+            android:label="@string/title_activity_view_members" >
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

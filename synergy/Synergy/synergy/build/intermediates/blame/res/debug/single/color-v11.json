@@ -8,6 +8,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",

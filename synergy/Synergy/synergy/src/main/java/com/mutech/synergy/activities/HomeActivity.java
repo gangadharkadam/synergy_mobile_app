@@ -275,9 +275,8 @@ public class HomeActivity extends AppCompatActivity {
 		XAxis x = mChart.getXAxis();
 
 		YAxis leftAxis1 = mChart.getAxisLeft();
-//		leftAxis1.setValueFormatter(new MyYAxis);
-//		leftAxis1.setValueFormatter(new LargeValueFormatter());
-        leftAxis1.setDrawGridLines(false);
+		leftAxis1.setValueFormatter(new LargeValueFormatter());
+		leftAxis1.setDrawGridLines(false);
 		leftAxis1.setSpaceTop(25f);
 
 		mChart.getAxisRight().setEnabled(false);
@@ -745,6 +744,10 @@ public class HomeActivity extends AppCompatActivity {
 		item11.setItemName("Logout");
 		item11.setImgResID(R.drawable.signout);
 
+		DrawerItem item12=new DrawerItem();
+		item12.setItemName("Feedback");
+		item12.setImgResID(R.drawable.msg);
+
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
 		mDrawerList.add(item04);
@@ -759,6 +762,7 @@ public class HomeActivity extends AppCompatActivity {
 		mDrawerList.add(item10);
 		mDrawerList.add(item06);
 		mDrawerList.add(item11);
+		mDrawerList.add(item12);
 	}
 
 	@Override
@@ -1172,7 +1176,7 @@ public class HomeActivity extends AppCompatActivity {
 		} else {
 			AlertDialog dialog =  new AlertDialog.Builder(this)
 					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Closing Synergy")
+					.setTitle("Closing Activity")
 					.setMessage("Are you sure you want to exit?")
 					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
 					{

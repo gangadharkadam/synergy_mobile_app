@@ -8,6 +8,10 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/bundles/debug/res/menu/main.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/volley/build/intermediates/res/merged/androidTest/debug/menu/main.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/volley/build/intermediates/bundles/debug/res/menu/main.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/androidTest/debug/menu/main.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/bundles/debug/res/menu/main.xml"
     },

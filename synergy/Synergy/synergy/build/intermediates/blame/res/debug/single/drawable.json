@@ -24,32 +24,40 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_dark.xml"
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_switch_thumb_material.xml"
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_dark.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_dark.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button.png",
@@ -68,12 +76,12 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_dark.xml"
     },
     {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_settings_dark.xml",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_dark.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_settings_dark.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_dark.xml"
+    },
+    {
+        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_settings_dark.xml",
+        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/text_background_greyborder.xml",
@@ -84,6 +92,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_tab_indicator_material.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/cast_ic_notification_connecting.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable/cast_ic_notification_connecting.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_ratingbar_full_material.xml"
     },
@@ -92,8 +104,20 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/actiontop.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/actiontop.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button1.png",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable/button1.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_play_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_play_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/home_dashboard.jpg",
@@ -108,16 +132,16 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_dark.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_dark.xml"
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_light.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_light.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_light.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_light.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_light.xml"
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_dark.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
@@ -134,6 +158,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/actionbar_background.xml",
@@ -192,6 +220,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/user.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/user.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_radio_material.xml"
     },
@@ -200,16 +232,24 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
+        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/table_header_background.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable/table_header_background.xml"
     },
     {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_light.xml"
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
@@ -224,40 +264,40 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_light.xml"
     },
     {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_dark.xml"
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_dark.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_dark.xml"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
@@ -268,12 +308,12 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable/button1.png"
     },
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/actiontop.png",
@@ -328,8 +368,16 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/actiontop.png",
@@ -360,6 +408,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
@@ -380,12 +432,20 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable/table_header_background.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_play_light.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_play_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_cast_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
@@ -402,6 +462,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_settings_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_dark.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -424,6 +488,10 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button1.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/button1.png"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_light.xml"
     },
@@ -438,6 +506,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
@@ -484,6 +556,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable/button1.png"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_play_dark.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_play_dark.xml"
     },
@@ -518,6 +594,14 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button1.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable/button1.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/rectangle1.png",
@@ -556,6 +640,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/rectangle.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/rectangle.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_light.xml"
     },
@@ -574,6 +662,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_dark.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
@@ -596,6 +688,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_pause_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_light.xml"
     },
@@ -608,12 +704,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_light.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/home_dashboard.jpg",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable/home_dashboard.jpg"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/cast_ic_notification_connecting.xml",
@@ -640,8 +744,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/filtericon.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/filtericon.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/table_header_background.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable/table_header_background.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -660,6 +776,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_radio_material.xml"
     },
@@ -670,6 +790,14 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/rectangle1.png",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable/rectangle1.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
@@ -684,6 +812,14 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable/filtericon.png"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button_border_white.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/src/main/res/drawable/button_border_white.xml"
     },
@@ -692,12 +828,24 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/dashboard_bg.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/dashboard_bg.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable/button.png"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/table_header_background.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/table_header_background.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_light.xml",
@@ -710,6 +858,14 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button_border_white.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable/button_border_white.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/text_background_greyborder.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/text_background_greyborder.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/home_dashboard.jpg",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/home_dashboard.jpg"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
@@ -756,8 +912,16 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_mono_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_connecting_mono_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
@@ -770,6 +934,10 @@
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_borderless_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
@@ -852,6 +1020,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_dark.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_dialog_material_background_dark.xml"
     },
@@ -870,6 +1042,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_settings_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_settings_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
@@ -908,12 +1084,24 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_dark.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/button.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button_border_white.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/button_border_white.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_play_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_play_light.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -944,8 +1132,16 @@
         "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_switch_thumb_material.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/rectangle.png",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/drawable/rectangle.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_dark.xml",
@@ -958,6 +1154,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_cast_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_pause_light.xml",
@@ -1004,6 +1204,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_media_route_mono_dark.xml"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_tab_indicator_material.xml"
     },
@@ -1014,6 +1218,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/text_background_greyborder.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/synergy/src/main/res/drawable/text_background_greyborder.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
@@ -1050,6 +1258,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/home_dashboard.jpg",
@@ -1096,6 +1308,10 @@
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/src/main/res/drawable/rectangle1.png"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_textfield_search_material.xml"
     },
@@ -1106,6 +1322,10 @@
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/mr_ic_play_light.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable/mr_ic_play_light.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/actionbar_background.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/actionbar_background.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/button_border_white.xml",
@@ -1120,12 +1340,20 @@
         "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/synergy/src/main/res/drawable/bg.png"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/rectangle1.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/rectangle1.png"
+    },
+    {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/bg.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/synergy/src/main/res/drawable/bg.png"
     },
     {
         "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
