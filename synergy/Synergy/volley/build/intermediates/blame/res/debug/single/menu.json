@@ -1,25 +1,5 @@
 [
     {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans/Synergy/synergy/Synergy/volley/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy_mobile_app_sumit_sir/synergy/Synergy/volley/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/sumitmore/Documents/NonStopIO/Indictrans/Synergy/volley/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/nonstop/AndroidStudioProjects/synergy/synergy/Synergy/volley/src/main/res/menu/main.xml"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergyfinal/synergy_mobile_app/synergy/Synergy/volley/src/main/res/menu/main.xml"
     }

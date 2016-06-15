@@ -55,6 +55,29 @@
                                     android:layout_gravity="center"
                                     />
 
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Member Id"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtMembershipNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:enabled="false"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_small" />
+
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -65,6 +88,93 @@
 
                                 <TextView
                                     android:id="@+id/txtName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:enabled="false"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/textsize_16" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Date of Birth"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtMemberDateOfBirth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Phone Number"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtMemberPhone1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_small"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Email Address"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtEmailID1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:inputType="textEmailAddress"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_small"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Home Address"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/textsize_18" />
+
+                                <TextView
+                                    android:id="@+id/txtHomeAddress"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dimen_10"

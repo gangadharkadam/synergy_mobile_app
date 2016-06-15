@@ -634,7 +634,7 @@ public class HomeActivity extends AppCompatActivity {
 							
 								monthnameslist.add(jarray.getJSONObject(i).getString("month"));
 								//	newConvertsList.add(memStrengthList.get(i).getNew_converts()); total_member_count
-								totalMemberList.add(jarray.getJSONObject(i).getString("total_member_count"));	
+								totalMemberList.add(jarray.getJSONObject(i).getString("total_member_count"));
 							}
 							setData();
 							
@@ -740,13 +740,13 @@ public class HomeActivity extends AppCompatActivity {
 		item10.setItemName("Broadcast Message");
 		item10.setImgResID(R.drawable.msg);
 
-		DrawerItem item11=new DrawerItem();
-		item11.setItemName("Logout");
-		item11.setImgResID(R.drawable.signout);
+        DrawerItem item11=new DrawerItem();
+        item11.setItemName("Feedback");
+        item11.setImgResID(R.drawable.msg);
 
 		DrawerItem item12=new DrawerItem();
-		item12.setItemName("Feedback");
-		item12.setImgResID(R.drawable.msg);
+        item12.setItemName("Logout");
+        item12.setImgResID(R.drawable.signout);
 
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
@@ -847,16 +847,27 @@ public class HomeActivity extends AppCompatActivity {
 
 			break;
 			
-		case 9://logout
+		case 9:
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
 
-			Intent intLogout=new Intent(this,LogoutActivity.class);
-			intLogout.putExtra("classname", "HomeActivity");
-			startActivity(intLogout);
-			finish();
-			break;
+            Intent intfeedback=new Intent(this,Feedback.class);
+            intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intfeedback);
+            finish();
+            break;
+
+			case 10://logout
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+                Intent intLogout=new Intent(this,LogoutActivity.class);
+                intLogout.putExtra("classname", "HomeActivity");
+                startActivity(intLogout);
+                finish();
+                break;
+
 
 
 		default:

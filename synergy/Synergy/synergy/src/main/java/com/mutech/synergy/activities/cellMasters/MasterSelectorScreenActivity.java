@@ -37,8 +37,12 @@ import com.mutech.databasedetails.FirstTimerInDatabaseActivity;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues.Commons;
+import com.mutech.synergy.activities.AttendanceHistory;
+import com.mutech.synergy.activities.CellLeaderMsg;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LogoutActivity;
+import com.mutech.synergy.activities.ShortBio;
+import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
@@ -53,7 +57,7 @@ import com.mutech.synergy.utils.PreferenceHelper;
 public class MasterSelectorScreenActivity extends ActionBarActivity implements OnClickListener{
 
 	//Button variables 
-	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer;
+	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer,btnviewprofile,btnviewattendancehistory,btncellleaderprofile,btncellleadermsg,btnviewmembers;
 	//Sharedpreference object
 	private PreferenceHelper mPreferenceHelper;
 	//ImageView variables
@@ -405,9 +409,66 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			dialogPopup = new Dialog(MasterSelectorScreenActivity.this);
 			dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
 			dialogPopup.setContentView(R.layout.custom_cell_dialogbox);
-			dialogPopup.show();
 
-			Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
+            btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
+            btnviewattendancehistory= (Button) dialogPopup.findViewById(R.id.viewattendancehistory);
+            btncellleaderprofile= (Button) dialogPopup.findViewById(R.id.cellleaderprofile);
+            btncellleadermsg= (Button) dialogPopup.findViewById(R.id.msgcellleader);
+            btnviewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
+
+            btnviewprofile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
+                    startActivity(signupInt);
+                    dialogPopup.dismiss();
+                }
+            });
+
+            btnviewattendancehistory.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, AttendanceHistory.class);
+                    startActivity(signupInt);
+                    dialogPopup.dismiss();
+                }
+            });
+
+            btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
+                    startActivity(signupInt);
+                    dialogPopup.dismiss();
+                }
+            });
+
+            btncellleadermsg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, CellLeaderMsg.class);
+                    startActivity(signupInt);
+                    dialogPopup.dismiss();
+                }
+            });
+
+            btnviewmembers.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ViewMembers.class);
+                    startActivity(signupInt);
+                    dialogPopup.dismiss();
+                }
+            });
+
+            dialogPopup.show();
+
+            Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
 			intCelllist.putExtra("OptionSelected", "Cell");
 			startActivity(intCelllist);
 			break;

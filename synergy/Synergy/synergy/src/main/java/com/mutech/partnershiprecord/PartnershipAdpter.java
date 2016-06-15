@@ -5,6 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.mutech.synergy.R;
 import com.mutech.synergy.fragments.task.TeamTaskFragment;
@@ -17,10 +23,30 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 			R.string.screen_pledge };
 	private Context mContext;
 
+//	private LayoutInflater li;
+
 	public PartnershipAdpter(Context context, FragmentManager fm) {
 		super(fm);
 		mContext = context;
 	}
+
+/*    public View getView(int position, View convertView, ViewGroup parent) {
+        View v = convertView;
+        TotalViewHolder viewHolder;
+        if (convertView == null) {
+            li = (LayoutInflater) mContext
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v = li.inflate(R.layout.custom_tablayout, null);
+            viewHolder = new TotalViewHolder(v);
+            v.setTag(viewHolder);
+        } else {
+            viewHolder = (TotalViewHolder) v.getTag();
+        }
+        viewHolder.total.setText("Total");
+        viewHolder.count.setText("100");
+
+        return v;
+    }*/
 
 	@Override
 	public Fragment getItem(int position) {
@@ -39,6 +65,7 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 		return screen;
 	}
 
+
 	@Override
 	public int getCount() {
 		return ITEM_COUNT;
@@ -46,6 +73,26 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 
 	@Override
 	public CharSequence getPageTitle(int position) {
-		return mContext.getString(titles[position]);
+        String title=mContext.getString(titles[position]);
+        if(position==0)
+        {
+            title=title +"\n Total-" + " " +"100";
+        }
+        else {
+            title=title +"\n Total-" + " " +"10";
+        }
+		return title;
 	}
+
+/*	class TotalViewHolder
+	{
+		TextView total;
+		TextView count;
+
+		public TotalViewHolder(View base) {
+			total = (TextView) base.findViewById(R.id.texttotal);
+			count = (TextView) base.findViewById(R.id.textcount);
+
+		}
+	}*/
 }

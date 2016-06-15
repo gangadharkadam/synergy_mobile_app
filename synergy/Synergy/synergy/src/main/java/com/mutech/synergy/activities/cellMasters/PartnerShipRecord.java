@@ -97,6 +97,12 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_partnershiplist);
 		initialize();
+
+	/*	View HomeView = getLayoutInflater().inflate(R.layout.custom_tablayout,null);
+		TextView textView = (TextView) HomeView.findViewById(R.id.texttotal);
+		TextView count = (TextView) HomeView.findViewById(R.id.textcount);
+		textView.setText("Total");
+		count.setText("100");*/
 	}
 
 	@Override
