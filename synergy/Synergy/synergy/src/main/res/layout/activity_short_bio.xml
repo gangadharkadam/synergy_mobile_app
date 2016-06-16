@@ -181,12 +181,8 @@
                                     android:layout_marginLeft="@dimen/dimen_10"
                                     android:layout_marginRight="@dimen/dimen_10"
                                     android:background="@drawable/rectangle1"
-                                    android:enabled="false"
-                                    android:maxLines="1"
                                     android:padding="@dimen/dimen_10"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/textsize_16" />
-
+                                    android:textSize="@dimen/font_size_small" />
 
                                 <TextView
                                     android:layout_width="match_parent"

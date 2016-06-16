@@ -144,6 +144,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 	private ArrayList<String> genderList,agegroupList,baptismStatusList,holyghostList,bornAgainList,SchoolstatusList;
 //	private ArrayList<String> titleList;
 	String Imageurl;
+	private Intent intent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +156,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 	@SuppressLint("NewApi")
 	private void initialize() {
 
+		intent = getIntent();
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
@@ -1016,7 +1018,8 @@ private void selectItem(int position) {
 				MemberProfileModel mProfModel=gson.fromJson(response, MemberProfileModel.class);
 				//Object meetingmsg=mMeetingModel.getMessage();
 
-				if(null !=mProfModel.getMessage() && mProfModel.getMessage().size() >0){
+				if(null !=mProfModel.getMessage() && mProfModel.getMessage().size() >0)
+				{
 
 					mProfSubModel=mProfModel.getMessage();
 
@@ -1838,26 +1841,29 @@ try {
 	}
 
 	public void onBackPressed() {
-		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-		if (drawer.isDrawerOpen(GravityCompat.START)) {
-			drawer.closeDrawer(GravityCompat.START);
-		} else {
-			AlertDialog dialog =  new AlertDialog.Builder(this)
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Closing Activity")
-					.setMessage("Are you sure you want to exit?")
-					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
-					{
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							moveTaskToBack(true);
-						}
+		if (intent.hasExtra("fromshortbio")) {
+			finish();
+		}else {
+			DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+			if (drawer.isDrawerOpen(GravityCompat.START)) {
+				drawer.closeDrawer(GravityCompat.START);
+			} else {
+				AlertDialog dialog = new AlertDialog.Builder(this)
+						.setIcon(android.R.drawable.ic_dialog_alert)
+						.setTitle("Closing Activity")
+						.setMessage("Are you sure you want to exit?")
+						.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								moveTaskToBack(true);
+							}
 
-					})
-					.setNegativeButton("No", null)
-					.show();
-			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-			textView.setTextSize(18);
+						})
+						.setNegativeButton("No", null)
+						.show();
+				TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+				textView.setTextSize(18);
+			}
 		}
 	}
 

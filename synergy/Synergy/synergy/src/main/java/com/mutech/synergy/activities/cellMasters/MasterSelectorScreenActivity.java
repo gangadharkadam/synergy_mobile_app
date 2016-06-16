@@ -420,8 +420,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
                 @Override
                 public void onClick(View v) {
 
-                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
-                    startActivity(signupInt);
+                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
+                    startActivity(Int);
                     dialogPopup.dismiss();
                 }
             });
@@ -430,8 +430,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
                 @Override
                 public void onClick(View v) {
 
-                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, AttendanceHistory.class);
-                    startActivity(signupInt);
+                    Intent Int = new Intent(MasterSelectorScreenActivity.this, AttendanceHistory.class);
+                    startActivity(Int);
                     dialogPopup.dismiss();
                 }
             });
@@ -440,8 +440,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
                 @Override
                 public void onClick(View v) {
 
-                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
-                    startActivity(signupInt);
+                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
+                    startActivity(Int);
                     dialogPopup.dismiss();
                 }
             });
@@ -450,8 +450,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
                 @Override
                 public void onClick(View v) {
 
-                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, CellLeaderMsg.class);
-                    startActivity(signupInt);
+                    Intent Int = new Intent(MasterSelectorScreenActivity.this, CellLeaderMsg.class);
+                    startActivity(Int);
                     dialogPopup.dismiss();
                 }
             });
@@ -460,8 +460,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
                 @Override
                 public void onClick(View v) {
 
-                    Intent signupInt = new Intent(MasterSelectorScreenActivity.this, ViewMembers.class);
-                    startActivity(signupInt);
+                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ViewMembers.class);
+                    startActivity(Int);
                     dialogPopup.dismiss();
                 }
             });

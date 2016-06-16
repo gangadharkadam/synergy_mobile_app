@@ -345,7 +345,8 @@
             android:label="@string/title_activity_cell_leader_msg" />
         <activity
             android:name="com.mutech.synergy.activities.AttendanceHistory"
-            android:label="@string/title_activity_attendance_history" />
+            android:label="@string/title_activity_attendance_history"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.mutech.synergy.activities.ShortBio"
             android:label="@string/title_activity_short_bio" />

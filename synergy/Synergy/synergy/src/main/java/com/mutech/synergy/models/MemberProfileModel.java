@@ -107,6 +107,7 @@ public class MemberProfileModel {
 		private String where;
 		private String parentfield;
 		private String password;
+		private String role;
 		
 		
 		
@@ -563,7 +564,14 @@ public class MemberProfileModel {
 		public void setUserpass(String userpass) {
 			this.userpass = userpass;
 		}
-		
+
+		public String getRole() {
+			return role;
+		}
+
+		public void setRole(String role) {
+			this.role = role;
+		}
 	}
 		
 

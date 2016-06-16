@@ -107,7 +107,8 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	private SimpleDateFormat displayDateFormat;
 	private Gson gson;
 	JSONArray jsonarray;
-	String str;
+	String str,fdate="",tdate="";
+    String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="";
 	
 	public int TOTAL_LIST_ITEMS;
     public int NUM_ITEMS_PAGE   = 20;
@@ -130,15 +131,24 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	private SimpleDateFormat dateFormatter,dateFormatter01;
 	Calendar newCalendar;
 	TextView tvTitle;
+	private Intent intent;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.my_attendance_layout);
 //		setContentView(R.layout.activity_meetinglist);
-
+        initialize();
 		jsonarray=new JSONArray();
-		
+
+        if(intent.hasExtra("fromah"))
+        {
+            fdate = getIntent().getStringExtra("fdate");
+            tdate = getIntent().getStringExtra("tdate");
+
+            getUpdatedListMethod(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+        }
+
 		mZoneList=new ArrayList<String>();
 		mRegionList=new ArrayList<String>();
 		mChurchList=new ArrayList<String>();
@@ -146,8 +156,8 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 		mGrpChurchList=new ArrayList<String>();
 		mPCFList=new ArrayList<String>();
 		mCellList=new ArrayList<String>();
-		
-		initialize();
+
+
 	}
 
 	@Override
@@ -199,6 +209,7 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@SuppressLint("NewApi")
 	private void initialize() {
+        intent = getIntent();
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
@@ -300,7 +311,8 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 		
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
-			getMyMeetingList("1");
+            if(!intent.hasExtra("fromah")){
+			getMyMeetingList("1");}
 		}else{
 			Methods.longToast("Please connect to Internet", this);
 		}
@@ -833,11 +845,11 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	public static class Holder{
 		private TextView lblMeetingName,lblMeetingVenue,lblMeetingTime,lblMeetingsubject;
 		private Button btnMarkAttendance;
-	}
+    }
 
-	@Override
+    @Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode,resultCode,data);
+		super.onActivityResult(requestCode, resultCode, data);
 	/*	if(requestCode==2)  
 		{  
 			
@@ -1489,8 +1501,7 @@ public void showDialog(){
 		alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 		
 		public void onClick(DialogInterface dialog, int id) {
-			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+
 			
 			try{
 				resion=spresion.getSelectedItem().toString();
@@ -1530,27 +1541,27 @@ public void showDialog(){
 			}catch(Exception ex){
 				cell="";
 			}
-			
-			 fdate=txtFromDate.getText().toString();
-			 tdate=txtToDate.getText().toString();
-					
+
+				fdate = txtFromDate.getText().toString();
+				tdate = txtToDate.getText().toString();
+
 			
 			if(NetworkHelper.isOnline(MyMeetingListActivity.this)){
 				Methods.showProgressDialog(MyMeetingListActivity.this);
 		
 				getUpdatedListMethod(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
-			
+
 				dialog.cancel();
 
-				
-			}else{
-			
-				Methods.longToast("Please connect to Internet",MyMeetingListActivity.this);
-			
-			}
-		}
-	 })
-	   .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            } else {
+
+                Methods.longToast("Please connect to Internet", MyMeetingListActivity.this);
+
+            }
+        }
+        })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
 		   public void onClick(DialogInterface dialog, int id) {
 
@@ -1828,57 +1839,55 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 	@Override
 	public void onResponse(String response) {
 		Methods.closeProgressDialog();
-		Log.e("droid get reqgetList Redord--------", response);
+		//Log.e("droid get reqgetList Redord--------", response);
 
-		
+
 
 		if(response.contains("status"))
 		{
 			ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
-		
+
 			if(respModel.getMessage().getStatus()=="401"){
 				Methods.longToast("User name or Password is incorrect", MyMeetingListActivity.this);
 			}else{
 				Methods.longToast(respModel.getMessage().getMessage(), MyMeetingListActivity.this);
 			}
 		}else{
-			
-				
 				try {
-					
+
 					JSONObject jsonobj=new JSONObject(response);
-					 
+
 					 jsonobj.getJSONObject("message");
-						
+
 					TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
-					
+
                     Log.e("totalcount=", ""+TOTAL_LIST_ITEMS);
                     tvTitle.setText("My Attendance(" + TOTAL_LIST_ITEMS + ")    ");
 
                     //if(pageflag)
 					 Btnfooter();
-					 
+
 					 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
-				
+
 					if(jsonarray.length()>0){
-						
+
 						MeetingListAdapter adapter=new MeetingListAdapter(MyMeetingListActivity.this,jsonarray);
 						lvMeeting.setAdapter(adapter);
 						adapter.notifyDataSetChanged();
-					
+
 					}else{
-						
+
 							Methods.longToast("No results found", MyMeetingListActivity.this);
 							MeetingListAdapter adapter=new MeetingListAdapter(MyMeetingListActivity.this,jsonarray);
 							lvMeeting.setAdapter(adapter);
 							adapter.notifyDataSetChanged();
 					}
-				
+
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			
+
 		}
 
 
@@ -1903,40 +1912,39 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 	protected Map<String, String> getParams() throws AuthFailureError{
 		Map<String, String> params = new HashMap<String, String>();
 
-		
+
 		JSONObject jsonobj=new JSONObject();
 		try {
-		
-			jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
+
+            //System.out.println("test ="+mPreferenceHelper.getString(Commons.USER_EMAILID));
+            jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
 			jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
-		
-		
-			
-			
+
+
 			//resion, zone,gchurch, church, pcf,srcell,cell,fdate, todate)
-			
+
 			JSONObject jsonfilter=new JSONObject();
-			
+
 		//	jsonfilter.put("Month", month);
 
 			if(!resion.equals(""))
 				jsonfilter.put("region", resion);
-			
+
 			if(!zone.equals(""))
 				jsonfilter.put("zone", zone);
-			
+
 			if(!gchurch.equals(""))
 				jsonfilter.put("group_church", gchurch);
-			
+
 			if(!church.equals(""))
 				jsonfilter.put("church", church);
-			
+
 			if(!pcf.equals(""))
 				jsonfilter.put("pcf", pcf);
-			
+
 			if(!srcell.equals(""))
 				jsonfilter.put("senior_cell", srcell);
-			
+
 			if(!cell.equals(""))
 				jsonfilter.put("cell", cell);
 
@@ -1946,14 +1954,14 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 			if(!fdate.equals(""))
 				jsonfilter.put("from_date", fdate);
 
-			
+
 			jsonobj.put("filters", jsonfilter);
-			
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		String dataString=jsonobj.toString();
 
 		Log.d("droid", dataString);
@@ -1995,25 +2003,28 @@ protected void onDestroy() {
 }
 
 	public void onBackPressed() {
-		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-		if (drawer.isDrawerOpen(GravityCompat.START)) {
-			drawer.closeDrawer(GravityCompat.START);
-		} else {
-			new AlertDialog.Builder(this)
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Closing Activity")
-					.setMessage("Are you sure you want to exit?")
-					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
-					{
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							moveTaskToBack(true);
-						}
+        if (intent.hasExtra("fromah")) {
+            finish();
+        } else {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                new AlertDialog.Builder(this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Closing Activity")
+                        .setMessage("Are you sure you want to exit?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                moveTaskToBack(true);
+                            }
 
-					})
-					.setNegativeButton("No", null)
-					.show();
-		}
-	}
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+            }
+        }
+    }
 
 }
