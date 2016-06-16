@@ -120,12 +120,14 @@ public class AttendanceHistory extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                Intent Int = new Intent(AttendanceHistory.this,  MyMeetingListActivity.class);
-                Int.putExtra("fdate",txtFromDate.getText().toString());
-                Int.putExtra("tdate",txtToDate.getText().toString());
-                Int.putExtra("fromah","fromah");
-                startActivity(Int);
-                finish();
+                if (isValid()) {
+                    Intent Int = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
+                    Int.putExtra("fdate", txtFromDate.getText().toString());
+                    Int.putExtra("tdate", txtToDate.getText().toString());
+                    Int.putExtra("fromah", "fromah");
+                    startActivity(Int);
+                    finish();
+                }
             }
         });
 
@@ -175,122 +177,5 @@ public class AttendanceHistory extends ActionBarActivity {
             return false;
         }
         return true;
-    }
-
-    private void getUpdatedListMethod1(final String fdate,final String todate){
-
-        StringRequest reqgetLowerHierarchy=new StringRequest(Request.Method.POST, SynergyValues.Web.GetMyMeetingService.SERVICE_URL,new Response.Listener<String>() {
-
-            @Override
-            public void onResponse(String response) {
-                Methods.closeProgressDialog();
-                Log.e("droid get reqgetList Redord--------", response);
-
-                if(response.contains("status"))
-                {
-                    ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
-
-                    if(respModel.getMessage().getStatus()=="401"){
-                        Methods.longToast("User name or Password is incorrect", AttendanceHistory.this);
-                    }else{
-                        Methods.longToast(respModel.getMessage().getMessage(), AttendanceHistory.this);
-                    }
-                }else{
-
-
-                    try {
-
-                        JSONObject jsonobj=new JSONObject(response);
-
-                        jsonobj.getJSONObject("message");
-
-
-                        jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
-
-                    /*    if(jsonarray.length()>0){
-
-                            MeetingListAdapter adapter=new MeetingListAdapter(AttendanceHistory.this,jsonarray);
-                            lvMeeting.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
-
-                        }else{
-
-                            Methods.longToast("No results found", AttendanceHistory.this);
-                            MeetingListAdapter adapter=new MeetingListAdapter(AttendanceHistory.this,jsonarray);
-                            lvMeeting.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
-                        }*/
-
-                    } catch (JSONException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-
-                }
-
-
-            }
-        },new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Methods.closeProgressDialog();
-                Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
-
-                if(error.networkResponse.statusCode==403){
-                    //	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
-                }
-                //else
-                //	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
-
-            }
-
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
-
-
-                JSONObject jsonobj=new JSONObject();
-                try {
-
-                    jsonobj.put("username", mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
-                    jsonobj.put("userpass", mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
-
-
-
-
-                    //resion, zone,gchurch, church, pcf,srcell,cell,fdate, todate)
-
-                    JSONObject jsonfilter=new JSONObject();
-
-                    //	jsonfilter.put("Month", month);
-
-                    if(!todate.equals(""))
-                        jsonfilter.put("to_date", todate);
-
-                    if(!fdate.equals(""))
-                        jsonfilter.put("from_date", fdate);
-
-
-                    jsonobj.put("filters", jsonfilter);
-
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-
-                String dataString=jsonobj.toString();
-
-                Log.d("droid", dataString);
-                params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
-                return params;
-            }
-        };
-
-        App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
-        reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-
-
     }
 }

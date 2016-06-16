@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
+import com.mutech.databasedetails.CellDetailsActivity;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues;
@@ -28,6 +29,10 @@ import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
 import com.mutech.synergy.utils.PreferenceHelper;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -48,6 +53,8 @@ public class ShortBio extends ActionBarActivity {
     private SimpleDateFormat dateFormatter,dateFormatterService;
     private TextView txtMemberDateOfBirth;
     private TextView txtMembershipNo,txtMemberName,txtMemberPhone,txtEmailID,txtMemberHomeAddress,txtDesignation,txtstatus,txtRole;
+
+    String cellcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +78,14 @@ public class ShortBio extends ActionBarActivity {
         dateFormatterService=new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
+        cellcode=getIntent().getStringExtra("cellcode");
+
         btnedit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent Int = new Intent(ShortBio.this, MyProfileActivity.class);
+                Intent Int = new Intent(ShortBio.this, CellDetailsActivity.class);
+                Int.putExtra("cellcode", cellcode);
                 Int.putExtra("fromshortbio","fromshortbio");
                 startActivity(Int);
                 finish();
@@ -85,118 +95,93 @@ public class ShortBio extends ActionBarActivity {
 
         if(NetworkHelper.isOnline(this)){
             Methods.showProgressDialog(this);
-            getProfileInfo();
+            //getProfileInfo();
+            getCellDetails();
         }
         else
             Methods.longToast("Please connect to Internet", this);
 
     }
 
-    private void getProfileInfo() {
-        StringRequest reqGetProfile=new StringRequest(Request.Method.POST, SynergyValues.Web.GetMemberProfileService.SERVICE_URL,new Response.Listener<String>() {
+
+    private void getCellDetails() {
+
+        StringRequest reqgetCellDetails=new StringRequest(Request.Method.POST, SynergyValues.Web.GetCellDetailsService.SERVICE_URL,new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
                 Methods.closeProgressDialog();
-                Log.e("responce droid", "get reqGetProfile ---------------" + response);
+                Log.d("droid","get reqgetTopHierarchy ---------------"+ response);
+                try {
 
-                MemberProfileModel mProfModel = gson.fromJson(response, MemberProfileModel.class);
-                //Object meetingmsg=mMeetingModel.getMessage();
-
-                if (null != mProfModel.getMessage() && mProfModel.getMessage().size() > 0) {
-
-                    mProfSubModel = mProfModel.getMessage();
-
-                    Log.d("NonStop", "mProfSumModel Size: " + mProfSubModel.size());
-                    for (int i = 0; i < mProfSubModel.size(); i++) {
-                        txtMembershipNo.setText(mProfSubModel.get(i).getName());
-
-                        txtMemberName.setText(mProfSubModel.get(i).getMember_name() + " " +mProfSubModel.get(i).getLast_name());
-                        //if(null !=mProfSubModel.get(i).getDate_of_birth()){
-                        try {
-                            Date dob = new Date();
-
-                            if (null != mProfSubModel.get(i).getDate_of_birth()) {
-                                dob = dateFormatterService.parse(mProfSubModel.get(i).getDate_of_birth());
-                                txtMemberDateOfBirth.setText(dateFormatter.format(dob));
-                            }
-
-                            if (null != mProfSubModel.get(i).getDate_of_join()) {
-                                dob = dateFormatterService.parse(mProfSubModel.get(i).getDate_of_join());
-//								txtDateofJoining.setText(dateFormatter.format(dob));
-                            }
-
-                            if (null != mProfSubModel.get(i).getBaptism_when()) {
-                                dob = dateFormatterService.parse(mProfSubModel.get(i).getBaptism_when());
-//								txtBaptisedWhen.setText(dateFormatter.format(dob));
-                            }
-
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                        //}
-
-//						if(null !=mProfSubModel.get(i).getBaptism_where())
-//							txtBaptisedWhere.setText(mProfSubModel.get(i).getBaptism_where());
-
-                        //getChurch
-
-                        txtMemberPhone.setText(mProfSubModel.get(i).getPhone_1());
-                        txtEmailID.setText(mProfSubModel.get(i).getEmail_id());
-                        txtMemberHomeAddress.setText(mProfSubModel.get(i).getAddress());
-                        txtDesignation.setText(mProfSubModel.get(i).getMember_designation());
-                        txtstatus.setText(mProfSubModel.get(i).getEmployment_status());
-                        txtRole.setText(mProfSubModel.get(i).getRole());
+                    JSONObject jsonobj=new JSONObject(response);
+                    JSONArray jarray=jsonobj.getJSONArray("message");
 
 
-                        if (i < 1) {
-                            Imageurl = mProfSubModel.get(i).getImage();
-                        }
+                    String str=jarray.getJSONObject(0).getString("cell_code");
 
-                        if (Imageurl != null) {
-                            Picasso.with(ShortBio.this).load(SynergyValues.ImageUrl.imageUrl + Imageurl).into(imgProfilePic);
-                        }
-                        Log.e("Image Url", SynergyValues.ImageUrl.imageUrl + Imageurl);
-                        Log.d("NonStop", "Image URL: " + SynergyValues.ImageUrl.imageUrl + Imageurl);
+                    if(str!=null)
+                        txtMembershipNo.setText(jarray.getJSONObject(0).getString("cell_code"));
 
-                    }
+                    str=jarray.getJSONObject(0).getString("cell_name");
 
-                    //	}
+                    if(str!=null)
+                        txtMemberName.setText(jarray.getJSONObject(0).getString("cell_name"));
 
+                    if(!jarray.getJSONObject(0).getString("contact_phone_no").equals("null"))
+                        txtMemberPhone.setText(jarray.getJSONObject(0).getString("contact_phone_no"));
+
+                    if(!jarray.getJSONObject(0).getString("contact_email_id").equals("null"))
+                        txtEmailID.setText(jarray.getJSONObject(0).getString("contact_email_id"));
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
+
+                Methods.closeProgressDialog();
+
             }
         },new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
                 Methods.closeProgressDialog();
-                Log.d("droid","get reqsaveMeeting error---------------"+ error.getCause());
+                Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
 
                 if(error.networkResponse.statusCode==403){
-                    Methods.longToast("No access to update Profile", ShortBio.this);
+                    Methods.longToast("Access Denied", ShortBio.this);
                 }
                 else
                     Methods.longToast("Some Error Occured,please try again later", ShortBio.this);
+
+
+
             }
+
         }){
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() throws AuthFailureError{
                 Map<String, String> params = new HashMap<String, String>();
 
                 MeetingListRequestModel model=new MeetingListRequestModel();
                 model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
                 model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
+                model.setTbl("Cells");
+                model.setName(cellcode);
 
                 String dataString=gson.toJson(model, MeetingListRequestModel.class);
 
-                Log.e("Request droid", dataString);
-                params.put(SynergyValues.Web.GetMemberProfileService.DATA, dataString);
+                Log.d("droid", dataString);
+                params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
                 return params;
             }
         };
 
-        App.getInstance().addToRequestQueue(reqGetProfile, "reqGetProfile");
-        reqGetProfile.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+        App.getInstance().addToRequestQueue(reqgetCellDetails, "reqgetCellDetails");
+        reqgetCellDetails.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
     }
+
 
 }

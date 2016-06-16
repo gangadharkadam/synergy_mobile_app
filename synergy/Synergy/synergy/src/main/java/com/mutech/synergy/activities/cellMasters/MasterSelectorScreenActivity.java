@@ -57,7 +57,7 @@ import com.mutech.synergy.utils.PreferenceHelper;
 public class MasterSelectorScreenActivity extends ActionBarActivity implements OnClickListener{
 
 	//Button variables 
-	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer,btnviewprofile,btnviewattendancehistory,btncellleaderprofile,btncellleadermsg,btnviewmembers;
+	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer;
 	//Sharedpreference object
 	private PreferenceHelper mPreferenceHelper;
 	//ImageView variables
@@ -74,7 +74,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 	private DrawerLayout mDrawerLayout; 
 	private ActionBarDrawerToggle mDrawerToggle;
 	String str;
-	private Dialog dialogPopup=null;
+
 
 
 	//onCreate method
@@ -405,68 +405,6 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			break;
 		case R.id.btnCellMaster:
 			Log.d("NonStop", "Going to CellMaster");
-
-			dialogPopup = new Dialog(MasterSelectorScreenActivity.this);
-			dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
-			dialogPopup.setContentView(R.layout.custom_cell_dialogbox);
-
-            btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
-            btnviewattendancehistory= (Button) dialogPopup.findViewById(R.id.viewattendancehistory);
-            btncellleaderprofile= (Button) dialogPopup.findViewById(R.id.cellleaderprofile);
-            btncellleadermsg= (Button) dialogPopup.findViewById(R.id.msgcellleader);
-            btnviewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
-
-            btnviewprofile.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
-                    startActivity(Int);
-                    dialogPopup.dismiss();
-                }
-            });
-
-            btnviewattendancehistory.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent Int = new Intent(MasterSelectorScreenActivity.this, AttendanceHistory.class);
-                    startActivity(Int);
-                    dialogPopup.dismiss();
-                }
-            });
-
-            btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ShortBio.class);
-                    startActivity(Int);
-                    dialogPopup.dismiss();
-                }
-            });
-
-            btncellleadermsg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent Int = new Intent(MasterSelectorScreenActivity.this, CellLeaderMsg.class);
-                    startActivity(Int);
-                    dialogPopup.dismiss();
-                }
-            });
-
-            btnviewmembers.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent Int = new Intent(MasterSelectorScreenActivity.this, ViewMembers.class);
-                    startActivity(Int);
-                    dialogPopup.dismiss();
-                }
-            });
-
-            dialogPopup.show();
 
             Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
 			intCelllist.putExtra("OptionSelected", "Cell");

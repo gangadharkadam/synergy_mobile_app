@@ -16,6 +16,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
@@ -34,6 +35,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -69,6 +71,10 @@ import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetAllMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
+import com.mutech.synergy.activities.AttendanceHistory;
+import com.mutech.synergy.activities.CellLeaderMsg;
+import com.mutech.synergy.activities.ShortBio;
+import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.event.CreateEventActivity;
 import com.mutech.synergy.activities.event.EventListActivity;
@@ -94,8 +100,10 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 	private String optionSelected,actionbarTitle;
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
+	private Button btnviewprofile,btnviewattendancehistory,btncellleaderprofile,btncellleadermsg,btnviewmembers;
 //	ImageView filterimg;
 	TextView textView1;
+	private Dialog dialogPopup=null;
 	
 	Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
@@ -271,12 +279,74 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 						/*String name=mResultList.get(position).getName();
 						startActivity(new Intent(DisplayMastersListActivity.this, CellDetailsActivity.class).putExtra("cellcode", name));*/
 						
-						String name;
+						final String name;
 						try {
 							//String name=mResultList.get(position).getName();
 							name = jsonarray.getJSONObject(position).getString("name");
 							Log.d("NonStop", "Going to Cell");
-							startActivity(new Intent(DisplayMastersListActivity.this, CellDetailsActivity.class).putExtra("cellcode", name));
+
+							dialogPopup = new Dialog(DisplayMastersListActivity.this);
+							dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+							dialogPopup.setContentView(R.layout.custom_cell_dialogbox);
+
+							btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
+							btnviewattendancehistory= (Button) dialogPopup.findViewById(R.id.viewattendancehistory);
+							btncellleaderprofile= (Button) dialogPopup.findViewById(R.id.cellleaderprofile);
+							btncellleadermsg= (Button) dialogPopup.findViewById(R.id.msgcellleader);
+							btnviewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
+
+							btnviewprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewattendancehistory.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+						/*	btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});*/
+
+							btncellleadermsg.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, CellLeaderMsg.class);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewmembers.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							dialogPopup.show();
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
