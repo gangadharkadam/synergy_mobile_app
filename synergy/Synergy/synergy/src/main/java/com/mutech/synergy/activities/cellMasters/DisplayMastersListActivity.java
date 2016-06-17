@@ -337,14 +337,14 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 							});
 
 							btnviewmembers.setOnClickListener(new View.OnClickListener() {
-								@Override
-								public void onClick(View v) {
+                                @Override
+                                public void onClick(View v) {
 
-									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
-									startActivity(Int);
-									dialogPopup.dismiss();
-								}
-							});
+                                    Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
+                                    startActivity(Int);
+                                    dialogPopup.dismiss();
+                                }
+                            });
 
 							dialogPopup.show();
 						} catch (JSONException e) {
