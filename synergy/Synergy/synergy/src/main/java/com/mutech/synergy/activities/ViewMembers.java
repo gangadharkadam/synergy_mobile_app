@@ -172,10 +172,10 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
 
        if(NetworkHelper.isOnline(ViewMembers.this)){
             Methods.showProgressDialog(ViewMembers.this);
-            if(cellcode.equals(""))
-                getListNew("Member","1","","","","","","","","","");
-            else
-                getListNew2("Member", "1", "", "", "", "", "", "", "", "", "", cellcode);
+//            if(cellcode.equals(""))
+                getListNew("Member","1","","","","","","",cellcode,"","");
+/*            else
+                getListNew2("Member", "1", "", "", "", "", "", "Zone30/CHR0001/SCL0001", cellcode, "", "", cellcode);*/
           // getListNew2("Member", "1", "", "", "", "", "", "", cellcode, "", "", "");
 
         }else{
@@ -192,140 +192,6 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
         else
             Methods.longToast("Please connect to Internet", this);*/
 
-    }
-
-    private void getListNew2(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate, final String name){
-
-        //	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
-        StringRequest reqgetLowerHierarchy=new StringRequest(Request.Method.POST, SynergyValues.Web.SearchService.SERVICE_URL,new Response.Listener<String>() {
-
-            @Override
-            public void onResponse(String response) {
-                Methods.closeProgressDialog();
-                Log.e("droid get reqResponce ---------------", response);
-
-
-
-                if(response.contains("status"))
-                {
-                    ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
-                    if(respModel.getMessage().getStatus()=="401"){
-                        Methods.longToast("User name or Password is incorrect", ViewMembers.this);
-                    }else{
-                        Methods.longToast(respModel.getMessage().getMessage(), ViewMembers.this);
-                    }
-                }else{
-
-
-                    try {
-
-                        jsonobj=new JSONObject(response);
-                        jsonobj.getJSONObject("message");
-
-                        int i=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
-
-                        TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
-
-                        txtcount.setText("Members ("+i+")");
-                        jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
-
-                        if(jsonarray.length()>0){
-
-
-                            DetailAdapter adapter=new DetailAdapter(ViewMembers.this,jsonarray);
-                            lvAllMembers.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
-
-
-                        }else{
-
-                            DetailAdapter adapter=new DetailAdapter(ViewMembers.this,jsonarray);
-                            lvAllMembers.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
-
-                            Methods.longToast("No results found", ViewMembers.this);
-                        }
-
-
-
-
-
-                    } catch (JSONException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-
-
-
-
-                }
-
-
-            }
-        },new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Methods.closeProgressDialog();
-                Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
-
-                if(error!=null) {
-                    if(error.networkResponse.statusCode==403){
-                        //	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
-                    }
-                }
-                //else
-                //	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
-
-            }
-
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError{
-                Map<String, String> params = new HashMap<String, String>();
-
-                try{
-
-                    jsonobj=new JSONObject();
-
-                    jsonobj.put("username", mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
-                    jsonobj.put("userpass", mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
-
-                    jsonobj.put("search", "member");
-                    if(!church.equals(""))
-                        jsonobj.put("church", church);
-                    if(!gchurch.equals(""))
-                        jsonobj.put("group_church", gchurch);
-                    if(!zone.equals(""))
-                        jsonobj.put("zone", zone);
-                    if(!resion.equals(""))
-                        jsonobj.put("region", resion);
-                    if(!name.equals(""))
-                        jsonobj.put("member", name);
-
-                    JSONObject jsonfilter=new JSONObject();
-
-                    if(!fdate.equals(""))
-                        jsonfilter.put("from_date", fdate);
-                    if(!todate.equals(""))
-                        jsonfilter.put("to_date", todate);
-                    if(!fdate.equals("") || !todate.equals(""))
-                        jsonobj.put("filters", jsonfilter);
-
-                }catch(Exception ex){
-
-                }
-
-                String dataString=jsonobj.toString();//gson.toJson(model, MeetingListRequestModel.class);
-
-                Log.e("Request droid", dataString);
-                params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
-                return params;
-            }
-        };
-
-        App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
-        reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
     }
 
     private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
@@ -470,6 +336,142 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
         App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
         reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
     }
+
+
+/*    private void getListNew2(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate, final String name){
+
+        //	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
+        StringRequest reqgetLowerHierarchy=new StringRequest(Request.Method.POST, SynergyValues.Web.SearchService.SERVICE_URL,new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Methods.closeProgressDialog();
+                Log.e("droid get reqResponce ---------------", response);
+
+
+
+                if(response.contains("status"))
+                {
+                    ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
+                    if(respModel.getMessage().getStatus()=="401"){
+                        Methods.longToast("User name or Password is incorrect", ViewMembers.this);
+                    }else{
+                        Methods.longToast(respModel.getMessage().getMessage(), ViewMembers.this);
+                    }
+                }else{
+
+
+                    try {
+
+                        jsonobj=new JSONObject(response);
+                        jsonobj.getJSONObject("message");
+
+                        int i=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+                        TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
+
+                        txtcount.setText("Members ("+i+")");
+                        jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
+
+                        if(jsonarray.length()>0){
+
+
+                            DetailAdapter adapter=new DetailAdapter(ViewMembers.this,jsonarray);
+                            lvAllMembers.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+
+
+                        }else{
+
+                            DetailAdapter adapter=new DetailAdapter(ViewMembers.this,jsonarray);
+                            lvAllMembers.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+
+                            Methods.longToast("No results found", ViewMembers.this);
+                        }
+
+
+
+
+
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+
+
+
+                }
+
+
+            }
+        },new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Methods.closeProgressDialog();
+                Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
+
+                if(error!=null) {
+                    if(error.networkResponse.statusCode==403){
+                        //	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+                    }
+                }
+                //else
+                //	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+
+            }
+
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError{
+                Map<String, String> params = new HashMap<String, String>();
+
+                try{
+
+                    jsonobj=new JSONObject();
+
+                    jsonobj.put("username", mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
+                    jsonobj.put("userpass", mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
+
+                    jsonobj.put("search", "member");
+                    if(!church.equals(""))
+                        jsonobj.put("church", church);
+                    if(!gchurch.equals(""))
+                        jsonobj.put("group_church", gchurch);
+                    if(!zone.equals(""))
+                        jsonobj.put("zone", zone);
+                    if(!resion.equals(""))
+                        jsonobj.put("region", resion);
+                    if(!name.equals(""))
+                        jsonobj.put("member", name);
+
+                    JSONObject jsonfilter=new JSONObject();
+
+                    if(!fdate.equals(""))
+                        jsonfilter.put("from_date", fdate);
+                    if(!todate.equals(""))
+                        jsonfilter.put("to_date", todate);
+                    if(!fdate.equals("") || !todate.equals(""))
+                        jsonobj.put("filters", jsonfilter);
+
+                }catch(Exception ex){
+
+                }
+
+                String dataString=jsonobj.toString();//gson.toJson(model, MeetingListRequestModel.class);
+
+                Log.e("Request droid", dataString);
+                params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
+                return params;
+            }
+        };
+
+        App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
+        reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+    }*/
+
 
 
     @Override
