@@ -338,8 +338,6 @@ private void getList(final String tbl){
 				Methods.closeProgressDialog();
 				Log.e("droid get reqgetLowerHierarchy ---------------", response);
 
-				
-
 				if(response.contains("status"))
 				{
 					ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
@@ -372,7 +370,6 @@ private void getList(final String tbl){
 						}
 					}
 				}
-
 
 			}
 		},new ErrorListener() {
@@ -610,19 +607,13 @@ private void getList(final String tbl){
 							
 							Methods.longToast("No results found", AllMemberListActivity.this);
 						}
-						
-						
-						
-						
+
 						 
 					} catch (JSONException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					 
-					 
-						
-					
+
 				}
 
 
@@ -1950,6 +1941,5 @@ protected void onDestroy() {
 //	pageflag=true;
 	
 }
-
 
 }

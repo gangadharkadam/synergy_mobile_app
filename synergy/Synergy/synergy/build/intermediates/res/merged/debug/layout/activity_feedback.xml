@@ -60,13 +60,13 @@
     <EditText
         android:id="@+id/edtdescription"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="@dimen/dimen_5"
         android:layout_marginLeft="@dimen/dimen_10"
         android:layout_marginRight="@dimen/dimen_10"
         android:background="@drawable/rectangle1"
         android:padding="@dimen/dimen_8"
-        android:singleLine="true" />
+        android:gravity="top"/>
     </LinearLayout>
     </ScrollView>
     <LinearLayout

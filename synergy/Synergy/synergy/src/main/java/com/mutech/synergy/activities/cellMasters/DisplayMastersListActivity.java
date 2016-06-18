@@ -341,6 +341,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
                                 public void onClick(View v) {
 
                                     Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
+									Int.putExtra("cellcode", name);
                                     startActivity(Int);
                                     dialogPopup.dismiss();
                                 }
