@@ -200,30 +200,73 @@
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"
                     android:textSize="@dimen/font_size_small" />
-                
-                
-                
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dimen_10"
-                    android:text="Giving or Pledge"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_size_small" />
 
-                <Spinner
-                    android:id="@+id/txtGiving_Pledge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_10"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:background="@drawable/rectangle1"
-                    android:maxLines="1"
-                  
-                    android:padding="@dimen/dimen_10"
-                    android:singleLine="true"
-                    android:textSize="@dimen/font_size_small" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_10"
+              android:text="Currency (Mandatory)"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/font_size_small" />
+
+          <Spinner
+              android:id="@+id/spCurrency"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dimen_10"
+              android:layout_marginLeft="@dimen/dimen_10"
+              android:layout_marginRight="@dimen/dimen_10"
+              android:background="@drawable/rectangle1"
+              android:textSize="@dimen/font_size_small"
+              android:maxLines="1"
+
+              android:padding="@dimen/dimen_10"
+              android:singleLine="true" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_10"
+              android:text="Conversation Rate (Mandatory)"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/font_size_small"/>
+
+          <EditText
+              android:id="@+id/txtConversation_Rate"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dimen_10"
+              android:layout_marginLeft="@dimen/dimen_10"
+              android:layout_marginRight="@dimen/dimen_10"
+              android:inputType="number"
+              android:background="@drawable/rectangle1"
+              android:maxLines="1"
+              android:padding="@dimen/dimen_10"
+              android:singleLine="true"
+              android:textSize="@dimen/font_size_small"/>
+
+                
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_10"
+              android:text="Giving or Pledge"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/font_size_small" />
+
+          <Spinner
+              android:id="@+id/txtGiving_Pledge"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dimen_10"
+              android:layout_marginLeft="@dimen/dimen_10"
+              android:layout_marginRight="@dimen/dimen_10"
+              android:background="@drawable/rectangle1"
+              android:maxLines="1"
+              android:padding="@dimen/dimen_10"
+              android:singleLine="true"
+              android:textSize="@dimen/font_size_small" />
                 
            <LinearLayout
                   		android:id="@+id/pledge"

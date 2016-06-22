@@ -11,6 +11,7 @@
     <color name="divider_color">#C0C0C0</color>
     <color name="darkgrey_textcolor">#A4A4A4</color>
      <color name="textview_background">#FCFCFC</color>
+    <color name="hor_divider">#21babfaa</color>
     <color name="red">#FF0000</color>
       <color name="green">#008000</color>
 </resources>

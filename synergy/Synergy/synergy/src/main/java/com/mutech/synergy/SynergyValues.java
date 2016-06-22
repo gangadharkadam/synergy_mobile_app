@@ -256,7 +256,13 @@ public class SynergyValues {
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_partnership_arms/";
 			public static String DATA ="data";
 		}
-		
+
+		public static class Getcurrency{
+			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.get_currency";
+			public static String DATA ="data";
+		}
+
+
 		public static class SaveMemberProfileService{
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.update_my_profile/";
 			public static String DATA ="data";
@@ -300,7 +306,7 @@ public class SynergyValues {
 		}
 		
 		public static class CreatePartnershipRecord{
-			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.create_partnership_reocrd/";
+			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.create_partnership_reocrd/";
 			public static String DATA ="data";
 		}
 		
@@ -333,13 +339,23 @@ public class SynergyValues {
 			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.get_master_details/";
 			public static String DATA="data";
 		}
+
+        public static class GetInvitesContactsDetailsService{
+            public static String SERVICE_URL=BASE_URL1+"method/church_ministry.church_ministry.doctype.member.member.get_master_details/";
+            public static String DATA="data";
+        }
 		
 		public static class UpdateAllDetailsService{
 			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.update_master_details/";
 			public static String DATA="data";
 			
 		}
-		
+
+		public static class UpdateInvitesContactsDetailsService{
+			public static String SERVICE_URL=BASE_URL1+"method/church_ministry.church_ministry.doctype.member.member.update_master_details/";
+			public static String DATA="data";
+
+		}
 
 		public static class LowerHierarchyService{		
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_lists/";
@@ -379,12 +395,12 @@ public class SynergyValues {
 		
 		
 		public static class ShowPartnerShipService{
-			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.partnership_arm_details/";
+			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.partnership_arm_details/";
 			public static String DATA ="data";
 		}
 		
 		public static class UpdatePartnerShipService{
-			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.update_partnership_arm/";
+			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.update_partnership_arm/";
 			public static String DATA ="data";
 		}
 		

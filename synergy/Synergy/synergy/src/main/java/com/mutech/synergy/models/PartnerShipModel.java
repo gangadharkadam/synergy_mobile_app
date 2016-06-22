@@ -25,7 +25,7 @@ public class PartnerShipModel {
 	}
 	
 	public class PartnerModel{
-		private String partnership_arms,ministry_year,date,amount,giving_or_pledge,member,is_member,partner_name,type_of_pledge;
+		private String partnership_arms,ministry_year,date,amount,giving_or_pledge,member,is_member,partner_name,type_of_pledge,currency,conversation_rate;
 		
 		
 		public String getType_of_pledge() {
@@ -72,6 +72,22 @@ public class PartnerShipModel {
 		}
 		public void setamount(String amount) {
 			this.amount = amount;
+		}
+
+		public String getcurrency() {
+			return currency;
+		}
+
+		public void setcurrency(String currency) {
+			this.currency = currency;
+		}
+
+		public String getConversation_rate() {
+			return conversation_rate;
+		}
+
+		public void setConversation_rate(String conversation_rate) {
+			this.conversation_rate = conversation_rate;
 		}
 		
 		public String getgiving_or_pledge() {

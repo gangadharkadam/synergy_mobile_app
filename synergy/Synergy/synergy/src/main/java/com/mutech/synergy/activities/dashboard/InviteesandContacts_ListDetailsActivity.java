@@ -32,6 +32,8 @@ import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.DashboardDataService;
 import com.mutech.synergy.SynergyValues.Web.GetCellDetailsService;
 import com.mutech.synergy.SynergyValues.Web.UpdateAllDetailsService;
+import com.mutech.synergy.SynergyValues.Web.UpdateInvitesContactsDetailsService;
+import com.mutech.synergy.SynergyValues.Web.GetInvitesContactsDetailsService;
 import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.utils.InputValidation;
@@ -67,7 +69,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
 	ImageView imgProfilePic;
-	EditText txtnamenumber,txtinvitee_contact_name,txtMemberPhone1,txtEmailID1;
+	EditText txtnamenumber,txtinvitee_contact_name,txtinvitee_surname,txtMemberPhone1,txtEmailID1;
 //	EditText txtInvitedby;
 	TextView txtMemberDateOfBirth,txtdate_of_convert;
 	Spinner txtMemberMartialInfo;
@@ -92,7 +94,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 			AlertDialog dialog = new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
-					.setMessage("Please enter Invitee/Contact Name")
+					.setMessage("Please enter Invitee/Contact First Name")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialogInterface, int i) {
@@ -136,6 +138,23 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 			textView.setTextSize(18);
 			return false;
 		}
+
+		if(!InputValidation.hasText(txtinvitee_surname)) {
+			AlertDialog dialog = new AlertDialog.Builder(InviteesandContacts_ListDetailsActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory Input")
+					.setMessage("Please enter Invitee/Contact Surname")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
 		return true;
 	}
 	
@@ -152,7 +171,9 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 
 		txtnamenumber=(EditText) findViewById(R.id.txtMembershipNo);
 		
-		txtinvitee_contact_name=(EditText) findViewById(R.id.txtMemberlName);
+		txtinvitee_contact_name=(EditText) findViewById(R.id.txtMemberfName);
+		txtinvitee_surname=(EditText) findViewById(R.id.txtMemberSurname);
+
 		txtMemberPhone1=(EditText) findViewById(R.id.txtMemberPhone1);
 		txtdate_of_convert=(TextView) findViewById(R.id.txtDateOfConvert);
 		txtEmailID1=(EditText) findViewById(R.id.txtEmailID1);
@@ -420,7 +441,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
     }
 
     private void getDashboardDataService() {
-		StringRequest reqDashboard=new StringRequest(Method.POST,GetCellDetailsService.SERVICE_URL,new Listener<String>() {
+		StringRequest reqDashboard=new StringRequest(Method.POST,GetInvitesContactsDetailsService.SERVICE_URL,new Listener<String>() {
 
 			@Override
 			public void onResponse(String response) {
@@ -440,15 +461,15 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 					try {
 							JSONObject jsonobj=new JSONObject(response);
 							JSONArray obj=jsonobj.getJSONArray("message");
-							Log.d("NonStop","Response: " + obj.toString());
+                        Log.d("NonStop", "Response: " + obj.toString());
 							txtnamenumber.setText(obj.getJSONObject(0).getString("name"));
 							sptitle.setSelection(adapterTitel.getPosition(obj.getJSONObject(0).getString("title")));
 							
 							//txttitle.setText(obj.getJSONObject(0).getString("title"));
-						
-							
-							
+
+
 							txtinvitee_contact_name.setText(obj.getJSONObject(0).getString("invitee_contact_name"));
+						    txtinvitee_surname.setText(obj.getJSONObject(0).getString("surname"));
 
 							Log.d("NonStop", "DOB Before: " + txtMemberDateOfBirth.getText().toString());
 							if(!obj.getJSONObject(0).getString("date_of_birth").equals("null") && !obj.getJSONObject(0).getString("date_of_birth").equals("")){
@@ -468,17 +489,13 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 							}
 
 							spAgegroup.setSelection(adapterAgeGroup.getPosition(obj.getJSONObject(0).getString("age_group")));
-							
-							
-							
+
 							String chk=obj.getJSONObject(0).getString("convert_invitee_contact_to_ft");
 							if(chk.equals("1"))
 							 chkConvertInviteeContactToFt.setChecked(true);
 							else
 								chkConvertInviteeContactToFt.setChecked(false);
-							
-							
-						
+
 							txtdate_of_convert.setText((obj.getJSONObject(0).getString("date_of_convert").equals("null")) ? "" : obj.getJSONObject(0).getString("date_of_convert"));
 							//txtsource_of_invitation.setText(obj.getJSONObject(0).getString("source_of_invitation"));
 							spSourceOfInvite.setSelection(adpterSourceofInvitation.getPosition(obj.getJSONObject(0).getString("source_of_invitation")));
@@ -554,7 +571,7 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 	}
 
 private void UpdateDashboardDataService() {
-	StringRequest reqDashboard=new StringRequest(Method.POST,UpdateAllDetailsService.SERVICE_URL,new Listener<String>() {
+	StringRequest reqDashboard=new StringRequest(Method.POST,UpdateInvitesContactsDetailsService.SERVICE_URL,new Listener<String>() {
 
 		@Override
 		public void onResponse(String response) {
@@ -623,6 +640,7 @@ private void UpdateDashboardDataService() {
 				
 				obj.put("title", sptitle.getSelectedItem().toString());
 				obj.put("invitee_contact_name", txtinvitee_contact_name.getText().toString());
+                obj.put("surname", txtinvitee_surname.getText().toString());
 				
 				if(!txtMemberDateOfBirth.getText().toString().equals("")){
 					

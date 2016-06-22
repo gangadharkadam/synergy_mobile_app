@@ -235,8 +235,8 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 		lblchurch=(TextView) findViewById(R.id.lblchurch);
 		lblpcf=(TextView) findViewById(R.id.lblpcf);
 		lblseniorcell=(TextView) findViewById(R.id.lblseniorcell);
-		
-		
+
+
 		txtCellCode=(EditText) findViewById(R.id.txtCellCode);
 		txtCellName=(EditText) findViewById(R.id.txtCellName);
 		spnSeniorCell=(Spinner) findViewById(R.id.spnSeniorCell);
@@ -1292,7 +1292,7 @@ private boolean validateFields() {
 	
 	if(mSeniorCellList.size()>0)
 	{
-	
+
 	if(txtCellCode.getText().toString().trim().length() > 0)
 	{
 		if(txtCellName.getText().toString().trim().length() >0)

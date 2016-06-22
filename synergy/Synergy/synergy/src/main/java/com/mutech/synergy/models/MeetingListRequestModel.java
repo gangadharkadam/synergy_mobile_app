@@ -20,7 +20,16 @@ public class MeetingListRequestModel {
     private String pcf_name;
     private String record_name;
     
-    private String giving_or_pledge,is_member,member,amount,ministry_year,church,date,partnership_arms;
+    private String giving_or_pledge;
+	private String is_member;
+	private String member;
+	private String amount;
+	private String ministry_year;
+	private String church;
+	private String date;
+	private String partnership_arms;
+	private String currency;
+	private Integer conversation_rate;
 	
     
     
@@ -234,7 +243,21 @@ public class MeetingListRequestModel {
 	public void setFdata(String fdata) {
 		this.fdata = fdata;
 	}
-	
-	
 
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	public Integer getConversation_rate() {
+		return conversation_rate;
+	}
+
+	public void setConversation_rate(int conversation_rate) {
+		this.conversation_rate = conversation_rate;
+	}
 }

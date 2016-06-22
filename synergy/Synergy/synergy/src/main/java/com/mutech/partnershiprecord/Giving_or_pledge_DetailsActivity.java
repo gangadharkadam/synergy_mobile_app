@@ -421,12 +421,14 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 			TextView txtMasterName=(TextView) convertView.findViewById(R.id.txtMasterName);
 			TextView txtPartnershiparm =(TextView) convertView.findViewById(R.id.txtPartnershiparm);
 			TextView txtAmount =(TextView) convertView.findViewById(R.id.txtAmount);
+			TextView txtCurrency =(TextView) convertView.findViewById(R.id.txtCurrency);
 					
 				try {
 					
 					txtMasterName.setText(jarray.getJSONObject(position).getString("name"));
 					txtPartnershiparm.setText(jarray.getJSONObject(position).getString("member_name"));
 					txtAmount.setText(jarray.getJSONObject(position).getString("amount"));
+					if(jarray.getJSONObject(position).has("currency")) txtCurrency.setText(jarray.getJSONObject(position).getString("currency"));
 					
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block

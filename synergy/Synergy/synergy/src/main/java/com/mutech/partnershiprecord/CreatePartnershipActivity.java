@@ -27,12 +27,14 @@ import com.mutech.synergy.R;
 import com.mutech.synergy.R.id;
 import com.mutech.synergy.R.layout;
 import com.mutech.synergy.R.menu;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.ImageUrl;
 import com.mutech.synergy.SynergyValues.Web.CreatePartnershipRecord;
 import com.mutech.synergy.SynergyValues.Web.GetAllTasksService;
 import com.mutech.synergy.SynergyValues.Web.GetMemberProfileService;
 import com.mutech.synergy.SynergyValues.Web.Getgetpartnershiparms;
+import com.mutech.synergy.SynergyValues.Web.Getcurrency;
 import com.mutech.synergy.SynergyValues.Web.Partnership_giving_or_pledge;
 import com.mutech.synergy.activities.event.CreateEventActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
@@ -71,9 +73,9 @@ import android.widget.Toast;
 
 public class CreatePartnershipActivity extends AppCompatActivity {
 	
-	EditText txtMinistryYear,txtPartnercategory,txtmember,txtamount,txtgivingtype,txtInstrumentNo,txtInstrumentdate,txtbankname,txtbranch;
+	EditText txtMinistryYear,txtPartnercategory,txtmember,txtamount,txtgivingtype,txtInstrumentNo,txtInstrumentdate,txtbankname,txtbranch,txtConversation_Rate;
 	TextView txtdate;
-	Spinner txtGiving_Pledge,spplagetype,spPartnershipArm;
+	Spinner txtGiving_Pledge,spplagetype,spPartnershipArm,spCurrency;
 	
 	Button btnPartnerSave;
 	private Gson gson;
@@ -91,7 +93,8 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 		
 		getSupportActionBar().hide();
 		spPartnershipArm=(Spinner) findViewById(R.id.spPartnershipArm);
-		
+        spCurrency=(Spinner) findViewById(R.id.spCurrency);
+
 		txtMinistryYear=(EditText) findViewById(R.id.txtMinistryYear);
 		txtPartnercategory=(EditText) findViewById(R.id.txtPartnercategory);
 		txtmember=(EditText) findViewById(R.id.txtmember);
@@ -102,6 +105,7 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 		txtInstrumentNo=(EditText) findViewById(R.id.txtInstrumentNo);
 		txtbankname=(EditText) findViewById(R.id.txtbankname);
 		txtbranch=(EditText) findViewById(R.id.txtbranch);
+        txtConversation_Rate=(EditText) findViewById(R.id.txtConversation_Rate);
 		
 		btnPartnerSave=(Button) findViewById(R.id.btnPartnerSave);
 		
@@ -175,8 +179,9 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 		
 		if (NetworkHelper.isOnline(CreatePartnershipActivity.this)) {
 			Methods.showProgressDialog(CreatePartnershipActivity.this);
-			
-			getProfileInfo();
+
+            getCurrency();
+            getProfileInfo();
 			getPartnershiparms();
 			
 		} else {
@@ -265,6 +270,40 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 			textView.setTextSize(18);
 			return false;
 		}
+
+		if(!InputValidation.spnHasText(spCurrency, "Currency")) {
+			AlertDialog dialog =new AlertDialog.Builder(CreatePartnershipActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory field cannot be blank")
+					.setMessage("Please select currency")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if(!InputValidation.hasText(txtConversation_Rate)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreatePartnershipActivity.this)
+					.setCancelable(false)
+					.setTitle("Mandatory field cannot be blank")
+					.setMessage("Please enter conversation rate")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
 		return true;
 	}
 	private void getPledge() {
@@ -321,6 +360,8 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 					
 					jsonobj.put("member",txtmember.getText().toString());
 					jsonobj.put("amount",txtamount.getText().toString());
+                    jsonobj.put("conversation_rate",Integer.parseInt(txtConversation_Rate.getText().toString()));
+					jsonobj.put("currency",spCurrency.getSelectedItem().toString());
 					jsonobj.put("giving_or_pledge",txtGiving_Pledge.getSelectedItem().toString());
 					
 					String str=txtGiving_Pledge.getSelectedItem().toString();
@@ -441,7 +482,7 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 					try {
 						JSONObject obj=new JSONObject(response);
 						JSONArray jsonoarray=obj.getJSONArray("message");
-						
+
 						String[] str=new String[jsonoarray.length()];
 						
 						for(int i=0;i<jsonoarray.length();i++){
@@ -496,7 +537,76 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 		App.getInstance().addToRequestQueue(reqGetProfile, "reqGetProfile");
 		reqGetProfile.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
-	
+
+
+    private void getCurrency() {
+        StringRequest reqGetProfile=new StringRequest(Method.POST,Getcurrency.SERVICE_URL,new Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Methods.closeProgressDialog();
+                Log.e("droid","get reqGetCurrency ---------------"+ response);
+
+                try {
+                    JSONObject obj=new JSONObject(response);
+                    JSONObject obj1=obj.getJSONObject("message");
+                    JSONArray jsonoarray=obj1.getJSONArray("currency_details");
+
+                    String[] str=new String[jsonoarray.length()];
+
+                    for(int i=0;i<jsonoarray.length();i++){
+                        str[i]=jsonoarray.getJSONObject(i).getString("name");
+                    }
+
+                    ArrayAdapter<String> currencyArrayAdapter = new ArrayAdapter<String>(CreatePartnershipActivity.this, android.R.layout.simple_spinner_item, str);
+                    currencyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spCurrency.setAdapter(currencyArrayAdapter);
+
+
+                    Log.e("droid","get reqGetCurrency ---------------"+ jsonoarray.toString());
+
+                    //	txtmember.setText(jsonoarray.getJSONObject(0).getString("name"));
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+
+            }
+        },new ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Methods.closeProgressDialog();
+                Log.d("droid","get reqGetCurrency error---------------"+ error.getCause());
+
+                if(error.networkResponse.statusCode==403){
+                    Methods.longToast("No access to update Profile", CreatePartnershipActivity.this);
+                }
+                else
+                    Methods.longToast("Some Error Occured,please try again later", CreatePartnershipActivity.this);
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError{
+                Map<String, String> params = new HashMap<String, String>();
+
+                MeetingListRequestModel model=new MeetingListRequestModel();
+                model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+                model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
+                String dataString=gson.toJson(model, MeetingListRequestModel.class);
+
+                Log.d("droid", dataString);
+                params.put(GetMemberProfileService.DATA, dataString);
+                return params;
+            }
+        };
+
+        App.getInstance().addToRequestQueue(reqGetProfile, "reqGetProfile");
+        reqGetProfile.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+    }
+
 	boolean validatefield(){
 		
 		//if(txtMinistryYear.getText().toString().length()>0){

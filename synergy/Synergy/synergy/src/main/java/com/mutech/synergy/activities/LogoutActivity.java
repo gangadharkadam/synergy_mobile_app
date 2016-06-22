@@ -140,8 +140,10 @@ public class LogoutActivity extends Activity{
 		
 		if(classname.equals("ToDoTaskActivity"))
 			startActivity(new Intent(LogoutActivity.this,ToDoTaskActivity.class));
-		
-		
+
+		if(classname.equals("Feedback"))
+			startActivity(new Intent(LogoutActivity.this,Feedback.class));
+
 		finish();
 
 	}

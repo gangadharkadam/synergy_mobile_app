@@ -316,15 +316,16 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 								}
 							});
 
-						/*	btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
+							btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
 								@Override
 								public void onClick(View v) {
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									Int.putExtra("cellcode", name);
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}
-							});*/
+							});
 
 							btncellleadermsg.setOnClickListener(new View.OnClickListener() {
 								@Override
