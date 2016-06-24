@@ -98,7 +98,7 @@ public class Feedback extends ActionBarActivity  {
                 new AlertDialog.Builder(Feedback.this)
                         .setCancelable(false)
                         .setTitle("Feedback")
-                        .setMessage("Your feedback has been registered successfully. Thank you")
+                        .setMessage("Redirecting to your email client for sending the feedback")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -107,7 +107,7 @@ public class Feedback extends ActionBarActivity  {
                                 intent.setType("Text/Play");
                                 intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
                                 intent.putExtra(Intent.EXTRA_TEXT, "Subject: " +  txtsubject.getText().toString() + "\n" + "Description: " + txtdesc.getText().toString());
-                                intent.setData(Uri.parse("mailto:poojapatil96km@gmail.com")); // or just "mailto:" for blank
+                                intent.setData(Uri.parse("mailto:sumit.s.more@gmail.com")); // or just "mailto:" for blank
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
                                 startActivity(intent);
                                 txtsubject.setText("");

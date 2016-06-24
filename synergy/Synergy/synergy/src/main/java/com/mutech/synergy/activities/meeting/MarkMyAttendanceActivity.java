@@ -208,6 +208,7 @@ public class MarkMyAttendanceActivity extends ActionBarActivity implements OnCli
 
 				ArrayList<RecordModel> newRecList=new ArrayList<MarkMyAttendanceReqModel.RecordModel>();
 				RecordModel recModel=model.new RecordModel();
+				Log.d("NonStop", "Name: " + Name);
 				recModel.setName(Name);
 				recModel.setPresent(getMeetingCategory());
 
