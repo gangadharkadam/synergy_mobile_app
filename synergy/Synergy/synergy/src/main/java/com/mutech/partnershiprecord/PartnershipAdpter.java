@@ -5,15 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.mutech.synergy.R;
-import com.mutech.synergy.fragments.task.TeamTaskFragment;
 
 public class PartnershipAdpter extends FragmentPagerAdapter {
 
@@ -22,6 +15,8 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 	private final Integer[] titles = new Integer[] { R.string.screen_giving,
 			R.string.screen_pledge };
 	private Context mContext;
+    private static String totalValGiving;
+    public static String totalValPrice;
 
 //	private LayoutInflater li;
 
@@ -29,6 +24,14 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 		super(fm);
 		mContext = context;
 	}
+
+    public static String getTotalValGiving() {
+        return totalValGiving;
+    }
+
+    public static void setTotalValGiving(String totalValGiving) {
+        PartnershipAdpter.totalValGiving = totalValGiving;
+    }
 
 /*    public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;
@@ -76,13 +79,15 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
         String title=mContext.getString(titles[position]);
         if(position==0)
         {
-            title=title +"\n Total-" + " " +"100";
+            title=title +"\n Total-" + " " + getTotalValGiving();
         }
         else {
-            title=title +"\n Total-" + " " +"10";
+            title=title +"\n Total-" + " " + totalValPrice;
         }
 		return title;
 	}
+
+
 
 /*	class TotalViewHolder
 	{

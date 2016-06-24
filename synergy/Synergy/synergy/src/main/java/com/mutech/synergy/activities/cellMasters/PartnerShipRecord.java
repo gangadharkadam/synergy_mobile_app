@@ -89,9 +89,8 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 	private ListView mLvDrawer;
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
-	String str;
-	
-	
+	private  String str;
+	public static PartnershipAdpter mAdapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -162,9 +161,9 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
 		mSlidingTabLayout.setDistributeEvenly(true);
 		
-		PartnershipAdpter mAdapter = new PartnershipAdpter(PartnerShipRecord.this, getSupportFragmentManager());
+		mAdapter = new PartnershipAdpter(PartnerShipRecord.this, getSupportFragmentManager());
 		vpgrHome.setAdapter(mAdapter);
-		
+
 		mSlidingTabLayout.setViewPager(vpgrHome);
 		mSlidingTabLayout.setSelectedIndicatorColors(Color.parseColor("#33B5E5"));
 		
@@ -677,6 +676,5 @@ private void getMemberList() {
 			textView.setTextSize(18);
 		}
 	}
-
 
 }

@@ -30,6 +30,8 @@ import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.models.DrawerItem;
+import com.mutech.synergy.utils.Methods;
+import com.mutech.synergy.utils.NetworkHelper;
 
 import java.util.ArrayList;
 
@@ -95,23 +97,26 @@ public class Feedback extends ActionBarActivity  {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 //                submit.setEnabled(false);
-                new AlertDialog.Builder(Feedback.this)
-                        .setCancelable(false)
-                        .setTitle("Feedback")
-                        .setMessage("Your feedback has been registered successfully. Thank you")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
+                if(NetworkHelper.isOnline(Feedback.this)){
+                    Methods.showProgressDialog(Feedback.this);
+                    //getProfileInfo();
+                    new AlertDialog.Builder(Feedback.this)
+                            .setCancelable(false)
+                            .setTitle("Feedback")
+                            .setMessage("Your feedback has been registered successfully. Thank you")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
 
-                                Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
-                                intent.setType("Text/Play");
-                                intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
-                                intent.putExtra(Intent.EXTRA_TEXT, "Subject: " +  txtsubject.getText().toString() + "\n" + "Description: " + txtdesc.getText().toString());
-                                intent.setData(Uri.parse("mailto:poojapatil96km@gmail.com")); // or just "mailto:" for blank
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
-                                startActivity(intent);
-                                txtsubject.setText("");
-                                txtdesc.setText("");
+                                    Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+                                    intent.setType("Text/Play");
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+                                    intent.putExtra(Intent.EXTRA_TEXT, "Subject: " +  txtsubject.getText().toString() + "\n" + "Description: " + txtdesc.getText().toString());
+                                    intent.setData(Uri.parse("mailto:synergysupport@loveworld360.com")); // or just "mailto:" for blank
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+                                    startActivity(intent);
+                                    txtsubject.setText("");
+                                    txtdesc.setText("");
                               /*  Intent emailIntent = new Intent(Intent.ACTION_SEND);
                                 emailIntent.putExtra(Intent.EXTRA_EMAIL, "poojapatil96km@gmail.com");
                                 emailIntent.setData(Uri.parse("mailto:" + txtsubject.getText().toString() + " " + txtdesc.getText().toString()));
@@ -131,9 +136,12 @@ public class Feedback extends ActionBarActivity  {
                                 startActivity(actInt);
                                 finish();*/
 
-                            }
-                        })
-                        .show();
+                                }
+                            })
+                            .show();
+                }
+                else
+                    Methods.longToast("Please connect to Internet", Feedback.this);
             }
 
         });

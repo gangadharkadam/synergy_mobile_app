@@ -33,6 +33,19 @@
    	    android:textColor="@android:color/black"
         android:textSize="@dimen/textsize_16"
    	    android:text="khkjh" />
+
+<!--
+	   <TextView
+		   android:id="@+id/txtcurrency"
+		   android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"
+		   android:textColor="@android:color/black"
+		   android:textSize="@dimen/textsize_16"
+		   android:text="khkjh"
+		   android:layout_toLeftOf="@+id/txtamount"
+		   android:layout_alignTop="@+id/txtamount"
+		   android:layout_toRightOf="@+id/txtname"
+		   android:layout_toEndOf="@+id/txtname" />-->
     
        </RelativeLayout>
 

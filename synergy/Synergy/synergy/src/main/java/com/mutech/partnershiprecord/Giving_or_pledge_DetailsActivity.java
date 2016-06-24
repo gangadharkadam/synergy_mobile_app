@@ -283,7 +283,7 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.e("droid","giving_or_pledge dateails"+ response);
+				Log.e("droid","giving_or_pledge dails"+ response);
 				try {
 					
 					JSONObject jsonobj=new JSONObject(response);
