@@ -921,8 +921,13 @@ public class HomeActivity extends AppCompatActivity {
 			yVals1.add(new BarEntry(Integer.valueOf(newConvertsList.get(i)),i));
 		}*/
 
+		Log.d("NonStop", "totalMemberlist count: " + totalMemberList.size());
+//		for(int i=0;i<2;i++){
+//			yVals2.add(new BarEntry(40000000,i));
+//		}
 		for(int i=0;i<totalMemberList.size();i++){
 			yVals2.add(new BarEntry(Integer.valueOf(totalMemberList.get(i)),i));
+//			yVals2.add(new BarEntry(400050,i));
 		}
 
 		/*BarDataSet set1 = new BarDataSet(yVals1, "New Converts");

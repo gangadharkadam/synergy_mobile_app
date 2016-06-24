@@ -66,6 +66,7 @@ import com.google.gson.JsonArray;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
@@ -85,6 +86,7 @@ import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
+import com.mutech.synergy.models.MarkMyAttendanceReqModel;
 import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.MeetingModel;
 import com.mutech.synergy.models.MeetingModel.MeetingListModel;
@@ -132,7 +134,7 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	Calendar newCalendar;
 	TextView tvTitle;
 	private Intent intent;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -768,6 +770,7 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 			if (convertView == null) {
 				convertView = layout.inflate(R.layout.row_meeting, null);
 
+				holder.meeting_ll = (LinearLayout) convertView.findViewById(R.id.meeting_ll);
 				holder.btnMarkAttendance=(Button) convertView.findViewById(R.id.btnMarkAttendance);
 				holder.lblMeetingName=(TextView) convertView.findViewById(R.id.lblMeetingName);
 				holder.lblMeetingsubject=(TextView) convertView.findViewById(R.id.lblMeetingsubject);
@@ -793,27 +796,43 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 					holder.lblMeetingVenue.setText((jsonList.getJSONObject(position).getString("venue").equals("null"))?"":jsonList.getJSONObject(position).getString("venue"));
 //					holder.lblMeetingVenue.setText(jsonList.getJSONObject(position).getString("venue").toString());
 
+				if(null != jsonList.getJSONObject(position).getString("name").toString()) {
+					holder.recordName = jsonList.getJSONObject(position).getString("name").toString();
+				} else {
+					holder.recordName = "";
+				}
+
 				if(null !=jsonList.getJSONObject(position).getString("present").toString() && jsonList.getJSONObject(position).getString("present").toString().equals("1")){
-				
-					holder.btnMarkAttendance.setText("Already Attendance Marked");
-	
+
+					/* NS Change Phase 1 CR Start */
+					holder.btnMarkAttendance.setText("Marked Present\nClick to Change");
+					holder.btnMarkAttendance.setBackgroundColor(getResources().getColor(R.color.green));
+					holder.attendanceVal = 1;
+//					holder.btnMarkAttendance.setText("Already Attendance Marked");
+					/* NS Change Phase 1 CR End */
+
 				}else{
-					
-					holder.btnMarkAttendance.setText("Mark Attendance");
+					/* NS Change Phase 1 CR Start */
+					holder.btnMarkAttendance.setText("Marked Absent\nClick to Change");
+					holder.btnMarkAttendance.setBackgroundColor(getResources().getColor(R.color.red));
+					holder.attendanceVal = 0;
+//					holder.btnMarkAttendance.setText("Mark Attendance");
+					/* NS Change Phase 1 CR End */
 				}
 
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} 
-				
-			holder.btnMarkAttendance.setOnClickListener(new View.OnClickListener() {
 
+			holder.meeting_ll.setOnClickListener(new OnClickListener() {
 				@Override
-				public void onClick(View v) {
+				public void onClick(View view) {
 					Intent i=new Intent(MyMeetingListActivity.this,MarkMyAttendanceActivity.class);
 					Bundle b=new Bundle();
 					try {
+
+						Log.d("NonStop", "Name in LL: " + jsonList.getJSONObject(position).getString("name").toString());
 
 						b.putString("MeetingCategory", jsonList.getJSONObject(position).getString("meeting_category").toString());
 						b.putString("MeetingSubject", jsonList.getJSONObject(position).getString("meeting_subject").toString());
@@ -824,17 +843,104 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 						b.putString("Name",jsonList.getJSONObject(position).getString("name").toString());
 						b.putInt("Position_Clicked", position);
 						b.putInt("status", jsonList.getJSONObject(position).getInt("present"));
-						
-					
+
+
 					} catch (JSONException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					
-					
-					
+
 					i.putExtra("Bundle", b);
 					startActivityForResult(i,1);
+				}
+			});
+
+			final View finalConvertView = convertView;
+			holder.btnMarkAttendance.setOnClickListener(new View.OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+
+					/* NS Change Phase 1 CR Start */
+
+					if (NetworkHelper.isOnline(MyMeetingListActivity.this)) {
+						Methods.showProgressDialog(MyMeetingListActivity.this);
+						StringRequest reqMarkMyAttendanceReq=new StringRequest(Method.POST, SynergyValues.Web.MarkMyMeetingAttendanceService.SERVICE_URL,new Listener<String>() {
+
+							@Override
+							public void onResponse(String response) {
+								Methods.closeProgressDialog();
+								Log.d("droid","get all reqMyMeetingList ---------------"+ response);
+
+								Gson gson=new Gson();
+
+								ResponseMessageModel modelResp=gson.fromJson(response, ResponseMessageModel.class);
+								//Object meetingmsg=mMeetingModel.getMessage();
+								if(null != modelResp.getStatus() && modelResp.getStatus().trim().length() >0){
+
+									if(modelResp.getStatus()=="401"){
+										Methods.longToast("User name or Password is incorrect", MyMeetingListActivity.this);
+									} else {
+										Methods.longToast(modelResp.getMessage(), MyMeetingListActivity.this);
+									}
+
+								} else {
+									getMyMeetingList("1");
+								}
+							}
+						},new ErrorListener() {
+
+							@Override
+							public void onErrorResponse(VolleyError error) {
+								Methods.closeProgressDialog();
+								Log.d("droid","get all zones error---------------" + error.getCause());
+								Methods.longToast("Some error occured,please try again later", MyMeetingListActivity.this);
+							}
+						})
+						{
+							@Override
+							protected Map<String, String> getParams() throws AuthFailureError {
+								Map<String, String> params = new HashMap<String, String>();
+
+								MarkMyAttendanceReqModel model=new MarkMyAttendanceReqModel();
+								model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+								model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
+
+								ArrayList<MarkMyAttendanceReqModel.RecordModel> newRecList=new ArrayList<MarkMyAttendanceReqModel.RecordModel>();
+								MarkMyAttendanceReqModel.RecordModel recModel=model.new RecordModel();
+								try {
+									recModel.setName(jsonList.getJSONObject(position).getString("name").toString());
+									Log.d("NonStop", "Name in Button: " + jsonList.getJSONObject(position).getString("name").toString());
+									Log.d("NonStop", "Value in Button: " + jsonList.getJSONObject(position).getString("present").toString());
+									if(jsonList.getJSONObject(position).getString("present").toString().equals("1")) {
+										recModel.setPresent("0");
+									} else {
+										recModel.setPresent("1");
+									}
+								} catch (JSONException e) {
+									e.printStackTrace();
+								}
+
+								newRecList.add(recModel);
+								model.setRecords(newRecList);
+
+								Gson gson = new Gson();
+								String dataString=gson.toJson(model, MarkMyAttendanceReqModel.class);
+
+								Log.e("droid", dataString);
+								params.put(SynergyValues.Web.MarkMyMeetingAttendanceService.DATA, dataString);
+								return params;
+							}
+						};
+
+						App.getInstance().addToRequestQueue(reqMarkMyAttendanceReq, "reqMarkMyAttendanceReq");
+						reqMarkMyAttendanceReq.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
+					} else {
+						Methods.longToast("Please connect to Internet", MyMeetingListActivity.this);
+					}
+
+					/* NS Change Phase 1 CR End */
 				}
 			});
 
@@ -843,8 +949,11 @@ public class MyMeetingListActivity  extends ActionBarActivity implements OnItemC
 	}
 
 	public static class Holder{
+		private LinearLayout meeting_ll;
 		private TextView lblMeetingName,lblMeetingVenue,lblMeetingTime,lblMeetingsubject;
 		private Button btnMarkAttendance;
+		private String recordName;
+		private int attendanceVal;
     }
 
     @Override
