@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/rectangle1"
+    android:layout_margin="@dimen/dimen_5"
+    >
+	
+   <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dimen_10"
+       android:padding="@dimen/dimen_10"
+    >
+
+   	<TextView
+   	    android:id="@+id/txtname"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_alignParentTop="true"
+   	    android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_16"
+   	    android:text="khkjh" />
+   	
+   	<TextView
+   	    android:id="@+id/txtamount"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_alignParentTop="true"
+   	    android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize_16"
+   	    android:text="khkjh" />
+
+<!--
+	   <TextView
+		   android:id="@+id/txtcurrency"
+		   android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"
+		   android:textColor="@android:color/black"
+		   android:textSize="@dimen/textsize_16"
+		   android:text="khkjh"
+		   android:layout_toLeftOf="@+id/txtamount"
+		   android:layout_alignTop="@+id/txtamount"
+		   android:layout_toRightOf="@+id/txtname"
+		   android:layout_toEndOf="@+id/txtname" />-->
+    
+       </RelativeLayout>
+
+</LinearLayout>

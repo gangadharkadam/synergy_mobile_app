@@ -99,6 +99,7 @@ import com.mutech.synergy.models.DashboardDetailsModel.DashPartnershipModel;
 import com.mutech.synergy.models.DashboardDetailsModel.MemStrengthModel;
 import com.mutech.synergy.models.DrawerItem;
 import com.mutech.synergy.models.MeetingListRequestModel;
+import com.mutech.synergy.models.ResponseMessageModel;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
@@ -700,9 +701,13 @@ public class HomeActivity extends AppCompatActivity {
 	}
 
 	private void addDrawerListData() {
+		DrawerItem item00 = new DrawerItem();
+		item00.setItemName("UserName : \n Role : Pstor");
+		item00.setImgResID(R.drawable.dashboard);
+
 		DrawerItem item01 = new DrawerItem();
 		item01.setItemName("Dashboard");
-		item01.setImgResID(R.drawable.dashboard);		
+		item01.setImgResID(R.drawable.dashboard);
 
 		DrawerItem item05 = new DrawerItem();
 		item05.setItemName("My Profile");
@@ -749,6 +754,7 @@ public class HomeActivity extends AppCompatActivity {
         item12.setItemName("Logout");
         item12.setImgResID(R.drawable.signout);
 
+		mDrawerList.add(item00);
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
 		mDrawerList.add(item04);
@@ -781,7 +787,13 @@ public class HomeActivity extends AppCompatActivity {
 			//			Intent intForm1=new Intent(this,MyProfileActivity.class);
 			//			startActivity(intForm1);
 			break;
-		case 2:
+
+            case 1:
+                //			Intent intForm1=new Intent(this,MyProfileActivity.class);
+                //			startActivity(intForm1);
+                break;
+
+            case 3:
 			Log.d("NonStop", "Going to Database");
 			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -792,20 +804,20 @@ public class HomeActivity extends AppCompatActivity {
 //			break;
 //		case 3:
 //			break;
-		case 3:
+		case 4:
             Log.d("NonStop", "Going to Partnership Record");
 			Intent partner=new Intent(this,PartnerShipRecord.class);
 			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(partner);
 			finish();
 			break;
-		case 1:
+		case 2:
 			Intent intForm1=new Intent(this,ProfileView.class);
 			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm1);
 			break;
 		
-		case 4:
+		case 5:
 		//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
 			//startActivity(intMeeting);
             Log.d("NonStop", "Going to Attendance");
@@ -814,7 +826,7 @@ public class HomeActivity extends AppCompatActivity {
 			startActivity(intMyMeetings);	
 			finish();
 			break;
-		case 5:
+		case 6:
             Log.d("NonStop", "Going to Calendar");
 			Intent intEvents=new Intent(this,MyEventListActivity.class);
 			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -822,7 +834,7 @@ public class HomeActivity extends AppCompatActivity {
 			finish();
 
 			break;
-		case 6:
+		case 7:
             Log.d("NonStop", "Going to ToDo");
 			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
 			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -830,14 +842,14 @@ public class HomeActivity extends AppCompatActivity {
 			finish();
 			break;
 			
-		case 7:
+		case 8:
 			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
 			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intentMsg);
 			finish();
 			break;
 			
-		case 8:
+		case 9:
             Log.d("NonStop", "Going to Search");
 			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
 			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -846,7 +858,7 @@ public class HomeActivity extends AppCompatActivity {
 
 			break;
 			
-		case 9:
+		case 10:
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
@@ -857,7 +869,7 @@ public class HomeActivity extends AppCompatActivity {
             finish();
             break;
 
-			case 10://logout
+			case 11://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

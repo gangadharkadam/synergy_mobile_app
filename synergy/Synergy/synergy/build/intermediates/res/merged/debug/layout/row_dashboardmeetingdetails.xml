@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/rectangle">
+
+    <TextView
+        android:id="@+id/lblCellName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cell Name"
+        android:textSize="@dimen/font_size_medium" />
+
+    <TextView
+        android:id="@+id/lblCellDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name of Cell"
+        android:textSize="@dimen/font_size_small" />
+
+      <TextView
+        android:id="@+id/lblPresent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cell"
+        android:textSize="@dimen/font_size_small" />
+    
+  
+    <TextView
+        android:id="@+id/lblAbsent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHR"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/lblPresentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:textSize="@dimen/font_size_small"
+        android:text="GPR"/>
+
+    <TextView
+        android:id="@+id/lblAbsentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:textSize="@dimen/font_size_small"
+        android:text=""
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/lblExtra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:textSize="@dimen/font_size_small"
+        android:text="region"
+        android:visibility="gone" />
+
+</LinearLayout>
