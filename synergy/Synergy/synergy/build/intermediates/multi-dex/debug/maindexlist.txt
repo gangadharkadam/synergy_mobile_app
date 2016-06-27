@@ -793,6 +793,7 @@ com/google/android/gms/clearcut/zzb.class
 com/google/android/gms/internal/zzdg$zza.class
 com/google/android/gms/internal/zzau.class
 com/mutech/synergy/activities/dashboard/MemberStrengthMutliBarChart$3.class
+com/mutech/synergy/activities/CellLeaderMsg$3.class
 android/support/v4/util/ArrayMap$1.class
 com/mutech/synergy/activities/cellMasters/MemberInfoActivtiy$17.class
 com/google/android/gms/appinvite/PreviewActivity.class
@@ -846,6 +847,7 @@ com/google/android/gms/wallet/Address.class
 android/support/v4/media/VolumeProviderCompat$ControlType.class
 com/mutech/databasedetails/CreateFirstTimerActivity$15.class
 com/mutech/synergy/activities/ViewMembers$4.class
+com/mutech/synergy/activities/CellLeaderMsg$2.class
 com/google/android/gms/wearable/DataApi.class
 android/support/design/widget/AppBarLayout$ScrollingViewBehavior.class
 com/mutech/partnershiprecord/PledgeActivity$6.class
@@ -1055,6 +1057,7 @@ com/mutech/synergy/activities/cellMasters/DisplayMastersListActivity$11.class
 com/google/android/gms/appinvite/PreviewActivity$1.class
 android/support/design/R.class
 com/mutech/synergy/activities/dashboard/FirstTimersYearActivity$24.class
+com/mutech/synergy/activities/CellLeaderMsg$1.class
 com/google/android/gms/wallet/MaskedWallet.class
 com/mutech/synergy/activities/event/MyEventListActivity$26.class
 com/google/android/gms/internal/zzeb.class
@@ -1100,6 +1103,7 @@ com/mutech/partnershiprecord/PledgeActivity$2.class
 com/mutech/synergy/activities/cellMasters/CreatePcfMasterFormActivity.class
 com/mutech/synergy/activities/dashboard/MemberStrengthMutliBarChart$2.class
 com/google/android/gms/nearby/messages/internal/PublishRequest.class
+com/mutech/synergy/activities/CellLeaderMsg$4.class
 com/mutech/synergy/activities/HomeActivity$4.class
 android/support/v4/media/MediaBrowserCompat$1.class
 com/github/mikephil/charting/interfaces/BarDataProvider.class
@@ -2338,6 +2342,7 @@ com/mutech/synergy/activities/task/CloseTaskActivity$1.class
 com/google/android/gms/internal/zzcw.class
 com/mutech/synergy/activities/dashboard/FirstTimeMonthActivity$26.class
 com/google/android/gms/auth/GoogleAuthUtil.class
+com/mutech/synergy/SynergyValues$Web$SendCellLeaderMsg.class
 com/mutech/synergy/activities/cellMasters/CreatePcfMasterFormActivity$5.class
 com/mutech/partnershiprecord/GivingActivity$7.class
 com/mutech/databasedetails/CreateNewMemberActivity$15.class

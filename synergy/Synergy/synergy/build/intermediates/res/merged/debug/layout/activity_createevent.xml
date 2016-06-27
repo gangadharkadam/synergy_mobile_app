@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@null"
+        android:orientation="vertical" >
+
+      
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:orientation="vertical" >
+			   <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Event Subject (Mandatory)"
+                    android:textColor="@android:color/black"
+                   android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
+                    android:singleLine="true" >
+                </EditText>
+                
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Event Type"
+                    android:textColor="@android:color/black"
+                     android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtEventCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="gone">
+                </EditText>
+                
+                <Spinner
+                    android:id="@+id/sptype"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
+                    android:singleLine="true"/>
+                
+                
+          		  <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Event Group"
+                    android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+          		
+          		<Spinner
+                    android:id="@+id/speventgrpoup"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
+                    />
+          		
+          		<LinearLayout
+          		    android:id="@+id/valuelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:orientation="vertical"
+                    android:weightSum="1" >
+                    
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Value"
+                    android:textColor="@android:color/black"
+                     android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+                 
+                 <Spinner
+                    android:id="@+id/spvalue"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                     android:textSize="@dimen/font_size_small"
+                    android:padding="@dimen/dimen_10"
+                    />
+       
+                 </LinearLayout>
+              
+          		<LinearLayout
+          		    android:id="@+id/participantrollLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="1" >
+                    
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Participants Roll"
+                    android:textColor="@android:color/black"
+                     android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+                    
+                   <!-- <ListView
+                       android:id="@+id/listtype" 
+                       android:layout_width="match_parent"
+                       android:layout_height="100dp"
+                      android:layout_marginBottom="@dimen/dimen_5"
+                     android:layout_marginLeft="@dimen/dimen_10"
+                   	 android:layout_marginRight="@dimen/dimen_10"
+                   	 android:layout_marginTop="@dimen/dimen_10"
+                       
+                       >
+                       
+                       
+                   </ListView> -->
+                   
+                    <com.mutech.synergy.activities.event.MultiSelectionSpinner
+      				 android:id="@+id/mySpinner"
+       				 android:layout_width="match_parent"
+        			 android:layout_height="wrap_content" 
+        			 android:layout_marginBottom="@dimen/dimen_5"
+                     android:layout_marginLeft="@dimen/dimen_10"
+                   	 android:layout_marginRight="@dimen/dimen_10"
+                        android:textSize="@dimen/font_size_small"
+                   	 android:layout_marginTop="@dimen/dimen_10"/>
+                   
+                   </LinearLayout>
+                   
+                  <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Event Description"
+                    android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
+                    android:padding="@dimen/dimen_10"
+
+                    android:singleLine="true" >
+                </EditText>
+          		
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="From Date (Mandatory):"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small2"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/txtFromDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/txtFromTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Date (Mandatory):"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small2"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/txtToDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:textSize="@dimen/font_size_small"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/txtToTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:textSize="@dimen/font_size_small"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Venue"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:textSize="@dimen/font_size_small"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Event Manager"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_small"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtEventManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/rectangle1"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_10"
+                    android:textSize="@dimen/font_size_small"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnSaveMettingDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="#03afef"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="SAVE"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_20" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

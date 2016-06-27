@@ -12,6 +12,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@drawable/bg">
 
@@ -172,9 +173,7 @@
                             android:layout_gravity="center"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="20dp"
-
-                            >
+                            android:layout_marginRight="20dp">
 
                             <TextView
                                 android:id="@+id/newyeartxtlable"
@@ -530,8 +529,6 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -553,8 +550,7 @@
                     android:layout_marginTop="@dimen/dimen_10"
                     android:background="@drawable/rectangle1"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/dimen_20"
-                    >
+                    android:paddingBottom="@dimen/dimen_20">
 
                     <LinearLayout
                         android:id="@+id/bargraph"
@@ -764,6 +760,36 @@
         </ScrollView>
     </FrameLayout>
 
+
+  <!--  <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="5dp"
+        android:elevation="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/email"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="Username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#1f1d1d" />
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="username@mymail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#242121" />-->
+
+
     <ListView
         android:id="@+id/left_drawer"
         android:layout_width="240dp"
@@ -774,5 +800,12 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp" />
 
+   <!-- <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        />-->
 
 </android.support.v4.widget.DrawerLayout>

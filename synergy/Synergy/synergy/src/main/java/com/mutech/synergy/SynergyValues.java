@@ -245,6 +245,11 @@ public class SynergyValues {
 			public static String DATA ="data";
 		}
 
+		public static class SendCellLeaderMsg{
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.send_push_leader";
+			public static String DATA ="data";
+		}
+
 		//create_member
 		
 		public static class create_memberService{
