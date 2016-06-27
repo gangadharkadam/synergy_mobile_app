@@ -74,6 +74,7 @@ import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.activities.AttendanceHistory;
 import com.mutech.synergy.activities.CellLeaderMsg;
 import com.mutech.synergy.activities.ShortBio;
+import com.mutech.synergy.activities.ShortBioCell;
 import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.event.CreateEventActivity;
@@ -283,7 +284,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 						try {
 							//String name=mResultList.get(position).getName();
 							name = jsonarray.getJSONObject(position).getString("name");
-							Log.d("NonStop", "Going to Cell");
+							Log.d("NonStop", "Going to Cell. Name: " + name);
 
 							dialogPopup = new Dialog(DisplayMastersListActivity.this);
 							dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -299,7 +300,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 								@Override
 								public void onClick(View v) {
 
-									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBioCell.class);
 									Int.putExtra("cellcode", name);
 									startActivity(Int);
 									dialogPopup.dismiss();
@@ -491,9 +492,8 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 							 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
 						
 							if(jsonarray.length()>0){
-							
-								
-								
+
+								Log.d("NonStop", "JSON Array: " + jsonarray.toString());
 								DetailAdapter adapter=new DetailAdapter(DisplayMastersListActivity.this,jsonarray);
 								lvSelectedList.setAdapter(adapter);
 								adapter.notifyDataSetChanged();

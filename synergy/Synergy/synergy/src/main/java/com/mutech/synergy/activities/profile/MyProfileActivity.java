@@ -170,7 +170,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		getSupportActionBar().setDisplayShowCustomEnabled(true);
 
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
-		tvTitle.setText("My Profile       ");
+		tvTitle.setText("Edit Profile       ");
 		
 
 		mPreferenceHelper=new PreferenceHelper(this);
@@ -739,7 +739,12 @@ private void selectItem(int position) {
 			startActivity(int1);
 			finish();
 			break;
-		case 2:	
+		case 1:
+			Intent intProf =new Intent(this,ProfileView.class);
+			intProf.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+			startActivity(intProf);
+			break;
+		case 2:
 			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm);
@@ -755,11 +760,11 @@ private void selectItem(int position) {
 			startActivity(partner);
 			finish();
 			break;
-		case 1:
+//		case 1:
 //			Intent intForm1=new Intent(this,MyProfileActivity.class);
 //			startActivity(intForm1);
-
-			break;
+//
+//			break;
 		
 		case 4:
 			//Intent intMeeting=new Intent(this,MeetingListActivity.class);

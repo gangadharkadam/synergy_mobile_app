@@ -44,17 +44,17 @@ public class SynergyValues {
 	}
 
 	public static class ImageUrl{
-		public static String imageUrl = "http://loveworldsynergy.org";
-		public static String imageUrl1 = "http://verve.indictranstech.com";
+		public static String imageUrl1 = "http://loveworldsynergy.org";
+		public static String imageUrl = "http://verve.indictranstech.com";
 		public static String imageUrl2 = "http://192.168.5.25:7001/";
 	}
 	
 	
 	public static class Web{
 		
-		public static String BASE_URL="http://loveworldsynergy.org/api/";
+		public static String BASE_URL1="http://loveworldsynergy.org/api/";
 
-		public static String BASE_URL1="http://verve.indictranstech.com/api/";
+		public static String BASE_URL="http://verve.indictranstech.com/api/";
 		
 		public static String BASE_URL2="http://192.168.5.25:7001/api/";
 		
@@ -239,7 +239,12 @@ public class SynergyValues {
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_my_profile/";
 			public static String DATA ="data";
 		}
-		
+
+		public static class GetMemberShortProfileService{
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_short_profile/";
+			public static String DATA ="data";
+		}
+
 		//create_member
 		
 		public static class create_memberService{
@@ -258,7 +263,7 @@ public class SynergyValues {
 		}
 
 		public static class Getcurrency{
-			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.get_currency";
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_currency";
 			public static String DATA ="data";
 		}
 

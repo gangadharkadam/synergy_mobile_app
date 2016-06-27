@@ -32,6 +32,7 @@ import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.adapters.TODOAdapter;
@@ -372,10 +373,9 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 			switch (position) {
 			case 0:
 				
-				Intent intForm1=new Intent(this,MyProfileActivity.class);
+				Intent intForm1=new Intent(this,ProfileView.class);
 				intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 				startActivity(intForm1);
-				finish();
 				break;
 			case 1:	
 				
@@ -460,10 +460,9 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 //			startActivity(partner);
 			break;
 		case 1:
-			Intent intForm1=new Intent(this,MyProfileActivity.class);
+			Intent intForm1=new Intent(this,ProfileView.class);
 			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm1);
-			finish();
 			break;
 		case 6:
 			//Intent intMeeting=new Intent(this,MeetingListActivity.class);

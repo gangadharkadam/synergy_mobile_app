@@ -330,31 +330,28 @@
             android:label="@string/title_activity_dashboard_list_details_converts" />
         <activity
             android:name=".activities.dashboard.DashboardListDetailsFirstTimersActivity"
-            android:label="@string/title_activity_dashboard_list_details_first_timers">
-        </activity>
+            android:label="@string/title_activity_dashboard_list_details_first_timers" />
         <activity
             android:name=".activities.Feedback"
-            android:label="@string/title_activity_feedaback">
-        </activity>
+            android:label="@string/title_activity_feedaback" />
         <activity
             android:name=".activities.CellLeaderMsg"
             android:label="@string/title_activity_cell_leader_msg" />
         <activity
             android:name=".activities.AttendanceHistory"
             android:label="@string/title_activity_attendance_history"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.ShortBio"
             android:label="@string/title_activity_short_bio" />
         <activity
             android:name=".activities.Messages"
-            android:label="@string/title_activity_messages">
-
-        </activity>
+            android:label="@string/title_activity_messages" />
         <activity
             android:name=".activities.ViewMembers"
-            android:label="@string/title_activity_view_members">
-        </activity>
+            android:label="@string/title_activity_view_members" />
+        <activity android:name=".activities.profile.ProfileView" />
+        <activity android:name=".activities.ShortBioCell" />
     </application>
 
 </manifest>

@@ -1,0 +1,102 @@
+-keep class com.mutech.synergy.App {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.mutech.synergy.activities.SplashScreenActivity { <init>(); }
+-keep class com.mutech.synergy.activities.LoginActivity { <init>(); }
+-keep class com.mutech.synergy.activities.HomeActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.CreatePcfMasterFormActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.CreateCellMasterActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.CreateSeniorCellMasterActivity { <init>(); }
+-keep class com.mutech.synergy.activities.task.ToDoTaskActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.MasterSelectorScreenActivity { <init>(); }
+-keep class com.mutech.synergy.activities.event.CreateEventActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.CreateCellMeetingActivity { <init>(); }
+-keep class com.mutech.synergy.activities.task.CreateTaskActivity { <init>(); }
+-keep class com.mutech.synergy.activities.task.CloseTaskActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.MeetingListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.MyMeetingListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.MarkMyAttendanceActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.MarkMemberAttendanceActivity { <init>(); }
+-keep class com.mutech.synergy.activities.meeting.SingleMeetingDetails { <init>(); }
+-keep class com.mutech.synergy.activities.event.EventListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.event.MarkMemberEventAttendanceActivity { <init>(); }
+-keep class com.mutech.synergy.activities.event.MarkMyEventAttendanceActivity { <init>(); }
+-keep class com.mutech.synergy.activities.event.MyEventListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.event.SingleEventDetails { <init>(); }
+-keep class com.mutech.synergy.activities.profile.MyProfileActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.AllMemberListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.MemberInfoActivtiy { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.DisplayMastersListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.PledgeActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.SearchFunctionActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.ShowSearchResultFunctionality { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.MemberStrengthMutliBarChart { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.GivingActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.PartnerShipRecord { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.PartnerRecordInformation { <init>(); }
+-keep class com.mutech.synergy.activities.MessageBroadcastActivity { <init>(); }
+-keep class com.mutech.synergy.activities.LogoutActivity { <init>(); }
+-keep class com.mutech.synergy.GcmBroadcastReceiver { <init>(); }
+-keep class com.mutech.synergy.GcmIntentService { <init>(); }
+-keep class com.mutech.messagebraudcast.MessageBroadcastActivity { <init>(); }
+-keep class com.mutech.databasedetails.PcfDetailsActivity { <init>(); }
+-keep class com.mutech.databasedetails.CellDetailsActivity { <init>(); }
+-keep class com.mutech.databasedetails.SrCellDetailsActivity { <init>(); }
+-keep class com.mutech.filter.FilterActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.NewConvertsYearActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.FirstTimesWeekActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.InviteesandContactsYearActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.DashboardListDetailsActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.InviteesandContacts_ListDetailsActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.PledgeActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.GivingActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.Giving_or_pledge_DetailsActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.NewConvertsWeekActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.NewConvertsMonthActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.FirstTimersYearActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.InviteesandContactsweekActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.InviteeandContactsMonthActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.MyPartnershipAdpter { <init>(); }
+-keep class com.mutech.partnershiprecord.MyPartnershipActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.MyPartnershipGivingActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.MypartnershipPledgeActivity { <init>(); }
+-keep class com.mutech.synergy.fragments.task.TeamTaskDetailsActivity { <init>(); }
+-keep class com.mutech.partnershiprecord.CreatePartnershipActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.MembershipStrengthDetailsActivity { <init>(); }
+-keep class com.mutech.synergy.ShowMessageActivity { <init>(); }
+-keep class com.mutech.synergy.GraphTestActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.TotalMemberListActivity { <init>(); }
+-keep class com.mutech.synergy.activities.cellMasters.NewCreateCellMasterActivity { <init>(); }
+-keep class com.mutech.databasedetails.FirstTimerInDatabaseActivity { <init>(); }
+-keep class com.mutech.databasedetails.CreateNewMemberActivity { <init>(); }
+-keep class com.mutech.databasedetails.ZoneDetailsActivity { <init>(); }
+-keep class com.mutech.databasedetails.GroupChurch { <init>(); }
+-keep class com.mutech.databasedetails.ChurchDetail { <init>(); }
+-keep class com.mutech.databasedetails.RegionActivity { <init>(); }
+-keep class com.mutech.databasedetails.CreateFirstTimerActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.DashboardListDetailsConvertsActivity { <init>(); }
+-keep class com.mutech.synergy.activities.dashboard.DashboardListDetailsFirstTimersActivity { <init>(); }
+-keep class com.mutech.synergy.activities.Feedback { <init>(); }
+-keep class com.mutech.synergy.activities.CellLeaderMsg { <init>(); }
+-keep class com.mutech.synergy.activities.AttendanceHistory { <init>(); }
+-keep class com.mutech.synergy.activities.ShortBio { <init>(); }
+-keep class com.mutech.synergy.activities.Messages { <init>(); }
+-keep class com.mutech.synergy.activities.ViewMembers { <init>(); }
+-keep class com.mutech.synergy.activities.profile.ProfileView { <init>(); }
+-keep class com.mutech.synergy.activities.ShortBioCell { <init>(); }
+-keep class com.google.android.gms.ads.AdActivity { <init>(); }
+-keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity { <init>(); }
+-keep class com.google.android.gms.appinvite.PreviewActivity { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementContentProvider { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}

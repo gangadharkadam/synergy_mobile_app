@@ -60,34 +60,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
-                                    android:text="Cell Code"
+                                    android:text="Cell Leader Id"
                                     android:textColor="@android:color/black"
                                     android:textSize="@dimen/font_size_small" />
 
                                 <TextView
-                                    android:id="@+id/txtMembershipNo"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dimen_10"
-                                    android:layout_marginLeft="@dimen/dimen_10"
-                                    android:layout_marginRight="@dimen/dimen_10"
-                                    android:background="@drawable/rectangle1"
-                                    android:enabled="false"
-                                    android:maxLines="1"
-                                    android:padding="@dimen/dimen_10"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/font_size_small" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="@dimen/dimen_10"
-                                    android:text="Cell Name"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_18" />
-
-                                <TextView
-                                    android:id="@+id/txtName"
+                                    android:id="@+id/txtCellLeaderId"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dimen_10"
@@ -104,12 +82,55 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
+                                    android:text="Cell Leader Name"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtCellLeaderName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:enabled="false"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/textsize_16" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
+                                    android:text="Cell Leader Email Id"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <TextView
+                                    android:id="@+id/txtLeaderEmailId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dimen_10"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:background="@drawable/rectangle1"
+                                    android:inputType="textEmailAddress"
+                                    android:padding="@dimen/dimen_10"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_small"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_10"
                                     android:text="Date of Birth"
                                     android:textColor="@android:color/black"
                                     android:textSize="@dimen/font_size_small" />
 
                                 <TextView
-                                    android:id="@+id/txtMemberDateOfBirth"
+                                    android:id="@+id/txtCellLeaderDateOfBirth"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dimen_10"
@@ -130,7 +151,7 @@
                                     android:textSize="@dimen/font_size_small" />
 
                                 <TextView
-                                    android:id="@+id/txtMemberPhone1"
+                                    android:id="@+id/txtCellLeaderPhone"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dimen_10"
@@ -144,26 +165,6 @@
                                     android:singleLine="true"
                                     android:textSize="@dimen/font_size_small"/>
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="@dimen/dimen_10"
-                                    android:text="Email Address"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/font_size_small" />
-
-                                <TextView
-                                    android:id="@+id/txtEmailID1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dimen_10"
-                                    android:layout_marginLeft="@dimen/dimen_10"
-                                    android:layout_marginRight="@dimen/dimen_10"
-                                    android:background="@drawable/rectangle1"
-                                    android:inputType="textEmailAddress"
-                                    android:padding="@dimen/dimen_10"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/font_size_small"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -174,7 +175,7 @@
                                     android:textSize="@dimen/textsize_18" />
 
                                 <TextView
-                                    android:id="@+id/txtHomeAddress"
+                                    android:id="@+id/txtCellLeaderAddress"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dimen_10"
@@ -184,84 +185,9 @@
                                     android:padding="@dimen/dimen_10"
                                     android:textSize="@dimen/font_size_small" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="@dimen/dimen_10"
-                                    android:text="Status"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_18" />
-
-                                <TextView
-                                    android:id="@+id/txtStatus"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dimen_10"
-                                    android:layout_marginLeft="@dimen/dimen_10"
-                                    android:layout_marginRight="@dimen/dimen_10"
-                                    android:background="@drawable/rectangle1"
-                                    android:maxLines="1"
-                                    android:padding="@dimen/dimen_10"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/textsize_16" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="@dimen/dimen_10"
-                                    android:text="Role"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_18" />
-
-                                <TextView
-                                    android:id="@+id/txtRole"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dimen_10"
-                                    android:layout_marginLeft="@dimen/dimen_10"
-                                    android:layout_marginRight="@dimen/dimen_10"
-                                    android:background="@drawable/rectangle1"
-                                    android:maxLines="1"
-                                    android:padding="@dimen/dimen_10"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/textsize_16" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="@dimen/dimen_10"
-                                    android:text="Designation"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/textsize_18" />
-
-                                <TextView
-                                    android:id="@+id/txtDesignation"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dimen_10"
-                                    android:layout_marginLeft="@dimen/dimen_10"
-                                    android:layout_marginRight="@dimen/dimen_10"
-                                    android:background="@drawable/rectangle1"
-                                    android:padding="@dimen/dimen_10"
-                                    android:inputType="textMultiLine"
-                                    android:textSize="@dimen/textsize_16" />
-
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-
-                    <Button
-                        android:id="@+id/btnEdit"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/dimen_10"
-                        android:background="#03afef"
-                        android:gravity="center"
-                        android:padding="@dimen/dimen_10"
-                        android:singleLine="true"
-                        android:text="EDIT"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/textsize_20" />
 
                 </LinearLayout>
 

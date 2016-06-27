@@ -41,6 +41,7 @@ import com.mutech.synergy.SynergyValues.Web.GetUserRolesService;
 import com.mutech.synergy.SynergyValues.Web.LoginService;
 import com.mutech.synergy.SynergyValues.Web.PushNotification;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.models.UserRolesReqModel;
 import com.mutech.synergy.models.UserRolesResponseModel;
 import com.mutech.synergy.models.UserRolesResponseModel.RolesRolesValues;
@@ -265,7 +266,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 //				Log.e("gjhgkgkgkjg",  rolelist.get(0).getRole());
 //				Log.e("gjh",  rolelist.get(1).getRole());
 				if(str.equals("Member")){
-					Intent intprof=new Intent(LoginActivity.this,MyProfileActivity.class);
+					Intent intprof=new Intent(LoginActivity.this,ProfileView.class);
 					startActivity(intprof);
 					finish();
 					Log.e(null, "11111111");

@@ -331,8 +331,21 @@ private void getPledge() {
 				try {
 					
 					txtname.setText(jarray.getJSONObject(position).getString("partnership_arms"));
-					txtamount.setText(jarray.getJSONObject(position).getString("amount"));
-					
+
+					if(jarray.getJSONObject(position).getString("currency").contentEquals("null")) {
+						txtamount.setText(jarray.getJSONObject(position).getString("amount"));
+					} else {
+						txtamount.setText(jarray.getJSONObject(position).getString("currency") + " " + jarray.getJSONObject(position).getString("amount"));
+					}
+
+//					if(jarray.getJSONObject(position).getString("currency") != null) {
+//						txtamount.setText(jarray.getJSONObject(position).getString("currency") + " " + jarray.getJSONObject(position).getString("amount"));
+//					} else if(jarray.getJSONObject(position).getString("currency").contentEquals("null")) {
+//						txtamount.setText(jarray.getJSONObject(position).getString("amount"));
+//					} else {
+//						txtamount.setText(jarray.getJSONObject(position).getString("amount"));
+//					}
+
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

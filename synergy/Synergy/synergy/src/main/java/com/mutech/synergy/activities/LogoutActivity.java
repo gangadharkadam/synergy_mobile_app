@@ -30,6 +30,7 @@ import com.mutech.synergy.activities.cellMasters.SearchFunctionActivity;
 import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.utils.PreferenceHelper;
 
@@ -84,7 +85,7 @@ public class LogoutActivity extends Activity{
 				
 				
 				if(classname.equals("MyProfileActivity"))
-					startActivity(new Intent(LogoutActivity.this, MyProfileActivity.class));
+					startActivity(new Intent(LogoutActivity.this, ProfileView.class));
 				
 				if(classname.equals("MasterSelectorScreenActivity"))
 					startActivity(new Intent(LogoutActivity.this, MasterSelectorScreenActivity.class));
@@ -120,7 +121,7 @@ public class LogoutActivity extends Activity{
 		super.onBackPressed();
 		
 		if(classname.equals("MyProfileActivity"))
-			startActivity(new Intent(LogoutActivity.this, MyProfileActivity.class));
+			startActivity(new Intent(LogoutActivity.this, ProfileView.class));
 		
 		if(classname.equals("MasterSelectorScreenActivity"))
 			startActivity(new Intent(LogoutActivity.this, MasterSelectorScreenActivity.class));

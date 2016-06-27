@@ -25,6 +25,7 @@ import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.MemberProfileModel;
+import com.mutech.synergy.models.MemberShortProfile;
 import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
 import com.mutech.synergy.utils.PreferenceHelper;
@@ -44,58 +45,38 @@ import java.util.Map;
 
 public class ShortBio extends ActionBarActivity {
 
-    private Button btnedit;
     ArrayList<MemberProfileModel.ProfileSubModel> mProfSubModel;
     private PreferenceHelper mPreferenceHelper;
     private Gson gson;
-    private ImageView imgProfilePic;
-    String Imageurl;
-    private SimpleDateFormat dateFormatter,dateFormatterService;
-    private TextView txtMemberDateOfBirth;
-    private TextView txtMembershipNo,txtMemberName,txtMemberPhone,txtEmailID,txtMemberHomeAddress,txtDesignation,txtstatus,txtRole;
 
+    private ImageView imgProfilePic;
+
+    String Imageurl;
+    private TextView txtCellLeaderId, txtCellLeaderName, txtCellLeaderEmailId, txtCellLeaderDateOfBirth, txtCellLeaderPhone, txtCellLeaderAddress;
     String cellcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_bio);
+        getSupportActionBar().setTitle("Cell Leader Profile");
 
         mProfSubModel=new ArrayList<MemberProfileModel.ProfileSubModel>();
         mPreferenceHelper=new PreferenceHelper(this);
         gson=new Gson();
+
         imgProfilePic=(ImageView) findViewById(R.id.imgProfilePic);
-        btnedit = (Button) findViewById(R.id.btnEdit);
-        txtMemberDateOfBirth=(TextView) findViewById(R.id.txtMemberDateOfBirth);
-        txtMembershipNo=(TextView) findViewById(R.id.txtMembershipNo);
-        txtMemberName=(TextView) findViewById(R.id.txtName);
-        txtMemberPhone=(TextView) findViewById(R.id.txtMemberPhone1);
-        txtEmailID=(TextView) findViewById(R.id.txtEmailID1);
-        txtDesignation=(TextView) findViewById(R.id.txtDesignation);
-        txtMemberHomeAddress=(TextView) findViewById(R.id.txtHomeAddress);
-        txtstatus=(TextView) findViewById(R.id.txtStatus);
-        txtRole=(TextView) findViewById(R.id.txtRole);
-        dateFormatterService=new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        txtCellLeaderId = (TextView) findViewById(R.id.txtCellLeaderId);
+        txtCellLeaderName = (TextView) findViewById(R.id.txtCellLeaderName);
+        txtCellLeaderEmailId = (TextView) findViewById(R.id.txtLeaderEmailId);
+        txtCellLeaderDateOfBirth = (TextView) findViewById(R.id.txtCellLeaderDateOfBirth);
+        txtCellLeaderPhone = (TextView) findViewById(R.id.txtCellLeaderPhone);
+        txtCellLeaderAddress = (TextView) findViewById(R.id.txtCellLeaderAddress);
 
         cellcode=getIntent().getStringExtra("cellcode");
 
-        btnedit.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent Int = new Intent(ShortBio.this, CellDetailsActivity.class);
-                Int.putExtra("cellcode", cellcode);
-                Int.putExtra("fromshortbio","fromshortbio");
-                startActivity(Int);
-                finish();
-            }
-        });
-
-
         if(NetworkHelper.isOnline(this)){
             Methods.showProgressDialog(this);
-            //getProfileInfo();
             getCellDetails();
         }
         else
@@ -106,7 +87,7 @@ public class ShortBio extends ActionBarActivity {
 
     private void getCellDetails() {
 
-        StringRequest reqgetCellDetails=new StringRequest(Request.Method.POST, SynergyValues.Web.GetCellDetailsService.SERVICE_URL,new Response.Listener<String>() {
+        StringRequest reqgetCellDetails=new StringRequest(Request.Method.POST, SynergyValues.Web.GetMemberShortProfileService.SERVICE_URL,new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -117,22 +98,29 @@ public class ShortBio extends ActionBarActivity {
                     JSONObject jsonobj=new JSONObject(response);
                     JSONArray jarray=jsonobj.getJSONArray("message");
 
+                    if(jarray.getJSONObject(0).getString("name") != null) {
+                        txtCellLeaderId.setText(jarray.getJSONObject(0).getString("name"));
+                    }
 
-                    String str=jarray.getJSONObject(0).getString("cell_code");
+                    if(jarray.getJSONObject(0).getString("member_name") != null) {
+                        txtCellLeaderName.setText(jarray.getJSONObject(0).getString("member_name"));
+                    }
 
-                    if(str!=null)
-                        txtMembershipNo.setText(jarray.getJSONObject(0).getString("cell_code"));
+                    if(jarray.getJSONObject(0).getString("email_id") != null) {
+                        txtCellLeaderEmailId.setText(jarray.getJSONObject(0).getString("email_id"));
+                    }
 
-                    str=jarray.getJSONObject(0).getString("cell_name");
+                    if(jarray.getJSONObject(0).getString("date_of_birth") != null) {
+                        txtCellLeaderDateOfBirth.setText(jarray.getJSONObject(0).getString("date_of_birth"));
+                    }
 
-                    if(str!=null)
-                        txtMemberName.setText(jarray.getJSONObject(0).getString("cell_name"));
+                    if(jarray.getJSONObject(0).getString("phone_1") != null) {
+                        txtCellLeaderPhone.setText(jarray.getJSONObject(0).getString("phone_1"));
+                    }
 
-                    if(!jarray.getJSONObject(0).getString("contact_phone_no").equals("null"))
-                        txtMemberPhone.setText(jarray.getJSONObject(0).getString("contact_phone_no"));
-
-                    if(!jarray.getJSONObject(0).getString("contact_email_id").equals("null"))
-                        txtEmailID.setText(jarray.getJSONObject(0).getString("contact_email_id"));
+                    if(jarray.getJSONObject(0).getString("address") != null) {
+                        txtCellLeaderAddress.setText(jarray.getJSONObject(0).getString("address"));
+                    }
 
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
@@ -164,13 +152,13 @@ public class ShortBio extends ActionBarActivity {
             protected Map<String, String> getParams() throws AuthFailureError{
                 Map<String, String> params = new HashMap<String, String>();
 
-                MeetingListRequestModel model=new MeetingListRequestModel();
+                MemberShortProfile model=new MemberShortProfile();
                 model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
                 model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
-                model.setTbl("Cells");
                 model.setName(cellcode);
+                model.setRole("Cell Leader");
 
-                String dataString=gson.toJson(model, MeetingListRequestModel.class);
+                String dataString=gson.toJson(model, MemberShortProfile.class);
 
                 Log.d("droid", dataString);
                 params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);

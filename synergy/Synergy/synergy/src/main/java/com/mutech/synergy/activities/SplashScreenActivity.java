@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.utils.PreferenceHelper;
 
 public class SplashScreenActivity extends Activity{
@@ -49,7 +50,7 @@ public class SplashScreenActivity extends Activity{
 						}else
 						{
 							if(str.equals("Member")){
-								Intent intprof=new Intent(SplashScreenActivity.this,MyProfileActivity.class);
+								Intent intprof=new Intent(SplashScreenActivity.this,ProfileView.class);
 								startActivity(intprof);
 								finish();
 								

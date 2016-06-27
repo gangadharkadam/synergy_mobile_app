@@ -126,6 +126,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
+			Log.d("NonStop", "Getting currency");
 			getCurrency();
 
 		}
@@ -278,7 +279,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
 					Methods.longToast("No access to update Profile", PartnerRecordInformation.this);
 				}
 				else
-					Methods.longToast("Some Error Occured,please try again later", PartnerRecordInformation.this);
+					Methods.longToast("Some Error Occured while getting currency,please try again later", PartnerRecordInformation.this);
 			}
 		}){
 			@Override

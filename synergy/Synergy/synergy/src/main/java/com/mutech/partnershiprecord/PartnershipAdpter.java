@@ -77,13 +77,13 @@ public class PartnershipAdpter extends FragmentPagerAdapter {
 	@Override
 	public CharSequence getPageTitle(int position) {
         String title=mContext.getString(titles[position]);
-        if(position==0)
-        {
-            title=title +"\n Total-" + " " + getTotalValGiving();
-        }
-        else {
-            title=title +"\n Total-" + " " + totalValPrice;
-        }
+//        if(position==0)
+//        {
+//			title=title +"\n Total-" + " " + getTotalValGiving();
+//        }
+//        else {
+//            title=title +"\n Total-" + " " + totalValPrice;
+//        }
 		return title;
 	}
 

@@ -424,7 +424,7 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 			TextView txtCurrency =(TextView) convertView.findViewById(R.id.txtCurrency);
 					
 				try {
-					
+
 					txtMasterName.setText(jarray.getJSONObject(position).getString("name"));
 					txtPartnershiparm.setText(jarray.getJSONObject(position).getString("member_name"));
 					txtAmount.setText(jarray.getJSONObject(position).getString("amount"));

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    tools:context="com.mutech.synergy.activities.profile.ProfileView">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgProfilePic"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/user"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:textSize="@dimen/font_size_small" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtMemberId"
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Member Id: "
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:id="@+id/txtMemberName"
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Member Name: "
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:id="@+id/txtMemberRole"
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Member Role: "
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtMemberDOB"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Member Date of Birth: "
+                    android:textSize="@dimen/font_size_small"/>
+
+                <TextView
+                    android:id="@+id/txtMemberPhone"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Member Phone #: "
+                    android:textSize="@dimen/font_size_small"/>
+
+                <TextView
+                    android:id="@+id/txtMemberEmailId"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Member Email Id: "
+                    android:textSize="@dimen/font_size_small"/>
+
+                <TextView
+                    android:id="@+id/txtMemberHomeAddress"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Member Home Address: "
+                    android:textSize="@dimen/font_size_small"/>
+
+                <Button
+                    android:id="@+id/btnEditProf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="#03afef"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:singleLine="true"
+                    android:text="EDIT PROFILE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_20" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -55,13 +55,13 @@ public class MyPartnershipAdpter extends FragmentPagerAdapter {
 
 		String title=mContext.getString(titles[position]);
 
-		if(position==0)
-		{
-			title=title +"\n Total-" + " " +"100";
-		}
-		else {
-			title=title +"\n Total-" + " " +"10";
-		}
+//		if(position==0)
+//		{
+//			title=title +"\n Total-" + " " +"100";
+//		}
+//		else {
+//			title=title +"\n Total-" + " " +"10";
+//		}
 		return title;
 	}
 	

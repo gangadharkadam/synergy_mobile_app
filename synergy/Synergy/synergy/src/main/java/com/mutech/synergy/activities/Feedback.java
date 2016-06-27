@@ -27,6 +27,7 @@ import com.mutech.synergy.activities.cellMasters.SearchFunctionActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.models.DrawerItem;
@@ -97,14 +98,13 @@ public class Feedback extends ActionBarActivity  {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 //                submit.setEnabled(false);
-<<<<<<< HEAD
                 if(NetworkHelper.isOnline(Feedback.this)){
                     Methods.showProgressDialog(Feedback.this);
                     //getProfileInfo();
                     new AlertDialog.Builder(Feedback.this)
                             .setCancelable(false)
                             .setTitle("Feedback")
-                            .setMessage("Your feedback has been registered successfully. Thank you")
+                            .setMessage("Redirecting to your email client for sending the feedback")
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -118,25 +118,6 @@ public class Feedback extends ActionBarActivity  {
                                     startActivity(intent);
                                     txtsubject.setText("");
                                     txtdesc.setText("");
-=======
-                new AlertDialog.Builder(Feedback.this)
-                        .setCancelable(false)
-                        .setTitle("Feedback")
-                        .setMessage("Redirecting to your email client for sending the feedback")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                                Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
-                                intent.setType("Text/Play");
-                                intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
-                                intent.putExtra(Intent.EXTRA_TEXT, "Subject: " +  txtsubject.getText().toString() + "\n" + "Description: " + txtdesc.getText().toString());
-                                intent.setData(Uri.parse("mailto:sumit.s.more@gmail.com")); // or just "mailto:" for blank
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
-                                startActivity(intent);
-                                txtsubject.setText("");
-                                txtdesc.setText("");
->>>>>>> e08a00a32c02c2134ac81b0fd696b6ceb931e1ac
                               /*  Intent emailIntent = new Intent(Intent.ACTION_SEND);
                                 emailIntent.putExtra(Intent.EXTRA_EMAIL, "poojapatil96km@gmail.com");
                                 emailIntent.setData(Uri.parse("mailto:" + txtsubject.getText().toString() + " " + txtdesc.getText().toString()));
@@ -281,10 +262,9 @@ public class Feedback extends ActionBarActivity  {
                 finish();
                 break;
             case 1:
-                Intent intForm1=new Intent(this,MyProfileActivity.class);
+                Intent intForm1=new Intent(this,ProfileView.class);
                 intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intForm1);
-                finish();
                 break;
 
             case 4:
