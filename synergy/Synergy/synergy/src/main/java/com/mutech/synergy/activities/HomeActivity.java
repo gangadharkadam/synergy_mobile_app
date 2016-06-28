@@ -701,9 +701,9 @@ public class HomeActivity extends AppCompatActivity {
 	}
 
 	private void addDrawerListData() {
-		DrawerItem item00 = new DrawerItem();
-		item00.setItemName("UserName : \n Role : Pstor");
-		item00.setImgResID(R.drawable.dashboard);
+//		DrawerItem item00 = new DrawerItem();
+//		item00.setItemName("UserName : \n Role : Pstor");
+//		item00.setImgResID(R.drawable.dashboard);
 
 		DrawerItem item01 = new DrawerItem();
 		item01.setItemName("Dashboard");
@@ -754,7 +754,7 @@ public class HomeActivity extends AppCompatActivity {
         item12.setItemName("Logout");
         item12.setImgResID(R.drawable.signout);
 
-		mDrawerList.add(item00);
+//		mDrawerList.add(item00);
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
 		mDrawerList.add(item04);
@@ -788,36 +788,33 @@ public class HomeActivity extends AppCompatActivity {
 			//			startActivity(intForm1);
 			break;
 
-            case 1:
-                //			Intent intForm1=new Intent(this,MyProfileActivity.class);
-                //			startActivity(intForm1);
-                break;
+		case 1:
+			Intent intForm1=new Intent(this,ProfileView.class);
+			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+			startActivity(intForm1);
+			break;
+//            case 1:
+//				Intent intForm1=new Intent(this,MyProfileActivity.class);
+//				startActivity(intForm1);
+//                break;
 
-            case 3:
+		case 2:
 			Log.d("NonStop", "Going to Database");
 			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm);
 			finish();
 			break;
-//		case 2:
-//			break;
-//		case 3:
-//			break;
-		case 4:
+
+		case 3:
             Log.d("NonStop", "Going to Partnership Record");
 			Intent partner=new Intent(this,PartnerShipRecord.class);
 			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(partner);
 			finish();
 			break;
-		case 2:
-			Intent intForm1=new Intent(this,ProfileView.class);
-			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intForm1);
-			break;
-		
-		case 5:
+
+		case 4:
 		//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
 			//startActivity(intMeeting);
             Log.d("NonStop", "Going to Attendance");
@@ -826,7 +823,7 @@ public class HomeActivity extends AppCompatActivity {
 			startActivity(intMyMeetings);	
 			finish();
 			break;
-		case 6:
+		case 5:
             Log.d("NonStop", "Going to Calendar");
 			Intent intEvents=new Intent(this,MyEventListActivity.class);
 			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -834,7 +831,7 @@ public class HomeActivity extends AppCompatActivity {
 			finish();
 
 			break;
-		case 7:
+		case 6:
             Log.d("NonStop", "Going to ToDo");
 			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
 			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -842,14 +839,14 @@ public class HomeActivity extends AppCompatActivity {
 			finish();
 			break;
 			
-		case 8:
+		case 7:
 			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
 			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intentMsg);
 			finish();
 			break;
 			
-		case 9:
+		case 8:
             Log.d("NonStop", "Going to Search");
 			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
 			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -858,7 +855,7 @@ public class HomeActivity extends AppCompatActivity {
 
 			break;
 			
-		case 10:
+		case 9:
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
@@ -869,7 +866,7 @@ public class HomeActivity extends AppCompatActivity {
             finish();
             break;
 
-			case 11://logout
+		case 10://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

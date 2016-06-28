@@ -75,6 +75,7 @@ import com.mutech.synergy.activities.AttendanceHistory;
 import com.mutech.synergy.activities.CellLeaderMsg;
 import com.mutech.synergy.activities.ShortBio;
 import com.mutech.synergy.activities.ShortBioCell;
+import com.mutech.synergy.activities.ShortBioSrCell;
 import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.event.CreateEventActivity;
@@ -256,18 +257,88 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 											
 						//getAllPCFMaster();
 					}else if(optionSelected.equalsIgnoreCase("Sr Cell")){
-						getList(Commons.USER_TBL_LABEL_SRCELLS);
-						
+//						getList(Commons.USER_TBL_LABEL_SRCELLS);
+
+						Log.d("NonStop", "Populated the table");
 						/*String name=mResultList.get(position).getName();
 						startActivity(new Intent(DisplayMastersListActivity.this, SrCellDetailsActivity.class).putExtra("cellcode", name));
 						Toast.makeText(DisplayMastersListActivity.this, name, Toast.LENGTH_LONG).show();*/
 			
-						String name;
+						final String name;
 						try {
 							//String name=mResultList.get(position).getName();
+//							name = jsonarray.getJSONObject(position).getString("name");
+//							startActivity(new Intent(DisplayMastersListActivity.this, SrCellDetailsActivity.class).putExtra("cellcode", name));
 							name = jsonarray.getJSONObject(position).getString("name");
-							startActivity(new Intent(DisplayMastersListActivity.this, SrCellDetailsActivity.class).putExtra("cellcode", name));
-					
+							Log.d("NonStop", "Going to Sr. Cell. Name: " + name);
+
+							dialogPopup = new Dialog(DisplayMastersListActivity.this);
+							dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+							dialogPopup.setContentView(R.layout.custom_sr_cell_dialogbox);
+
+							btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
+							btnviewattendancehistory= (Button) dialogPopup.findViewById(R.id.viewattendancehistory);
+							btncellleaderprofile= (Button) dialogPopup.findViewById(R.id.cellleaderprofile);
+							btncellleadermsg= (Button) dialogPopup.findViewById(R.id.msgcellleader);
+							btnviewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
+
+							btnviewprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBioSrCell.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewattendancehistory.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Senior Cell Leader");
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btncellleadermsg.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, CellLeaderMsg.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewmembers.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							dialogPopup.show();
+
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -323,6 +394,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
 									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Cell Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}

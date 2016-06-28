@@ -405,7 +405,6 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			break;
 		case R.id.btnCellMaster:
 			Log.d("NonStop", "Going to CellMaster");
-
             Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
 			intCelllist.putExtra("OptionSelected", "Cell");
 			startActivity(intCelllist);

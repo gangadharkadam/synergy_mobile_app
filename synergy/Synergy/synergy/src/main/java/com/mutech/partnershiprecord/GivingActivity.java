@@ -285,9 +285,11 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 		try {
 
 			Intent it=new Intent(getActivity(), Giving_or_pledge_DetailsActivity.class);
+			Log.d("NonStop", "Going to Giving_or_pledge_DetailsActivity from GivingActivity. JSON: " + jsonarray.getJSONObject(position).toString());
 			it.putExtra("type","Giving");
 			it.putExtra("record","My");
 			it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));
+			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
 			startActivity(it);
 
 		} catch (JSONException e) {
@@ -344,8 +346,13 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 			try {
 
 				txtname.setText(jarray.getJSONObject(position).getString("partnership_arms"));
+				if(jarray.getJSONObject(position).getString("currency").contentEquals("null"))
+					txtamount.setText(jarray.getJSONObject(position).getString("amount"));
+				else
+					txtamount.setText(jarray.getJSONObject(position).getString("currency") + " " + jarray.getJSONObject(position).getString("amount"));
+
 				String sumVal=jarray.getJSONObject(position).getString("amount");
-				txtamount.setText(sumVal);
+//				txtamount.setText(sumVal);
 					/*in0;
 					if(sum.equals(""))
 					{

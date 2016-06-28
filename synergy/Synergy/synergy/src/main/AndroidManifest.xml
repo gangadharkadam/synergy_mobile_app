@@ -352,6 +352,7 @@
             android:label="@string/title_activity_view_members" />
         <activity android:name=".activities.profile.ProfileView" />
         <activity android:name=".activities.ShortBioCell" />
+        <activity android:name=".activities.ShortBioSrCell"></activity>
     </application>
 
 </manifest>

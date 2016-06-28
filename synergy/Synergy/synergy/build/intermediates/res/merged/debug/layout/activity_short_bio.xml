@@ -57,6 +57,7 @@
 
 
                                 <TextView
+                                    android:id="@+id/txtCellLeaderIdLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
@@ -79,6 +80,7 @@
                                     android:textSize="@dimen/textsize_16" />
 
                                 <TextView
+                                    android:id="@+id/txtCellLeaderNameLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
@@ -101,6 +103,7 @@
                                     android:textSize="@dimen/textsize_16" />
 
                                 <TextView
+                                    android:id="@+id/txtLeaderEmailIdLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
@@ -122,6 +125,7 @@
                                     android:textSize="@dimen/font_size_small"/>
 
                                 <TextView
+                                    android:id="@+id/txtCellLeaderDateOfBirthLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
@@ -143,6 +147,7 @@
                                     android:textSize="@dimen/font_size_small" />
 
                                 <TextView
+                                    android:id="@+id/txtCellLeaderPhoneLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
@@ -167,6 +172,7 @@
 
 
                                 <TextView
+                                    android:id="@+id/txtCellLeaderAddressLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/dimen_10"
