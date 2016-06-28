@@ -168,8 +168,8 @@ public class SrCellDetailsActivity extends AppCompatActivity {
 					JSONObject jsonobj=new JSONObject(response);
 					JSONArray jarray=jsonobj.getJSONArray("message");
 					
-					if(!jarray.getJSONObject(0).getString("senior_cell_code").equals("null"))
-					txtSeniorCellCode.setText(jarray.getJSONObject(0).getString("senior_cell_code"));
+					/*if(!jarray.getJSONObject(0).getString("senior_cell_code").equals("null"))
+					txtSeniorCellCode.setText(jarray.getJSONObject(0).getString("senior_cell_code"));*/
 					
 					if(!jarray.getJSONObject(0).getString("senior_cell_name").equals("null"))
 						txtSeniorCellName.setText(jarray.getJSONObject(0).getString("senior_cell_name"));

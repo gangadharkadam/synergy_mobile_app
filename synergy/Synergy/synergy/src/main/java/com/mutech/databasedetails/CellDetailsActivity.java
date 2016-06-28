@@ -154,12 +154,12 @@ public class CellDetailsActivity extends AppCompatActivity {
 					JSONArray jarray=jsonobj.getJSONArray("message");
 					
 					
-					String str=jarray.getJSONObject(0).getString("cell_code");
+					/*String str=jarray.getJSONObject(0).getString("cell_code");
 					
 					if(str!=null)
-					txtCellCode.setText(jarray.getJSONObject(0).getString("cell_code"));
+					txtCellCode.setText(jarray.getJSONObject(0).getString("cell_code"));*/
 					
-					str=jarray.getJSONObject(0).getString("cell_name");
+					String str=jarray.getJSONObject(0).getString("cell_name");
 					
 					if(str!=null)					
 					txtCellName.setText(jarray.getJSONObject(0).getString("cell_name"));

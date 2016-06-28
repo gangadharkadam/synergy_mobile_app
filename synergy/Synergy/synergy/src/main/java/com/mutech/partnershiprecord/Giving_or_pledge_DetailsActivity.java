@@ -80,7 +80,7 @@ import android.widget.Toast;
 
 public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 
-	String type,value;
+	String type,value, currency;
 	private PreferenceHelper mPreferenceHelper;
 	JSONArray jsonarray;
 	Context context;
@@ -183,7 +183,8 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 		type=getIntent().getStringExtra("type");
 		value=getIntent().getStringExtra("value");
 		recordtype=getIntent().getStringExtra("record");
-		
+		currency = getIntent().getStringExtra("currency");
+
 		txttitle.setText(type+" - "+value);
 		
 		
@@ -344,6 +345,8 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 					jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
 					jsonobj.put("giving_or_pledge",type);
 					jsonobj.put("partnership_arms",value);
+					jsonobj.put("currency", currency);
+
 					Log.d("NonStop", "User Role in Giving_or_pledge_DetailsActivity: " +
 							mPreferenceHelper.getString(Commons.USER_ROLE));
 					if((mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Regional Pastor") ||

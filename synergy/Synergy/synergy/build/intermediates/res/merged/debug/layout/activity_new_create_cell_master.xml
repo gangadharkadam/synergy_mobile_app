@@ -67,7 +67,8 @@
                     android:text="Cell Code (Mandatory)"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_size_small"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
 
                 <EditText
                     android:id="@+id/txtCellCode"
@@ -80,7 +81,8 @@
                     android:maxLines="1"
                     android:padding="@dimen/dimen_8"
                     android:textSize="@dimen/font_size_small"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:layout_width="match_parent"

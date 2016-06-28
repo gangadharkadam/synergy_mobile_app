@@ -356,6 +356,13 @@
             android:label="@string/title_activity_view_members" />
         <activity android:name="com.mutech.synergy.activities.profile.ProfileView" />
         <activity android:name="com.mutech.synergy.activities.ShortBioCell" />
+        <activity android:name="com.mutech.synergy.activities.ShortBioSrCell" />
+        <activity
+            android:name="com.mutech.synergy.activities.ShortBioPCF"
+            android:label="@string/title_activity_short_bio_pcf" />
+        <activity
+            android:name="com.mutech.synergy.activities.MessageLogs"
+            android:label="@string/title_activity_message_logs" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

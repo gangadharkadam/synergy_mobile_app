@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/color/abc_search_url_text_holo.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/color/abc_search_url_text_holo.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/color/abc_search_url_text_holo.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/volley/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/color/abc_search_url_text_holo.xml"
     }

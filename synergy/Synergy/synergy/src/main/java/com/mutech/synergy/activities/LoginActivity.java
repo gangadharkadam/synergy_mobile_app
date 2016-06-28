@@ -1,7 +1,9 @@
 package com.mutech.synergy.activities;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -25,7 +27,9 @@ import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
 import com.android.volley.Request.Method;
+import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
@@ -36,12 +40,15 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.gson.Gson;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetUserRolesService;
 import com.mutech.synergy.SynergyValues.Web.LoginService;
 import com.mutech.synergy.SynergyValues.Web.PushNotification;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.activities.profile.ProfileView;
+import com.mutech.synergy.models.MeetingListRequestModel;
+import com.mutech.synergy.models.MemberProfileModel;
 import com.mutech.synergy.models.UserRolesReqModel;
 import com.mutech.synergy.models.UserRolesResponseModel;
 import com.mutech.synergy.models.UserRolesResponseModel.RolesRolesValues;
@@ -49,6 +56,11 @@ import com.mutech.synergy.models.UserRolesResponseModel.RolesUserValues;
 import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
 import com.mutech.synergy.utils.PreferenceHelper;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class LoginActivity extends Activity implements OnClickListener{
 
@@ -181,12 +193,14 @@ public class LoginActivity extends Activity implements OnClickListener{
 			@Override
 			public void onResponse(String response) {			
 
+				Log.d("NonStop", response);
 				mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, true);
 				mPreferenceHelper.addString(Commons.USER_EMAILID, txtUserName.getText().toString().trim());
 				mPreferenceHelper.addString(Commons.USER_PASSWORD, txtPassword.getText().toString().trim());
 
 				getLoggedInUserRoles();
 				sendGCM();
+				getProfileInfo();
 
 				//				Intent intHome=new Intent(LoginActivity.this,HomeActivity.class);
 				//				startActivity(intHome);
@@ -231,20 +245,20 @@ public class LoginActivity extends Activity implements OnClickListener{
 			@Override
 			public void onResponse(String response) {
 				Methods.closeProgressDialog();
-				Log.e("login droid", "onResponse roles"+response);
+				Log.e("login droid", "onResponse roles" + response);
 				Methods.longToast("Logged In successfully", LoginActivity.this);
 
 			
 				UserRolesResponseModel respModel=gson.fromJson(response, UserRolesResponseModel.class);
 				ArrayList<RolesUserValues> roleUserlist=respModel.getMessage().getUser_values();
 
-				Log.e(null, "Rolelist--"+roleUserlist.toString());
+				Log.d(null, "Rolelist--"+roleUserlist.toString());
 				
 				
 
 				ArrayList<RolesRolesValues> rolelist=respModel.getMessage().getRoles();
 
-				Log.e(null, "Rolelist--"+respModel.getMessage().getRoles());
+				Log.d(null, "Rolelist--" + respModel.getMessage().getRoles());
 				
 				for(int i=0;i<rolelist.size();i++){
 					if(rolelist.get(i).getRole()!="Member"){
@@ -261,7 +275,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 				}
 				String str=mPreferenceHelper.getString(Commons.USER_ROLE);
 				Log.e("str ", str);
-//				mPreferenceHelper.addString(Commons.USER_ROLE, rolelist.get(0).getRole());
+//   			mPreferenceHelper.addString(Commons.USER_ROLE, rolelist.get(0).getRole());
 				
 //				Log.e("gjhgkgkgkjg",  rolelist.get(0).getRole());
 //				Log.e("gjh",  rolelist.get(1).getRole());
@@ -284,7 +298,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 			public void onErrorResponse(VolleyError error) {
 				Methods.closeProgressDialog();
 
-				Log.d("droid", "onErrorResponse"+error.getCause());
+				Log.d("droid", "onErrorResponse" + error.getCause());
 			}
 		})
 		{
@@ -307,8 +321,75 @@ public class LoginActivity extends Activity implements OnClickListener{
 		requestRoles.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 
-	
-	
+
+	private void getProfileInfo() {
+		StringRequest reqGetProfile=new StringRequest(Request.Method.POST, SynergyValues.Web.GetMemberProfileService.SERVICE_URL,new Response.Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetTopHierarchy ---------------"+ response);
+				try {
+
+					JSONObject jsonobj=new JSONObject(response);
+					JSONArray jarray=jsonobj.getJSONArray("message");
+
+					mPreferenceHelper.addString(Commons.USER_NAME, jarray.getJSONObject(0).getString("member_name") + " " +jarray.getJSONObject(0).getString("last_name"));
+					mPreferenceHelper.addString(Commons.USER_STATUS, jarray.getJSONObject(0).getString("employment_status"));
+					mPreferenceHelper.addString(Commons.USER_DESIGNATION, jarray.getJSONObject(0).getString("member_designation"));
+					mPreferenceHelper.addString(Commons.USER_IMAGE, SynergyValues.ImageUrl.imageUrl +jarray.getJSONObject(0).getString("image"));
+
+					Log.d("NonStop", "last_name: " + jarray.getJSONObject(0).getString("last_name"));
+					Log.d("NonStop", "name: " + jarray.getJSONObject(0).getString("member_name"));
+					Log.d("NonStop", "member_designation: " + jarray.getJSONObject(0).getString("member_designation"));
+					Log.d("NonStop", "employment_status: " + jarray.getJSONObject(0).getString("employment_status"));
+					Log.d("NonStop", "image: " + SynergyValues.ImageUrl.imageUrl +jarray.getJSONObject(0).getString("image"));
+
+					Log.d("NonStop", "name: " + mPreferenceHelper.getString(Commons.USER_NAME));
+					Log.d("NonStop", "member_designation: " + mPreferenceHelper.getString(Commons.USER_DESIGNATION));
+					Log.d("NonStop", "employment_status: " + mPreferenceHelper.getString(Commons.USER_STATUS));
+					Log.d("NonStop", "image: " + mPreferenceHelper.getString(Commons.USER_IMAGE));
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				Methods.closeProgressDialog();
+			}
+		},new Response.ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqsaveMeeting error---------------"+ error.getCause());
+
+				if(error.networkResponse.statusCode==403){
+					Methods.longToast("No access to update Profile", LoginActivity.this);
+				}
+				else
+					Methods.longToast("Some Error Occured,please try again later", LoginActivity.this);
+			}
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError {
+				Map<String, String> params = new HashMap<String, String>();
+
+				MeetingListRequestModel model=new MeetingListRequestModel();
+				model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
+
+				String dataString=gson.toJson(model, MeetingListRequestModel.class);
+
+				Log.e("Request droid", dataString);
+				params.put(SynergyValues.Web.GetMemberProfileService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqGetProfile, "reqGetProfile");
+		reqGetProfile.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+	}
 	
 	private void sendGCM() {
 		StringRequest request=new StringRequest(Method.POST,PushNotification.SERVICE_URL, new Listener<String>() {

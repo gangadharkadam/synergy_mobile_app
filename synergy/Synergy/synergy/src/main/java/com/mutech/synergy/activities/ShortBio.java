@@ -51,9 +51,11 @@ public class ShortBio extends ActionBarActivity {
 
     private ImageView imgProfilePic;
 
-    String Imageurl;
+    private String Imageurl;
     private TextView txtCellLeaderId, txtCellLeaderName, txtCellLeaderEmailId, txtCellLeaderDateOfBirth, txtCellLeaderPhone, txtCellLeaderAddress;
-    String cellcode;
+    private TextView txtCellLeaderIdLbl, txtCellLeaderNameLbl, txtCellLeaderEmailIdLbl, txtCellLeaderDateOfBirthLbl, txtCellLeaderPhoneLbl, txtCellLeaderAddressLbl;
+    private String cellcode;
+    private String role;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,8 @@ public class ShortBio extends ActionBarActivity {
         mPreferenceHelper=new PreferenceHelper(this);
         gson=new Gson();
 
+        role = getIntent().getStringExtra("role");
+
         imgProfilePic=(ImageView) findViewById(R.id.imgProfilePic);
         txtCellLeaderId = (TextView) findViewById(R.id.txtCellLeaderId);
         txtCellLeaderName = (TextView) findViewById(R.id.txtCellLeaderName);
@@ -72,6 +76,43 @@ public class ShortBio extends ActionBarActivity {
         txtCellLeaderDateOfBirth = (TextView) findViewById(R.id.txtCellLeaderDateOfBirth);
         txtCellLeaderPhone = (TextView) findViewById(R.id.txtCellLeaderPhone);
         txtCellLeaderAddress = (TextView) findViewById(R.id.txtCellLeaderAddress);
+
+        txtCellLeaderIdLbl = (TextView) findViewById(R.id.txtCellLeaderIdLbl);
+        txtCellLeaderNameLbl = (TextView) findViewById(R.id.txtCellLeaderNameLbl);
+        txtCellLeaderEmailIdLbl = (TextView) findViewById(R.id.txtLeaderEmailIdLbl);
+        txtCellLeaderDateOfBirthLbl = (TextView) findViewById(R.id.txtCellLeaderDateOfBirthLbl);
+        txtCellLeaderPhoneLbl = (TextView) findViewById(R.id.txtCellLeaderPhoneLbl);
+        txtCellLeaderAddressLbl = (TextView) findViewById(R.id.txtCellLeaderAddressLbl);
+
+        switch(role) {
+            case "Cell Leader":
+                getSupportActionBar().setTitle("Cell Leader Profile");
+                txtCellLeaderIdLbl.setText("Cell Leader Id");
+                txtCellLeaderNameLbl.setText("Cell Leader Name");
+                txtCellLeaderEmailIdLbl.setText("Cell Leader Email Id");
+                txtCellLeaderDateOfBirthLbl.setText("Date of Birth");
+                txtCellLeaderPhoneLbl.setText("Phone Number");
+                txtCellLeaderAddressLbl.setText("Home Address");
+                break;
+            case "Senior Cell Leader":
+                getSupportActionBar().setTitle("Senior Cell Leader Profile");
+                txtCellLeaderIdLbl.setText("Senior Cell Leader Id");
+                txtCellLeaderNameLbl.setText("Senior Cell Leader Name");
+                txtCellLeaderEmailIdLbl.setText("Senior Cell Leader Email Id");
+                txtCellLeaderDateOfBirthLbl.setText("Date of Birth");
+                txtCellLeaderPhoneLbl.setText("Phone Number");
+                txtCellLeaderAddressLbl.setText("Home Address");
+                break;
+            case "PCF Leader":
+                getSupportActionBar().setTitle("PCF Leader Profile");
+                txtCellLeaderIdLbl.setText("PCF Leader Id");
+                txtCellLeaderNameLbl.setText("PCF Leader Name");
+                txtCellLeaderEmailIdLbl.setText("PCF Leader Email Id");
+                txtCellLeaderDateOfBirthLbl.setText("Date of Birth");
+                txtCellLeaderPhoneLbl.setText("Phone Number");
+                txtCellLeaderAddressLbl.setText("Home Address");
+                break;
+        }
 
         cellcode=getIntent().getStringExtra("cellcode");
 
@@ -122,6 +163,17 @@ public class ShortBio extends ActionBarActivity {
                         txtCellLeaderAddress.setText(jarray.getJSONObject(0).getString("address"));
                     }
 
+                    Imageurl= jarray.getJSONObject(0).getString("image");
+                    if(Imageurl != null) {
+                        Picasso.with(ShortBio.this)
+                                .load(SynergyValues.ImageUrl.imageUrl + jarray.getJSONObject(0).getString("image"))
+                                .placeholder(R.drawable.user) // optional
+                                .error(R.drawable.user)         // optional
+                                .into(imgProfilePic);
+                    }
+                    Log.e("Image Url", SynergyValues.ImageUrl.imageUrl + Imageurl);
+                    Log.d("NonStop", "Image URL: " + SynergyValues.ImageUrl.imageUrl + Imageurl);
+
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -156,7 +208,8 @@ public class ShortBio extends ActionBarActivity {
                 model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
                 model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
                 model.setName(cellcode);
-                model.setRole("Cell Leader");
+                model.setRole(role);
+//                model.setRole("Cell Leader");
 
                 String dataString=gson.toJson(model, MemberShortProfile.class);
 

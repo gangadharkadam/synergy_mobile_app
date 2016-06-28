@@ -72,4 +72,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
+    <string name="title_activity_short_bio_pcf">ShortBioPCF</string>
+    <string name="title_activity_message_logs">Message Logs</string>
 </resources>

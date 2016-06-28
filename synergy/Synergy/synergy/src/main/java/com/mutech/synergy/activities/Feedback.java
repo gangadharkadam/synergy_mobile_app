@@ -143,6 +143,7 @@ public class Feedback extends ActionBarActivity  {
                 }
                 else
                     Methods.longToast("Please connect to Internet", Feedback.this);
+                Methods.closeProgressDialog();
             }
 
         });

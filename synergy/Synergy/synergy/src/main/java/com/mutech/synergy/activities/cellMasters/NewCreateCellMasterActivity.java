@@ -62,7 +62,7 @@ import android.widget.Toast;
 public class NewCreateCellMasterActivity extends AppCompatActivity {
 	
 	
-	private EditText txtCellCode,txtCellName,txtCellMeetingLoc,txtCellContactPhn,txtCellContactEmailId;
+	private EditText txtCellName,txtCellMeetingLoc,txtCellContactPhn,txtCellContactEmailId;
 	private Button btnSaveCellMaster,OnclickButton;
 	private Spinner spnSeniorCell,spnCellZone,spnCellRegion,spnCellChurch,spnSeniorCellChurchgroup,txtPCF;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList;
@@ -76,7 +76,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 
 	public boolean isValid() {
 
-		if(!InputValidation.hasText(txtCellCode)) {
+	/*	if(!InputValidation.hasText(txtCellCode)) {
 			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
@@ -91,7 +91,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
 			textView.setTextSize(18);
 			return false;
-		}
+		}*/
 		if(!InputValidation.hasText(txtCellName)) {
 			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
 					.setCancelable(false)
@@ -237,7 +237,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 		lblseniorcell=(TextView) findViewById(R.id.lblseniorcell);
 
 
-		txtCellCode=(EditText) findViewById(R.id.txtCellCode);
+		//txtCellCode=(EditText) findViewById(R.id.txtCellCode);
 		txtCellName=(EditText) findViewById(R.id.txtCellName);
 		spnSeniorCell=(Spinner) findViewById(R.id.spnSeniorCell);
 		spnCellZone=(Spinner) findViewById(R.id.spnCellZone);
@@ -1236,7 +1236,7 @@ protected void saveCellMaster() {
 			Map<String, String> params = new HashMap<String, String>();
 
 			CreateCellModel cellModel=new CreateCellModel();
-			cellModel.setCell_code(txtCellCode.getText().toString().trim());
+//			cellModel.setCell_code(txtCellCode.getText().toString().trim());
 			cellModel.setCell_name(txtCellName.getText().toString().trim());
 			cellModel.setContact_phone_no(txtCellContactPhn.getText().toString().trim());
 			cellModel.setContact_email_id(txtCellContactEmailId.getText().toString().trim());
@@ -1293,8 +1293,8 @@ private boolean validateFields() {
 	if(mSeniorCellList.size()>0)
 	{
 
-	if(txtCellCode.getText().toString().trim().length() > 0)
-	{
+	/*if(txtCellCode.getText().toString().trim().length() > 0)
+	{*/
 		if(txtCellName.getText().toString().trim().length() >0)
 		{
 
@@ -1322,10 +1322,10 @@ private boolean validateFields() {
 		}else{
 			Methods.longToast("Please enter Cell Name", this);
 		}
-	}else
+	/*}else
 	{
 		Methods.longToast("Please enter Cell Code", this);
-	}
+	}*/
 	}else{
 		
 		Methods.longToast("Senior Cell  not avalible", this);

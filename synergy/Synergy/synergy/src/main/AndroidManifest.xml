@@ -352,6 +352,13 @@
             android:label="@string/title_activity_view_members" />
         <activity android:name=".activities.profile.ProfileView" />
         <activity android:name=".activities.ShortBioCell" />
+        <activity android:name=".activities.ShortBioSrCell" />
+        <activity
+            android:name=".activities.ShortBioPCF"
+            android:label="@string/title_activity_short_bio_pcf" />
+        <activity
+            android:name=".activities.MessageLogs"
+            android:label="@string/title_activity_message_logs"></activity>
     </application>
 
 </manifest>

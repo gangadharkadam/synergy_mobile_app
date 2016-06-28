@@ -1,5 +1,276 @@
 [
     {
+        "outputFile": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 50,
+                    "endOffset": 101
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 677,
+                        "endColumn": 50,
+                        "endOffset": 723
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 106,
+                    "endColumn": 51,
+                    "endOffset": 153
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 624,
+                        "endColumn": 51,
+                        "endOffset": 671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 158,
+                    "endColumn": 39,
+                    "endOffset": 193
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endColumn": 39,
+                        "endOffset": 210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 198,
+                    "endColumn": 39,
+                    "endOffset": 233
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 216,
+                        "endColumn": 39,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 238,
+                    "endColumn": 39,
+                    "endOffset": 273
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 257,
+                        "endColumn": 39,
+                        "endOffset": 292
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 278,
+                    "endColumn": 37,
+                    "endOffset": 311
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 37,
+                        "endOffset": 130
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 316,
+                    "endColumn": 37,
+                    "endOffset": 349
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 136,
+                        "endColumn": 37,
+                        "endOffset": 169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 354,
+                    "endColumn": 48,
+                    "endOffset": 398
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 574,
+                        "endColumn": 48,
+                        "endOffset": 618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 403,
+                    "endColumn": 42,
+                    "endOffset": 441
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 42,
+                        "endOffset": 342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 446,
+                    "endColumn": 42,
+                    "endOffset": 484
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 348,
+                        "endColumn": 42,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 489,
+                    "endColumn": 42,
+                    "endOffset": 527
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 392,
+                        "endColumn": 42,
+                        "endOffset": 430
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 532,
+                    "endColumn": 42,
+                    "endOffset": 570
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 436,
+                        "endColumn": 42,
+                        "endOffset": 474
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 575,
+                    "endColumn": 42,
+                    "endOffset": 613
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 480,
+                        "endColumn": 42,
+                        "endOffset": 518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 618,
+                    "endColumn": 42,
+                    "endOffset": 656
+                },
+                "from": {
+                    "file": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 524,
+                        "endColumn": 42,
+                        "endOffset": 562
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/values-xxhdpi-v4/values-xxhdpi-v4.xml",
         "map": [
             {

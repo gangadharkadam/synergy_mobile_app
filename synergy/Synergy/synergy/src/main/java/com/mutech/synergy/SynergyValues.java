@@ -9,6 +9,10 @@ public class SynergyValues {
 		public static String USER_DEFVALUE="defvalue";
 		public static String USER_DEFKEY="defkey";
 		public static String USER_ROLE="Role";
+		public static String USER_NAME="Name";
+		public static String USER_DESIGNATION="Designation";
+		public static String USER_STATUS="Status";
+		public static String USER_IMAGE="Image";
 		
 	//	public static String USER_ROLE="PCF Leader";
 		
@@ -316,7 +320,7 @@ public class SynergyValues {
 		}
 		
 		public static class CreatePartnershipRecord{
-			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.create_partnership_reocrd/";
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.create_partnership_reocrd/";
 			public static String DATA ="data";
 		}
 		
@@ -351,7 +355,7 @@ public class SynergyValues {
 		}
 
         public static class GetInvitesContactsDetailsService{
-            public static String SERVICE_URL=BASE_URL1+"method/church_ministry.church_ministry.doctype.member.member.get_master_details/";
+            public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.get_master_details/";
             public static String DATA="data";
         }
 		
@@ -362,7 +366,7 @@ public class SynergyValues {
 		}
 
 		public static class UpdateInvitesContactsDetailsService{
-			public static String SERVICE_URL=BASE_URL1+"method/church_ministry.church_ministry.doctype.member.member.update_master_details/";
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.update_master_details/";
 			public static String DATA="data";
 
 		}
@@ -405,12 +409,12 @@ public class SynergyValues {
 		
 		
 		public static class ShowPartnerShipService{
-			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.partnership_arm_details/";
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.partnership_arm_details/";
 			public static String DATA ="data";
 		}
 		
 		public static class UpdatePartnerShipService{
-			public static String SERVICE_URL = BASE_URL1 +"method/church_ministry.church_ministry.doctype.member.member.update_partnership_arm/";
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.update_partnership_arm/";
 			public static String DATA ="data";
 		}
 		

@@ -57,7 +57,7 @@ import com.mutech.synergy.utils.PreferenceHelper;
 
 public class CreateSeniorCellMasterActivity extends ActionBarActivity implements OnClickListener{
 
-	private EditText txtSeniorCellCode,txtSeniorCellName,txtSeniorCellMeetingLoc,txtSrCellContactPhn,txtSrCellContactEmailId;
+	private EditText txtSeniorCellName,txtSeniorCellMeetingLoc,txtSrCellContactPhn,txtSrCellContactEmailId;
 	private Button btnSeniorCellSave;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mGrpChurchList,mPCFList,mSrCellList;
 	private PreferenceHelper mPreferenceHelper;
@@ -78,7 +78,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 
 	public boolean isValid() {
 
-		if(!InputValidation.hasText(txtSeniorCellCode)) {
+	/*	if(!InputValidation.hasText(txtSeniorCellCode)) {
 			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
 					.setTitle("Mandatory Input")
@@ -93,7 +93,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
 			textView.setTextSize(18);
 			return false;
-		}
+		}*/
 		if(!InputValidation.hasText(txtSeniorCellName)) {
 			AlertDialog dialog = new AlertDialog.Builder(CreateSeniorCellMasterActivity.this)
 					.setCancelable(false)
@@ -226,7 +226,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 		lblchurch=(TextView) findViewById(R.id.lblchurch);
 		lblpcf=(TextView) findViewById(R.id.lblpcf);
 		
-		txtSeniorCellCode=(EditText) findViewById(R.id.txtSeniorCellCode);
+	//	txtSeniorCellCode=(EditText) findViewById(R.id.txtSeniorCellCode);
 		txtSeniorCellName=(EditText) findViewById(R.id.txtSeniorCellName);
 		spnSeniorCellZone=(Spinner) findViewById(R.id.spnSeniorCellZone);
 		spnSeniorCellRegion=(Spinner) findViewById(R.id.spnSeniorCellRegion);
@@ -1162,8 +1162,8 @@ private void getLowerHierarchy(){
 	}
 
 	private boolean validateFields() {
-		if(txtSeniorCellCode.getText().toString().trim().length() > 0)
-		{
+		/*if(txtSeniorCellCode.getText().toString().trim().length() > 0)
+		{*/
 			if(txtSeniorCellName.getText().toString().trim().length() >0)
 			{
 
@@ -1190,10 +1190,10 @@ private void getLowerHierarchy(){
 			}else{
 				Methods.longToast("Please enter Senior Name", this);
 			}
-		}else
+		/*}else
 		{
 			Methods.longToast("Please enter Senior Cell Code", this);
-		}
+		}*/
 		return false;
 	}
 
@@ -1466,7 +1466,7 @@ private void getLowerHierarchy(){
 				Map<String, String> params = new HashMap<String, String>();
 
 				CreateSrCellModel srCellModel=new CreateSrCellModel();
-				srCellModel.setSenior_cell_code(txtSeniorCellCode.getText().toString().trim());
+			//	srCellModel.setSenior_cell_code(txtSeniorCellCode.getText().toString().trim());
 				srCellModel.setSenior_cell_name(txtSeniorCellName.getText().toString().trim());
 				srCellModel.setContact_email_id(txtSrCellContactEmailId.getText().toString().trim());
 				srCellModel.setContact_phone_no(txtSrCellContactPhn.getText().toString().trim());

@@ -469,7 +469,9 @@ public class InviteesandContacts_ListDetailsActivity extends AppCompatActivity {
 
 
 							txtinvitee_contact_name.setText(obj.getJSONObject(0).getString("invitee_contact_name"));
-						    txtinvitee_surname.setText(obj.getJSONObject(0).getString("surname"));
+
+						if(!obj.getJSONObject(0).getString("surname").equals("null") && !obj.getJSONObject(0).getString("surname").equals("")){
+						    txtinvitee_surname.setText(obj.getJSONObject(0).getString("surname"));}
 
 							Log.d("NonStop", "DOB Before: " + txtMemberDateOfBirth.getText().toString());
 							if(!obj.getJSONObject(0).getString("date_of_birth").equals("null") && !obj.getJSONObject(0).getString("date_of_birth").equals("")){
@@ -640,6 +642,7 @@ private void UpdateDashboardDataService() {
 				
 				obj.put("title", sptitle.getSelectedItem().toString());
 				obj.put("invitee_contact_name", txtinvitee_contact_name.getText().toString());
+
                 obj.put("surname", txtinvitee_surname.getText().toString());
 				
 				if(!txtMemberDateOfBirth.getText().toString().equals("")){

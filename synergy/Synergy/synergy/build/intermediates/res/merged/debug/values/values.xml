@@ -399,6 +399,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_membership_strength_details">MembershipStrengthDetailsActivity</string>
     <string name="title_activity_message_broadcast">MessageBroadcastActivity</string>
+    <string name="title_activity_message_logs">Message Logs</string>
     <string name="title_activity_messages">Messages</string>
     <string name="title_activity_my_partnership">MyPartnershipActivity</string>
     <string name="title_activity_my_partnership_adpter">MyPartnershipAdpter</string>
@@ -412,6 +413,7 @@
     <string name="title_activity_pledge">PledgeActivity</string>
     <string name="title_activity_region">RegionActivity</string>
     <string name="title_activity_short_bio">Profile</string>
+    <string name="title_activity_short_bio_pcf">ShortBioPCF</string>
     <string name="title_activity_show_message">ShowMessageActivity</string>
     <string name="title_activity_sr_cell_details">SrCellDetailsActivity</string>
     <string name="title_activity_synergy_home">SynergyHomeActivity</string>
