@@ -1,0 +1,163 @@
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null" >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="@null"
+                    android:orientation="vertical" >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_10"
+                        android:background="@null"
+                        android:orientation="vertical" >
+
+
+                        <LinearLayout
+                            android:id="@+id/linear1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="To"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textsize_18" />
+
+                            <TextView
+                                android:id="@+id/txtTo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:enabled="false"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10"
+                                android:textSize="@dimen/textsize_16" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="From"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <TextView
+                                android:id="@+id/txtFrom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Message"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textsize_18" />
+
+                            <TextView
+                                android:id="@+id/txtMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10"
+                                android:textSize="@dimen/textsize_16" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Date and Time"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textsize_18" />
+
+                            <TextView
+                                android:id="@+id/txtDateTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10"
+                                android:textSize="@dimen/textsize_16" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <TextView
+                                android:id="@+id/txtName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

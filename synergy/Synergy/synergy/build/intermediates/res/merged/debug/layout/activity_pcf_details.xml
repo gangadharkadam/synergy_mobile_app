@@ -57,7 +57,7 @@
                 android:background="@null"
                 android:orientation="vertical" >
 
-                <TextView
+     <!--           <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/dimen_5"
@@ -82,7 +82,7 @@
                     android:padding="@dimen/dimen_10"
                     android:textSize="@dimen/font_size_small"
                     android:singleLine="true"
-                    android:visibility="gone"/>
+                    android:visibility="gone"/>-->
 
                 <TextView
                     android:layout_width="match_parent"

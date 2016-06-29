@@ -20,7 +20,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.activities.cellMasters.MasterSelectorScreenActivity;
 import com.mutech.synergy.activities.cellMasters.PartnerShipRecord;
 import com.mutech.synergy.activities.cellMasters.SearchFunctionActivity;
@@ -33,6 +36,7 @@ import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.models.DrawerItem;
 import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
+import com.mutech.synergy.utils.PreferenceHelper;
 
 import java.util.ArrayList;
 
@@ -45,6 +49,9 @@ public class Feedback extends ActionBarActivity  {
     private ActionBarDrawerToggle mDrawerToggle;
     private ListView mLvDrawer;
     private DrawerLayout mDrawerLayout;
+    private PreferenceHelper mPreferenceHelper;
+    private Gson gson;
+    private String Role,Name,Status,Designation,Image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +62,9 @@ public class Feedback extends ActionBarActivity  {
         cancel=(Button) findViewById(R.id.cancel);
         txtsubject=(EditText) findViewById((R.id.edtsubject));
         txtdesc=(EditText) findViewById((R.id.edtdescription));
+
+        mPreferenceHelper=new PreferenceHelper(this);
+        gson=new Gson();
 
         mDrawerList = new ArrayList<DrawerItem>();
         addDrawerListData();
@@ -162,6 +172,25 @@ public class Feedback extends ActionBarActivity  {
     }
 
     private void addDrawerListData() {
+        if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
+            Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
+
+        if(mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME) != null){
+            Name=mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME);}
+
+        if(mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS) != null){
+            Status=mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS);}
+
+        if(mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION) != null){
+            Designation=mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION);}
+
+        if(mPreferenceHelper.getString(SynergyValues.Commons.USER_IMAGE) != null){
+            Image=mPreferenceHelper.getString(SynergyValues.Commons.USER_IMAGE);}
+
+        DrawerItem item00 = new DrawerItem();
+        item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
+        item00.setImgResID(R.drawable.user);
+
         DrawerItem item01 = new DrawerItem();
         item01.setItemName("Dashboard");
         item01.setImgResID(R.drawable.dashboard);
@@ -208,17 +237,22 @@ public class Feedback extends ActionBarActivity  {
         item11.setImgResID(R.drawable.msg);
 
         DrawerItem item12=new DrawerItem();
-        item12.setItemName("Logout");
-        item12.setImgResID(R.drawable.signout);
+        item12.setItemName("Message Logs");
+        item12.setImgResID(R.drawable.msg);
 
+        DrawerItem item13=new DrawerItem();
+        item13.setItemName("Logout");
+        item13.setImgResID(R.drawable.signout);
+
+        mDrawerList.add(item00);
         mDrawerList.add(item01);
         mDrawerList.add(item05);
         mDrawerList.add(item04);
-//	mDrawerList.add(item02);
-//	mDrawerList.add(item03);
+//		mDrawerList.add(item02);
+//		mDrawerList.add(item03);
         mDrawerList.add(item03);
 
-//	mDrawerList.add(item06);
+        //	mDrawerList.add(item06);
         mDrawerList.add(item07);
         mDrawerList.add(item08);
         mDrawerList.add(item9);
@@ -226,6 +260,7 @@ public class Feedback extends ActionBarActivity  {
         mDrawerList.add(item06);
         mDrawerList.add(item11);
         mDrawerList.add(item12);
+        mDrawerList.add(item13);
     }
 
     @Override
@@ -240,13 +275,18 @@ public class Feedback extends ActionBarActivity  {
     private void selectItem(int position) {
         switch (position) {
             case 0:
+                //			Intent intForm1=new Intent(this,MyProfileActivity.class);
+                //			startActivity(intForm1);
+                break;
+
+            case 1:
 
                 Intent int1=new Intent(this,HomeActivity.class);
                 int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(int1);
                 finish();
                 break;
-            case 2:
+            case 3:
                 Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
                 intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intForm);
@@ -256,19 +296,19 @@ public class Feedback extends ActionBarActivity  {
 //		break;
 //	case 3:
 //		break;
-            case 3:
+            case 4:
                 Intent partner=new Intent(this,PartnerShipRecord.class);
                 partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(partner);
                 finish();
                 break;
-            case 1:
+            case 2:
                 Intent intForm1=new Intent(this,ProfileView.class);
                 intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intForm1);
                 break;
 
-            case 4:
+            case 5:
                 //Intent intMeeting=new Intent(this,MeetingListActivity.class);
                 //startActivity(intMeeting);
                 Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
@@ -276,32 +316,34 @@ public class Feedback extends ActionBarActivity  {
                 startActivity(intMyMeetings);
                 finish();
                 break;
-            case 5:
+            case 6:
                 Intent intEvents=new Intent(this,MyEventListActivity.class);
                 intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intEvents);
                 finish();
                 break;
-            case 6:
+            case 7:
                 Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
                 intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intentTODO);
                 finish();
                 break;
 
-            case 7:
-//		Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
-//		startActivity(intentMsg);
+            case 8:
+                Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
+                intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intentMsg);
+                finish();
                 break;
 
-            case 8:
+            case 9:
                 Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
                 intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intSearchMembers);
                 finish();
                 break;
 
-            case 9:
+            case 10:
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
@@ -312,7 +354,13 @@ public class Feedback extends ActionBarActivity  {
                 finish();
                 break;
 
-            case 10://logout
+            case 11:
+                Intent intmsglogs=new Intent(this,MessageLogs.class);
+                intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intmsglogs);
+                break;
+
+            case 12://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

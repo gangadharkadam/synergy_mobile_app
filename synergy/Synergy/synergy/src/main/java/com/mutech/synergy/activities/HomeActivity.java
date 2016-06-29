@@ -723,7 +723,7 @@ public class HomeActivity extends AppCompatActivity {
             Image=mPreferenceHelper.getString(Commons.USER_IMAGE);}
 
         DrawerItem item00 = new DrawerItem();
-        item00.setItemName(Name + "\n" + Role + "\n" + Designation + "\n" + Status);
+        item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
         item00.setImgResID(R.drawable.user);
 
         DrawerItem item01 = new DrawerItem();
@@ -772,12 +772,12 @@ public class HomeActivity extends AppCompatActivity {
         item11.setImgResID(R.drawable.msg);
 
         DrawerItem item12=new DrawerItem();
-        item12.setItemName("Logout");
-        item12.setImgResID(R.drawable.signout);
+        item12.setItemName("Message Logs");
+        item12.setImgResID(R.drawable.msg);
 
         DrawerItem item13=new DrawerItem();
-        item13.setItemName("Message Logs");
-        item13.setImgResID(R.drawable.msg);
+        item13.setItemName("Logout");
+        item13.setImgResID(R.drawable.signout);
 
         mDrawerList.add(item00);
         mDrawerList.add(item01);
@@ -897,20 +897,19 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
                 break;
 
-            case 11://logout
+            case 11:
+                Intent intmsglogs=new Intent(this,MessageLogs.class);
+                intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intmsglogs);
+                break;
+
+            case 12://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
                 Intent intLogout=new Intent(this,LogoutActivity.class);
                 intLogout.putExtra("classname", "HomeActivity");
                 startActivity(intLogout);
-                finish();
-                break;
-
-            case 12:
-                Intent intmsglogs=new Intent(this,MessageLogs.class);
-                intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(intmsglogs);
                 finish();
                 break;
 

@@ -74,4 +74,5 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_short_bio_pcf">ShortBioPCF</string>
     <string name="title_activity_message_logs">Message Logs</string>
+    <string name="title_activity_message_information">Message Details</string>
 </resources>

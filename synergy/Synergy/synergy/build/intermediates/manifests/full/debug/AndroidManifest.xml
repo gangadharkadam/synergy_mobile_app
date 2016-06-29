@@ -363,6 +363,10 @@
         <activity
             android:name="com.mutech.synergy.activities.MessageLogs"
             android:label="@string/title_activity_message_logs" />
+        <activity
+            android:name="com.mutech.synergy.activities.MessageInformation"
+            android:label="@string/title_activity_message_information" >
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

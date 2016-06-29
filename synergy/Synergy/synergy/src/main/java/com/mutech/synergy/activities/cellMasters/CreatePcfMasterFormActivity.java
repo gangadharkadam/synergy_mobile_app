@@ -63,7 +63,7 @@ import com.mutech.synergy.utils.PreferenceHelper;
 
 public class CreatePcfMasterFormActivity extends ActionBarActivity implements OnClickListener{
 
-	private EditText txtPCFCode,txtPCFName,txtPCFContactPhn,txtPCFContactEmailId;
+	private EditText txtPCFName,txtPCFContactPhn,txtPCFContactEmailId;
 	private Spinner spnPCFZone,spnPCFRegion,spnCellChurch,spnSeniorCellChurchgroup;
 	private Button btnSavePCF;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mGrpChurchList;
@@ -75,7 +75,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 
     public boolean isValid() {
 
-        if(!InputValidation.hasText(txtPCFCode)) {
+     /*   if(!InputValidation.hasText(txtPCFCode)) {
 			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
                     .setTitle("Mandatory Input")
@@ -90,7 +90,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
 			textView.setTextSize(18);
             return false;
-        }
+        }*/
         if(!InputValidation.hasText(txtPCFName)) {
 			AlertDialog dialog = new AlertDialog.Builder(CreatePcfMasterFormActivity.this)
                     .setCancelable(false)
@@ -216,7 +216,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 		lblchurch=(TextView) findViewById(R.id.lblchurch);
 		
 		
-		txtPCFCode=(EditText) findViewById(R.id.txtPCFCode);
+		//txtPCFCode=(EditText) findViewById(R.id.txtPCFCode);
 		txtPCFName=(EditText) findViewById(R.id.txtPCFName);
 		spnPCFZone=(Spinner) findViewById(R.id.spnPCFZone);
 		spnPCFRegion=(Spinner) findViewById(R.id.spnPCFRegion);
@@ -484,8 +484,8 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 	}
 
 	private boolean validateFields() {
-		if(txtPCFCode.getText().toString().trim().length() > 0)
-		{
+	/*	if(txtPCFCode.getText().toString().trim().length() > 0)
+		{*/
 			if(txtPCFName.getText().toString().trim().length() >0)
 			{
 				if(txtPCFContactPhn.getText().toString().trim().length() > 0){
@@ -504,10 +504,10 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 			}else{
 				Methods.longToast("Please enter PCF Name", this);
 			}
-		}else
+		/*}else
 		{
 			Methods.longToast("Please enter PCF Code", this);
-		}
+		}*/
 		return false;
 	}
 
@@ -764,7 +764,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 		ArrayAdapter<String> adapterChurch = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mChurchList);
 		adapterChurch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnCellChurch.setAdapter(adapterChurch);
-		lblchurch.setText(spnCellChurch.getSelectedItem().toString());
+		//lblchurch.setText(spnCellChurch.getSelectedItem().toString());
 
 		ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
 		adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -968,7 +968,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 				Map<String, String> params = new HashMap<String, String>();
 
 				CreatePCFModel pcfModel = new CreatePCFModel();
-				pcfModel.setPcf_code(txtPCFCode.getText().toString().trim());
+				//pcfModel.setPcf_code(txtPCFCode.getText().toString().trim());
 				pcfModel.setPcf_name(txtPCFName.getText().toString().trim());
 				pcfModel.setZone(spnPCFZone.getSelectedItem().toString().trim());
 				pcfModel.setRegion(spnPCFRegion.getSelectedItem().toString().trim());

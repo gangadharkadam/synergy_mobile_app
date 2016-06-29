@@ -56,7 +56,7 @@ import android.widget.TextView;
 public class PcfDetailsActivity extends AppCompatActivity {
 	
 	
-	EditText txtPCFCode,txtPCFName,txtPCFContactPhn,txtPCFContactEmailId,txtPCFZone,txtPCFRegion,txtGroupChurch,txtChurch;
+	EditText txtPCFName,txtPCFContactPhn,txtPCFContactEmailId,txtPCFZone,txtPCFRegion,txtGroupChurch,txtChurch;
 	Spinner spnPCFZone,spnPCFRegion,spnPCFChurch;
 	
 	Button btnSavePCF;
@@ -78,7 +78,7 @@ public class PcfDetailsActivity extends AppCompatActivity {
 		txtPCFZone=(EditText) findViewById(R.id.txtPCFZone);
 		txtGroupChurch=(EditText) findViewById(R.id.txtGroupChurch);
 		
-		txtPCFCode=(EditText) findViewById(R.id.txtPCFCode);
+		//txtPCFCode=(EditText) findViewById(R.id.txtPCFCode);
 		txtPCFName=(EditText) findViewById(R.id.txtPCFName);
 		txtPCFContactPhn=(EditText) findViewById(R.id.txtPCFContactPhn);
 		txtPCFContactEmailId=(EditText) findViewById(R.id.txtPCFContactEmailId);
@@ -232,7 +232,7 @@ public class PcfDetailsActivity extends AppCompatActivity {
 					jsonobj.put("tbl", "PCFs");
 					jsonobj.put("name", cellcode);
 					
-					jsonobj.put("pcf_code",txtPCFCode.getText().toString());
+					//jsonobj.put("pcf_code",txtPCFCode.getText().toString());
 					jsonobj.put("pcf_name",txtPCFName.getText().toString());
 				
 					jsonobj.put("zone",txtPCFZone.getText().toString());
@@ -274,8 +274,8 @@ public class PcfDetailsActivity extends AppCompatActivity {
 				
 					JSONObject jsonobj=new JSONObject(response);
 					JSONArray jarray=jsonobj.getJSONArray("message");
-					if(!jarray.getJSONObject(0).getString("pcf_code").equals("null"))
-						txtPCFCode.setText(jarray.getJSONObject(0).getString("pcf_code"));
+				/*	if(!jarray.getJSONObject(0).getString("pcf_code").equals("null"))
+						txtPCFCode.setText(jarray.getJSONObject(0).getString("pcf_code"));*/
 											
 					if(!jarray.getJSONObject(0).getString("pcf_name").equals("null"));
 						txtPCFName.setText(jarray.getJSONObject(0).getString("pcf_name"));

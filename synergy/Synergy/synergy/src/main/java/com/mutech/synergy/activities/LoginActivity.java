@@ -198,9 +198,9 @@ public class LoginActivity extends Activity implements OnClickListener{
 				mPreferenceHelper.addString(Commons.USER_EMAILID, txtUserName.getText().toString().trim());
 				mPreferenceHelper.addString(Commons.USER_PASSWORD, txtPassword.getText().toString().trim());
 
+				getProfileInfo();
 				getLoggedInUserRoles();
 				sendGCM();
-				getProfileInfo();
 
 				//				Intent intHome=new Intent(LoginActivity.this,HomeActivity.class);
 				//				startActivity(intHome);
@@ -248,7 +248,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 				Log.e("login droid", "onResponse roles" + response);
 				Methods.longToast("Logged In successfully", LoginActivity.this);
 
-			
+
 				UserRolesResponseModel respModel=gson.fromJson(response, UserRolesResponseModel.class);
 				ArrayList<RolesUserValues> roleUserlist=respModel.getMessage().getUser_values();
 

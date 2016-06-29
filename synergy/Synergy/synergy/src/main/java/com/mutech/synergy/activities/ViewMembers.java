@@ -96,6 +96,7 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
     TextView txtFromDate,txtToDate;
     Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell;
     private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
+    private String role;
 
 
     @Override
@@ -113,6 +114,7 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
         getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 
         cellcode=getIntent().getStringExtra("cellcode");
+        role = getIntent().getStringExtra("role");
         txtcount=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
@@ -169,28 +171,28 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
         fromDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
         toDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
-
        if(NetworkHelper.isOnline(ViewMembers.this)){
             Methods.showProgressDialog(ViewMembers.this);
-//            if(cellcode.equals(""))
+           switch(role) {
+               case "Cell Leader":
                 getListNew("Member","1","","","","","","",cellcode,"","");
-/*            else
-                getListNew2("Member", "1", "", "", "", "", "", "Zone30/CHR0001/SCL0001", cellcode, "", "", cellcode);*/
-          // getListNew2("Member", "1", "", "", "", "", "", "", cellcode, "", "", "");
+                   break;
+
+               case "Senior Cell Leader":
+                   getListNew("Member","1","","","","","",cellcode,"","","");
+                   break;
+
+               case "PCF Leader":
+                   getListNew("Member","1","","","","",cellcode,"","","","");
+                   break;
+
+           }
 
         }else{
 
-            Methods.longToast("Please connect to Internet", ViewMembers.this);
+           Methods.longToast("Please connect to Internet", ViewMembers.this);
 
         }
-
-      /*  if(NetworkHelper.isOnline(this)){
-            Methods.showProgressDialog(this);
-            getListNew2("Member", "1", "", "", "", "", "", "", "", "", "", cellcode);
-//            getListNew("Member","1","","","","","","","","","");
-        }
-        else
-            Methods.longToast("Please connect to Internet", this);*/
 
     }
 
@@ -203,7 +205,6 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
             public void onResponse(String response) {
                 Methods.closeProgressDialog();
                 Log.e("droid get reqResponce ---------------", response);
-
 
 
                 if(response.contains("status"))

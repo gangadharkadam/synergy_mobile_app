@@ -36,11 +36,14 @@ import com.mutech.databasedetails.CreateNewMemberActivity;
 import com.mutech.databasedetails.FirstTimerInDatabaseActivity;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.activities.AttendanceHistory;
 import com.mutech.synergy.activities.CellLeaderMsg;
+import com.mutech.synergy.activities.Feedback;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LogoutActivity;
+import com.mutech.synergy.activities.MessageLogs;
 import com.mutech.synergy.activities.ShortBio;
 import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.event.EventListActivity;
@@ -75,6 +78,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 	private DrawerLayout mDrawerLayout; 
 	private ActionBarDrawerToggle mDrawerToggle;
 	String str;
+	private String Role,Name,Status,Designation,Image;
 
 
 
@@ -213,10 +217,26 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 	
 	
 	private void addDrawerListData() {
-		
-		
-		
-		
+
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
+			Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
+
+		if(mPreferenceHelper.getString(Commons.USER_NAME) != null){
+			Name=mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME);}
+
+		if(mPreferenceHelper.getString(Commons.USER_STATUS) != null){
+			Status=mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS);}
+
+		if(mPreferenceHelper.getString(Commons.USER_DESIGNATION) != null){
+			Designation=mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION);}
+
+		if(mPreferenceHelper.getString(Commons.USER_IMAGE) != null){
+			Image=mPreferenceHelper.getString(Commons.USER_IMAGE);}
+
+		DrawerItem item00 = new DrawerItem();
+		item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
+		item00.setImgResID(R.drawable.user);
+
 		DrawerItem item01 = new DrawerItem();
 		item01.setItemName("Dashboard");
 		item01.setImgResID(R.drawable.dashboard);		
@@ -259,9 +279,19 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		item10.setImgResID(R.drawable.msg);
 
 		DrawerItem item11=new DrawerItem();
-		item11.setItemName("Logout");
-		item11.setImgResID(R.drawable.signout);
+		item11.setItemName("Feedback");
+		item11.setImgResID(R.drawable.msg);
 
+		DrawerItem item12=new DrawerItem();
+		item12.setItemName("Message Logs");
+		item12.setImgResID(R.drawable.msg);
+
+		DrawerItem item13=new DrawerItem();
+		item13.setItemName("Logout");
+		item13.setImgResID(R.drawable.signout);
+
+
+		mDrawerList.add(item00);
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
 		mDrawerList.add(item04);
@@ -275,6 +305,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		mDrawerList.add(item9);
 		mDrawerList.add(item10);
 		mDrawerList.add(item11);
+		mDrawerList.add(item12);
+		mDrawerList.add(item13);
 	}
 
 	@Override
@@ -288,14 +320,19 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 
 	private void selectItem(int position) {
 		switch (position) {
-		case 0:
+
+			case 0:
+				//			Intent intForm1=new Intent(this,MyProfileActivity.class);
+				//			startActivity(intForm1);
+				break;
+		case 1:
 			
 			Intent int1=new Intent(this,HomeActivity.class);
 			int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(int1);
 			finish();
 			break;
-		case 2:	
+		case 3:
 //			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 //			startActivity(intForm);
 			break;
@@ -303,24 +340,24 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 //			break;
 //		case 3:
 //			break;
-		case 3:
+		case 4:
 			Intent partner=new Intent(this,PartnerShipRecord.class);
 			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(partner);
 			finish();
 			break;
-		case 1:
+		case 2:
 			Intent intForm1=new Intent(this,ProfileView.class);
 			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intForm1);
 			break;
-		case 4:
+		case 5:
 			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
 			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intSearchMembers);
 			finish();
 			break;
-		case 5:
+		case 6:
 			//Intent intMeeting=new Intent(this,MeetingListActivity.class);
 			//startActivity(intMeeting);
 			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
@@ -329,27 +366,45 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			finish();
 
 			break;
-		case 6:
+		case 7:
 			Intent intEvents=new Intent(this,MyEventListActivity.class);
 			 intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intEvents);
 			finish();
 
 			break;
-		case 7:
+		case 8:
 			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
 			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intentTODO);
 			finish();
 			break;
 			
-		case 8:
+		case 9:
 			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
 			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 			startActivity(intentMsg);
 			finish();
-			break;	
-		case 9://logout
+			break;
+
+			case 10:
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+
+				Intent intfeedback=new Intent(this,Feedback.class);
+				intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intfeedback);
+				finish();
+				break;
+
+			case 11:
+				Intent intmsglogs=new Intent(this,MessageLogs.class);
+				intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intmsglogs);
+				break;
+
+		case 12://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

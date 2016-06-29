@@ -64,6 +64,10 @@ public class LogoutActivity extends Activity{
 				mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 				mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 				mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+				mPreferenceHelper.addString(Commons.USER_NAME, null);
+				mPreferenceHelper.addString(Commons.USER_ROLE, null);
+				mPreferenceHelper.addString(Commons.USER_DESIGNATION, null);
+				mPreferenceHelper.addString(Commons.USER_STATUS, null);
 
 		            
 				//Intent intLogout=new Intent(getApplicationContext(),LoginActivity.class);

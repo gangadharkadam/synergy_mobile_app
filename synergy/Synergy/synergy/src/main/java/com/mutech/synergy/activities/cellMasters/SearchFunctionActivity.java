@@ -51,6 +51,7 @@ import com.google.gson.Gson;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetAllChurchesService;
 import com.mutech.synergy.SynergyValues.Web.GetAllGroupChurchesService;
@@ -59,9 +60,11 @@ import com.mutech.synergy.SynergyValues.Web.GetAllZonesService;
 import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.SearchServiceforSpinner;
+import com.mutech.synergy.activities.Feedback;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LoginActivity;
 import com.mutech.synergy.activities.LogoutActivity;
+import com.mutech.synergy.activities.MessageLogs;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
@@ -103,6 +106,7 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 	String str;
+	private String Role,Name,Status,Designation,Image;
 	
 	TextView spresionTextView,spzoneTextView,spgroupchurchTextView,spchurchTextView;
 	
@@ -430,67 +434,99 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			mDrawerList.add(item7);
 			
 		}else{
-		
-		
-		DrawerItem item01 = new DrawerItem();
-		item01.setItemName("Dashboard");
-		item01.setImgResID(R.drawable.dashboard);		
-
-		DrawerItem item05 = new DrawerItem();
-		item05.setItemName("My Profile");
-		item05.setImgResID(R.drawable.myprofile);
-
-//		DrawerItem item03 = new DrawerItem();
-//		item03.setItemName("Ministry \n Material");
-//		item03.setImgResID(R.drawable.ministry_materials);
-
-		DrawerItem item03 = new DrawerItem();
-		item03.setItemName("Partnership \n Records");
-		item03.setImgResID(R.drawable.partnership_record);
-
-		DrawerItem item04 = new DrawerItem();
-		item04.setItemName("Database");
-		item04.setImgResID(R.drawable.database);
 
 
-		DrawerItem item06 = new DrawerItem();
-		item06.setItemName("Search");
-		item06.setImgResID(R.drawable.search);
 
-		DrawerItem item07 = new DrawerItem();
-		item07.setItemName("Attendance");
-		item07.setImgResID(R.drawable.my_meetings);
+			if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
+				Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
 
-		DrawerItem item08 = new DrawerItem();
-		item08.setItemName("Calendar");
-		item08.setImgResID(R.drawable.carlender);
+			if(mPreferenceHelper.getString(Commons.USER_NAME) != null){
+				Name=mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME);}
 
-		DrawerItem item9 = new DrawerItem();
-		item9.setItemName("To Do");
-		item9.setImgResID(R.drawable.todo);
-		
-		DrawerItem item10 = new DrawerItem();
-		item10.setItemName("Broadcast Message");
-		item10.setImgResID(R.drawable.msg);
+			if(mPreferenceHelper.getString(Commons.USER_STATUS) != null){
+				Status=mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS);}
 
-		DrawerItem item11=new DrawerItem();
-		item11.setItemName("Logout");
-		item11.setImgResID(R.drawable.signout);
+			if(mPreferenceHelper.getString(Commons.USER_DESIGNATION) != null){
+				Designation=mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION);}
 
-		mDrawerList.add(item01);
-		mDrawerList.add(item05);
-		mDrawerList.add(item04);
+			if(mPreferenceHelper.getString(Commons.USER_IMAGE) != null){
+				Image=mPreferenceHelper.getString(Commons.USER_IMAGE);}
+
+			DrawerItem item00 = new DrawerItem();
+			item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
+			item00.setImgResID(R.drawable.user);
+
+			DrawerItem item01 = new DrawerItem();
+			item01.setItemName("Dashboard");
+			item01.setImgResID(R.drawable.dashboard);
+
+			DrawerItem item05 = new DrawerItem();
+			item05.setItemName("My Profile");
+			item05.setImgResID(R.drawable.myprofile);
+
+			//		DrawerItem item03 = new DrawerItem();
+			//		item03.setItemName("Ministry \n Material");
+			//		item03.setImgResID(R.drawable.ministry_materials);
+
+			DrawerItem item03 = new DrawerItem();
+			item03.setItemName("Partnership \n Records");
+			item03.setImgResID(R.drawable.partnership_record);
+
+			DrawerItem item04 = new DrawerItem();
+			item04.setItemName("Database");
+			item04.setImgResID(R.drawable.database);
+
+
+			DrawerItem item06 = new DrawerItem();
+			item06.setItemName("Search");
+			item06.setImgResID(R.drawable.search);
+
+			DrawerItem item07 = new DrawerItem();
+			item07.setItemName("Attendance");
+			item07.setImgResID(R.drawable.my_meetings);
+
+			DrawerItem item08 = new DrawerItem();
+			item08.setItemName("Calendar");
+			item08.setImgResID(R.drawable.carlender);
+
+			DrawerItem item9 = new DrawerItem();
+			item9.setItemName("To Do");
+			item9.setImgResID(R.drawable.todo);
+
+			DrawerItem item10 = new DrawerItem();
+			item10.setItemName("Broadcast Message");
+			item10.setImgResID(R.drawable.msg);
+
+
+			DrawerItem item11=new DrawerItem();
+			item11.setItemName("Feedback");
+			item11.setImgResID(R.drawable.msg);
+
+			DrawerItem item12=new DrawerItem();
+			item12.setItemName("Message Logs");
+			item12.setImgResID(R.drawable.msg);
+
+			DrawerItem item13=new DrawerItem();
+			item13.setItemName("Logout");
+			item13.setImgResID(R.drawable.signout);
+
+			mDrawerList.add(item00);
+			mDrawerList.add(item01);
+			mDrawerList.add(item05);
+			mDrawerList.add(item04);
 //		mDrawerList.add(item02);
 //		mDrawerList.add(item03);
-		mDrawerList.add(item03);	
-		
-	//	mDrawerList.add(item06);
-		mDrawerList.add(item07);
-		mDrawerList.add(item08);
-		mDrawerList.add(item9);
-		mDrawerList.add(item10);
-		mDrawerList.add(item06);
-		mDrawerList.add(item11);
+			mDrawerList.add(item03);
+
+			//	mDrawerList.add(item06);
+			mDrawerList.add(item07);
+			mDrawerList.add(item08);
+			mDrawerList.add(item9);
+			mDrawerList.add(item10);
+			mDrawerList.add(item06);
+			mDrawerList.add(item11);
+			mDrawerList.add(item12);
+			mDrawerList.add(item13);
 		
 		}
 	}
@@ -575,72 +611,97 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 		}else{
 		
 		switch (position) {
-		case 0:
-			
-			Intent int1=new Intent(this,HomeActivity.class);
-			int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(int1);
-			finish();
-			break;
-		case 2:	
-			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
-			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intForm);
-			finish();
-			break;
-//		case 2:
-//			break;
-//		case 3:
-//			break;
-		case 3:
-			Intent partner=new Intent(this,PartnerShipRecord.class);
-			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(partner);
-			finish();
-			break;
-		case 1:
-			Intent intForm1=new Intent(this,ProfileView.class);
-			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intForm1);
-			break;
-		case 4:
-			//Intent intMeeting=new Intent(this,MeetingListActivity.class);
-			//startActivity(intMeeting);
-			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
-			intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intMyMeetings);
-			finish();
-			break;
-		case 5:
-			Intent intEvents=new Intent(this,MyEventListActivity.class);
-			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intEvents);
-			finish();
-			break;
-		case 6:
-			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
-			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentTODO);
-			finish();
-			break;
-			
-		case 7:
-			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
-			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentMsg);
-			finish();
-			break;
-			
-		case 8:
+			case 0:
+				//			Intent intForm1=new Intent(this,MyProfileActivity.class);
+				//			startActivity(intForm1);
+				break;
+
+			case 1:
+
+				Intent int1=new Intent(this,HomeActivity.class);
+				int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(int1);
+				finish();
+				break;
+			case 3:
+				Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
+				intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intForm);
+				finish();
+				break;
+			//		case 2:
+			//			break;
+			//		case 3:
+			//			break;
+			case 4:
+				Intent partner=new Intent(this,PartnerShipRecord.class);
+				partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(partner);
+				finish();
+				break;
+			case 2:
+				Intent intForm1=new Intent(this,ProfileView.class);
+				intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intForm1);
+				break;
+
+			case 5:
+				//Intent intMeeting=new Intent(this,MeetingListActivity.class);
+				//startActivity(intMeeting);
+				Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
+				intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intMyMeetings);
+				finish();
+				break;
+
+			case 6:
+				Intent intEvents=new Intent(this,MyEventListActivity.class);
+				intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intEvents);
+				finish();
+				break;
+
+			case 7:
+				Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
+				intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentTODO);
+				finish();
+				break;
+
+			case 8:
+				Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
+				intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentMsg);
+				finish();
+				break;
+
+			case 9:
 //			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
 //			//intSearchMembers.putExtra("Search", "Member");
 //			//intSearchGroup.putExtra("Search", "Group");
 //			//intSearchLeaders.putExtra("Search", "Leader");
 //			startActivity(intSearchMembers);
 
-			break;
+				break;
 
-		case 9://logout
+			case 10:
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+
+				Intent intfeedback=new Intent(this,Feedback.class);
+				intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intfeedback);
+				finish();
+				break;
+
+			case 11:
+				Intent intmsglogs=new Intent(this,MessageLogs.class);
+				intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intmsglogs);
+				break;
+
+		case 12://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

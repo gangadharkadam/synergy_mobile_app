@@ -326,6 +326,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
 									Int.putExtra("cellcode", name);
+									Int.putExtra("role","PCF Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}
@@ -418,6 +419,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
 									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Senior Cell Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}
@@ -503,6 +505,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 
                                     Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
 									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Cell Leader");
                                     startActivity(Int);
                                     dialogPopup.dismiss();
                                 }
