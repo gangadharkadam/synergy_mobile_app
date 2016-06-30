@@ -1480,6 +1480,7 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 		
 			jsonobj.put("giving_or_pledge",type);
 			jsonobj.put("partnership_arms",value);
+			jsonobj.put("currency", currency);
 			
 			if(recordtype.equals("My"))
 			jsonobj.put("flag","My");

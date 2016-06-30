@@ -198,7 +198,6 @@ public class LoginActivity extends Activity implements OnClickListener{
 				mPreferenceHelper.addString(Commons.USER_EMAILID, txtUserName.getText().toString().trim());
 				mPreferenceHelper.addString(Commons.USER_PASSWORD, txtPassword.getText().toString().trim());
 
-				getProfileInfo();
 				getLoggedInUserRoles();
 				sendGCM();
 
@@ -286,9 +285,8 @@ public class LoginActivity extends Activity implements OnClickListener{
 					Log.e(null, "11111111");
 				}else{
 					Log.e(null, "2222222");
-				Intent intHome=new Intent(LoginActivity.this,HomeActivity.class);
-				startActivity(intHome);
-				finish();
+				getProfileInfo();
+
 				}
 				
 			}
@@ -360,6 +358,10 @@ public class LoginActivity extends Activity implements OnClickListener{
 					Log.d("NonStop", "member_designation: " + mPreferenceHelper.getString(Commons.USER_DESIGNATION));
 					Log.d("NonStop", "employment_status: " + mPreferenceHelper.getString(Commons.USER_STATUS));
 					Log.d("NonStop", "image: " + mPreferenceHelper.getString(Commons.USER_IMAGE));
+
+					Intent intHome=new Intent(LoginActivity.this,HomeActivity.class);
+					startActivity(intHome);
+					finish();
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block

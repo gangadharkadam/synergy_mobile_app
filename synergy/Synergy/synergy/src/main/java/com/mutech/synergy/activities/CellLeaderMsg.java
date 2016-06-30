@@ -84,7 +84,7 @@ public class CellLeaderMsg extends ActionBarActivity {
 
                     JSONObject jObj= jsonobj.getJSONObject("message");
                    if( jObj.getString("status").equals("200")) {
-                       Methods.longToast("Message Send Successfully. ", CellLeaderMsg.this);
+                       Methods.longToast("Message Sent Successfully. ", CellLeaderMsg.this);
                        finish();
                     }else{
                        Methods.longToast("Some Error Occured,please try again later", CellLeaderMsg.this);

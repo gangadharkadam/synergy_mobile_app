@@ -118,6 +118,7 @@ public class MyPartnershipGivingActivity extends BaseFragment implements OnItemC
 			it.putExtra("type","Giving");
 			it.putExtra("record","All");
 			it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));
+			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
 			startActivity(it);
 			
 		} catch (JSONException e) {
@@ -239,7 +240,7 @@ UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 			protected Map<String, String> getParams() throws AuthFailureError {
 				Map<String, String> params = new HashMap<String, String>();
 
-				MeetingListRequestModel model=new MeetingListRequestModel();
+				MeetingListRequestModel model = new MeetingListRequestModel();
 				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
 				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
       //          model. setName(model.getName());
@@ -257,8 +258,8 @@ UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Church Pastor") ||
 							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Partnership Rep")) {
 						Log.d("NonStop", "NonStop in here! Dashboard");
-						TextView titleTV = (TextView) getActivity().findViewById(id.textView1);
-						titleTV.setText("All Members Records");
+				/*		TextView titleTV = (TextView) getActivity().findViewById(id.textView1);
+						titleTV.setText("All Members Records");*/
 					} else {
 						Log.d("NonStop", "NonStop in else! Dashboard! User Role: " + mPreferenceHelper.getString(Commons.USER_ROLE));
 						jsonobj.put("flag", "My");
@@ -1235,7 +1236,7 @@ public void showDialog(){
 		Methods.closeProgressDialog();
 		Log.e("droid get reqgetList Redord--------", response);
 
-		
+
 
 		if(response.contains("status"))
 		{

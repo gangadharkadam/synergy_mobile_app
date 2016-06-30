@@ -151,6 +151,8 @@ public class HomeActivity extends AppCompatActivity {
 //		getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_home);
         initialize();
+        addDrawerListData();
+
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -159,8 +161,6 @@ public class HomeActivity extends AppCompatActivity {
         mDrawerList = new ArrayList<DrawerItem>();
 
         mPreferenceHelper=new PreferenceHelper(this);
-
-        addDrawerListData();
 
         mLvDrawer = (ListView) findViewById(R.id.left_drawer);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

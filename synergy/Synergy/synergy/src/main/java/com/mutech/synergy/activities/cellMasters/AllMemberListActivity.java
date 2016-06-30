@@ -18,6 +18,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ActionBar.LayoutParams;
 import android.app.DatePickerDialog.OnDateSetListener;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,6 +34,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -109,7 +111,8 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 	TextView txtFromDate,txtToDate;
 	Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
-	
+	private Dialog dialogPopup=null;
+	private Button btnviewgivinghistory,btnviewcellattendancehistory,btnviewchurchattendancehistory,btnviewprofile;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -711,18 +714,31 @@ private void getList(final String tbl){
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		
+
+		final String memberno;
 		try {
-			
-			Intent intMemberDetails=new Intent(this,MemberInfoActivtiy.class);
+
+			memberno=jsonarray.getJSONObject(position).getString("name");
+	/*		Intent intMemberDetails=new Intent(this,MemberInfoActivtiy.class);
 			intMemberDetails.putExtra("MemberNo",jsonarray.getJSONObject(position).getString("name"));
-			startActivity(intMemberDetails);
-			
+			startActivity(intMemberDetails);*/
+
+			dialogPopup = new Dialog(AllMemberListActivity.this);
+			dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			dialogPopup.setContentView(R.layout.custom_all_member_dialogbox);
+
+			btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
+			btnviewchurchattendancehistory= (Button) dialogPopup.findViewById(R.id.viewchurchattendancehistory);
+			btnviewcellattendancehistory= (Button) dialogPopup.findViewById(R.id.viewcellattendancehistory);
+			btnviewgivinghistory= (Button) dialogPopup.findViewById(R.id.viewgivinghistory);
+
+			dialogPopup.show();
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	class MemberListAdapter extends BaseAdapter{

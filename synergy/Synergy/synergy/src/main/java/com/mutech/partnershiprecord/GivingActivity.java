@@ -244,6 +244,7 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 					jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
 					jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
 					jsonobj.put("giving_or_pledge","Giving");
+//					jsonobj.put("currency", jsonarray.getJSONObject(0).getString("currency"));
 					Log.d("NonStop", "User Role: " + mPreferenceHelper.getString(Commons.USER_ROLE));
 //					if(mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Regional Pastor") ||
 //							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Zonal Pastor") ||

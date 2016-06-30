@@ -276,14 +276,13 @@ private void getPledge() {
 			it.putExtra("type","Pledge");
 			it.putExtra("record","All");
 			it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));
+			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
 			startActivity(it);
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 	@Override

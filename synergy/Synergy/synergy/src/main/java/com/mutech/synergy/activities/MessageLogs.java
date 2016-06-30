@@ -225,10 +225,12 @@ public class MessageLogs extends ActionBarActivity {
             convertView = layout.inflate(R.layout.row_messageslist, null);
 
             TextView txtMsg=(TextView) convertView.findViewById(R.id.txtMsg);
+            TextView txtDateandtime=(TextView) convertView.findViewById(R.id.txtDateandtime);
 
             try {
 
                 txtMsg.setText(jarray.getJSONObject(position).getString("message"));
+                txtDateandtime.setText(jarray.getJSONObject(position).getString("datetime"));
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block

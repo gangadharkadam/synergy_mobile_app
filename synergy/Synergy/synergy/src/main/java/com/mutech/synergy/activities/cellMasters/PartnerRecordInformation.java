@@ -185,6 +185,7 @@ public class PartnerRecordInformation extends ActionBarActivity implements OnCli
                             if(mPartnerSubModel.get(i).getcurrency() !=null){
                                 spCurrency.setSelection(currencyArrayAdapter.getPosition(mPartnerSubModel.get(i).getcurrency()));}
                             else { spCurrency.setSelection(0);}
+							txtConversation_Rate.setText(mPartnerSubModel.get(i).getConversation_rate());
                             Amount.setText(mPartnerSubModel.get(i).getamount());
 							PartnerCategory.setText(mPartnerSubModel.get(i).getIs_member());
 							PartnerValue.setText(mPartnerSubModel.get(i).getMember());
