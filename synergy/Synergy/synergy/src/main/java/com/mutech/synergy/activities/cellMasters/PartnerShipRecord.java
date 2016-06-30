@@ -19,13 +19,16 @@ import com.mutech.partnershiprecord.MyPartnershipAdpter;
 import com.mutech.partnershiprecord.PartnershipAdpter;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.Todoadpternew;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetPartnerShipService;
 import com.mutech.synergy.SynergyValues.Web.ShowAllMembersService;
+import com.mutech.synergy.activities.Feedback;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LoginActivity;
 import com.mutech.synergy.activities.LogoutActivity;
+import com.mutech.synergy.activities.MessageLogs;
 import com.mutech.synergy.activities.cellMasters.AllMemberListActivity.Holder;
 import com.mutech.synergy.activities.cellMasters.AllMemberListActivity.MemberListAdapter;
 import com.mutech.synergy.activities.event.EventListActivity;
@@ -92,6 +95,8 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 	private ActionBarDrawerToggle mDrawerToggle;
 	private  String str;
 	public static PartnershipAdpter mAdapter;
+	private String Role,Name,Status,Designation,Image;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -276,6 +281,25 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		}else{
 
 
+			if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
+				Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
+
+			if(mPreferenceHelper.getString(Commons.USER_NAME) != null){
+				Name=mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME);}
+
+			if(mPreferenceHelper.getString(Commons.USER_STATUS) != null){
+				Status=mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS);}
+
+			if(mPreferenceHelper.getString(Commons.USER_DESIGNATION) != null){
+				Designation=mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION);}
+
+			if(mPreferenceHelper.getString(Commons.USER_IMAGE) != null){
+				Image=mPreferenceHelper.getString(Commons.USER_IMAGE);}
+
+			DrawerItem item00 = new DrawerItem();
+			item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
+			item00.setImgResID(R.drawable.user);
+
 			DrawerItem item01 = new DrawerItem();
 			item01.setItemName("Dashboard");
 			item01.setImgResID(R.drawable.dashboard);
@@ -318,9 +342,19 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 			item10.setImgResID(R.drawable.msg);
 
 			DrawerItem item11=new DrawerItem();
-			item11.setItemName("Logout");
-			item11.setImgResID(R.drawable.signout);
+			item11.setItemName("Feedback");
+			item11.setImgResID(R.drawable.msg);
 
+			DrawerItem item12=new DrawerItem();
+			item12.setItemName("Message Logs");
+			item12.setImgResID(R.drawable.msg);
+
+			DrawerItem item13=new DrawerItem();
+			item13.setItemName("Logout");
+			item13.setImgResID(R.drawable.signout);
+
+
+			mDrawerList.add(item00);
 			mDrawerList.add(item01);
 			mDrawerList.add(item05);
 			mDrawerList.add(item04);
@@ -328,13 +362,14 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 //		mDrawerList.add(item03);
 			mDrawerList.add(item03);
 
-			//mDrawerList.add(item06);
+			mDrawerList.add(item06);
 			mDrawerList.add(item07);
 			mDrawerList.add(item08);
 			mDrawerList.add(item9);
 			mDrawerList.add(item10);
-			mDrawerList.add(item06);
 			mDrawerList.add(item11);
+			mDrawerList.add(item12);
+			mDrawerList.add(item13);
 		}
 	}
 
@@ -436,33 +471,38 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 
 			switch (position) {
 				case 0:
+					//			Intent intForm1=new Intent(this,MyProfileActivity.class);
+					//			startActivity(intForm1);
+					break;
+				case 1:
+
 					Intent int1=new Intent(this,HomeActivity.class);
 					int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(int1);
 					finish();
 					break;
-				case 2:
+
+				case 3:
 					Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 					intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intForm);
 					finish();
 					break;
-//		case 2:
-//			break;
+
 				case 4:
-					Intent intMyMeetings1=new Intent(this,MyMeetingListActivity.class);
-					intMyMeetings1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-					startActivity(intMyMeetings1);
-					finish();
-					break;
-				case 3:
 //			Intent partner=new Intent(this,PartnerShipRecord.class);
 //			startActivity(partner);
 					break;
-				case 1:
+				case 2:
 					Intent intForm1=new Intent(this,ProfileView.class);
 					intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intForm1);
+					break;
+				case 5:
+					Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
+					intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(intSearchMembers);
+					finish();
 					break;
 				case 6:
 					//Intent intMeeting=new Intent(this,MeetingListActivity.class);
@@ -471,6 +511,7 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 					intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intMyMeetings);
 					finish();
+
 					break;
 				case 7:
 					Intent intEvents=new Intent(this,MyEventListActivity.class);
@@ -494,14 +535,24 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 					break;
 
 				case 10:
-					Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-					intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-					startActivity(intSearchMembers);
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+
+					Intent intfeedback=new Intent(this,Feedback.class);
+					intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(intfeedback);
 					finish();
 					break;
 
+				case 11:
+					Intent intmsglogs=new Intent(this,MessageLogs.class);
+					intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(intmsglogs);
+					break;
 
-				case 11://logout
+
+				case 12://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

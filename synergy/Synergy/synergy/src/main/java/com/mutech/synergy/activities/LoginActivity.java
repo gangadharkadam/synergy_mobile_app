@@ -83,7 +83,7 @@ public class LoginActivity extends Activity implements OnClickListener{
     GoogleCloudMessaging gcm;
     AtomicInteger msgId = new AtomicInteger();
     Context context;
-
+	String first_name,last_name;
     String regid;
 
 	@Override
@@ -334,7 +334,18 @@ public class LoginActivity extends Activity implements OnClickListener{
 					JSONObject jsonobj=new JSONObject(response);
 					JSONArray jarray=jsonobj.getJSONArray("message");
 
-					mPreferenceHelper.addString(Commons.USER_NAME, jarray.getJSONObject(0).getString("member_name") + " " +jarray.getJSONObject(0).getString("last_name"));
+					if(jarray.getJSONObject(0).getString("last_name") != null)
+					{
+						if (jarray.getJSONObject(0).getString("last_name").contentEquals("null")) {
+							last_name="";
+						} else {
+							last_name=jarray.getJSONObject(0).getString("last_name");
+						}
+					} else  {
+						last_name="";
+					}
+
+					mPreferenceHelper.addString(Commons.USER_NAME, jarray.getJSONObject(0).getString("member_name") + " " +last_name);
 					mPreferenceHelper.addString(Commons.USER_STATUS, jarray.getJSONObject(0).getString("employment_status"));
 					mPreferenceHelper.addString(Commons.USER_DESIGNATION, jarray.getJSONObject(0).getString("member_designation"));
 					mPreferenceHelper.addString(Commons.USER_IMAGE, SynergyValues.ImageUrl.imageUrl +jarray.getJSONObject(0).getString("image"));
