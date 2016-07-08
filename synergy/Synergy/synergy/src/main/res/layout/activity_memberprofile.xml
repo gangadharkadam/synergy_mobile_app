@@ -1025,27 +1025,27 @@
                                 android:textSize="@dimen/font_size_small" />
 
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Designation"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
+                            <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Designation"
+                            android:textColor="@color/darkgrey_textcolor"
+                            android:textSize="@dimen/textsize_18" />
 
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtDesignation"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
+                            <EditText
+                            android:id="@+id/txtDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:inputType="textMultiLine"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_16" />
 
                         </LinearLayout>
                     </LinearLayout>

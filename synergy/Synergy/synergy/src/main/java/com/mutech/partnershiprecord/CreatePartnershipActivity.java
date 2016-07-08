@@ -288,22 +288,6 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 			return false;
 		}
 
-		if(!InputValidation.hasText(txtConversation_Rate)) {
-			AlertDialog dialog =new AlertDialog.Builder(CreatePartnershipActivity.this)
-					.setCancelable(false)
-					.setTitle("Mandatory field cannot be blank")
-					.setMessage("Please enter conversation rate")
-					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialogInterface, int i) {
-
-						}
-					})
-					.show();
-			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-			textView.setTextSize(18);
-			return false;
-		}
 		return true;
 	}
 	private void getPledge() {

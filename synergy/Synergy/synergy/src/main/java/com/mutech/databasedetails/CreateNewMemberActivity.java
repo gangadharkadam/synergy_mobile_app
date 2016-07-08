@@ -82,7 +82,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 	txtMemberHomeAddress,txtOfficeAddress,txtShortbio,txtYookosID,txtBaptisedWhere,
 	txtYearlyIncome,txtCoreCompeteance,txtDesignation;
 	private TextView txtMemberDateOfBirth,txtempInfo,txtBaptisedWhen,txtDateofJoining,lblphoto;
-	private ImageView imgProfilePic,editEmailId1,editEmailId2,editPassword;
+	private ImageView imgProfilePic;
 	private Button btnSaveMemberInfo;
 	private Spinner spnEducationalQualification,spnExperienceYears,spnIndustrySegment,spnEmploymentStatus,spnMemberMartialInfo;
 	ArrayAdapter<String> adapterIndSeg,adapterQual,adapterExp,adapterEmpStatus,adapterMartial;
@@ -102,9 +102,6 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 	private Spinner spnSeniorCell,spnCellZone,spnCellRegion,spnCellChurch,spnSeniorCellChurchgroup,spnCell;
 	private Spinner txtPCF;
 	String defKey,defVal,defRole;
-
-//	private ArrayList<String> txtisnewconvertList;
-//	private Spinner spisnewconvert;
 
 	TextView bapWhrTV, bapWhnTV;
 	Calendar dob, doj;
@@ -1804,12 +1801,6 @@ private void getLowerHierarchy(){
 			textView.setTextSize(18);
 			return false;
 		}
-//		if (!InputValidation.hasText(txtMemberPhone1)) {
-//			return false;
-//		}
-//		if (!InputValidation.hasText(txtMemberPhone2)) {
-//			return false;
-//		}
 
 		return true;
 	}

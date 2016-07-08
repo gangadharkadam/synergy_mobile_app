@@ -57,10 +57,6 @@ public class ViewMemberListAdapter extends BaseAdapter{
         } else {
             mHolder = (Holder) convertView.getTag();
         }
-     /*   mHolder.txtMsg.setText(mList.get(position).getMsg());
-        mHolder.txtDate.setText(mList.get(position).getDate());*/
-
-
         return convertView;
     }
 

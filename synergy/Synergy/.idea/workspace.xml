@@ -29,31 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/AndroidManifest.xml">
+      <file leaf-file-name="CreateNewMemberActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/CreateNewMemberActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2581522">
-              <caret line="337" column="44" selection-start-line="337" selection-start-column="44" selection-end-line="337" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.967742">
-              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="352" column="8" selection-start-line="352" selection-start-column="8" selection-end-line="352" selection-end-column="8" />
+            <state vertical-scroll-proportion="-13.258064">
+              <caret line="1547" column="15" selection-start-line="1547" selection-start-column="15" selection-end-line="1547" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,110 +41,86 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageLogs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/MessageLogs.java">
+      <file leaf-file-name="NewCreateCellMasterActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/NewCreateCellMasterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="232" column="89" selection-start-line="232" selection-start-column="89" selection-end-line="232" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="row_messageslist.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/row_messageslist.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.774194">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
+            <state vertical-scroll-proportion="-7.935484">
+              <caret line="1213" column="79" selection-start-line="1213" selection-start-column="79" selection-end-line="1213" selection-end-column="79" />
               <folding>
-                <element signature="e#978#995#0" expanded="true" />
-                <element signature="e#1021#1041#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayMastersListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/DisplayMastersListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="334" column="47" selection-start-line="334" selection-start-column="28" selection-end-line="334" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom_all_member_dialogbox.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/custom_all_member_dialogbox.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.548388">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllMemberListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/AllMemberListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-117.86207">
-              <caret line="734" column="31" selection-start-line="734" selection-start-column="31" selection-end-line="734" selection-end-column="31" />
-              <folding>
-                <element signature="e#25151#25152#0" expanded="true" />
-                <element signature="e#25179#25180#0" expanded="true" />
-                <element signature="e#25232#25233#0" expanded="true" />
-                <element signature="e#25267#25268#0" expanded="true" />
-                <element signature="e#25320#25321#0" expanded="true" />
-                <element signature="e#25344#25345#0" expanded="true" />
-                <element signature="e#29753#30453#0" expanded="true" />
-                <element signature="e#30452#30453#0" expanded="true" />
-                <element signature="e#35541#36042#0" expanded="true" />
-                <element signature="e#36041#36042#0" expanded="true" />
-                <element signature="e#36082#37624#0" expanded="true" />
-                <element signature="e#37623#37624#0" expanded="true" />
-                <element signature="e#37671#39328#0" expanded="true" />
-                <element signature="e#39327#39328#0" expanded="true" />
-                <element signature="e#39369#41234#0" expanded="true" />
-                <element signature="e#41233#41234#0" expanded="true" />
-                <element signature="e#41272#42826#0" expanded="true" />
-                <element signature="e#42825#42826#0" expanded="true" />
-                <element signature="e#42872#44083#0" expanded="true" />
-                <element signature="e#44082#44083#0" expanded="true" />
-                <element signature="e#44122#45276#0" expanded="true" />
-                <element signature="e#45275#45276#0" expanded="true" />
-                <element signature="e#46474#46646#0" expanded="true" />
-                <element signature="e#46645#46646#0" expanded="true" />
-                <element signature="e#46681#46834#0" expanded="true" />
-                <element signature="e#46833#46834#0" expanded="true" />
-                <element signature="e#46970#49104#0" expanded="true" />
-                <element signature="e#49103#49104#0" expanded="true" />
-                <element signature="e#49147#49281#0" expanded="true" />
-                <element signature="e#49280#49281#0" expanded="true" />
-                <element signature="e#54019#54035#0" expanded="true" />
-                <element signature="e#54733#54741#0" expanded="true" />
-                <element signature="e#54993#55001#0" expanded="true" />
-                <element signature="e#55261#55269#0" expanded="true" />
-                <element signature="e#55529#55537#0" expanded="true" />
-                <element signature="e#55810#55818#0" expanded="true" />
-                <element signature="e#56093#56101#0" expanded="true" />
-                <element signature="e#56348#56356#0" expanded="true" />
-                <element signature="e#58663#58679#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartnerRecordInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java">
+      <file leaf-file-name="CreateCellModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/CreateCellModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
+              <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+              <folding>
+                <element signature="e#1974#1975#0" expanded="true" />
+                <element signature="e#1994#1995#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseMessageModel2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/ResponseMessageModel2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04418262">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="6" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Methods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/Methods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreferenceHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/PreferenceHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -176,6 +132,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -2777,9 +2734,24 @@
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/AllMemberListActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/res/layout/row_messageslist.xml" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/MessageLogs.java" />
-        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/adapters/ViewMemberListAdapter.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/CreateNewMemberActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/CreatePartnershipActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_home.xml" />
+        <option value="$PROJECT_DIR$/synergy/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/messagebraudcast/MessageBroadcastActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_profile_view.xml" />
         <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/CellLeaderMsg.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_create_partnership.xml" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/profile/ProfileView.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/res/layout/activity_memberprofile.xml" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/profile/MyProfileActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/MyFormatter.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/MyFormatter.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java" />
+        <option value="$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/App.java" />
       </list>
     </option>
   </component>
@@ -2789,8 +2761,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1295" />
-    <option name="height" value="744" />
+    <option name="width" value="1375" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2815,8 +2787,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2824,6 +2794,74 @@
               <option name="myItemId" value="Synergy" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2845,8 +2883,8 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2859,18 +2897,186 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cellMasters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partnershiprecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mutech" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="synergy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2882,6 +3088,15 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0123456789ABCDEF" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_16" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../helpdeskindic" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mutech.synergy.activities" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.synergy">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2934,6 +3149,15 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -3037,6 +3261,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4b370bf6-5c4f-41b8-b4e8-b5662c3bfbc9" name="Default" comment="" />
@@ -3047,40 +3274,48 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1295" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="24" width="1375" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29307568" sideWeight="0.50280225" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5378486" sideWeight="0.5086531" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="165" y="124" width="1095" height="544" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35909823" sideWeight="0.49719775" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="165" y="124" width="1095" height="544" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2430279" sideWeight="0.49134687" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27389014" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20772947" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16467464" sideWeight="0.49435666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905944" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.058432937" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2962963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29482073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -3101,101 +3336,49 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java</url>
-          <line>709</line>
+          <line>894</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java</url>
-          <line>725</line>
+          <line>913</line>
           <properties />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java</url>
+          <line>914</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java</url>
+          <line>882</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_create_partnership.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/PartnershipAdpter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/MypartnershipPledgeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="9" selection-start-line="284" selection-start-column="9" selection-end-line="284" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/GivingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="42" selection-start-line="284" selection-start-column="42" selection-end-line="284" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#10606#10607#0" expanded="false" />
-            <element signature="e#10637#10638#0" expanded="false" />
-            <element signature="e#10690#10691#0" expanded="false" />
-            <element signature="e#10714#10715#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/Giving_or_pledge_DetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="218" column="63" selection-start-line="218" selection-start-column="63" selection-end-line="218" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/PartnerShipModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="42" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="42" />
-          <folding>
-            <element signature="e#1860#1861#0" expanded="false" />
-            <element signature="e#1893#1894#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/partnership_record.xml">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_memberprofile.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="1026" column="0" selection-start-line="1026" selection-start-column="0" selection-end-line="1047" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -3203,10 +3386,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/PledgeActivity.java">
+    <entry file="file://$PROJECT_DIR$/volley/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="12" selection-start-line="298" selection-start-column="12" selection-end-line="298" selection-end-column="93" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk1/sources/android-23/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8203593">
+          <caret line="798" column="0" selection-start-line="798" selection-start-column="0" selection-end-line="798" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3214,159 +3413,101 @@
     <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="474" column="0" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+          <caret line="604" column="0" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/DashboardDetailsModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.580645">
-          <caret line="322" column="33" selection-start-line="322" selection-start-column="33" selection-end-line="322" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/MyPartnershipGivingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1833333">
-          <caret line="116" column="32" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2115#2116#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/dashboard/PledgeActivity.java">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/GraphTestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.785714">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/MyPartnershipAdpter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/PledgeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="12" selection-start-line="298" selection-start-column="12" selection-end-line="298" selection-end-column="93" />
+        <state vertical-scroll-proportion="-0.6886228">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_partnershiplist.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/MyPartnershipActivity.java">
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/data/BarData.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12195122">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerShipRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33188722">
-          <caret line="388" column="66" selection-start-line="388" selection-start-column="66" selection-end-line="388" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_giving_or_pledge__details.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/Giving_or_pledge_DetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="218" column="63" selection-start-line="218" selection-start-column="63" selection-end-line="218" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/partnership_record.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/GivingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="42" selection-start-line="284" selection-start-column="42" selection-end-line="284" selection-end-column="42" />
+        <state vertical-scroll-proportion="-11.896552">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#10606#10607#0" expanded="false" />
-            <element signature="e#10637#10638#0" expanded="false" />
-            <element signature="e#10690#10691#0" expanded="false" />
-            <element signature="e#10714#10715#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="false" />
-            <element signature="e#10791#10792#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/PartnershipAdpter.java">
+    <entry file="file://$USER_HOME$/Android/Sdk1/sources/android-23/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/MypartnershipPledgeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30456853">
-          <caret line="284" column="9" selection-start-line="284" selection-start-column="9" selection-end-line="284" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/PartnerShipModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36548224">
-          <caret line="84" column="42" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.4231537">
+          <caret line="12659" column="16" selection-start-line="12659" selection-start-column="16" selection-end-line="12659" selection-end-column="16" />
           <folding>
-            <element signature="e#1860#1861#0" expanded="false" />
-            <element signature="e#1893#1894#0" expanded="false" />
+            <element signature="e#495577#495578#0" expanded="false" />
+            <element signature="e#495609#495610#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/PartnerRecordInformation.java">
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/data/BarEntry.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
+        <state vertical-scroll-proportion="-3.1034484">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/custom_pcf_dialogbox.xml">
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/charts/BarLineChartBase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35381356">
+          <caret line="701" column="17" selection-start-line="701" selection-start-column="17" selection-end-line="701" selection-end-column="17" />
+          <folding>
+            <element signature="e#29508#29509#0" expanded="true" />
+            <element signature="e#29545#29546#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk1/sources/android-23/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="5264" column="0" selection-start-line="5264" selection-start-column="0" selection-end-line="5264" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/StringRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4311377">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#2067#2068#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/ExecutorDelivery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4041096">
+          <caret line="597" column="47" selection-start-line="597" selection-start-column="41" selection-end-line="597" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -3374,133 +3515,335 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/custom_all_member_dialogbox.xml">
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/utils/ValueFormatter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.548388">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12738854">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/utils/LargeValueFormatter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7586207">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/DisplayMastersListActivity.java">
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/components/YAxis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.02972399">
+          <caret line="172" column="16" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/synergy/libs/mpandroidchartlibrary-2-1-0.jar!/com/github/mikephil/charting/charts/Chart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2511628">
+          <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/MyFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="334" column="47" selection-start-line="334" selection-start-column="28" selection-end-line="334" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/AllMemberListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-117.86207">
-          <caret line="734" column="31" selection-start-line="734" selection-start-column="31" selection-end-line="734" selection-end-column="31" />
-          <folding>
-            <element signature="e#25151#25152#0" expanded="true" />
-            <element signature="e#25179#25180#0" expanded="true" />
-            <element signature="e#25232#25233#0" expanded="true" />
-            <element signature="e#25267#25268#0" expanded="true" />
-            <element signature="e#25320#25321#0" expanded="true" />
-            <element signature="e#25344#25345#0" expanded="true" />
-            <element signature="e#29753#30453#0" expanded="true" />
-            <element signature="e#30452#30453#0" expanded="true" />
-            <element signature="e#35541#36042#0" expanded="true" />
-            <element signature="e#36041#36042#0" expanded="true" />
-            <element signature="e#36082#37624#0" expanded="true" />
-            <element signature="e#37623#37624#0" expanded="true" />
-            <element signature="e#37671#39328#0" expanded="true" />
-            <element signature="e#39327#39328#0" expanded="true" />
-            <element signature="e#39369#41234#0" expanded="true" />
-            <element signature="e#41233#41234#0" expanded="true" />
-            <element signature="e#41272#42826#0" expanded="true" />
-            <element signature="e#42825#42826#0" expanded="true" />
-            <element signature="e#42872#44083#0" expanded="true" />
-            <element signature="e#44082#44083#0" expanded="true" />
-            <element signature="e#44122#45276#0" expanded="true" />
-            <element signature="e#45275#45276#0" expanded="true" />
-            <element signature="e#46474#46646#0" expanded="true" />
-            <element signature="e#46645#46646#0" expanded="true" />
-            <element signature="e#46681#46834#0" expanded="true" />
-            <element signature="e#46833#46834#0" expanded="true" />
-            <element signature="e#46970#49104#0" expanded="true" />
-            <element signature="e#49103#49104#0" expanded="true" />
-            <element signature="e#49147#49281#0" expanded="true" />
-            <element signature="e#49280#49281#0" expanded="true" />
-            <element signature="e#54019#54035#0" expanded="true" />
-            <element signature="e#54733#54741#0" expanded="true" />
-            <element signature="e#54993#55001#0" expanded="true" />
-            <element signature="e#55261#55269#0" expanded="true" />
-            <element signature="e#55529#55537#0" expanded="true" />
-            <element signature="e#55810#55818#0" expanded="true" />
-            <element signature="e#56093#56101#0" expanded="true" />
-            <element signature="e#56348#56356#0" expanded="true" />
-            <element signature="e#58663#58679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/MasterSelectorScreenActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4541485">
-          <caret line="467" column="65" selection-start-line="467" selection-start-column="65" selection-end-line="467" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/row_messageslist.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.774194">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="e#978#995#0" expanded="true" />
-            <element signature="e#1021#1041#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/MessageLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="232" column="89" selection-start-line="232" selection-start-column="89" selection-end-line="232" selection-end-column="89" />
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.967742">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-4.580645">
+          <caret line="532" column="89" selection-start-line="532" selection-start-column="89" selection-end-line="532" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12269#12286#0" expanded="true" />
+            <element signature="e#12304#12321#0" expanded="true" />
+            <element signature="e#15479#15765#0" expanded="true" />
+            <element signature="e#15764#15765#0" expanded="true" />
+            <element signature="e#15823#16109#0" expanded="true" />
+            <element signature="e#16108#16109#0" expanded="true" />
+            <element signature="e#16162#16495#0" expanded="true" />
+            <element signature="e#16494#16495#0" expanded="true" />
+            <element signature="e#16549#16883#0" expanded="true" />
+            <element signature="e#16882#16883#0" expanded="true" />
+            <element signature="e#16936#17217#0" expanded="true" />
+            <element signature="e#17216#17217#0" expanded="true" />
+            <element signature="e#17269#17600#0" expanded="true" />
+            <element signature="e#17599#17600#0" expanded="true" />
+            <element signature="e#17653#17999#0" expanded="true" />
+            <element signature="e#17998#17999#0" expanded="true" />
+            <element signature="e#18051#18383#0" expanded="true" />
+            <element signature="e#18382#18383#0" expanded="true" />
+            <element signature="e#18432#18773#0" expanded="true" />
+            <element signature="e#18772#18773#0" expanded="true" />
+            <element signature="e#18824#19167#0" expanded="true" />
+            <element signature="e#19166#19167#0" expanded="true" />
+            <element signature="e#19216#19557#0" expanded="true" />
+            <element signature="e#19556#19557#0" expanded="true" />
+            <element signature="e#33672#33682#0" expanded="true" />
+            <element signature="e#34612#34624#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="352" column="8" selection-start-line="352" selection-start-column="8" selection-end-line="352" selection-end-column="8" />
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/NetworkHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6013072">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/LruBitmapCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/GcmBroadcastReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/GcmIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_graph_test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21778585">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/partnershiprecord/CreatePartnershipActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1290324">
+          <caret line="294" column="98" selection-start-line="294" selection-start-column="97" selection-end-line="294" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ClearCacheRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HurlStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/AndroidAuthenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/profile/MyProfileActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37037036">
+          <caret line="1069" column="35" selection-start-line="1069" selection-start-column="28" selection-end-line="1069" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.548387">
+          <caret line="352" column="57" selection-start-line="352" selection-start-column="57" selection-end-line="352" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/profile/ProfileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="246" column="5" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/Feedback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
+          <folding>
+            <element signature="e#7430#7766#0" expanded="false" />
+            <element signature="e#7765#7766#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/res/layout/activity_allmembers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.741936">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/AllMemberListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+          <folding>
+            <element signature="e#7092#7379#0" expanded="false" />
+            <element signature="e#7378#7379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/CreateCellMasterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/SynergyValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/Methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/utils/PreferenceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="6" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/cellMasters/NewCreateCellMasterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.935484">
+          <caret line="1213" column="79" selection-start-line="1213" selection-start-column="79" selection-end-line="1213" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/activities/CellLeaderMsg.java">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/databasedetails/CreateNewMemberActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48913044">
-          <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
-          <folding />
+        <state vertical-scroll-proportion="-13.258064">
+          <caret line="1547" column="15" selection-start-line="1547" selection-start-column="15" selection-end-line="1547" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/synergy/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2581522">
-          <caret line="337" column="44" selection-start-line="337" selection-start-column="44" selection-end-line="337" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.26509574">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#624#625#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#912#928#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/CreateCellModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+          <folding>
+            <element signature="e#1974#1975#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synergy/src/main/java/com/mutech/synergy/models/ResponseMessageModel2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04418262">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>

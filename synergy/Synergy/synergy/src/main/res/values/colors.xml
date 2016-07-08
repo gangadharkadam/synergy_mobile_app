@@ -2,7 +2,7 @@
 <resources>
     
     <color name="actionbarcolor">#2E9AFE</color>
-    <color name="dashcolor">#4166f5</color>
+    <color name="dashcolor">#2E9AFE</color>
     <color name="parrot_green">#56B750</color>
     <color name="activity_background">#F7F7F7</color>
     <color name="actionbar_text">#fff</color>

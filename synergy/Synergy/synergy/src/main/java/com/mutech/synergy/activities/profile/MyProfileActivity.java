@@ -76,14 +76,17 @@ import com.mutech.databasedetails.CreateNewMemberActivity;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.ImageUrl;
 import com.mutech.synergy.SynergyValues.Web.GetMemberProfileService;
 import com.mutech.synergy.SynergyValues.Web.ProfilePicUploadService;
 import com.mutech.synergy.SynergyValues.Web.SaveMemberProfileService;
+import com.mutech.synergy.activities.Feedback;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LoginActivity;
 import com.mutech.synergy.activities.LogoutActivity;
+import com.mutech.synergy.activities.MessageLogs;
 import com.mutech.synergy.activities.cellMasters.MasterSelectorScreenActivity;
 import com.mutech.synergy.activities.cellMasters.PartnerShipRecord;
 import com.mutech.synergy.activities.cellMasters.SearchFunctionActivity;
@@ -112,7 +115,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 	private EditText txtMembershipNo,txtMemberName,txtMemberSurname,txtMemberPhone1,txtMemberPhone2,txtEmailID1,txtEmailID2,
 	txtPassword,txtMemberHomeAddress,txtOfficeAddress,txtShortbio,txtregion,txtregionname,txtzonename,txtchurch_group_name,
 	txtsenior_cell_name,txtcell,txtcell_name,txtCoreCompeteance,txtzone,txtchurch_group,
-			txtChurch,txtChurch_name,txtsenior_cell;
+			txtChurch,txtChurch_name,txtsenior_cell,txtDesignation;
 //	private EditText txtBaptisedWhere, txtYookosID, txtDesignation, txtYearlyIncome;
 
 	private TextView txtMemberDateOfBirth,txtmemInfo,txtempInfo,txtpcf,txtpcf_name;
@@ -133,7 +136,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 	
 	private int SELECT_FILE=0,REQUEST_CAMERA=1;
 	private Bitmap thumbnail;
-	
+
 	private ArrayList<DrawerItem> mDrawerList;
 	private CustomDrawerAdapter mCustomDrawerAdapter;
 	private ListView mLvDrawer;
@@ -145,6 +148,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 //	private ArrayList<String> titleList;
 	String Imageurl;
 	private Intent intent;
+	private String Role,Name,Status,Designation,Image;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -174,7 +178,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		
 
 		mPreferenceHelper=new PreferenceHelper(this);
-		
+
 	    str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		
 		gson=new Gson();
@@ -209,7 +213,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		txtregion=(EditText)findViewById(R.id.txtregion);
 	
 		txtShortbio=(EditText) findViewById(R.id.txtShortbio);
-//		txtDesignation=(EditText) findViewById(R.id.txtDesignation);
+		txtDesignation=(EditText) findViewById(R.id.txtDesignation);
 		txtMembershipNo=(EditText) findViewById(R.id.txtMembershipNo);
 		txtMemberName=(EditText) findViewById(R.id.txtMemberfName);
 		txtMemberSurname=(EditText) findViewById(R.id.txtMemberlName);
@@ -473,7 +477,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		martialInfoList=new ArrayList<String>();
 
 		setSpinners();
-		
+
 		mDrawerList = new ArrayList<DrawerItem>();
 		// mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
 		// GravityCompat.START);
@@ -487,14 +491,14 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		mLvDrawer.setAdapter(mCustomDrawerAdapter);
 		mLvDrawer.setOnItemClickListener(new DrawerItemClickListener());
 
-		
+
 
 		mDrawerToggle = new ActionBarDrawerToggle(
 				this,
 				mDrawerLayout,
-				R.drawable.actiontop, 
-				R.string.app_name, 
-				R.string.app_name 
+				R.drawable.actiontop,
+				R.string.app_name,
+				R.string.app_name
 				) {
 
 			/** Called when a drawer has settled in a completely closed state. */
@@ -510,8 +514,8 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 			}
 		};
 
-		mDrawerLayout.setDrawerListener(mDrawerToggle);	
-		
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	//	actionBar.setHomeAsUpIndicator(R.drawable.actiontop);
 		getSupportActionBar().setIcon(
@@ -540,59 +544,31 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 			Methods.longToast("Please connect to Internet", this);
 
 	}
-	
+
 	private void addDrawerListData() {
-		
-				
-		if(str.equalsIgnoreCase("Member")){
 
-			DrawerItem item0 = new DrawerItem();
-			item0.setItemName("My Profile");
-			item0.setImgResID(R.drawable.myprofile);
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
+			Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
 
-			DrawerItem item1 = new DrawerItem();
-			item1.setItemName("Partnership \n Record");
-			item1.setImgResID(R.drawable.partnership_record);
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME) != null){
+			Name=mPreferenceHelper.getString(SynergyValues.Commons.USER_NAME);}
 
-			DrawerItem item2 = new DrawerItem();
-			item2.setItemName("Search");
-			item2.setImgResID(R.drawable.search);
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS) != null){
+			Status=mPreferenceHelper.getString(SynergyValues.Commons.USER_STATUS);}
 
-			DrawerItem item3 = new DrawerItem();
-			item3.setItemName("Attendance");
-			item3.setImgResID(R.drawable.my_meetings);
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION) != null){
+			Designation=mPreferenceHelper.getString(SynergyValues.Commons.USER_DESIGNATION);}
 
-			DrawerItem item4 = new DrawerItem();
-			item4.setItemName("Calendar");
-			item4.setImgResID(R.drawable.carlender);
+		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_IMAGE) != null){
+			Image=mPreferenceHelper.getString(SynergyValues.Commons.USER_IMAGE);}
 
-			DrawerItem item5 = new DrawerItem();
-			item5.setItemName("To Do");
-			item5.setImgResID(R.drawable.todo);
-			
-			DrawerItem item6 = new DrawerItem();
-			item6.setItemName("Broadcast Message");
-			item6.setImgResID(R.drawable.msg);
+		DrawerItem item00 = new DrawerItem();
+		item00.setItemName(Name + "\n" + "Role: " + Role + "\n" + "Designation: " +Designation + "\n" + Status);
+		item00.setImgResID(R.drawable.user);
 
-			DrawerItem item7=new DrawerItem();
-			item7.setItemName("Logout");
-			item7.setImgResID(R.drawable.signout);
-
-			mDrawerList.add(item0);
-			mDrawerList.add(item1);
-		//	mDrawerList.add(item2);
-			mDrawerList.add(item3);
-			mDrawerList.add(item4);
-			mDrawerList.add(item5);
-		//	mDrawerList.add(item6);
-			mDrawerList.add(item2);
-			mDrawerList.add(item7);
-			
-		}else{
-		
 		DrawerItem item01 = new DrawerItem();
 		item01.setItemName("Dashboard");
-		item01.setImgResID(R.drawable.dashboard);		
+		item01.setImgResID(R.drawable.dashboard);
 
 		DrawerItem item05 = new DrawerItem();
 		item05.setItemName("My Profile");
@@ -603,7 +579,7 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 //		item03.setImgResID(R.drawable.ministry_materials);
 
 		DrawerItem item03 = new DrawerItem();
-		item03.setItemName("Partnership \n Record");
+		item03.setItemName("Partnership \n Records");
 		item03.setImgResID(R.drawable.partnership_record);
 
 		DrawerItem item04 = new DrawerItem();
@@ -626,30 +602,40 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		DrawerItem item9 = new DrawerItem();
 		item9.setItemName("To Do");
 		item9.setImgResID(R.drawable.todo);
-		
+
 		DrawerItem item10 = new DrawerItem();
 		item10.setItemName("Broadcast Message");
 		item10.setImgResID(R.drawable.msg);
 
 		DrawerItem item11=new DrawerItem();
-		item11.setItemName("Logout");
-		item11.setImgResID(R.drawable.signout);
+		item11.setItemName("Feedback");
+		item11.setImgResID(R.drawable.msg);
 
+		DrawerItem item12=new DrawerItem();
+		item12.setItemName("Message Logs");
+		item12.setImgResID(R.drawable.msg);
+
+		DrawerItem item13=new DrawerItem();
+		item13.setItemName("Logout");
+		item13.setImgResID(R.drawable.signout);
+
+		mDrawerList.add(item00);
 		mDrawerList.add(item01);
 		mDrawerList.add(item05);
 		mDrawerList.add(item04);
-		mDrawerList.add(item03);	
-		
-		//mDrawerList.add(item06);
+//		mDrawerList.add(item02);
+//		mDrawerList.add(item03);
+		mDrawerList.add(item03);
+
+		//	mDrawerList.add(item06);
 		mDrawerList.add(item07);
 		mDrawerList.add(item08);
 		mDrawerList.add(item9);
 		mDrawerList.add(item10);
 		mDrawerList.add(item06);
 		mDrawerList.add(item11);
-		
-		}
-		
+		mDrawerList.add(item12);
+		mDrawerList.add(item13);
 	}
 
 	@Override
@@ -661,177 +647,131 @@ public class MyProfileActivity extends ActionBarActivity implements OnClickListe
 		return super.onOptionsItemSelected(item);
 	}
 
-private void selectItem(int position) {
-		
-		
-	if(str.equalsIgnoreCase("Member")){
-		
+	private void selectItem(int position) {
 		switch (position) {
-		case 0:
-			
-			//Intent intForm1=new Intent(this,MyProfileActivity.class);
-			//startActivity(intForm1);
-			
-			break;
-		case 1:	
-			
-			Intent partner=new Intent(this,PartnerShipRecord.class);
-			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(partner);
-			finish();
-			break;
-		
-		case 2:
-			
-			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
-			intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intMyMeetings);
-			finish();
-			break;
-		case 3:
-			
-			Intent intEvents=new Intent(this,MyEventListActivity.class);
-			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intEvents);
-			finish();
-			break;
-		case 4:
+			case 0:
+				//			Intent intForm1=new Intent(this,MyProfileActivity.class);
+				//			startActivity(intForm1);
+				break;
 
-			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
-			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentTODO);
-			finish();
-			break;
-		/*case 5:
-		
-			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
-			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentMsg);
-			finish();
-			break;*/
-			
-		case 5:
-			
-			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intSearchMembers);
-			finish();
-			break;
-		
-		case 6:
-			
-			Intent intLogout=new Intent(getApplicationContext(),LogoutActivity.class);
-			intLogout.putExtra("classname", "MyProfileActivity");
-			startActivity(intLogout);
-			finish();
-			break;
-		
+			case 1:
+				Intent int1=new Intent(this,HomeActivity.class);
+				int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(int1);
+				finish();
+				break;
+
+			case 2:
+               finish();
+				break;
+//            case 1:
+//				Intent intForm1=new Intent(this,MyProfileActivity.class);
+//				startActivity(intForm1);
+//                break;
+
+			case 3:
+				Log.d("NonStop", "Going to Database");
+				Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
+				intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intForm);
+				finish();
+				break;
+
+			case 4:
+				Log.d("NonStop", "Going to Partnership Record");
+				Intent partner=new Intent(this,PartnerShipRecord.class);
+				partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(partner);
+				finish();
+				break;
+
+			case 5:
+				//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
+				//startActivity(intMeeting);
+				Log.d("NonStop", "Going to Attendance");
+				Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
+				intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intMyMeetings);
+				finish();
+				break;
+			case 6:
+				Log.d("NonStop", "Going to Calendar");
+				Intent intEvents=new Intent(this,MyEventListActivity.class);
+				intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intEvents);
+				finish();
+
+				break;
+			case 7:
+				Log.d("NonStop", "Going to ToDo");
+				Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
+				intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentTODO);
+				finish();
+				break;
+
+			case 8:
+				Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
+				intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentMsg);
+				finish();
+				break;
+
+			case 9:
+				Log.d("NonStop", "Going to Search");
+				Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
+				intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intSearchMembers);
+				finish();
+
+				break;
+
+			case 10:
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+
+				Intent intfeedback=new Intent(this,Feedback.class);
+				intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intfeedback);
+				finish();
+				break;
+
+			case 11:
+				Intent intmsglogs=new Intent(this,MessageLogs.class);
+				intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intmsglogs);
+				break;
+
+			case 12://logout
+//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
+//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
+//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+
+				Intent intLogout=new Intent(getApplicationContext(),LogoutActivity.class);
+				intLogout.putExtra("classname", "MyProfileActivity");
+				startActivity(intLogout);
+				finish();
+				break;
+
+
+			default:
+				break;
 		}
 
-		
-	}else{
-		
-		switch (position) {
-		case 0:
-			
-			Intent int1=new Intent(this,HomeActivity.class);
-			int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(int1);
-			finish();
-			break;
-		case 1:
-			Intent intProf =new Intent(this,ProfileView.class);
-			intProf.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intProf);
-			break;
-		case 2:
-			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
-			intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intForm);
-			finish();
-			break;
-//		case 2:
-//			break;
-//		case 3:
-//			break;
-		case 3:
-			Intent partner=new Intent(this,PartnerShipRecord.class);
-			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(partner);
-			finish();
-			break;
-//		case 1:
-//			Intent intForm1=new Intent(this,MyProfileActivity.class);
-//			startActivity(intForm1);
-//
-//			break;
-		
-		case 4:
-			//Intent intMeeting=new Intent(this,MeetingListActivity.class);
-			//startActivity(intMeeting);
-			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
-			intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intMyMeetings);
-			finish();
-			break;
-		case 5:
-			Intent intEvents=new Intent(this,MyEventListActivity.class);
-			intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intEvents);
-			finish();
-			break;
-		case 6:
-			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
-			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentTODO);
-			finish();
-			break;
-			
-		case 7:
-			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
-			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentMsg);
-			finish();
-			break;
-			
-		case 8:
-			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intSearchMembers);
-			finish();
-			break;
-			
-		case 9://logout
-
-
-			Intent intLogout=new Intent(getApplicationContext(),LogoutActivity.class);
-			intLogout.putExtra("classname", "MyProfileActivity");
-			startActivity(intLogout);
-			finish();
-			break;
-
-
-		default:
-			break;
-		}
-
-	}
 		mDrawerLayout.closeDrawer(mLvDrawer);
-
+//		getSupportActionBar().invalidateOptionsMenu();
 	}
-
-	
 
 	private class DrawerItemClickListener implements
-	ListView.OnItemClickListener {
+			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
-				long id) {
+								long id) {
 			selectItem(position);
 
 		}
 	}
-	
 	public static final boolean isValidPhoneNumber(CharSequence target) {
 	    if (target == null || TextUtils.isEmpty(target)) {
 	        return false;
@@ -1030,9 +970,11 @@ private void selectItem(int position) {
 
 					Log.d("NonStop", "mProfSumModel Size: " + mProfSubModel.size());
 					for(int i=0;i<mProfSubModel.size();i++){
-						txtMembershipNo.setText(mProfSubModel.get(i).getName());
-						
-						txtMemberName.setText(mProfSubModel.get(i).getMember_name());
+						if(mProfSubModel.get(i).getName() != null) {
+						txtMembershipNo.setText(mProfSubModel.get(i).getName());}
+
+						if(mProfSubModel.get(i).getMember_name() != null) {
+						txtMemberName.setText(mProfSubModel.get(i).getMember_name());}
 						//if(null !=mProfSubModel.get(i).getDate_of_birth()){
 							try {
 								Date dob=new Date();
@@ -1111,17 +1053,14 @@ private void selectItem(int position) {
 						
 						//getChurch
 
-						txtMemberPhone1.setText(mProfSubModel.get(i).getPhone_1());
-						txtMemberPhone2.setText(mProfSubModel.get(i).getPhone_2());
-//						txtDesignation.setText(mProfSubModel.get(i).getMember_designation());
+						if(mProfSubModel.get(i).getPhone_1() != null) {
+							txtMemberPhone1.setText(mProfSubModel.get(i).getPhone_1());
+						}
+						if(mProfSubModel.get(i).getPhone_2() != null) {
+						txtMemberPhone2.setText(mProfSubModel.get(i).getPhone_2());}
 
-						//imgProfilePic.setImageURI(Uri.parse("http://loveworldsynergy.org"+mProfSubModel.get(i).getImage()));
-						/*if(null !=mProfSubModel.get(i).getImage() && mProfSubModel.get(i).getImage().trim().length() > 0){
-							String Imageurl= mProfSubModel.get(i).getImage();
-						    Log.e("Image Url",ImageUrl.imageUrl+Imageurl);
-							Picasso.with(MyProfileActivity.this).load("http://verve.indictranstech.com/files/image1.jpg").into(imgProfilePic);
-						
-						}*/
+						if(mProfSubModel.get(i).getMember_designation() != null) {
+						txtDesignation.setText(mProfSubModel.get(i).getMember_designation());}
 
 						if(i<1) {
 							Imageurl= mProfSubModel.get(i).getImage();
@@ -1133,29 +1072,29 @@ private void selectItem(int position) {
 						Log.e("Image Url", ImageUrl.imageUrl + Imageurl);
 						Log.d("NonStop", "Image URL: " + ImageUrl.imageUrl + Imageurl);
 
+						if(mProfSubModel.get(i).getEmail_id() != null) {
+						txtEmailID1.setText(mProfSubModel.get(i).getEmail_id());}
 
-						txtEmailID1.setText(mProfSubModel.get(i).getEmail_id());
-						txtEmailID2.setText(mProfSubModel.get(i).getEmail_id2());
-						txtPassword.setText(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-						txtMemberHomeAddress.setText(mProfSubModel.get(i).getAddress());
-						txtOfficeAddress.setText(mProfSubModel.get(i).getOffice_address());
+						if(mProfSubModel.get(i).getEmail_id2() != null) {
+						txtEmailID2.setText(mProfSubModel.get(i).getEmail_id2());}
+
+						if((mPreferenceHelper.getString(Commons.USER_PASSWORD)) != null) {
+						txtPassword.setText(mPreferenceHelper.getString(Commons.USER_PASSWORD));}
+
+						if(mProfSubModel.get(i).getAddress() != null) {
+						txtMemberHomeAddress.setText(mProfSubModel.get(i).getAddress());}
+
+						if(mProfSubModel.get(i).getOffice_address() != null) {
+						txtOfficeAddress.setText(mProfSubModel.get(i).getOffice_address());}
 
 //						txtYearlyIncome.setText(mProfSubModel.get(i).getYearly_income());
-						txtCoreCompeteance.setText(mProfSubModel.get(i).getCore_competeance());
+						if(mProfSubModel.get(i).getCore_competeance() != null) {
+						txtCoreCompeteance.setText(mProfSubModel.get(i).getCore_competeance());}
 						
 						if(null !=mProfSubModel.get(i).getLast_name())
 						txtMemberSurname.setText(mProfSubModel.get(i).getLast_name());
-						
-//						if(null !=mProfSubModel.get(i).getYokoo_id())
-//						txtYookosID.setText(mProfSubModel.get(i).getYokoo_id());
-						
-						
-//						txtLandmarkforHomeAddress.setText(mProfSubModel.get(i).getHome_address());
-//
-//						if(null !=mProfSubModel.get(i).getOffice_landmark())
-//						txtLandmarkforOfficeAddress.setText(mProfSubModel.get(i).getOffice_landmark());
-						
-						
+
+
 						if(null !=mProfSubModel.get(i).getMarital_info() && mProfSubModel.get(i).getMarital_info().trim().length() >0){
 							spnMemberMartialInfo.setSelection(adapterMartial.getPosition(mProfSubModel.get(i).getMarital_info()));
 						}
@@ -1171,31 +1110,7 @@ private void selectItem(int position) {
 
 						if(null !=mProfSubModel.get(i).getEducational_qualification() && mProfSubModel.get(i).getEducational_qualification().trim().length() >0)
 							spnEducationalQualification.setSelection(adapterQual.getPosition(mProfSubModel.get(i).getEducational_qualification()));
-						
-//						if(null !=mProfSubModel.get(i).getSex() && mProfSubModel.get(i).getSex().trim().length() >0)
-//							txtGender.setSelection(adapterGender.getPosition(mProfSubModel.get(i).getSex()));
-						
-//						if(null !=mProfSubModel.get(i).getAge_group() && mProfSubModel.get(i).getAge_group().trim().length() >0)
-//							txtAgeGroup.setSelection(adapterageGroup.getPosition(mProfSubModel.get(i).getAge_group()));
-						
-//						if(null !=mProfSubModel.get(i).getBaptisum_status() && mProfSubModel.get(i).getBaptisum_status().trim().length() >0)
-//							txtBaptismStatus.setSelection(adapterbaptismStstus.getPosition(mProfSubModel.get(i).getBaptisum_status()));
-						
-//						if(null !=mProfSubModel.get(i).getFilled_with_holy_ghost() && mProfSubModel.get(i).getFilled_with_holy_ghost().trim().length() >0)
-//							txtholyghost.setSelection(adapterholyghost.getPosition(mProfSubModel.get(i).getFilled_with_holy_ghost()));
-						
-//						if(null !=mProfSubModel.get(i).getIs_new_born() && mProfSubModel.get(i).getIs_new_born().trim().length() >0)
-//							txtBornAgain.setSelection(adapterBornAgain.getPosition(mProfSubModel.get(i).getIs_new_born()));
-						
-//						if(null !=mProfSubModel.get(i).getSchool_status() && mProfSubModel.get(i).getSchool_status().trim().length() >0)
-//							txtSchoolstatus.setSelection(adaptershcoolstatus.getPosition(mProfSubModel.get(i).getSchool_status()));
-						
-//						if(null !=mProfSubModel.get(i).getTitle() && mProfSubModel.get(i).getTitle().trim().length() >0)
-//							txttitle.setSelection(adapterTitle.getPosition(mProfSubModel.get(i).getTitle()));
-						
-						
-//					if(mProfSubModel.get(i).getIs_eligibale_for_follow_up().equals("1"))
-//						txt_is_eligibale_for_follow_up.setChecked(true);
+
 //
 					}
 
@@ -1837,39 +1752,11 @@ try {
 		
 //10-26 12:59:00.720: E/AndroidRuntime(10940): java.lang.StackOverflowError
 
-
 	}
 	
 	public void LogoutfinishActivity(){
 		
 		MyProfileActivity.this.finish();
-	}
-
-	public void onBackPressed() {
-		if (intent.hasExtra("fromshortbio")) {
-			finish();
-		}else {
-			DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-			if (drawer.isDrawerOpen(GravityCompat.START)) {
-				drawer.closeDrawer(GravityCompat.START);
-			} else {
-				AlertDialog dialog = new AlertDialog.Builder(this)
-						.setIcon(android.R.drawable.ic_dialog_alert)
-						.setTitle("Closing Activity")
-						.setMessage("Are you sure you want to exit?")
-						.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-							@Override
-							public void onClick(DialogInterface dialog, int which) {
-								moveTaskToBack(true);
-							}
-
-						})
-						.setNegativeButton("No", null)
-						.show();
-				TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-				textView.setTextSize(18);
-			}
-		}
 	}
 
 

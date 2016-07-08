@@ -61,6 +61,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.LargeValueFormatter;
 import com.github.mikephil.charting.utils.PercentFormatter;
 //import com.google.android.gms.internal.iw;
+import com.github.mikephil.charting.utils.ValueFormatter;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
@@ -224,9 +225,9 @@ public class HomeActivity extends AppCompatActivity {
         l2.setForm(LegendForm.SQUARE);
 
         //Liner chart end
-		
+
 		/*//Linear start chart 3
-		
+
 		mChart3 = (LineChart) findViewById(R.id.chart3);
 		mChart3.setDrawGridBackground(false);
 
@@ -243,7 +244,7 @@ public class HomeActivity extends AppCompatActivity {
 
 		mChart3.setPinchZoom(false);
 
-		
+
 		YAxis leftAxis = mChart3.getAxisLeft();
 		leftAxis.removeAllLimitLines(); // reset all limit lines to avoid
 		// overlapping lines
@@ -276,14 +277,21 @@ public class HomeActivity extends AppCompatActivity {
         mChart.setNoDataText("");
         mChart.setNoDataTextDescription("");
 
-
         Legend l1 = mChart.getLegend();
         l1.setPosition(LegendPosition.RIGHT_OF_CHART_INSIDE);
 
         XAxis x = mChart.getXAxis();
 
         YAxis leftAxis1 = mChart.getAxisLeft();
-        leftAxis1.setValueFormatter(new LargeValueFormatter());
+        leftAxis1.setLabelCount(2);
+     /*   leftAxis1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value) {
+                return Integer.toString((int) value);
+            }
+        })*/;
+
+      leftAxis1.setValueFormatter(new MyFormatter());
         leftAxis1.setDrawGridLines(false);
         leftAxis1.setSpaceTop(25f);
 
@@ -316,20 +324,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//	//	actionBar.setHomeAsUpIndicator(R.drawable.actiontop);
-//		getSupportActionBar().setIcon(
-//				   new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-//
-//
-//
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setHomeButtonEnabled(true);
-//	//	getSupportActionBar().setHomeAsUpIndicator(R.drawable.icon);
-//		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
-//		getSupportActionBar().setIcon(R.drawable.actiontop);
-//		getSupportActionBar().setLogo(R.drawable.actiontop);
-//		getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
         tvTitle.setText("Dashboard       ");
 
@@ -337,9 +332,6 @@ public class HomeActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowCustomEnabled(true);
 
-//		lblFirstTimersCount=(TextView) findViewById(R.id.lblFirstTimersCount);
-//		lblNewBornCount=(TextView) findViewById(R.id.lblNewBornCount);
-//		lblNewVisitorsCount=(TextView) findViewById(R.id.lblNewVisitorsCount);
 
         bargraph=(LinearLayout) findViewById(R.id.bargraph);
 
@@ -514,13 +506,6 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-		
-		/*lblPledge =(TextView) findViewById(R.id.lblPledge);
-		lblGiving =(TextView) findViewById(R.id.lblGiving);*/
-/*
-		lblPledge.setOnClickListener(this);
-		lblGiving.setOnClickListener(this);*/
-
 
 
         setPieChartVisitors();
@@ -529,9 +514,6 @@ public class HomeActivity extends AppCompatActivity {
             Methods.showProgressDialog(this);
             //getDashboardDataService3();
             getDashboardDataService();
-            //	getDashboardDataService1();
-
-            //Methods.showProgressDialog(this);
 
         }
         else
@@ -541,26 +523,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setPieChartVisitors() {
-//		chartPieVisitors = (PieChart) findViewById(R.id.chartPieVisitors);
-//		chartPieVisitors.setUsePercentValues(true);
-//		chartPieVisitors.setDescription("");
-//
-//		chartPieVisitors.setDrawHoleEnabled(true);
-//		chartPieVisitors.setHoleColorTransparent(true);
-//
-//		chartPieVisitors.setTransparentCircleColor(Color.WHITE);
-//
-//		chartPieVisitors.setHoleRadius(50f);
-//		chartPieVisitors.setTransparentCircleRadius(50f);
-//
-//		chartPieVisitors.setDrawCenterText(true);   
-//
-//		chartPieVisitors.setRotationAngle(0);
-//
-//		Legend l = chartPieVisitors.getLegend();
-//		l.setPosition(LegendPosition.RIGHT_OF_CHART);
-//		l.setXEntrySpace(5f);
-//		l.setYEntrySpace(7f);
 
     }
 
@@ -670,8 +632,6 @@ public class HomeActivity extends AppCompatActivity {
 
                 }
 
-
-                //}
 
             }
         },new ErrorListener() {
@@ -810,13 +770,9 @@ public class HomeActivity extends AppCompatActivity {
     private void selectItem(int position) {
         switch (position) {
             case 0:
-                //			Intent intForm1=new Intent(this,MyProfileActivity.class);
-                //			startActivity(intForm1);
                 break;
 
             case 1:
-                //			Intent intForm1=new Intent(this,MyProfileActivity.class);
-                //			startActivity(intForm1);
                 break;
 
             case 2:
@@ -824,10 +780,6 @@ public class HomeActivity extends AppCompatActivity {
                 intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intForm1);
                 break;
-//            case 1:
-//				Intent intForm1=new Intent(this,MyProfileActivity.class);
-//				startActivity(intForm1);
-//                break;
 
             case 3:
                 Log.d("NonStop", "Going to Database");
@@ -846,8 +798,6 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case 5:
-                //	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
-                //startActivity(intMeeting);
                 Log.d("NonStop", "Going to Attendance");
                 Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
                 intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -887,9 +837,6 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case 10:
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
 
                 Intent intfeedback=new Intent(this,Feedback.class);
                 intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -904,11 +851,9 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case 12://logout
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
-                Intent intLogout=new Intent(this,LogoutActivity.class);
-                intLogout.putExtra("classname", "HomeActivity");
+
+                Intent intLogout=new Intent(getApplicationContext(),LogoutActivity.class);
+                intLogout.putExtra("classname", "MyProfileActivity");
                 startActivity(intLogout);
                 finish();
                 break;
@@ -932,30 +877,6 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-	/*@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.lblPledge:
-			Intent i1 = new Intent(HomeActivity.this, PledgeActivity.class);
-			i1.putExtra("FROM", 0);
-			startActivity(i1);
-			break;
-
-		case R.id.llMemberStrengthLayout:
-			Intent i=new Intent(this,MemberStrengthMutliBarChart.class);
-		//	startActivity(i);
-			break;
-
-		case R.id.lblGiving:
-			Intent i2 = new Intent(HomeActivity.this, PledgeActivity.class);
-			i2.putExtra("FROM", 1);
-			startActivity(i2);
-			break;
-
-		default:
-			break;
-		}
-	}*/
 
     private void setData(){
         //	ArrayList<BarEntry> yVals1 = new ArrayList<BarEntry>();
@@ -969,11 +890,14 @@ public class HomeActivity extends AppCompatActivity {
 //		for(int i=0;i<2;i++){
 //			yVals2.add(new BarEntry(40000000,i));
 //		}
-        for(int i=0;i<totalMemberList.size();i++){
+
+        int i;
+        for(i=0;i<totalMemberList.size();i++){
             yVals2.add(new BarEntry(Integer.valueOf(totalMemberList.get(i)),i));
+            Log.d("NonStop", "totalMember: " + new BarEntry(Integer.valueOf(totalMemberList.get(i)),i));
 //			yVals2.add(new BarEntry(400050,i));
         }
-
+//        Log.d("NonStop", "totalMemberlist: " +Integer.valueOf(totalMemberList.get(i)));
 		/*BarDataSet set1 = new BarDataSet(yVals1, "New Converts");
 		set1.setColor(Color.BLACK);*/
 
@@ -991,133 +915,6 @@ public class HomeActivity extends AppCompatActivity {
         mChart.setData(data);
         mChart.invalidate();
     }
-	
-	/*private void getDashboardDataService1() {
-		StringRequest reqDashboard=new StringRequest(Method.POST,DashboardDataService.SERVICE_URL,new Listener<String>() {
-
-			@Override
-			public void onResponse(String response) {
-				Methods.closeProgressDialog();
-				Log.e("droid","get all first graph responce ---------------"+ response);
-
-				if(response.contains("status"))
-				{
-					ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
-					if(respModel.getMessage().getStatus()=="401"){
-						Methods.longToast("User name or Password is incorrect", HomeActivity.this);
-					}else{
-						Methods.longToast(respModel.getMessage().getMessage(), HomeActivity.this);
-					}
-				}else{
-					DashboardDetailsModel mDetailsModel=gson.fromJson(response, DashboardDetailsModel.class);
-					if(null !=mDetailsModel.getMessage()){
-						ArrayList<MemStrengthModel> memStrengthList = mDetailsModel.getMessage().getMembership_strength();							
-					
-						for(int i=0;i<memStrengthList.size();i++){	
-							monthnameslist.add(memStrengthList.get(i).getMonth());
-						//	newConvertsList.add(memStrengthList.get(i).getNew_converts());
-							totalMemberList.add(memStrengthList.get(i).getTotal_member_count());	
-						}
- 
-						setData();
-					}
-				}
-				//}
-			}
-		},new ErrorListener() {
-
-			@Override
-			public void onErrorResponse(VolleyError error) {
-				Methods.closeProgressDialog();
-				Log.d("droid","get all zones error---------------"+ error.getCause());
-			}
-		})
-		{
-			@Override
-			protected Map<String, String> getParams() throws AuthFailureError {
-				Map<String, String> params = new HashMap<String, String>();
-
-				MeetingListRequestModel model=new MeetingListRequestModel();
-				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-
-				String dataString=gson.toJson(model, MeetingListRequestModel.class);
-
-				Log.d("droid","data passed is ::::::::"+dataString);
-				params.put(DashboardDataService.DATA, dataString);
-				return params; 
-			}
-		};
-
-		App.getInstance().addToRequestQueue(reqDashboard, "reqDashboard");
-		reqDashboard.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-	}
-	
-	private void getDashboardDataService3() {
-		StringRequest reqDashboard=new StringRequest(Method.POST,DashboardDataService.SERVICE_URL,new Listener<String>() {
-
-			@Override
-			public void onResponse(String response) {
-
-				Log.d("droid","get second graph responce ---------------"+ response);
-
-				if(response.contains("status"))
-				{
-					ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);
-					if(respModel.getMessage().getStatus()=="401"){
-						Methods.longToast("User name or Password is incorrect", HomeActivity.this);
-					}else{
-						Methods.longToast(respModel.getMessage().getMessage(), HomeActivity.this);
-					}
-				}else{
-					DashboardDetailsModel mDetailsModel=gson.fromJson(response, DashboardDetailsModel.class);
-					if(null !=mDetailsModel.getMessage()){
-						ArrayList<DashPartnershipModel> partnership = mDetailsModel.getMessage().getPartnership();	
-						Log.e(null, "length"+partnership.size());
-						for(int i=0;i<partnership.size();i++){	
-							monthnameslist.add(partnership.get(i).getMonth());
-							pledgeValList.add(partnership.get(i).getPledge());
-							givingValList.add(partnership.get(i).getGiving());
-						}
-
-						
-						setData2();
-						setData3();
-					}
-				}
-				Methods.closeProgressDialog();
-				//}
-			}
-		},new ErrorListener() {
-
-			@Override
-			public void onErrorResponse(VolleyError error) {
-				Methods.closeProgressDialog();
-				Log.d("droid","get all zones error---------------"+ error.getCause());
-
-
-			}
-		})
-		{
-			@Override
-			protected Map<String, String> getParams() throws AuthFailureError {
-				Map<String, String> params = new HashMap<String, String>();
-
-				MeetingListRequestModel model=new MeetingListRequestModel();
-				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-
-				String dataString=gson.toJson(model, MeetingListRequestModel.class);
-
-				Log.d("droid","data passed is ::::::::"+dataString);
-				params.put(DashboardDataService.DATA, dataString);
-				return params; 
-			}
-		};
-
-		App.getInstance().addToRequestQueue(reqDashboard, "reqDashboard");
-		reqDashboard.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-	}*/
 
     private void setData2() {
 

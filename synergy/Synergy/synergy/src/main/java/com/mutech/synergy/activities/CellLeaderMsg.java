@@ -41,7 +41,7 @@ public class CellLeaderMsg extends ActionBarActivity {
     private PreferenceHelper mPreferenceHelper;
     private Gson gson;
     String cellcode;
-    private Button btnsend;
+    private Button btnsend,btncancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class CellLeaderMsg extends ActionBarActivity {
 
         edtmsg=(EditText)findViewById(R.id.edmsg);
         btnsend=(Button)findViewById(R.id.btnsend);
+        btncancel=(Button)findViewById(R.id.cancel);
         cellcode=getIntent().getStringExtra("cellcode");
         mPreferenceHelper=new PreferenceHelper(this);
         gson=new Gson();
@@ -68,6 +69,13 @@ public class CellLeaderMsg extends ActionBarActivity {
 
         });
 
+        btncancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                finish();
+            }
+        });
 
     }
 

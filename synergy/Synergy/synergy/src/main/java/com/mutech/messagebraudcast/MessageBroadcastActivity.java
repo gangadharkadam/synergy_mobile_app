@@ -124,23 +124,7 @@ public class MessageBroadcastActivity extends ActionBarActivity {
 		chkEmail = (CheckBox) findViewById(R.id.chkemail);
 		chkSms = (CheckBox) findViewById(R.id.chksms);
 		chkPush = (CheckBox) findViewById(R.id.chkpush);
-		
-//		SelectedAll = (CheckBox) findViewById(R.id.chkMarkAll);
-//		
-//		SelectedAll.setOnClickListener(new OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//		
-//                for (int i = 0; i < adapter.getCount(); i++) {
-//                    mChecked.put(i, SelectedAll.isChecked());
-//                }            				
-//			}
-//		});
 
-		
-		
 		btnsend.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -243,14 +227,6 @@ public class MessageBroadcastActivity extends ActionBarActivity {
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);
 
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);
-//		getSupportActionBar().setIcon(
-//				   new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setHomeButtonEnabled(true);
-//		getSupportActionBar().setHomeAsUpIndicator(R.drawable.icon);
-//		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 	
 		tvTitle.setText("Broadcast Message    ");
@@ -266,9 +242,9 @@ public class MessageBroadcastActivity extends ActionBarActivity {
 	
 	
 		private void setSpinners() {
-			ListOption.add("ALL Leader");
-			ListOption.add("FT");
-			ListOption.add("Member");
+			ListOption.add("All Leaders");
+			ListOption.add("First Timers");
+			ListOption.add("Members");
 			
 			adapter = new ArrayAdapter<String>(MessageBroadcastActivity.this, android.R.layout.simple_spinner_item, ListOption);
 			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -278,13 +254,13 @@ public class MessageBroadcastActivity extends ActionBarActivity {
 			    @Override
 			    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 			    	if(position==0){
-			    		Selecteditem = "ALL leader";
+			    		Selecteditem = "All Leaders";
 			    		getMemberList();
 			    	}else if(position==1){
-			    		Selecteditem = "FT";
+			    		Selecteditem = "First Timers";
 			    		getMemberList();
 			    	}else{
-			    		Selecteditem = "Member";
+			    		Selecteditem = "Members";
 			    		getMemberList();
 			    	}
 			    }
