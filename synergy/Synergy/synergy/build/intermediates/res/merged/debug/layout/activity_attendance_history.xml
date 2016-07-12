@@ -68,7 +68,7 @@
                 android:singleLine="true" />
 
         <LinearLayout
-            android:id="@+id/layoutchurch"
+            android:id="@+id/layoutchurch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -128,7 +128,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/cellLayout"
+                android:id="@+id/cellLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

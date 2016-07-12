@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -59,6 +60,7 @@ public class AttendanceHistory extends ActionBarActivity {
     private PreferenceHelper mPreferenceHelper;
     Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
     private Intent intent;
+    private LinearLayout layoutchurch,cellLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,10 @@ public class AttendanceHistory extends ActionBarActivity {
 
         spchurch =(Spinner) findViewById(R.id.spchurch);
         spCell=(Spinner) findViewById(R.id.spCell);
+        layoutchurch=(LinearLayout) findViewById(R.id.layoutchurch1);
+        cellLayout=(LinearLayout) findViewById(R.id.cellLayout1);
+        final TextView spchurchTextView=(TextView) findViewById(R.id.spchurchTextView);
+        final TextView spCellTextView=(TextView) findViewById(R.id.spCellTextView);
 
         jsonarray=new JSONArray();
         mPreferenceHelper=new PreferenceHelper(this);
@@ -121,6 +127,11 @@ public class AttendanceHistory extends ActionBarActivity {
             }
         });
 
+        if(intent.hasExtra("churchah")) {
+            layoutchurch.setVisibility(View.VISIBLE);
+            // cellLayout.setVisibility(View.VISIBLE);
+        }
+
         btnsubmit.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -134,13 +145,13 @@ public class AttendanceHistory extends ActionBarActivity {
                         startActivity(Int);
                         finish();
                     }
-                    else{
-                    Intent Int = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
-                    Int.putExtra("fdate", txtFromDate.getText().toString());
-                    Int.putExtra("tdate", txtToDate.getText().toString());
-                    Int.putExtra("fromah", "fromah");
-                    startActivity(Int);
-                    finish();}
+                    else{;
+                        Intent Int = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
+                        Int.putExtra("fdate", txtFromDate.getText().toString());
+                        Int.putExtra("tdate", txtToDate.getText().toString());
+                        Int.putExtra("fromah", "fromah");
+                        startActivity(Int);
+                        finish();}
                 }
             }
         });
