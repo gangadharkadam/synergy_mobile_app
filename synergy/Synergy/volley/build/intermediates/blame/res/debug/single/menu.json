@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/volley/src/main/res/menu/main.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/volley/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/volley/src/main/res/menu/main.xml"
     }

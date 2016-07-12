@@ -1,7 +1,7 @@
--injars /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
--outjars /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/multi-dex/debug/componentClasses.jar
+-injars /Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /home/nonstop/Android/Sdk1/build-tools/23.0.2/lib/shrinkedAndroid.jar
+-libraryjars /Users/sumitmore/Library/Android/sdk/build-tools/23.0.2/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
@@ -9,7 +9,7 @@
 -dontusemixedcaseclassnames
 -dontpreverify
 -dontwarn
--printconfiguration /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/multi-dex/debug/components.flags
+-printconfiguration /Users/sumitmore/Workspace/NonStop/Indictrans-Synergy/Synergy/synergy/Synergy/synergy/build/intermediates/multi-dex/debug/components.flags
 
 
 -keep class com.mutech.synergy.App {

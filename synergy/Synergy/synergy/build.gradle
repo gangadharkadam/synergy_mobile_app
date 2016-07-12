@@ -9,7 +9,7 @@ android {
         applicationId "com.mutech.synergy"
         minSdkVersion 11
         targetSdkVersion 23
-       // multiDexEnabled true
+        multiDexEnabled true
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
             targetCompatibility JavaVersion.VERSION_1_7
@@ -33,10 +33,10 @@ android {
 }
 
 dependencies {
-      compile project(':volley')
+//      compile project(':volley')
 //    compile fileTree(include: ['*.jar'], dir: 'libs')
-//    compile 'com.android.support:multidex:1.0.0'
-//    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.volley:volley:1.0.0'
     compile 'com.android.support:appcompat-v7:19.1.0'
     //compile 'com.android.support:appcompat-v7:23.4.0'
    // compile 'com.android.support:design:23.4.0'
