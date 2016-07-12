@@ -69,6 +69,13 @@ import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.ShowAllMembersService;
 
+import com.mutech.synergy.activities.AttendanceHistory;
+import com.mutech.synergy.activities.CellLeaderMsg;
+import com.mutech.synergy.activities.ChurchAttendanceHistory;
+import com.mutech.synergy.activities.MemberProfile;
+import com.mutech.synergy.activities.ShortBio;
+import com.mutech.synergy.activities.ShortBioSrCell;
+import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity.SpinnerDataFlag;
 import com.mutech.synergy.activities.event.CreateEventActivity;
@@ -123,21 +130,21 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 
 	@SuppressLint("NewApi")
 	private void initialize() {
-		
+
 		/*getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 		getSupportActionBar().setHomeButtonEnabled(false);
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 		tvTitle.setText("Members       ");
-		
+
 		ActionBar bar = getSupportActionBar();
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
-		
+
 		getSupportActionBar().setDisplayShowCustomEnabled(true);*/
-		
-		
+
+
 	//	filterimg=(ImageView) findViewById(R.id.imageView2);
-		
+
 		//txtcount=(TextView) findViewById(R.id.textView1);
 	
 		    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -198,20 +205,20 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 
 		fromDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 		toDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-		
+
 		/*filterimg.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-					
+
 				if(NetworkHelper.isOnline(AllMemberListActivity.this)){
-				
+
 					showDialog();
-				
+
 				}else{
-				
+
 					Methods.longToast("Please connect to Internet",AllMemberListActivity.this);
-				
+
 				}
 			}
 		});
@@ -231,10 +238,10 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_todo, menu);
 		String roll=mPreferenceHelper.getString(Commons.USER_ROLE);
-	
-		
-		
-		
+
+
+
+
 			MenuItem item = (MenuItem) menu.findItem(R.id.menu_addTo);
             item.setVisible(false);
 		
@@ -318,19 +325,19 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
 				model.setName(tbl);
 				model.setRecord_name(tbl);
-				
+
 				String dataString=gson.toJson(model, MeetingListRequestModel.class);
 
 				Log.d("droid","data passed is ::::::::"+dataString);
 				params.put(GetAllMastersService.DATA, dataString);
-				return params; 
+				return params;
 			}
 		};
 		App.getInstance().addToRequestQueue(reqGetMembers, "reqGetMembers");
 		reqGetMembers.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 	*/
-	
+
 	
 private void getList(final String tbl){
 
@@ -732,6 +739,55 @@ private void getList(final String tbl){
 			btnviewcellattendancehistory= (Button) dialogPopup.findViewById(R.id.viewcellattendancehistory);
 			btnviewgivinghistory= (Button) dialogPopup.findViewById(R.id.viewgivinghistory);
 
+
+			btnviewprofile.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+
+					Intent Int = new Intent(AllMemberListActivity.this, ShortBio.class);
+					Int.putExtra("cellcode",memberno);
+					Int.putExtra("role","Member");
+					//Int.putExtra("cellcode", name);
+					startActivity(Int);
+					dialogPopup.dismiss();
+				}
+			});
+
+			btnviewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Intent Int = new Intent(AllMemberListActivity.this, AttendanceHistory.class);
+					Int.putExtra("churchah","churchah");
+					startActivity(Int);
+					dialogPopup.dismiss();
+				}
+			});
+
+		/*	btnviewcellattendancehistory.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+
+					Intent Int = new Intent(AllMemberListActivity.this, ShortBio.class);
+					Int.putExtra("MemberNo",memberno);
+					//Int.putExtra("cellcode", name);
+					Int.putExtra("role","Senior Cell Leader");
+					startActivity(Int);
+					dialogPopup.dismiss();
+				}
+			});
+
+			btnviewgivinghistory.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+
+					Intent Int = new Intent(AllMemberListActivity.this, CellLeaderMsg.class);
+					Int.putExtra("MemberNo",memberno);
+				//	Int.putExtra("cellcode", name);
+					startActivity(Int);
+					dialogPopup.dismiss();
+				}
+			});
+*/
 			dialogPopup.show();
 
 		} catch (JSONException e) {

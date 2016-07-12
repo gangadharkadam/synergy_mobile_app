@@ -365,8 +365,29 @@
             android:label="@string/title_activity_message_logs" />
         <activity
             android:name="com.mutech.synergy.activities.MessageInformation"
-            android:label="@string/title_activity_message_information" >
-        </activity>
+            android:label="@string/title_activity_message_information" />
+        <activity
+            android:name="com.mutech.synergy.activities.MinistryMaterials"
+            android:label="@string/title_activity_ministry_materials"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.FoundationSchool"
+            android:label="@string/title_activity_foundation_school"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityTheme" />
+        <activity
+            android:name="com.mutech.synergy.activities.MemberProfile"
+            android:label="@string/title_activity_member_profile" />
+        <activity
+            android:name="com.mutech.synergy.activities.ChurchAttendanceHistory"
+            android:label="@string/title_activity_church_attendance_history" />
+        <activity
+            android:name="com.mutech.synergy.activities.GivingHistoryTest"
+            android:label="@string/title_activity_giving_history_test" />
+        <activity
+            android:name="com.mutech.synergy.GivingTest"
+            android:label="@string/title_activity_giving_test" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

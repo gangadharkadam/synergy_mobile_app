@@ -67,7 +67,7 @@ import com.google.gson.JsonObject;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.partnershiprecord.MyPartnershipActivity;
 import com.mutech.synergy.App;
-import com.mutech.synergy.GraphTestActivity;
+//import com.mutech.synergy.GraphTestActivity;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
@@ -147,9 +147,6 @@ public class HomeActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_actionbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);
-//		getSupportActionBar().setIcon(R.drawable.actiontop);
-//		getSupportActionBar().setLogo(R.drawable.actiontop);
-//		getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_home);
         initialize();
         addDrawerListData();
@@ -204,6 +201,8 @@ public class HomeActivity extends AppCompatActivity {
         mChart2.setHighlightEnabled(false);
 
         YAxis leftAxis2 = mChart2.getAxisLeft();
+        leftAxis2.setLabelCount(2);
+        leftAxis2.setValueFormatter(new MyFormatter());
         leftAxis2.removeAllLimitLines(); // reset all limit lines to avoid
         // overlapping lines
         // leftAxis.setAxisMaxValue(220f);
@@ -732,12 +731,20 @@ public class HomeActivity extends AppCompatActivity {
         item11.setImgResID(R.drawable.msg);
 
         DrawerItem item12=new DrawerItem();
-        item12.setItemName("Message Logs");
-        item12.setImgResID(R.drawable.msg);
+        item12.setItemName("Ministry Materials");
+        item12.setImgResID(R.drawable.ministry_materials);
 
         DrawerItem item13=new DrawerItem();
-        item13.setItemName("Logout");
-        item13.setImgResID(R.drawable.signout);
+        item13.setItemName("Foundation School");
+        item13.setImgResID(R.drawable.todo);
+
+        DrawerItem item14=new DrawerItem();
+        item14.setItemName("Message Logs");
+        item14.setImgResID(R.drawable.msg);
+
+        DrawerItem item15=new DrawerItem();
+        item15.setItemName("Logout");
+        item15.setImgResID(R.drawable.signout);
 
         mDrawerList.add(item00);
         mDrawerList.add(item01);
@@ -756,6 +763,8 @@ public class HomeActivity extends AppCompatActivity {
         mDrawerList.add(item11);
         mDrawerList.add(item12);
         mDrawerList.add(item13);
+        mDrawerList.add(item14);
+        mDrawerList.add(item15);
     }
 
     @Override
@@ -845,12 +854,24 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case 11:
+                Intent int1=new Intent(this,MinistryMaterials.class);
+                int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(int1);
+                break;
+
+            case 12:
+                Intent int2=new Intent(this,FoundationSchool.class);
+                int2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(int2);
+                break;
+
+            case 13:
                 Intent intmsglogs=new Intent(this,MessageLogs.class);
                 intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intmsglogs);
                 break;
 
-            case 12://logout
+            case 14://logout
 
                 Intent intLogout=new Intent(getApplicationContext(),LogoutActivity.class);
                 intLogout.putExtra("classname", "MyProfileActivity");

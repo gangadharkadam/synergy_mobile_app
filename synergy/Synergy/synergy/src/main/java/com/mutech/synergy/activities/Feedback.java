@@ -237,12 +237,20 @@ public class Feedback extends ActionBarActivity  {
         item11.setImgResID(R.drawable.msg);
 
         DrawerItem item12=new DrawerItem();
-        item12.setItemName("Message Logs");
-        item12.setImgResID(R.drawable.msg);
+        item12.setItemName("Ministry Materials");
+        item12.setImgResID(R.drawable.ministry_materials);
 
         DrawerItem item13=new DrawerItem();
-        item13.setItemName("Logout");
-        item13.setImgResID(R.drawable.signout);
+        item13.setItemName("Foundation School");
+        item13.setImgResID(R.drawable.todo);
+
+        DrawerItem item14=new DrawerItem();
+        item14.setItemName("Message Logs");
+        item14.setImgResID(R.drawable.msg);
+
+        DrawerItem item15=new DrawerItem();
+        item15.setItemName("Logout");
+        item15.setImgResID(R.drawable.signout);
 
         mDrawerList.add(item00);
         mDrawerList.add(item01);
@@ -261,6 +269,8 @@ public class Feedback extends ActionBarActivity  {
         mDrawerList.add(item11);
         mDrawerList.add(item12);
         mDrawerList.add(item13);
+        mDrawerList.add(item14);
+        mDrawerList.add(item15);
     }
 
     @Override
@@ -355,12 +365,24 @@ public class Feedback extends ActionBarActivity  {
                 break;
 
             case 11:
+                Intent int3=new Intent(this,MinistryMaterials.class);
+                int3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(int3);
+                break;
+
+            case 12:
+                Intent int2=new Intent(this,FoundationSchool.class);
+                int2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(int2);
+                break;
+
+            case 13:
                 Intent intmsglogs=new Intent(this,MessageLogs.class);
                 intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intmsglogs);
                 break;
 
-            case 12://logout
+            case 14://logout
 //			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
 //			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
 //			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);

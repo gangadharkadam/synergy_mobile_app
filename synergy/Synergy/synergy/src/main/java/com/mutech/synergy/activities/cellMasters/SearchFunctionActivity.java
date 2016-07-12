@@ -61,10 +61,12 @@ import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.SearchServiceforSpinner;
 import com.mutech.synergy.activities.Feedback;
+import com.mutech.synergy.activities.FoundationSchool;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LoginActivity;
 import com.mutech.synergy.activities.LogoutActivity;
 import com.mutech.synergy.activities.MessageLogs;
+import com.mutech.synergy.activities.MinistryMaterials;
 import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
 import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
@@ -503,12 +505,20 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			item11.setImgResID(R.drawable.msg);
 
 			DrawerItem item12=new DrawerItem();
-			item12.setItemName("Message Logs");
-			item12.setImgResID(R.drawable.msg);
+			item12.setItemName("Ministry Materials");
+			item12.setImgResID(R.drawable.ministry_materials);
 
 			DrawerItem item13=new DrawerItem();
-			item13.setItemName("Logout");
-			item13.setImgResID(R.drawable.signout);
+			item13.setItemName("Foundation School");
+			item13.setImgResID(R.drawable.todo);
+
+			DrawerItem item14=new DrawerItem();
+			item14.setItemName("Message Logs");
+			item14.setImgResID(R.drawable.msg);
+
+			DrawerItem item15=new DrawerItem();
+			item15.setItemName("Logout");
+			item15.setImgResID(R.drawable.signout);
 
 			mDrawerList.add(item00);
 			mDrawerList.add(item01);
@@ -527,6 +537,8 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 			mDrawerList.add(item11);
 			mDrawerList.add(item12);
 			mDrawerList.add(item13);
+			mDrawerList.add(item14);
+			mDrawerList.add(item15);
 		
 		}
 	}
@@ -629,10 +641,7 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 				startActivity(intForm);
 				finish();
 				break;
-			//		case 2:
-			//			break;
-			//		case 3:
-			//			break;
+
 			case 4:
 				Intent partner=new Intent(this,PartnerShipRecord.class);
 				partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -676,18 +685,10 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 				break;
 
 			case 9:
-//			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-//			//intSearchMembers.putExtra("Search", "Member");
-//			//intSearchGroup.putExtra("Search", "Group");
-//			//intSearchLeaders.putExtra("Search", "Leader");
-//			startActivity(intSearchMembers);
 
 				break;
 
 			case 10:
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
 
 				Intent intfeedback=new Intent(this,Feedback.class);
 				intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -696,15 +697,24 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 				break;
 
 			case 11:
+				Intent int3=new Intent(this,MinistryMaterials.class);
+				int3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(int3);
+				break;
+
+			case 12:
+				Intent int2=new Intent(this,FoundationSchool.class);
+				int2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(int2);
+				break;
+
+			case 13:
 				Intent intmsglogs=new Intent(this,MessageLogs.class);
 				intmsglogs.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 				startActivity(intmsglogs);
 				break;
 
-		case 12://logout
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
+		case 14://logout
 
 			Intent intLogout=new Intent(this,LogoutActivity.class);
 			intLogout.putExtra("classname", "SearchFunctionActivity");
@@ -1114,9 +1124,6 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 					e.printStackTrace();
 				}
 
-			//	Methods.showProgressDialog(SearchFunctionActivity.this);
-			//	getAllGroupChurches();
-
 			}
 		},new ErrorListener() {
 
@@ -1163,7 +1170,6 @@ public class SearchFunctionActivity extends ActionBarActivity implements OnClick
 
 			//	Methods.showProgressDialog(SearchFunctionActivity.this);
 				//getAllZones();
-
 			}
 		},new ErrorListener() {
 

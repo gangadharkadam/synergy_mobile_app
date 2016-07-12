@@ -509,32 +509,6 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 
 		mProfSubModel=new ArrayList<ProfileSubModel>();
 
-		
-		
-//		txtcell_name.setEnabled(false);
-
-//		txtsenior_cell_name.setEnabled(false);
-		
-//		txtpcf_name.setEnabled(false);
-		
-//		txtzonename.setEnabled(false);
-		
-//		txtregionname.setEnabled(false);
-		
-		
-//		txtchurch_group_name.setEnabled(false);
-
-//		txtChurch_name.setEnabled(false);
-		
-	/*//	txtMemberName.setEnabled(false);
-		txtMemberMartialInfo.setEnabled(false);
-		txtMemberDateOfBirth.setEnabled(false);
-		txtMemberHomeAddress.setEnabled(false);
-		txtMemberPhone1.setEnabled(false);
-		txtMemberPhone2.setEnabled(false);
-		txtOfficeAddress.setEnabled(false);
-		txtCoreCompeteance.setEnabled(false);*/
-	//	txtYearlyIncome.setEnabled(false);
 
 		setSpinners();
 
@@ -886,15 +860,6 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 		adapterQual.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnEducationalQualification.setAdapter(adapterQual);
 
-//		expYearsList.add("");
-//		//expYearsList.add("");
-//		expYearsList.add("1 - 3 Years");
-//		expYearsList.add("3 - 6 Years");
-//		expYearsList.add("6 - 10 Years");
-//		expYearsList.add("10+ Years");
-//
-//
-//		adapterExp = new ArrayAdapter<String>(MemberInfoActivtiy.this, android.R.layout.simple_spinner_item, expYearsList);
 
 		adapterExp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnExperienceYears.setAdapter(adapterExp);
@@ -1484,12 +1449,6 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 			textView.setTextSize(18);
 			return false;
 		}
-//		if (!InputValidation.hasText(txtMemberPhone1)) {
-//			return false;
-//		}
-//		if (!InputValidation.hasText(txtMemberPhone2)) {
-//			return false;
-//		}
 		return true;
 	}
 

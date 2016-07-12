@@ -167,7 +167,7 @@ public final class R {
 		public static final int action_menu_divider = 0x7f0c0002;
 		public static final int action_menu_presenter = 0x7f0c0003;
 		public static final int action_mode_close_button = 0x7f0c004a;
-		public static final int action_settings = 0x7f0c025d;
+		public static final int action_settings = 0x7f0c0262;
 		public static final int activity_chooser_view_content = 0x7f0c004b;
 		public static final int always = 0x7f0c0022;
 		public static final int beginning = 0x7f0c001a;
@@ -234,7 +234,7 @@ public final class R {
 		public static final int abc_popup_menu_item_layout = 0x7f030010;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030015;
 		public static final int abc_search_view = 0x7f030016;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030095;
+		public static final int support_simple_spinner_dropdown_item = 0x7f03009c;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0d0013;

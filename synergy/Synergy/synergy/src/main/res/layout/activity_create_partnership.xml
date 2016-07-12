@@ -228,7 +228,7 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_margin="@dimen/dimen_10"
-              android:text="Conversation Rate"
+              android:text="Conversion Rate"
               android:textColor="@android:color/black"
               android:textSize="@dimen/font_size_small"/>
 

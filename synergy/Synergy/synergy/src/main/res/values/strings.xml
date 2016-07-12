@@ -75,4 +75,10 @@
     <string name="title_activity_short_bio_pcf">ShortBioPCF</string>
     <string name="title_activity_message_logs">Message Logs</string>
     <string name="title_activity_message_information">Message Details</string>
+    <string name="title_activity_ministry_materials">Ministry Materials</string>
+    <string name="title_activity_foundation_school">Foundation School</string>
+    <string name="title_activity_member_profile">MemberProfile</string>
+    <string name="title_activity_church_attendance_history">Church Attendance History</string>
+    <string name="title_activity_giving_history_test">GivingHistoryTest</string>
+    <string name="title_activity_giving_test">GivingTest</string>
 </resources>

@@ -112,6 +112,15 @@ public class ShortBio extends ActionBarActivity {
                 txtCellLeaderPhoneLbl.setText("Phone Number");
                 txtCellLeaderAddressLbl.setText("Home Address");
                 break;
+            case "Member":
+                getSupportActionBar().setTitle("Member Info");
+                txtCellLeaderIdLbl.setText("Member Id");
+                txtCellLeaderNameLbl.setText("Member Name");
+                txtCellLeaderEmailIdLbl.setText("Email Id");
+                txtCellLeaderDateOfBirthLbl.setText("Date of Birth");
+                txtCellLeaderPhoneLbl.setText("Phone Number");
+                txtCellLeaderAddressLbl.setText("Home Address");
+                break;
         }
 
         cellcode=getIntent().getStringExtra("cellcode");

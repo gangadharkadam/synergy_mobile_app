@@ -87,6 +87,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 	private MeetingListAdapter mMeetingListAdapter;
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
+	String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private";
 	
 	JSONArray jsonarray;
 	String str;
@@ -108,6 +109,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
     private int noOfBtns;
     private Button[] btns;
     TextView tvTitle;
+	private Intent intent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +119,13 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		jsonarray=new JSONArray();
 		
 		initialize();
+
+		if(intent.hasExtra("fromah"))
+		{
+			fdate = getIntent().getStringExtra("fdate");
+			tdate = getIntent().getStringExtra("tdate");
+			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+		}
 	}
 
 
@@ -132,7 +141,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		tvTitle.setText("All Meetings   ");
 		getSupportActionBar().setDisplayShowCustomEnabled(true);
 
-
+		intent = getIntent();
 		lvMeeting=(ListView) findViewById(R.id.lvMeeting);
 		lvMeeting.setOnItemClickListener(this);
 
@@ -186,10 +195,12 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		
 		 str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
-		
+
+
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
-			getMeetingList("1");
+			if(!intent.hasExtra("fromah")) {
+				getMeetingList("1");}
 		}else{
 			Methods.longToast("Please connect to Internet", this);
 		}
@@ -260,28 +271,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 						Methods.longToast(respModel.getMessage().getMessage(), MeetingListActivity.this);
 					}
 				}else{
-					
-					/*mMeetingModel=gson.fromJson(response, MeetingModel.class);
-					//Object meetingmsg=mMeetingModel.getMessage();
-					if(null != mMeetingModel.getStatus() && mMeetingModel.getStatus().trim().length() >0){
 
-						if(mMeetingModel.getStatus()=="401"){
-							Methods.longToast("User name or Password is incorrect", MeetingListActivity.this);
-						}
-					}else{
-						if(null !=mMeetingModel.getMessage() && mMeetingModel.getMessage().size() >0){
-							mMeetingList=new ArrayList<MeetingModel.MeetingListModel>();
-							//if(meetingmsg instanceof JSONArray){
-							mMeetingList=mMeetingModel.getMessage();
-							Log.d("droid", "isjsonarray----------------------------------");
-							if(mMeetingList.size() > 0){
-								mMeetingListAdapter=new MeetingListAdapter(MeetingListActivity.this,mMeetingList);
-								lvMeeting.setAdapter(mMeetingListAdapter);
-							}
-						}else{
-							Methods.longToast("No meetings found", MeetingListActivity.this);
-						}
-					}*/
 					
 					try {
 						
@@ -372,87 +362,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		
 	}
 
-	/*class MeetingListAdapter extends BaseAdapter{
 
-		private Context mContext;
-		private ArrayList<MeetingListModel> mList;
-		private Holder holder;
-
-		public MeetingListAdapter(Context context,
-				ArrayList<MeetingListModel> meetingList) {
-			mContext=context;
-			mList=new ArrayList<MeetingModel.MeetingListModel>();
-			mList=meetingList;
-		}
-
-		@Override
-		public int getCount() {
-			return mList.size();
-		}
-
-		@Override
-		public Object getItem(int position) {
-			return mList.get(position);
-		}
-
-		@Override
-		public long getItemId(int position) {
-			return position;
-		}
-
-		@Override
-		public View getView(final int position, View convertView, ViewGroup parent) {
-
-			LayoutInflater layout = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			holder = new Holder();
-			if (convertView == null) {
-				convertView = layout.inflate(R.layout.row_meeting, null);
-
-				holder.btnMarkAttendance=(Button) convertView.findViewById(R.id.btnMarkAttendance);
-				holder.lblMeetingsubject=(TextView) convertView.findViewById(R.id.lblMeetingsubject);
-				holder.lblMeetingName=(TextView) convertView.findViewById(R.id.lblMeetingName);
-				holder.lblMeetingTime=(TextView) convertView.findViewById(R.id.lblMeetingTime);
-				holder.lblMeetingVenue=(TextView) convertView.findViewById(R.id.lblMeetingVenue);
-				convertView.setTag(holder);
-			}else{
-				holder = (Holder) convertView.getTag();
-			}
-
-			if(null !=mList.get(position).getMeeting_name())
-				holder.lblMeetingName.setText(mList.get(position).getMeeting_name());
-			
-			
-			if(null !=mList.get(position).getMeeting_subject())
-				holder.lblMeetingsubject.setText(mList.get(position).getMeeting_subject());
-			
-			if(null !=mList.get(position).getMeeting_date())
-				holder.lblMeetingTime.setText(mList.get(position).getMeeting_date());
-			holder.lblMeetingVenue.setText(mList.get(position).getVenue());
-
-			holder.btnMarkAttendance.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					Intent i=new Intent(MeetingListActivity.this,MarkMemberAttendanceActivity.class);
-					Bundle b=new Bundle();
-					b.putString("Meeting_name",mMeetingList.get(position).getMeeting_name());
-					b.putString("MeetingSubj",mMeetingList.get(position).getMeeting_subject());
-					b.putString("Meetingtime",mList.get(position).getMeeting_date());
-					i.putExtra("Bundle",b);
-					startActivity(i);
-				}
-			});
-
-			return convertView;
-		}
-
-	}
-
-	public static class Holder{
-		private TextView lblMeetingName,lblMeetingVenue,lblMeetingTime,lblMeetingsubject;
-		private Button btnMarkAttendance;
-	}*/
-	
 	class MeetingListAdapter extends BaseAdapter{
 
 		private Context mContext;
@@ -1192,8 +1102,6 @@ public void showDialog(){
 		
 		public void onClick(DialogInterface dialog, int id) {
 			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private";
-			
 			try{
 				eventtype=spresion.getSelectedItem().toString();
 			}catch(Exception ex){
@@ -1246,7 +1154,7 @@ public void showDialog(){
 			if(NetworkHelper.isOnline(MeetingListActivity.this)){
 				Methods.showProgressDialog(MeetingListActivity.this);
 				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
-			
+
 				dialog.cancel();
 
 				
@@ -1599,8 +1507,6 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 		if(error.networkResponse.statusCode==403){
 			//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
 		}
-		//else
-		//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
 
 	}
 
@@ -1655,7 +1561,14 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 //			jsonfilter.put("event_type", eventtype);
 			
 			jsonobj.put("filters", jsonfilter);
-			
+
+	    	if(intent.hasExtra("fromah")){
+			jsonobj.put("attendance_type", "church Attendance");}
+
+
+	/*		if(intent.hasExtra("fromah")){
+				jsonobj.put("attendance_type", "Cell Meeting");}*/
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

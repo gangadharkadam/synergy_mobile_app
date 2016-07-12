@@ -1108,57 +1108,6 @@ private void getSpinnerData(final String tbl,final String selval ){
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
-				
-				
-				
-				/*
-				if(null != mHHModel.getStatus() && mHHModel.getStatus().trim().length() >0){
-
-					if(mHHModel.getStatus()=="401"){
-						Methods.longToast("User name or Password is incorrect", CreateCellMasterActivity.this);
-					}
-				}else{
-					if(null !=mHHModel.getMessage() && mHHModel.getMessage().size() >0){
-						ArrayList<HHSubModel> mHHSubModel=new ArrayList<HHSubModel>();
-						//if(meetingmsg instanceof JSONArray){
-						mHHSubModel=mHHModel.getMessage();
-
-
-						//						for(int i=0;i<mHHSubModel.size();i++){	
-						//							if(null !=mHHSubModel.get(i).getZone())
-						//								mZoneList.add(mHHSubModel.get(i).getZone());
-						//							if(null !=mHHSubModel.get(i).getRegion())
-						//								mRegionList.add(mHHSubModel.get(i).getRegion());
-						//							if(null !=mHHSubModel.get(i).getChurch())
-						//								mChurchList.add(mHHSubModel.get(i).getChurch());
-						//							if(null !=mHHSubModel.get(i).getChurch_group())
-						//								mGrpChurchList.add(mHHSubModel.get(i).getChurch_group());
-						//							if(null !=mHHSubModel.get(i).getPcf())
-						//								mPCFList.add(mHHSubModel.get(i).getPcf());
-						//							if(null !=mHHSubModel.get(i).getSenior_cell())
-						//								mSeniorCellList.add(mHHSubModel.get(i).getSenior_cell());
-						//						}
-
-						if(null !=mHHSubModel && mHHSubModel.size() > 0){
-							for(int i=0;i<mHHSubModel.size();i++)
-								if( defKey.equalsIgnoreCase("PCFs")){
-									mSeniorCellList.add(mHHModel.getMessage().get(i).getName());
-								}else if(defKey.equalsIgnoreCase("Churches")){
-									mPCFList.add(mHHModel.getMessage().get(i).getName());
-								}else if(defKey.equalsIgnoreCase("Group Churches")){
-									mChurchList.add(mHHModel.getMessage().get(i).getName());
-								}else if(defKey.equalsIgnoreCase("Zones")){
-									mGrpChurchList.add(mHHModel.getMessage().get(i).getName());
-								}else if(defKey.equalsIgnoreCase("Region")){
-									mZoneList.add(mHHModel.getMessage().get(i).getName());
-								}
-						}
-
-					}else{
-					}
-				}*/
-				//setAdapters();
 
 			}
 		},new ErrorListener() {

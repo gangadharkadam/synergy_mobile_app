@@ -10,9 +10,11 @@ import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -26,8 +28,10 @@ import com.google.gson.Gson;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues;
+import com.mutech.synergy.activities.meeting.MeetingListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
 import com.mutech.synergy.activities.profile.MyProfileActivity;
+import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.utils.InputValidation;
 import com.mutech.synergy.utils.Methods;
@@ -53,22 +57,23 @@ public class AttendanceHistory extends ActionBarActivity {
     private Gson gson;
     JSONArray jsonarray;
     private PreferenceHelper mPreferenceHelper;
+    Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_history);
-
-       /* getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.custom_actionbar);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);*/
+        intent = getIntent();
 
         btnsubmit = (Button) findViewById(R.id.submit);
         btncancel = (Button) findViewById(R.id.cancel);
 
         txtFromDate=(EditText) findViewById(R.id.txtfromdate);
         txtToDate=(EditText) findViewById(R.id.txttodate);
+
+        spchurch =(Spinner) findViewById(R.id.spchurch);
+        spCell=(Spinner) findViewById(R.id.spCell);
 
         jsonarray=new JSONArray();
         mPreferenceHelper=new PreferenceHelper(this);
@@ -121,12 +126,21 @@ public class AttendanceHistory extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if(intent.hasExtra("churchah")){
+                        Intent Int = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int.putExtra("fdate", txtFromDate.getText().toString());
+                        Int.putExtra("tdate", txtToDate.getText().toString());
+                        Int.putExtra("fromah", "fromah");
+                        startActivity(Int);
+                        finish();
+                    }
+                    else{
                     Intent Int = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
                     Int.putExtra("fdate", txtFromDate.getText().toString());
                     Int.putExtra("tdate", txtToDate.getText().toString());
                     Int.putExtra("fromah", "fromah");
                     startActivity(Int);
-                    finish();
+                    finish();}
                 }
             }
         });

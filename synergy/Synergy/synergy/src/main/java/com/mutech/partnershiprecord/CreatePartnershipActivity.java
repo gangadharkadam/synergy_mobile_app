@@ -344,7 +344,8 @@ public class CreatePartnershipActivity extends AppCompatActivity {
 					
 					jsonobj.put("member",txtmember.getText().toString());
 					jsonobj.put("amount",txtamount.getText().toString());
-                    jsonobj.put("conversation_rate",Integer.parseInt(txtConversation_Rate.getText().toString()));
+					if(txtConversation_Rate.getText().toString().equals("")){}else{
+                    jsonobj.put("conversation_rate",Integer.parseInt(txtConversation_Rate.getText().toString()));}
 					jsonobj.put("currency",spCurrency.getSelectedItem().toString());
 					jsonobj.put("giving_or_pledge",txtGiving_Pledge.getSelectedItem().toString());
 					

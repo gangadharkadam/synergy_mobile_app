@@ -371,6 +371,7 @@
     <string name="title_activity_attendance_history">View Attendance History</string>
     <string name="title_activity_cell_details">CellDetailsActivity</string>
     <string name="title_activity_cell_leader_msg">Send Message</string>
+    <string name="title_activity_church_attendance_history">Church Attendance History</string>
     <string name="title_activity_church_detail">ChurchDetail</string>
     <string name="title_activity_create_first_timer">CreateFirstTimerActivity</string>
     <string name="title_activity_create_new_member">CreateNewMemberActivity</string>
@@ -388,8 +389,11 @@
     <string name="title_activity_first_timer_in_database">FirstTimerInDatabaseActivity</string>
     <string name="title_activity_first_timers_year">FirstTimersYearActivity</string>
     <string name="title_activity_first_times_week">FirstTimesWeekActivity</string>
+    <string name="title_activity_foundation_school">Foundation School</string>
     <string name="title_activity_giving">GivingActivity</string>
+    <string name="title_activity_giving_history_test">GivingHistoryTest</string>
     <string name="title_activity_giving_or_pledge__details">Giving_or_pledge_DetailsActivity</string>
+    <string name="title_activity_giving_test">GivingTest</string>
     <string name="title_activity_graph_test">GraphTestActivity</string>
     <string name="title_activity_group_church">GroupChurch</string>
     <string name="title_activity_inviteeand_contacts_month">InviteeandContactsMonthActivity</string>
@@ -397,11 +401,13 @@
     <string name="title_activity_inviteesand_contacts_year">InviteesandContactsYearActivity</string>
     <string name="title_activity_inviteesand_contactsweek">InviteesandContactsweekActivity</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_member_profile">MemberProfile</string>
     <string name="title_activity_membership_strength_details">MembershipStrengthDetailsActivity</string>
     <string name="title_activity_message_broadcast">MessageBroadcastActivity</string>
     <string name="title_activity_message_information">Message Details</string>
     <string name="title_activity_message_logs">Message Logs</string>
     <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_ministry_materials">Ministry Materials</string>
     <string name="title_activity_my_partnership">MyPartnershipActivity</string>
     <string name="title_activity_my_partnership_adpter">MyPartnershipAdpter</string>
     <string name="title_activity_my_partnership_giving">MyPartnershipGivingActivity</string>
