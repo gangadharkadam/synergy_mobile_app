@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- <ImageView
+         android:id="@+id/prevImage"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:src="@drawable/appt_back"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        >
+        <Button
+            android:id="@+id/viewchurchattendancehistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" View Church attendance history "
+            android:background="#03afef"
+            android:padding="2dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/viewmembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View members"
+            android:background="#03afef"
+            android:padding="2dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <Button
+            android:id="@+id/viewmembershipstrength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View membership strength "
+            android:background="#03afef"
+            android:padding="2dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <Button
+            android:id="@+id/msgchurchpastor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" Send message to the Church Pastor Remark"
+            android:background="#03afef"
+            android:padding="2dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/viewnewconverts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View new converts history Remark "
+            android:padding="2dp"
+            android:background="#03afef"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/viewpartnershipinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View Partnership Information Remark"
+            android:padding="2dp"
+            android:background="#03afef"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/viewfirsttimers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View first timers history Remark"
+            android:padding="2dp"
+            android:background="#03afef"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/viewcellspcf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View Cells /PCF in the church"
+            android:padding="2dp"
+            android:background="#03afef"
+            android:layout_marginBottom="5dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -120,12 +120,6 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		
 		initialize();
 
-		if(intent.hasExtra("fromah"))
-		{
-			fdate = getIntent().getStringExtra("fdate");
-			tdate = getIntent().getStringExtra("tdate");
-			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
-		}
 	}
 
 
@@ -137,11 +131,19 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 	    tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 		
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
-		
-		tvTitle.setText("All Meetings   ");
-		getSupportActionBar().setDisplayShowCustomEnabled(true);
 
 		intent = getIntent();
+
+		if((!intent.hasExtra("fdate")))
+		{
+			tvTitle.setText("All Meetings   ");
+		}else{
+			tvTitle.setText("All Events   ");
+		}
+
+		getSupportActionBar().setDisplayShowCustomEnabled(true);
+
+
 		lvMeeting=(ListView) findViewById(R.id.lvMeeting);
 		lvMeeting.setOnItemClickListener(this);
 
@@ -193,17 +195,36 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		
 		mPreferenceHelper=new PreferenceHelper(this);
 		
-		 str=mPreferenceHelper.getString(Commons.USER_ROLE);
+		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 
 
+		if(intent.hasExtra("fromah"))
+		{
+			fdate = getIntent().getStringExtra("fdate");
+			tdate = getIntent().getStringExtra("tdate");
+			if(!getIntent().getStringExtra("cellcode").contentEquals("")){
+				church = getIntent().getStringExtra("cellcode");}
+			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+		}
+
+		if(intent.hasExtra("cellah"))
+		{
+			fdate = getIntent().getStringExtra("fdate");
+			tdate = getIntent().getStringExtra("tdate");
+			if(!getIntent().getStringExtra("cellcode").contentEquals("")){
+				cell = getIntent().getStringExtra("cellcode");}
+			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+		}
+
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
-			if(!intent.hasExtra("fromah")) {
+			if((!intent.hasExtra("fdate"))){
 				getMeetingList("1");}
 		}else{
 			Methods.longToast("Please connect to Internet", this);
 		}
+
 	}
 
 	
@@ -213,14 +234,11 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		inflater.inflate(R.menu.menu_todo, menu);
 		String roll=mPreferenceHelper.getString(Commons.USER_ROLE);
 	
+		MenuItem item = (MenuItem) menu.findItem(R.id.menu_addTo);
+		item.setVisible(false);
 		
-		
-		
-			MenuItem item = (MenuItem) menu.findItem(R.id.menu_addTo);
-            item.setVisible(false);
-		
-            MenuItem item1 = (MenuItem) menu.findItem(R.id.menu_option2);
-            item1.setVisible(false);
+		MenuItem item1 = (MenuItem) menu.findItem(R.id.menu_option2);
+		item1.setVisible(false);
 		
 		
 		return true;
@@ -425,11 +443,12 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 					holder.lblMeetingVenue.setText((jsonList.getJSONObject(position).getString("venue").equals("null"))?"":jsonList.getJSONObject(position).getString("venue"));
 //				holder.lblMeetingVenue.setText(jsonList.getJSONObject(position).getString("venue"));
 
+				if(jsonList.getJSONObject(position).has("present")){
 				if(null !=jsonList.getJSONObject(position).getString("present").toString() && jsonList.getJSONObject(position).getString("present").toString().equals("1")){
 				
 					holder.btnMarkAttendance.setText("Already Attendance Marked");
 	
-				}else{
+				}}else{
 					
 					holder.btnMarkAttendance.setText("Mark Attendance");
 				}
@@ -1442,6 +1461,7 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 
 	@Override
 	public void onResponse(String response) {
+
 		Methods.closeProgressDialog();
 		Log.e("droid get reqgetList Redord--------", response);
 
@@ -1558,16 +1578,17 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 			if(!fdate.equals(""))
 				jsonfilter.put("from_date", fdate);
 
+			if(intent.hasExtra("fromah")){
+				jsonfilter.put("attendance_type", "church Attendance");}
+
+
+			if(intent.hasExtra("cellah")){
+				jsonfilter.put("attendance_type", "Cell Meeting");}
+
 //			jsonfilter.put("event_type", eventtype);
 			
 			jsonobj.put("filters", jsonfilter);
 
-	    	if(intent.hasExtra("fromah")){
-			jsonobj.put("attendance_type", "church Attendance");}
-
-
-	/*		if(intent.hasExtra("fromah")){
-				jsonobj.put("attendance_type", "Cell Meeting");}*/
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

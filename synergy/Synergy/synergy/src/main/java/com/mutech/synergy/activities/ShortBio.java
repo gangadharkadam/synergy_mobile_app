@@ -142,7 +142,8 @@ public class ShortBio extends ActionBarActivity {
             @Override
             public void onResponse(String response) {
                 Methods.closeProgressDialog();
-                Log.d("droid","get reqgetTopHierarchy ---------------"+ response);
+
+                Log.d("droid","get shortbio ---------------"+ response);
                 try {
 
                     JSONObject jsonobj=new JSONObject(response);

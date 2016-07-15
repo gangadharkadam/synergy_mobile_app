@@ -17,6 +17,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ActionBar.LayoutParams;
 import android.app.DatePickerDialog.OnDateSetListener;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,6 +33,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -62,6 +64,7 @@ import com.mutech.databasedetails.RegionActivity;
 import com.mutech.databasedetails.SrCellDetailsActivity;
 import com.mutech.databasedetails.ZoneDetailsActivity;
 import com.mutech.synergy.App;
+import com.mutech.synergy.GraphTestActivity;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
@@ -70,6 +73,11 @@ import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.SearchService;
 import com.mutech.synergy.SynergyValues.Web.ShowAllMembersService;
 
+import com.mutech.synergy.activities.AttendanceHistory;
+import com.mutech.synergy.activities.CellLeaderMsg;
+import com.mutech.synergy.activities.ChurchPastorMsg;
+import com.mutech.synergy.activities.ShortBioChurch;
+import com.mutech.synergy.activities.ViewMembers;
 import com.mutech.synergy.activities.event.CreateEventActivity;
 import com.mutech.synergy.activities.meeting.MeetingListActivity;
 import com.mutech.synergy.models.MeetingListRequestModel;
@@ -93,9 +101,9 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 	Calendar newCalendar;
 	String UserRoll;
 	//ImageView filterimg;
-	
-	
-	
+
+	private Dialog dialogPopup=null;
+	private Button viewchurchattendancehistory,viewmembers,viewmembershipstrength,msgchurchpastor,viewnewconverts,viewpartnershipinfo,viewfirsttimers,viewcellspcf;
 	
 	private ListView lvShowSearch;
 	private ArrayList<SearchResultSubModel> subModelList;
@@ -199,29 +207,464 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+					final int position, final long id) {
 				// TODO Auto-generated method stub
 				
 				try {
-					String memberid=jarray.getJSONObject(position).getString("id");
+					final String memberid=jarray.getJSONObject(position).getString("id");
 					String type=jarray.getJSONObject(position).getString("type");
-					
+					final String name=jarray.getJSONObject(position).getString("id");
+
+					dialogPopup = new Dialog(ShowSearchResultFunctionality.this);
+					dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+					dialogPopup.setContentView(R.layout.custom_search_dialogbox);
+
+					viewchurchattendancehistory= (Button) dialogPopup.findViewById(R.id.viewchurchattendancehistory);
+					viewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
+					viewmembershipstrength= (Button) dialogPopup.findViewById(R.id.viewmembershipstrength);
+					msgchurchpastor= (Button) dialogPopup.findViewById(R.id.msgchurchpastor);
+					viewnewconverts= (Button) dialogPopup.findViewById(R.id.viewnewconverts);
+					viewpartnershipinfo= (Button) dialogPopup.findViewById(R.id.viewpartnershipinfo);
+					viewfirsttimers= (Button) dialogPopup.findViewById(R.id.viewfirsttimers);
+					viewcellspcf= (Button) dialogPopup.findViewById(R.id.viewcellspcf);
 					
 					if(type.equals("Regions")){
-						startActivity(new Intent(ShowSearchResultFunctionality.this, RegionActivity.class).putExtra("cellcode", memberid));
+						viewchurchattendancehistory.setText("View Region attendance history");
+						msgchurchpastor.setText("Send message to the Region Pastor Remark");
+						viewcellspcf.setText("View Zones in the Region");
+						dialogPopup.show();
+
+						viewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("churchah", "churchah");
+								Int.putExtra("role", "Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Region");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembershipstrength.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Membership Strength");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewnewconverts.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Region New Converts");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewfirsttimers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Region First Timer");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewpartnershipinfo.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
+								mPreferenceHelper.addString(Commons.CHURCH, name);
+								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
+								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								Int.putExtra("fromactivity", "Allmemberlist");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						msgchurchpastor.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ChurchPastorMsg.class);
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewcellspcf.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+								Int.putExtra("role","Region");
+								Int.putExtra("tbl", "Regions");
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+					//	startActivity(new Intent(ShowSearchResultFunctionality.this, RegionActivity.class).putExtra("cellcode", memberid));
 					}
 					
 					if(type.equals("Zones")){
-						startActivity(new Intent(ShowSearchResultFunctionality.this, ZoneDetailsActivity.class).putExtra("cellcode", memberid));
+						viewchurchattendancehistory.setText("View Zone attendance history");
+						msgchurchpastor.setText("Send message to the Zone Pastor Remark");
+						viewcellspcf.setText("View Group Churches in the Zone");
+						dialogPopup.show();
+
+						viewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("churchah", "churchah");
+								Int.putExtra("role", "Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Zone");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembershipstrength.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Membership Strength");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewnewconverts.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Zone New Converts");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewfirsttimers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Zone First Timer");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewpartnershipinfo.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
+								mPreferenceHelper.addString(Commons.CHURCH, name);
+								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
+								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								Int.putExtra("fromactivity", "Allmemberlist");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						msgchurchpastor.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ChurchPastorMsg.class);
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewcellspcf.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+								Int.putExtra("role","Zone");
+								Int.putExtra("tbl", "Zones");
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+					//	startActivity(new Intent(ShowSearchResultFunctionality.this, ZoneDetailsActivity.class).putExtra("cellcode", memberid));
 					}
 					
 					if(type.equals("Group Churches")){
-						startActivity(new Intent(ShowSearchResultFunctionality.this, GroupChurch.class).putExtra("cellcode", memberid));
+						viewchurchattendancehistory.setText("View Group Church attendance history");
+						msgchurchpastor.setText("Send message to the Group Church Pastor Remark");
+						viewcellspcf.setText("View churches in the Group Church");
+						dialogPopup.show();
+
+						viewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("churchah", "churchah");
+								Int.putExtra("role", "Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Group Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembershipstrength.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Membership Strength");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						viewnewconverts.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Group Church New Converts");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewfirsttimers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Group Church First Timer");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewpartnershipinfo.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
+								mPreferenceHelper.addString(Commons.CHURCH, name);
+								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
+								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								Int.putExtra("fromactivity", "Allmemberlist");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						msgchurchpastor.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ChurchPastorMsg.class);
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewcellspcf.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+								Int.putExtra("role","GroupChurch");
+								Int.putExtra("tbl", "Group Churches");
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+						//startActivity(new Intent(ShowSearchResultFunctionality.this, GroupChurch.class).putExtra("cellcode", memberid));
 					}
 					
 					if(type.equals("Churches")){
-						startActivity(new Intent(ShowSearchResultFunctionality.this, ChurchDetail.class).putExtra("cellcode", memberid));
+						//final String name=jarray.getJSONObject(position).getString("id");
+						//final String name=jarray.getJSONObject(position).getString("name");
+
+						dialogPopup.show();
+
+
+						viewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("churchah", "churchah");
+								Int.putExtra("role", "Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Church");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembershipstrength.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Membership Strength");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewnewconverts.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","New Converts");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewfirsttimers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","First Timer");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewpartnershipinfo.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
+								mPreferenceHelper.addString(Commons.CHURCH, name);
+								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
+								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								Int.putExtra("fromactivity", "Allmemberlist");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						msgchurchpastor.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ChurchPastorMsg.class);
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewcellspcf.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+								Int.putExtra("role","Church");
+								Int.putExtra("cellcode", name);
+								Int.putExtra("tbl", "Churches");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+							//startActivity(new Intent(ShowSearchResultFunctionality.this, ChurchDetail.class).putExtra("cellcode", memberid));
 					}
+
 					
 					if(type.equals("PCFs")){
 						startActivity(new Intent(ShowSearchResultFunctionality.this, PcfDetailsActivity.class).putExtra("cellcode", memberid));
@@ -254,29 +697,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 				
 			}
 		});
-		
-		
-		
-		
-		/*filterimg.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-						
-					if(NetworkHelper.isOnline(ShowSearchResultFunctionality.this)){
-					
-						showDialog();
-					
-					}else{
-					
-						Methods.longToast("Please connect to Internet",ShowSearchResultFunctionality.this);
-					
-					}
-				}
-			});*/
-			
-		
-		
+
 
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
@@ -1631,17 +2052,13 @@ protected Map<String, String> getParams() throws AuthFailureError{
 		
 		if(!cell.equals(""))
 			jsonfilter.put("cell", cell);
-		
-	
+
 		if(!fdate.equals(""))
 			jsonfilter.put("from_date", fdate);
 		
-		
 		if(!todate.equals(""))
 			jsonfilter.put("to_date", todate);
-		
-		
-		
+
 		jsonobj.put("filters", jsonfilter);
 		
 	} catch (JSONException e) {

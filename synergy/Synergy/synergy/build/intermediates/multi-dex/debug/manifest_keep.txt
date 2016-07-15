@@ -32,10 +32,8 @@
 -keep class com.mutech.synergy.activities.cellMasters.SearchFunctionActivity { <init>(); }
 -keep class com.mutech.synergy.activities.cellMasters.ShowSearchResultFunctionality { <init>(); }
 -keep class com.mutech.synergy.activities.dashboard.MemberStrengthMutliBarChart { <init>(); }
--keep class com.mutech.synergy.activities.dashboard.GivingActivity { <init>(); }
 -keep class com.mutech.synergy.activities.cellMasters.PartnerShipRecord { <init>(); }
 -keep class com.mutech.synergy.activities.cellMasters.PartnerRecordInformation { <init>(); }
--keep class com.mutech.synergy.activities.MessageBroadcastActivity { <init>(); }
 -keep class com.mutech.synergy.activities.LogoutActivity { <init>(); }
 -keep class com.mutech.synergy.GcmBroadcastReceiver { <init>(); }
 -keep class com.mutech.synergy.GcmIntentService { <init>(); }
@@ -43,7 +41,6 @@
 -keep class com.mutech.databasedetails.PcfDetailsActivity { <init>(); }
 -keep class com.mutech.databasedetails.CellDetailsActivity { <init>(); }
 -keep class com.mutech.databasedetails.SrCellDetailsActivity { <init>(); }
--keep class com.mutech.filter.FilterActivity { <init>(); }
 -keep class com.mutech.synergy.activities.dashboard.NewConvertsYearActivity { <init>(); }
 -keep class com.mutech.synergy.activities.dashboard.FirstTimesWeekActivity { <init>(); }
 -keep class com.mutech.synergy.activities.dashboard.InviteesandContactsYearActivity { <init>(); }
@@ -94,8 +91,10 @@
 -keep class com.mutech.synergy.activities.FoundationSchool { <init>(); }
 -keep class com.mutech.synergy.activities.MemberProfile { <init>(); }
 -keep class com.mutech.synergy.activities.ChurchAttendanceHistory { <init>(); }
--keep class com.mutech.synergy.activities.GivingHistoryTest { <init>(); }
--keep class com.mutech.synergy.GivingTest { <init>(); }
+-keep class com.mutech.synergy.activities.CAttendanceHistory { <init>(); }
+-keep class com.mutech.synergy.PartnershipRecordNew { <init>(); }
+-keep class com.mutech.synergy.activities.ChurchPastorMsg { <init>(); }
+-keep class com.mutech.synergy.activities.ShortBioChurch { <init>(); }
 -keep class com.google.android.gms.ads.AdActivity { <init>(); }
 -keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity { <init>(); }
 -keep class com.google.android.gms.appinvite.PreviewActivity { <init>(); }

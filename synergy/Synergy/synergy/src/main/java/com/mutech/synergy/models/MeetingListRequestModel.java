@@ -29,6 +29,10 @@ public class MeetingListRequestModel {
 	private String date;
 	private String partnership_arms;
 	private String currency;
+	private String key;
+	private String role;
+	private String from_date;
+	private String to_date;
 	private Integer conversation_rate;
 	
     
@@ -259,5 +263,37 @@ public class MeetingListRequestModel {
 
 	public void setConversation_rate(int conversation_rate) {
 		this.conversation_rate = conversation_rate;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getFrom_date() {
+		return from_date;
+	}
+
+	public void setFrom_date(String from_date) {
+		this.from_date = from_date;
+	}
+
+	public String getTo_date() {
+		return to_date;
+	}
+
+	public void setTo_date(String to_date) {
+		this.to_date = to_date;
 	}
 }

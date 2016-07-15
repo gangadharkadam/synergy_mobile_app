@@ -13,14 +13,17 @@ public class SynergyValues {
 		public static String USER_DESIGNATION="Designation";
 		public static String USER_STATUS="Status";
 		public static String USER_IMAGE="Image";
-		
-	//	public static String USER_ROLE="PCF Leader";
-		
+		public static String FROM_ACTIVITY="from_activity";
+		public static String FROM_ACTIVITY1="from_activity1";
+		public static String MEMBER_NO="member_no";
+		public static String CHURCH="church";
+
 		public static String USER_ZONE="zone";
 		public static String USER_SENIOR_CELL="senior_cell";
 		public static String USER_CHURCH_GROUP="church_group";
 		public static String USER_REGION="region";
-		public static String USER_CHURCH="church";
+		public static String USER_CHURCH="userchurch";
+		public static String USER_CHURCH1="userchurch1";
 		public static String USER_PCF="pcf";
 
 		public static String USER_TBL_LABEL_CELLS="Cells";
@@ -214,6 +217,11 @@ public class SynergyValues {
 			public static String DATA="data";
 		}
 
+		public static class ViewGivingPledge{
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.view_giving_pledge_member/";
+			public static String DATA="data";
+		}
+
 		public static class GetEventMemberListService{
 			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.event_participents/";
 			public static String DATA="data";
@@ -243,6 +251,12 @@ public class SynergyValues {
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_my_profile/";
 			public static String DATA ="data";
 		}
+
+		public static class GetCellPcf{
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_childerns/";
+			public static String DATA ="data";
+		}
+
 
 		public static class GetMemberShortProfileService{
 			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.get_short_profile/";
@@ -313,8 +327,13 @@ public class SynergyValues {
 		}
 
 		
-		public static class DashboardDataService{
-			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.dashboard/";
+		public static class DashboardDataService {
+			public static String SERVICE_URL = BASE_URL + "method/church_ministry.church_ministry.doctype.member.member.dashboard/";
+			public static String DATA = "data";
+		}
+
+		public static class GetMembershipstrength{
+			public static String SERVICE_URL = BASE_URL +"method/church_ministry.church_ministry.doctype.member.member.view_membership_strength/";
 			public static String DATA ="data";
 		}
 		

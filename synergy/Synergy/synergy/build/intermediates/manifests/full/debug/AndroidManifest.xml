@@ -182,10 +182,10 @@
             android:name="com.mutech.synergy.activities.dashboard.MemberStrengthMutliBarChart"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="com.mutech.synergy.activities.dashboard.GivingActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".activities.dashboard.GivingActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
         <activity
             android:name="com.mutech.synergy.activities.cellMasters.PartnerShipRecord"
             android:label="@string/app_name"
@@ -195,10 +195,10 @@
             android:name="com.mutech.synergy.activities.cellMasters.PartnerRecordInformation"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="com.mutech.synergy.activities.MessageBroadcastActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".activities.MessageBroadcastActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
         <activity
             android:name="com.mutech.synergy.activities.LogoutActivity"
             android:label="@string/app_name"
@@ -230,9 +230,9 @@
         <activity
             android:name="com.mutech.databasedetails.SrCellDetailsActivity"
             android:label="@string/title_activity_sr_cell_details" />
-        <activity
-            android:name="com.mutech.filter.FilterActivity"
-            android:label="@string/title_activity_filter" />
+        <!-- <activity -->
+        <!-- android:name="com.mutech.filter.FilterActivity" -->
+        <!-- android:label="@string/title_activity_filter" /> -->
         <activity
             android:name="com.mutech.synergy.activities.dashboard.NewConvertsYearActivity"
             android:label="@string/title_activity_new_converts_year" />
@@ -383,11 +383,25 @@
             android:name="com.mutech.synergy.activities.ChurchAttendanceHistory"
             android:label="@string/title_activity_church_attendance_history" />
         <activity
-            android:name="com.mutech.synergy.activities.GivingHistoryTest"
+            android:name="com.mutech.synergy.activities.CAttendanceHistory"
+            android:label="Cell Attendance History" />
+        <!--
+            <activity
+            android:name=".activities.GivingHistoryTest"
             android:label="@string/title_activity_giving_history_test" />
         <activity
-            android:name="com.mutech.synergy.GivingTest"
-            android:label="@string/title_activity_giving_test" />
+            android:name=".GivingTest"
+            android:label="@string/title_activity_giving_test"></activity>
+        -->
+        <activity
+            android:name="com.mutech.synergy.PartnershipRecordNew"
+            android:label="@string/title_activity_partnership_record_new" />
+        <activity
+            android:name="com.mutech.synergy.activities.ChurchPastorMsg"
+            android:label="@string/title_activity_church_pastor_msg" />
+        <activity
+            android:name="com.mutech.synergy.activities.ShortBioChurch"
+            android:label="@string/title_activity_short_bio_church" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

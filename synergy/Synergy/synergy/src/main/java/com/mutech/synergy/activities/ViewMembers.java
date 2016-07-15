@@ -186,6 +186,56 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
                    getListNew("Member","1","","","","",cellcode,"","","","");
                    break;
 
+               case "Church":
+                   getListNew("Member","1","","","",cellcode,"","","","","");
+                   break;
+
+               case "Region":
+                   getListNew("Member","1",cellcode,"","","","","","","","");
+                   break;
+
+               case "Zone":
+                   getListNew("Member","1","",cellcode,"","","","","","","");
+                   break;
+
+               case "Group Church":
+                   getListNew("Member","1","","",cellcode,"","","","","","");
+                   break;
+
+               case "New Converts":
+                   txtcount.setText("New Converts   ");
+                   getListNew("New Converts","1","","","",cellcode,"","","","","");
+                   break;
+
+               case "First Timer":
+                   txtcount.setText("First Timer   ");
+                   getListNew("First Timer","1","","","",cellcode,"","","","","");
+                   break;
+
+               case "Region New Converts":
+                   getListNew("New Converts","1",cellcode,"","","","","","","","");
+                   break;
+
+               case "Zone New Converts":
+                   getListNew("New Converts","1","",cellcode,"","","","","","","");
+                   break;
+
+               case "Group Church New Converts":
+                   getListNew("New Converts","1","","",cellcode,"","","","","","");
+                   break;
+
+               case "Region First Timer":
+                   getListNew("First Timer","1",cellcode,"","","","","","","","");
+                   break;
+
+               case "Zone First Timer":
+                   getListNew("First Timer","1","",cellcode,"","","","","","","");
+                   break;
+
+               case "Group Church First Timer":
+                   getListNew("First Timer","1","","",cellcode,"","","","","","");
+                   break;
+
            }
 
         }else{
@@ -227,7 +277,14 @@ public class ViewMembers extends ActionBarActivity implements AdapterView.OnItem
 
                         TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
 
-                        txtcount.setText("Members ("+i+")");
+                        if(getIntent().getStringExtra("role").contentEquals("New Converts")){
+                            txtcount.setText("New Converts ("+i+")");
+                        }
+                        else if(getIntent().getStringExtra("role").contentEquals("First Timer")){
+                            txtcount.setText("First Timer ("+i+")");
+                        }else
+                        {
+                        txtcount.setText("Members ("+i+")");}
                         jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
 
                         if(jsonarray.length()>0){

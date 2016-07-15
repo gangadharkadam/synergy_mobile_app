@@ -53,7 +53,9 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
 import com.android.volley.Request.Method;
+import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
@@ -70,6 +72,7 @@ import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.ShowAllMembersService;
 
 import com.mutech.synergy.activities.AttendanceHistory;
+import com.mutech.synergy.activities.CAttendanceHistory;
 import com.mutech.synergy.activities.CellLeaderMsg;
 import com.mutech.synergy.activities.ChurchAttendanceHistory;
 import com.mutech.synergy.activities.MemberProfile;
@@ -86,6 +89,7 @@ import com.mutech.synergy.models.AllMembersResponseModel.AllMemSubResponseModel;
 import com.mutech.synergy.models.MeetingModel.MeetingListModel;
 import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.MeetingModel;
+import com.mutech.synergy.models.MemberShortProfile;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.utils.Methods;
 import com.mutech.synergy.utils.NetworkHelper;
@@ -120,6 +124,8 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
 	private Dialog dialogPopup=null;
 	private Button btnviewgivinghistory,btnviewcellattendancehistory,btnviewchurchattendancehistory,btnviewprofile;
+	String name1;
+	String memberno = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -131,22 +137,6 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 	@SuppressLint("NewApi")
 	private void initialize() {
 
-		/*getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-		getSupportActionBar().setHomeButtonEnabled(false);
-		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
-		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
-		tvTitle.setText("Members       ");
-
-		ActionBar bar = getSupportActionBar();
-		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
-
-		getSupportActionBar().setDisplayShowCustomEnabled(true);*/
-
-
-	//	filterimg=(ImageView) findViewById(R.id.imageView2);
-
-		//txtcount=(TextView) findViewById(R.id.textView1);
-	
 		    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 		    getSupportActionBar().setHomeButtonEnabled(false);
 			getSupportActionBar().setCustomView(R.layout.custom_actionbar);
@@ -205,27 +195,10 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 
 		fromDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 		toDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-
-		/*filterimg.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-
-				if(NetworkHelper.isOnline(AllMemberListActivity.this)){
-
-					showDialog();
-
-				}else{
-
-					Methods.longToast("Please connect to Internet",AllMemberListActivity.this);
-
-				}
-			}
-		});
-*/
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
-			getListNew("Member","1","","","","","","","","","");
+			getListNew("Member", "1", "", "", "", "", "", "", "", "", "");
+
 		}
 		else
 			Methods.longToast("Please connect to Internet", this);
@@ -280,64 +253,6 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 		}
 		return false;
 	}
-
-
-	/*private void getMemberList(final String tbl) {
-
-		StringRequest reqGetMembers=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
-			@Override
-			public void onResponse(String response) {
-				Methods.closeProgressDialog();
-				Log.d("droid","getMemberList ---------------"+ response);
-
-				if(response.contains("status")){
-					ResponseMessageModel2 resp2Model=gson.fromJson(response, ResponseMessageModel2.class);
-					Methods.longToast(resp2Model.getMessage().getMessage(), AllMemberListActivity.this);
-				}else{
-					AllMembersResponseModel model=gson.fromJson(response, AllMembersResponseModel.class);
-					if(null !=model.getMessage() && model.getMessage().size() >0){
-						subModelList=new ArrayList<AllMemSubResponseModel>();
-						for(int i=0;i<model.getMessage().size();i++){
-							subModelList.add(model.getMessage().get(i));
-							Log.d("droid", "subModelList :::::::"+model.getMessage().get(i));
-						}
-						Log.d("droid", "subModelList final size ::: "+subModelList.size());
-						MemberListAdapter adapter=new MemberListAdapter(AllMemberListActivity.this,subModelList);
-						lvAllMembers.setAdapter(adapter);
-					}
-				}
-
-			}
-		},new ErrorListener() {
-			@Override
-			public void onErrorResponse(VolleyError error) {
-				Methods.closeProgressDialog();
-				Log.d("droid","get all pcf error---------------"+ error.getCause());
-			}
-		})
-		{
-			@Override
-			protected Map<String, String> getParams() throws AuthFailureError {
-				Map<String, String> params = new HashMap<String, String>();
-
-				MeetingListRequestModel model=new MeetingListRequestModel();
-				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				model.setName(tbl);
-				model.setRecord_name(tbl);
-
-				String dataString=gson.toJson(model, MeetingListRequestModel.class);
-
-				Log.d("droid","data passed is ::::::::"+dataString);
-				params.put(GetAllMastersService.DATA, dataString);
-				return params;
-			}
-		};
-		App.getInstance().addToRequestQueue(reqGetMembers, "reqGetMembers");
-		reqGetMembers.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-	}
-	*/
-
 	
 private void getList(final String tbl){
 
@@ -475,17 +390,10 @@ private void getList(final String tbl){
 							Methods.longToast("No results found", AllMemberListActivity.this);
 						}
 
-
-
-
-
 					} catch (JSONException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-
-
-
 
 				}
 
@@ -503,8 +411,6 @@ private void getList(final String tbl){
 						//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
 					}
 				}
-				//else
-				//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
 
 			}
 
@@ -513,14 +419,6 @@ private void getList(final String tbl){
 			protected Map<String, String> getParams() throws AuthFailureError{
 				Map<String, String> params = new HashMap<String, String>();
 
-			    /*model=new MeetingListRequestModel();
-				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				model.setTbl(tbl);
-		//		model.setRecord_name(tbl);
-				model.setPage_no(pageno);
-			*/
-				//model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
 				try{
 
 					jsonobj=new JSONObject();
@@ -598,9 +496,10 @@ private void getList(final String tbl){
 					 TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
 					 
 					 Btnfooter();
-					 txtcount.setText("Members ("+i+")"); 
+					 txtcount.setText("Members (" + i + ")");
 					 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
-					
+
+					  name1=jsonarray.getJSONObject(0).getString("name");
 						if(jsonarray.length()>0){
 						
 															
@@ -650,14 +549,6 @@ private void getList(final String tbl){
 			protected Map<String, String> getParams() throws AuthFailureError{
 				Map<String, String> params = new HashMap<String, String>();
 
-			    /*model=new MeetingListRequestModel();
-				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				model.setTbl(tbl);
-		//		model.setRecord_name(tbl);
-				model.setPage_no(pageno);
-			*/
-				//model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
 			try{
 				
 					jsonobj=new JSONObject();
@@ -722,10 +613,15 @@ private void getList(final String tbl){
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 
-		final String memberno;
+
 		try {
 
 			memberno=jsonarray.getJSONObject(position).getString("name");
+
+			mPreferenceHelper.addString(Commons.MEMBER_NO, memberno);
+			mPreferenceHelper.addString(Commons.FROM_ACTIVITY, "true");
+			mPreferenceHelper.addString(Commons.FROM_ACTIVITY1, "true");
+
 	/*		Intent intMemberDetails=new Intent(this,MemberInfoActivtiy.class);
 			intMemberDetails.putExtra("MemberNo",jsonarray.getJSONObject(position).getString("name"));
 			startActivity(intMemberDetails);*/
@@ -758,19 +654,19 @@ private void getList(final String tbl){
 				public void onClick(View v) {
 					Intent Int = new Intent(AllMemberListActivity.this, AttendanceHistory.class);
 					Int.putExtra("churchah","churchah");
+					Int.putExtra("role", "Member");
 					startActivity(Int);
 					dialogPopup.dismiss();
 				}
 			});
 
-		/*	btnviewcellattendancehistory.setOnClickListener(new View.OnClickListener() {
+			btnviewcellattendancehistory.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 
-					Intent Int = new Intent(AllMemberListActivity.this, ShortBio.class);
-					Int.putExtra("MemberNo",memberno);
+					Intent Int = new Intent(AllMemberListActivity.this, CAttendanceHistory.class);
 					//Int.putExtra("cellcode", name);
-					Int.putExtra("role","Senior Cell Leader");
+					Int.putExtra("cellah","cellah");
 					startActivity(Int);
 					dialogPopup.dismiss();
 				}
@@ -779,15 +675,13 @@ private void getList(final String tbl){
 			btnviewgivinghistory.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-
-					Intent Int = new Intent(AllMemberListActivity.this, CellLeaderMsg.class);
-					Int.putExtra("MemberNo",memberno);
-				//	Int.putExtra("cellcode", name);
-					startActivity(Int);
+					Intent partner=new Intent(AllMemberListActivity.this,PartnerShipRecord.class);
+					partner.putExtra("fromactivity","Allmemberlist");
+					partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(partner);
 					dialogPopup.dismiss();
 				}
 			});
-*/
 			dialogPopup.show();
 
 		} catch (JSONException e) {
@@ -954,8 +848,6 @@ private void Btnfooter()
     
     HorizontalScrollView horizontalscroll=(HorizontalScrollView) findViewById(R.id.horizontalscroll);
     horizontalscroll.setBackgroundColor(getResources().getColor(android.R.color.white));
-
-    
     
     btns    =new Button[noOfBtns];
      
@@ -988,8 +880,7 @@ private void Btnfooter()
                 CheckBtnBackGroud(j);
             }
         });
-        
-      //  pageflag=false;
+
     }
      
 }
@@ -1514,9 +1405,7 @@ public void showDialog(){
 		}
 	});
 	
-	
-	
-	
+
 	if(UserRoll.equals("Zonal Pastor")){
 		
 		layoutRegion.setVisibility(View.GONE);
@@ -1987,6 +1876,75 @@ private void getSpinnerData(final String tblname,final String name) {
 	reqgetTopHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 
 }
+
+
+	private void getGivingHistory() {
+
+		StringRequest reqgetCellDetails=new StringRequest(Request.Method.POST, SynergyValues.Web.ViewGivingPledge.SERVICE_URL,new Response.Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+
+				Log.d("droid","get pledge ---------------"+ response);
+				try {
+
+					JSONObject jsonobj=new JSONObject(response);
+
+					Intent partner=new Intent(AllMemberListActivity.this,PartnerShipRecord.class);
+					partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(partner);
+					finish();
+
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				Methods.closeProgressDialog();
+
+			}
+		},new Response.ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
+
+				if(error.networkResponse.statusCode==403){
+					Methods.longToast("Access Denied", AllMemberListActivity.this);
+				}
+				else
+					Methods.longToast("Some Error Occured,please try again later", AllMemberListActivity.this);
+
+
+
+			}
+
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError{
+				Map<String, String> params = new HashMap<String, String>();
+
+				MemberShortProfile model=new MemberShortProfile();
+				model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
+				model.setName(memberno);
+//                model.setRole("Cell Leader");
+
+				String dataString=gson.toJson(model, MemberShortProfile.class);
+
+				Log.d("droid", dataString);
+				params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqgetCellDetails, "reqgetCellDetails");
+		reqgetCellDetails.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
+	}
 
 public static class SpinnerDataFlag{
 	public static boolean Regions_flag = true;

@@ -56,8 +56,7 @@ public class GivingTest extends Activity {
                     JSONObject jsonobj=new JSONObject(response);
                     JSONArray jarray=jsonobj.getJSONArray("message");
 
-*/
-/*                    if(jarray.getJSONObject(0).getString("name") != null) {
+                    if(jarray.getJSONObject(0).getString("name") != null) {
                         txtCellLeaderId.setText(jarray.getJSONObject(0).getString("name"));
                     }
 
@@ -90,7 +89,7 @@ public class GivingTest extends Activity {
                                 .into(imgProfilePic);
                     }
                     Log.e("Image Url", SynergyValues.ImageUrl.imageUrl + Imageurl);
-                    Log.d("NonStop", "Image URL: " + SynergyValues.ImageUrl.imageUrl + Imageurl);*//*
+                    Log.d("NonStop", "Image URL: " + SynergyValues.ImageUrl.imageUrl + Imageurl);
 
 
                 } catch (JSONException e) {

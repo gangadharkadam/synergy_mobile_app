@@ -33,7 +33,7 @@
                 android:textSize="@dimen/textsize_16"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:id="@+id/txtfromdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 android:textSize="@dimen/textsize_16"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:id="@+id/txttodate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

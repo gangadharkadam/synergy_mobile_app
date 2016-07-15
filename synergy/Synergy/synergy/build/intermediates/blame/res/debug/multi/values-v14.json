@@ -7,30 +7,9 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endLine": 4,
+                    "endLine": 6,
                     "endColumn": 12,
-                    "endOffset": 198
-                },
-                "from": {
-                    "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/Synergy/volley/unspecified/res/values-v14/values-v14.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 4,
-                        "endColumn": 12,
-                        "endOffset": 198
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 203,
-                    "endLine": 9,
-                    "endColumn": 12,
-                    "endOffset": 474
+                    "endOffset": 326
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -46,11 +25,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 479,
+                    "startOffset": 331,
                     "endColumn": 70,
-                    "endOffset": 545
+                    "endOffset": 397
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -65,11 +44,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 550,
+                    "startOffset": 402,
                     "endColumn": 82,
-                    "endOffset": 628
+                    "endOffset": 480
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -84,12 +63,12 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 633,
-                    "endLine": 17,
+                    "startOffset": 485,
+                    "endLine": 14,
                     "endColumn": 12,
-                    "endOffset": 1038
+                    "endOffset": 890
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -105,12 +84,12 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1043,
-                    "endLine": 23,
+                    "startOffset": 895,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 1460
+                    "endOffset": 1312
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -126,11 +105,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1465,
+                    "startOffset": 1317,
                     "endColumn": 119,
-                    "endOffset": 1580
+                    "endOffset": 1432
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -145,11 +124,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1585,
+                    "startOffset": 1437,
                     "endColumn": 62,
-                    "endOffset": 1643
+                    "endOffset": 1495
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -164,12 +143,12 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1648,
-                    "endLine": 28,
+                    "startOffset": 1500,
+                    "endLine": 25,
                     "endColumn": 12,
-                    "endOffset": 1797
+                    "endOffset": 1649
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -185,11 +164,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1802,
+                    "startOffset": 1654,
                     "endColumn": 62,
-                    "endOffset": 1860
+                    "endOffset": 1712
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",
@@ -204,11 +183,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1865,
+                    "startOffset": 1717,
                     "endColumn": 131,
-                    "endOffset": 1992
+                    "endOffset": 1844
                 },
                 "from": {
                     "file": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v14/values-v14.xml",

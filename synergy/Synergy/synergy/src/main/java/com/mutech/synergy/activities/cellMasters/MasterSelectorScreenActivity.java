@@ -337,73 +337,82 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 				//			Intent intForm1=new Intent(this,MyProfileActivity.class);
 				//			startActivity(intForm1);
 				break;
-		case 1:
-			
-			Intent int1=new Intent(this,HomeActivity.class);
-			int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(int1);
-			finish();
-			break;
-		case 3:
-//			Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
-//			startActivity(intForm);
-			break;
-//		case 2:
-//			break;
-//		case 3:
-//			break;
-		case 4:
-			Intent partner=new Intent(this,PartnerShipRecord.class);
-			partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(partner);
-			finish();
-			break;
-		case 2:
-			Intent intForm1=new Intent(this,ProfileView.class);
-			intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intForm1);
-			break;
-		case 5:
-			Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-			intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intSearchMembers);
-			finish();
-			break;
-		case 6:
-			//Intent intMeeting=new Intent(this,MeetingListActivity.class);
-			//startActivity(intMeeting);
-			Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
-			intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intMyMeetings);
-			finish();
 
-			break;
-		case 7:
-			Intent intEvents=new Intent(this,MyEventListActivity.class);
-			 intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intEvents);
-			finish();
+			case 1:
+				Intent int1=new Intent(this,HomeActivity.class);
+				int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(int1);
+				finish();
+				break;
 
-			break;
-		case 8:
-			Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
-			intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentTODO);
-			finish();
-			break;
-			
-		case 9:
-			Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
-			intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-			startActivity(intentMsg);
-			finish();
-			break;
+			case 2:
+              /*  Intent intForm1=new Intent(this,ProfileView.class);
+                intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intForm1);*/
+				break;
+//            case 1:
+//				Intent intForm1=new Intent(this,MyProfileActivity.class);
+//				startActivity(intForm1);
+//                break;
+
+			case 3:
+				Log.d("NonStop", "Going to Database");
+			/*	Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
+				intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intForm);
+				finish();*/
+				break;
+
+			case 4:
+				Log.d("NonStop", "Going to Partnership Record");
+				Intent partner=new Intent(this,PartnerShipRecord.class);
+				partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(partner);
+				finish();
+				break;
+
+			case 5:
+				//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
+				//startActivity(intMeeting);
+				Log.d("NonStop", "Going to Attendance");
+				Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
+				intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intMyMeetings);
+				finish();
+				break;
+			case 6:
+				Log.d("NonStop", "Going to Calendar");
+				Intent intEvents=new Intent(this,MyEventListActivity.class);
+				intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intEvents);
+				finish();
+
+				break;
+			case 7:
+				Log.d("NonStop", "Going to ToDo");
+				Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
+				intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentTODO);
+				finish();
+				break;
+
+			case 8:
+				Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
+				intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intentMsg);
+				finish();
+				break;
+
+			case 9:
+				Log.d("NonStop", "Going to Search");
+				Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
+				intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+				startActivity(intSearchMembers);
+				finish();
+
+				break;
 
 			case 10:
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
-
 				Intent intfeedback=new Intent(this,Feedback.class);
 				intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 				startActivity(intfeedback);
@@ -429,10 +438,6 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 				break;
 
 		case 14://logout
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
-
 			Intent intLogout=new Intent(this,LogoutActivity.class);
 			intLogout.putExtra("classname","MasterSelectorScreenActivity");
 			startActivity(intLogout);

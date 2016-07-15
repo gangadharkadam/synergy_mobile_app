@@ -7,10 +7,24 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mutech.synergy.GraphTestActivity" >
-    
-     <com.github.mikephil.charting.charts.BarChart
-       	 android:id="@+id/chart1"
-       	 android:layout_width="match_parent"
-         android:layout_height="match_parent" /> 
+    <LinearLayout
+        android:id="@+id/llMemberStrengthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@drawable/rectangle1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_20">
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
 
 </RelativeLayout>

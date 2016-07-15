@@ -292,6 +292,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 								public void onClick(View v) {
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									Int.putExtra("role", "Cell Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}
@@ -385,6 +386,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 								public void onClick(View v) {
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									Int.putExtra("role", "Cell Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}
@@ -471,6 +473,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 								public void onClick(View v) {
 
 									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									Int.putExtra("role", "Cell Leader");
 									startActivity(Int);
 									dialogPopup.dismiss();
 								}

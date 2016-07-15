@@ -265,8 +265,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 					mPreferenceHelper.addString(Commons.USER_ROLE, rolelist.get(i).getRole());
 					mPreferenceHelper.addString(Commons.USER_DEFKEY, roleUserlist.get(i).getDefkey());
 					mPreferenceHelper.addString(Commons.USER_DEFVALUE, roleUserlist.get(i).getDefvalue());
-					
-					
+
 					Log.e("USER_DEFKEY",  rolelist.get(i).getRole());
 					Log.e("USER_DEFVALUE",  rolelist.get(i).getRole());
 					}

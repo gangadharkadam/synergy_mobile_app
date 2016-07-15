@@ -98,18 +98,13 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 	private  String str;
 	public static PartnershipAdpter mAdapter;
 	private String Role,Name,Status,Designation,Image;
+	Intent intent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_partnershiplist);
 		initialize();
-
-	/*	View HomeView = getLayoutInflater().inflate(R.layout.custom_tablayout,null);
-		TextView textView = (TextView) HomeView.findViewById(R.id.texttotal);
-		TextView count = (TextView) HomeView.findViewById(R.id.textcount);
-		textView.setText("Total");
-		count.setText("100");*/
 	}
 
 	@Override
@@ -132,10 +127,6 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 	@SuppressLint("NewApi")
 	private void initialize() {
 
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setHomeButtonEnabled(true);
-//		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
-//		getSupportActionBar().setIcon(R.drawable.actiontop);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
@@ -144,22 +135,14 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		getSupportActionBar().setDisplayShowCustomEnabled(true);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 
-		//	lvAllMembers=(ListView) findViewById(R.id.lvAllMembers);
-		//	lvAllMembers.setOnItemClickListener(this);
 		mMembersList=new ArrayList<String>();
 
 		mPreferenceHelper=new PreferenceHelper(this);
 
-//		if(mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Regional Pastor") ||
-//				mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Zonal Pastor") ||
-//				mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Group Church Pastor") ||
-//				mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Church Pastor") ||
-//				mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Partnership Rep")) {
-//			tvTitle.setText("All Members Records    ");
-//		} else {
-//			tvTitle.setText("My Partnership Records    ");
-//		}
-		tvTitle.setText("My Partnership Records    ");
+		if(mPreferenceHelper.getString(Commons.FROM_ACTIVITY).equals("true")) {
+			tvTitle.setText("Partnership Records    ");
+		}else{
+			tvTitle.setText("My Partnership Records    ");}
 
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 
@@ -175,12 +158,9 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		mSlidingTabLayout.setViewPager(vpgrHome);
 		mSlidingTabLayout.setSelectedIndicatorColors(Color.parseColor("#33B5E5"));
 
-
-
 		mDrawerList = new ArrayList<DrawerItem>();
-		// mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
-		// GravityCompat.START);
 
+		intent=getIntent();
 		addDrawerListData();
 
 		mLvDrawer = (ListView) findViewById(R.id.left_drawer);
@@ -216,7 +196,7 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		//actionBar.setHomeAsUpIndicator(R.drawable.actiontop);
+
 		getSupportActionBar().setIcon(
 				new ColorDrawable(getResources().getColor(android.R.color.transparent)));
 
@@ -310,9 +290,6 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 			item05.setItemName("My Profile");
 			item05.setImgResID(R.drawable.myprofile);
 
-//		DrawerItem item03 = new DrawerItem();
-//		item03.setItemName("Ministry \n Material");
-//		item03.setImgResID(R.drawable.ministry_materials);
 
 			DrawerItem item03 = new DrawerItem();
 			item03.setItemName("Partnership \n Records");
@@ -486,15 +463,27 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 					//			Intent intForm1=new Intent(this,MyProfileActivity.class);
 					//			startActivity(intForm1);
 					break;
-				case 1:
 
+				case 1:
 					Intent int1=new Intent(this,HomeActivity.class);
 					int1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(int1);
 					finish();
 					break;
 
+				case 2:
+                Intent intForm1=new Intent(this,ProfileView.class);
+                intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intForm1);
+					finish();
+					break;
+//            case 1:
+//				Intent intForm1=new Intent(this,MyProfileActivity.class);
+//				startActivity(intForm1);
+//                break;
+
 				case 3:
+					Log.d("NonStop", "Going to Database");
 					Intent intForm=new Intent(this,MasterSelectorScreenActivity.class);
 					intForm.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intForm);
@@ -502,54 +491,55 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 					break;
 
 				case 4:
-//			Intent partner=new Intent(this,PartnerShipRecord.class);
-//			startActivity(partner);
+					Log.d("NonStop", "Going to Partnership Record");
+				/*	Intent partner=new Intent(this,PartnerShipRecord.class);
+					partner.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(partner);
+					finish();*/
 					break;
-				case 2:
-					Intent intForm1=new Intent(this,ProfileView.class);
-					intForm1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-					startActivity(intForm1);
-					break;
+
 				case 5:
-					Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
-					intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-					startActivity(intSearchMembers);
-					finish();
-					break;
-				case 6:
-					//Intent intMeeting=new Intent(this,MeetingListActivity.class);
+					//	Intent intMyMeetings=new Intent(this,MeetingListActivity.class);
 					//startActivity(intMeeting);
+					Log.d("NonStop", "Going to Attendance");
 					Intent intMyMeetings=new Intent(this,MyMeetingListActivity.class);
 					intMyMeetings.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intMyMeetings);
 					finish();
-
 					break;
-				case 7:
+				case 6:
+					Log.d("NonStop", "Going to Calendar");
 					Intent intEvents=new Intent(this,MyEventListActivity.class);
 					intEvents.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intEvents);
 					finish();
 
 					break;
-				case 8:
+				case 7:
+					Log.d("NonStop", "Going to ToDo");
 					Intent intentTODO = new Intent(this, ToDoTaskActivity.class);
 					intentTODO.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intentTODO);
 					finish();
 					break;
 
-				case 9:
+				case 8:
 					Intent intentMsg = new Intent(this, MessageBroadcastActivity.class);
 					intentMsg.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 					startActivity(intentMsg);
 					finish();
 					break;
 
+				case 9:
+					Log.d("NonStop", "Going to Search");
+					Intent intSearchMembers=new Intent(this,SearchFunctionActivity.class);
+					intSearchMembers.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+					startActivity(intSearchMembers);
+					finish();
+
+					break;
+
 				case 10:
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
 
 					Intent intfeedback=new Intent(this,Feedback.class);
 					intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -587,6 +577,8 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 					finish();
 					break;
 
+				default:
+					break;
 
 			}
 		}
@@ -728,27 +720,30 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 	}
 
 	public void onBackPressed() {
-		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-		if (drawer.isDrawerOpen(GravityCompat.START)) {
-			drawer.closeDrawer(GravityCompat.START);
-		} else {
-			AlertDialog dialog =new AlertDialog.Builder(this)
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("Closing Activity")
-					.setMessage("Are you sure you want to exit?")
-					.setPositiveButton("Yes", new DialogInterface.OnClickListener()
-					{
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							moveTaskToBack(true);
-						}
+		if(intent.hasExtra("fromactivity")){
+			super.onBackPressed();
+		}else{
+			DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+			if (drawer.isDrawerOpen(GravityCompat.START)) {
+				drawer.closeDrawer(GravityCompat.START);
+			} else {
+				AlertDialog dialog = new AlertDialog.Builder(this)
+						.setIcon(android.R.drawable.ic_dialog_alert)
+						.setTitle("Closing Activity")
+						.setMessage("Are you sure you want to exit?")
+						.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								moveTaskToBack(true);
+							}
 
-					})
-					.setNegativeButton("No", null)
-					.show();
-			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-			textView.setTextSize(18);
-		}
+						})
+						.setNegativeButton("No", null)
+						.show();
+				TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+				textView.setTextSize(18);
+			}
+	}
 	}
 
 }

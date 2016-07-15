@@ -137,19 +137,11 @@
     <init>();
 }
 
--keep class com.mutech.synergy.activities.dashboard.GivingActivity {
-    <init>();
-}
-
 -keep class com.mutech.synergy.activities.cellMasters.PartnerShipRecord {
     <init>();
 }
 
 -keep class com.mutech.synergy.activities.cellMasters.PartnerRecordInformation {
-    <init>();
-}
-
--keep class com.mutech.synergy.activities.MessageBroadcastActivity {
     <init>();
 }
 
@@ -178,10 +170,6 @@
 }
 
 -keep class com.mutech.databasedetails.SrCellDetailsActivity {
-    <init>();
-}
-
--keep class com.mutech.filter.FilterActivity {
     <init>();
 }
 
@@ -385,11 +373,19 @@
     <init>();
 }
 
--keep class com.mutech.synergy.activities.GivingHistoryTest {
+-keep class com.mutech.synergy.activities.CAttendanceHistory {
     <init>();
 }
 
--keep class com.mutech.synergy.GivingTest {
+-keep class com.mutech.synergy.PartnershipRecordNew {
+    <init>();
+}
+
+-keep class com.mutech.synergy.activities.ChurchPastorMsg {
+    <init>();
+}
+
+-keep class com.mutech.synergy.activities.ShortBioChurch {
     <init>();
 }
 

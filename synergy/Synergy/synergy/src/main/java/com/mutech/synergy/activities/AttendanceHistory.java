@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -18,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -27,6 +29,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.mutech.synergy.App;
+import com.mutech.synergy.GraphTestActivity;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.activities.meeting.MeetingListActivity;
@@ -43,6 +46,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
@@ -51,7 +55,7 @@ import java.util.Map;
 public class AttendanceHistory extends ActionBarActivity {
 
     private Button btnsubmit,btncancel;
-    private EditText txtFromDate,txtToDate;
+    private TextView txtFromDate,txtToDate;
     private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
     private SimpleDateFormat dateFormatter,dateFormatter01;
     String fdate="",tdate="";
@@ -61,25 +65,37 @@ public class AttendanceHistory extends ActionBarActivity {
     Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
     private Intent intent;
     private LinearLayout layoutchurch,cellLayout;
+    private TextView  spchurchTextView,spCellTextView;
+    private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
+    String cellcode;
+    private String role;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_history);
         intent = getIntent();
+        cellcode=getIntent().getStringExtra("cellcode");
+        role = getIntent().getStringExtra("role");
 
         btnsubmit = (Button) findViewById(R.id.submit);
         btncancel = (Button) findViewById(R.id.cancel);
 
-        txtFromDate=(EditText) findViewById(R.id.txtfromdate);
-        txtToDate=(EditText) findViewById(R.id.txttodate);
+        txtFromDate=(TextView) findViewById(R.id.txtfromdate);
+        txtToDate=(TextView) findViewById(R.id.txttodate);
 
         spchurch =(Spinner) findViewById(R.id.spchurch);
         spCell=(Spinner) findViewById(R.id.spCell);
         layoutchurch=(LinearLayout) findViewById(R.id.layoutchurch1);
-        cellLayout=(LinearLayout) findViewById(R.id.cellLayout1);
-        final TextView spchurchTextView=(TextView) findViewById(R.id.spchurchTextView);
-        final TextView spCellTextView=(TextView) findViewById(R.id.spCellTextView);
+       // cellLayout=(LinearLayout) findViewById(R.id.cellLayout1);
+        spchurchTextView=(TextView) findViewById(R.id.spchurchTextView);
+        spCellTextView=(TextView) findViewById(R.id.spCellTextView);
+
+        spchurch =(Spinner) findViewById(R.id.spchurch);
+        spCell=(Spinner) findViewById(R.id.spCell);
+
+        mChurchList=new ArrayList<String>();
+        mCellList=new ArrayList<String>();
 
         jsonarray=new JSONArray();
         mPreferenceHelper=new PreferenceHelper(this);
@@ -127,33 +143,65 @@ public class AttendanceHistory extends ActionBarActivity {
             }
         });
 
-        if(intent.hasExtra("churchah")) {
+        if(role.contentEquals("Member"))
+        {
             layoutchurch.setVisibility(View.VISIBLE);
-            // cellLayout.setVisibility(View.VISIBLE);
         }
+
 
         btnsubmit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (isValid()) {
-                    if(intent.hasExtra("churchah")){
-                        Intent Int = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+//                if (isValid()) {
+                switch(role) {
+                    case "Membership Strength":
+                        Intent Int = new Intent(AttendanceHistory.this, GraphTestActivity.class);
                         Int.putExtra("fdate", txtFromDate.getText().toString());
                         Int.putExtra("tdate", txtToDate.getText().toString());
                         Int.putExtra("fromah", "fromah");
+                        Int.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
                         startActivity(Int);
                         finish();
-                    }
-                    else{;
-                        Intent Int = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
-                        Int.putExtra("fdate", txtFromDate.getText().toString());
-                        Int.putExtra("tdate", txtToDate.getText().toString());
-                        Int.putExtra("fromah", "fromah");
-                        startActivity(Int);
-                        finish();}
+                        break;
+                    case "Church":
+                        Intent Int1 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int1.putExtra("fdate", txtFromDate.getText().toString());
+                        Int1.putExtra("tdate", txtToDate.getText().toString());
+                        Int1.putExtra("fromah", "fromah");
+                        Int1.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int1);
+                        finish();
+                        break;
+
+                    case "Member":
+                        String church;
+                        try{
+                            church=spchurch.getSelectedItem().toString();
+                        }catch(Exception ex){
+                            church="";
+                        }
+                        Intent Int3 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int3.putExtra("fdate", txtFromDate.getText().toString());
+                        Int3.putExtra("tdate", txtToDate.getText().toString());
+                        Int3.putExtra("fromah", "fromah");
+                        Int3.putExtra("cellcode", church);
+                        startActivity(Int3);
+                        finish();
+                        break;
+                    case "Cell Leader":
+                        Intent Int2 = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
+                        Int2.putExtra("fdate", txtFromDate.getText().toString());
+                        Int2.putExtra("tdate", txtToDate.getText().toString());
+                        Int2.putExtra("fromah", "fromah");
+//                        Int.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int2);
+                        finish();
+                        break;
                 }
-            }
+
+                }
+           // }
         });
 
         btncancel.setOnClickListener(new View.OnClickListener() {
@@ -165,42 +213,52 @@ public class AttendanceHistory extends ActionBarActivity {
                 finish();
             }
         });
+
+        spchurchTextView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                mChurchList.add(mPreferenceHelper.getString(SynergyValues.Commons.USER_DEFVALUE));
+                spchurch.setVisibility(View.VISIBLE);
+                spchurchTextView.setVisibility(View.GONE);
+                setAdapters();
+            }
+        });
+
     }
 
-    public boolean isValid() {
+    private void setAdapters() {
 
-        if(!InputValidation.hasText(txtFromDate)) {
-            AlertDialog dialog =  new AlertDialog.Builder(AttendanceHistory.this)
-                    .setCancelable(false)
-                    .setTitle("Invalid Input")
-                    .setMessage("Please enter valid value in the 'From Date'")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+    /*    ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mZoneList);
+        adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spzone.setAdapter(adapterZone);
 
-                        }
-                    })
-                    .show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(18);
-            return false;
-        }
-        if(!InputValidation.hasText(txtToDate)) {
-            AlertDialog dialog =  new AlertDialog.Builder(AttendanceHistory.this)
-                    .setCancelable(false)
-                    .setTitle("Invalid Input")
-                    .setMessage("Please enter valid value in the 'To Date'")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+        ArrayAdapter<String> adapterRegion = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mRegionList);
+        adapterRegion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spresion.setAdapter(adapterRegion);*/
 
-                        }
-                    })
-                    .show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(18);
-            return false;
-        }
-        return true;
+        ArrayAdapter<String> adapterChurch = new ArrayAdapter<String>(AttendanceHistory.this, android.R.layout.simple_spinner_item, mChurchList);
+        adapterChurch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spchurch.setAdapter(adapterChurch);
+
+ /*       ArrayAdapter<String> adapterSrCell = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mSeniorCellList);
+        adapterSrCell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spSeniorCell.setAdapter(adapterSrCell);
+
+        ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mGrpChurchList);
+        adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spgroupchurch.setAdapter(adapterchurchgropu);
+
+        ArrayAdapter<String> adapterPCF = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mPCFList);
+        adapterPCF.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sppcf.setAdapter(adapterPCF);
+
+        ArrayAdapter<String> adaptercell = new ArrayAdapter<String>(ShowSearchResultFunctionality.this, android.R.layout.simple_spinner_item, mCellList);
+        adaptercell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spCell.setAdapter(adaptercell);*/
+
     }
+
 }

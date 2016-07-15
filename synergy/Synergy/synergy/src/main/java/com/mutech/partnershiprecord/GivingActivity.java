@@ -13,6 +13,8 @@ import org.json.JSONObject;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.Request.Method;
 import com.android.volley.Response.ErrorListener;
@@ -21,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
+import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetAllTasksService;
@@ -31,6 +34,7 @@ import com.mutech.synergy.activities.cellMasters.PartnerShipRecord;
 import com.mutech.synergy.adapters.MyTaskAdapter;
 import com.mutech.synergy.fragments.task.BaseFragment;
 import com.mutech.synergy.models.MeetingListRequestModel;
+import com.mutech.synergy.models.MemberShortProfile;
 import com.mutech.synergy.models.MyTasksResponseModel;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.models.MyTasksResponseModel.Message;
@@ -177,10 +181,120 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 
 		if (NetworkHelper.isOnline(getActivity())) {
 			//	Methods.showProgressDialog(getActivity());
-			getPledge("1");
+			if(mPreferenceHelper.getString(Commons.FROM_ACTIVITY).equals("true")){
+				mPreferenceHelper.addString(Commons.FROM_ACTIVITY, "false");
+			getGivingHistory();
+			}
+			   else{
+			getPledge("1");}
 		} else {
 			Methods.longToast("Please connect to Internet", getActivity());
 		}
+	}
+
+	private void getGivingHistory() {
+
+		StringRequest reqgetCellDetails=new StringRequest(Request.Method.POST, SynergyValues.Web.ViewGivingPledge.SERVICE_URL,new Response.Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+
+				Log.d("droid","get pledge ---------------"+ response);
+				try {
+
+					JSONObject jsonobj=new JSONObject(response);
+
+					if(jsonobj.has("message")){
+					jsonarray=jsonobj.getJSONArray("message");
+
+					Integer total=jsonarray.length();
+
+					Log.e("total=", ""+total);
+
+					Log.e("totalcount=", ""+TOTAL_LIST_ITEMS);
+					if(jsonarray.length()>0){
+						JSONArray tempjsonarray = new JSONArray();
+
+						for(int i=0;i<jsonarray.length();i++) {
+							Log.d("NonStop", "Giving/Pledge: " + jsonarray.getJSONObject(i).getString("giving_or_pledge"));
+							if (jsonarray.getJSONObject(i).getString("giving_or_pledge").contentEquals("Giving")) {
+								tempjsonarray.put(jsonarray.get(i));
+							}
+						}
+						GivingListAdapter1 adpt = new GivingListAdapter1(getActivity(), tempjsonarray);
+						lvMyTasks.setAdapter(adpt);
+					}else{
+						Methods.longToast("No results found", getActivity());
+					}}else{
+						Methods.longToast("No results found", getActivity());}
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				Methods.closeProgressDialog();
+
+			}
+		},new Response.ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
+
+				if(error.networkResponse.statusCode==403){
+					Methods.longToast("Access Denied", getActivity());
+				}
+				else
+					Methods.longToast("Some Error Occured,please try again later",getActivity());
+
+
+
+			}
+
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError{
+				Map<String, String> params = new HashMap<String, String>();
+
+				MemberShortProfile model=new MemberShortProfile();
+				model.setUsername(mPreferenceHelper.getString(SynergyValues.Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(SynergyValues.Commons.USER_PASSWORD));
+				model.setName(mPreferenceHelper.getString(Commons.MEMBER_NO));
+//                model.setRole("Cell Leader");
+
+		//		String dataString=gson.toJson(model, MemberShortProfile.class);
+
+				JSONObject jsonobj=new JSONObject();
+				try {
+
+					jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
+					jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
+					//jsonobj.put("giving_or_pledge","Giving");
+//					jsonobj.put("currency", jsonarray.getJSONObject(0).getString("currency"));
+					Log.d("NonStop", "User Role: " + mPreferenceHelper.getString(Commons.USER_ROLE));
+					jsonobj.put("name",mPreferenceHelper.getString(Commons.MEMBER_NO));
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				//{"userpass":"password","giving_or_pledge":"Giving","username":"nikhil.k@indictranstech.com","flag":"My"}
+
+				String dataString=jsonobj.toString();//gson.toJson(model, MeetingListRequestModel.class);
+
+				Log.d("droid", dataString);
+				params.put(SynergyValues.Web.GetHigherHierarchyService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqgetCellDetails, "reqgetCellDetails");
+		reqgetCellDetails.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
 	}
 
 	private void getPledge(final String pageno) {
@@ -246,18 +360,17 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 					jsonobj.put("giving_or_pledge","Giving");
 //					jsonobj.put("currency", jsonarray.getJSONObject(0).getString("currency"));
 					Log.d("NonStop", "User Role: " + mPreferenceHelper.getString(Commons.USER_ROLE));
-//					if(mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Regional Pastor") ||
-//							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Zonal Pastor") ||
-//							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Group Church Pastor") ||
-//							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Church Pastor") ||
-//							mPreferenceHelper.getString(Commons.USER_ROLE).contentEquals("Partnership Rep")) {
-//						Log.d("NonStop", "NonStop in here!");
-//					} else {
-//						Log.d("NonStop", "NonStop in else! User Role: " + mPreferenceHelper.getString(Commons.USER_ROLE));
-//						jsonobj.put("flag","My");
-//					}
-					jsonobj.put("flag","My");
-					//jsonobj.put("page_no", pageno);
+
+
+					if(mPreferenceHelper.getString(Commons.USER_CHURCH).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_CHURCH, "false");{
+					JSONObject jsonfilter=new JSONObject();
+					jsonfilter.put("church",mPreferenceHelper.getString(Commons.CHURCH));
+					jsonobj.put("filters", jsonfilter);}}
+					else
+					{
+						jsonobj.put("flag","My");
+					}
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -289,7 +402,9 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 			Log.d("NonStop", "Going to Giving_or_pledge_DetailsActivity from GivingActivity. JSON: " + jsonarray.getJSONObject(position).toString());
 			it.putExtra("type","Giving");
 			it.putExtra("record","My");
-			it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));
+			if(jsonarray.getJSONObject(position).has("partnership_arms")){
+				it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));}
+			else {it.putExtra("value","ASD");}
 			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
 			startActivity(it);
 
@@ -297,8 +412,6 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 
 	}
 
@@ -346,7 +459,9 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 
 			try {
 
-				txtname.setText(jarray.getJSONObject(position).getString("partnership_arms"));
+				if(jarray.getJSONObject(position).has("partnership_arms")){
+				txtname.setText(jarray.getJSONObject(position).getString("partnership_arms"));}
+
 				if(jarray.getJSONObject(position).getString("currency").contentEquals("null"))
 					txtamount.setText(jarray.getJSONObject(position).getString("amount"));
 				else
@@ -367,6 +482,84 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
                     Log.e("sum2 = ", ""*/
 
 //					Toast.makeText(getActivity(), "Sum" +sum, Toast.LENGTH_LONG).show();
+
+				double val=0;
+				if(sum.equals(""))
+				{
+					val=Double.parseDouble(sumVal.replace(",", ""));
+				}
+				else {
+					val=Double.parseDouble(sum) + Double.parseDouble(sumVal.replace(",", ""));
+				}
+				sum = Double.toString(val);
+				if(position==jarray.length()-1){
+					PartnershipAdpter.setTotalValGiving(sum);
+					PartnerShipRecord.mAdapter.notifyDataSetChanged();
+				}
+//				Toast.makeText(getActivity(), "Sum" +sum, Toast.LENGTH_LONG).show();
+				Log.e("sum2=", ""+sum);
+
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
+
+			return convertView;
+		}
+	}
+
+	class GivingListAdapter1 extends BaseAdapter{
+
+		private Context mContext;
+		private JSONArray jarray;
+
+
+		public GivingListAdapter1(Context context,JSONArray jarray) {
+			mContext=context;
+			this.jarray=jarray;
+
+		}
+
+		@Override
+		public int getCount() {
+			return jarray.length();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return position;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(final int position, View convertView, ViewGroup parent) {
+
+			LayoutInflater layout = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView = layout.inflate(R.layout.partnership_raw, null);
+
+			TextView txtname=(TextView) convertView.findViewById(R.id.txtname);
+			TextView txtamount=(TextView) convertView.findViewById(R.id.txtamount);
+
+			try {
+//				Log.d("NonStop2", "Giving/Pledge: " + jsonarray.getJSONObject(position).getString("giving_or_pledge"));
+//				if(jarray.getJSONObject(position).getString("giving_or_pledge").contentEquals("Giving")) {
+					if (jarray.getJSONObject(position).has("partnership_arms")) {
+						txtname.setText(jarray.getJSONObject(position).getString("partnership_arms"));
+					}
+
+					if (jarray.getJSONObject(position).getString("currency").contentEquals("null"))
+						txtamount.setText(jarray.getJSONObject(position).getString("amount"));
+					else
+						txtamount.setText(jarray.getJSONObject(position).getString("currency") + " " + jarray.getJSONObject(position).getString("amount"));
+//				}
+
+				String sumVal=jarray.getJSONObject(position).getString("amount");
 
 				double val=0;
 				if(sum.equals(""))

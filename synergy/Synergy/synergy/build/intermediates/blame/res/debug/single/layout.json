@@ -164,6 +164,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_church_detail.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_church_pastor_msg.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_church_pastor_msg.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_markmemberattendance.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_markmemberattendance.xml"
     },
@@ -206,6 +210,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_dashboard_list_details_converts.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_dashboard_list_details_converts.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_partnership_record_new.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_partnership_record_new.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
@@ -456,6 +464,10 @@
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/my_events_layout.xml"
     },
     {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_short_bio_church.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_short_bio_church.xml"
+    },
+    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/nav_header_medipta_home.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/nav_header_medipta_home.xml"
     },
@@ -566,6 +578,10 @@
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_region.xml",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/activity_region.xml"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/custom_search_dialogbox.xml",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/layout/custom_search_dialogbox.xml"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/layout/activity_foundation_school.xml",

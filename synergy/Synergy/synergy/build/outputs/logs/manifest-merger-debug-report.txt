@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:2:1-389:12
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:2:1-403:12
 	package
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml
@@ -17,9 +17,9 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [Synergy:volley:unspecified] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/Synergy/volley/unspecified/AndroidManifest.xml:7:5-9:40
-MERGED from [com.android.support:appcompat-v7:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.1] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.1] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.volley:volley:1.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:appcompat-v7:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services:8.4.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.4.0/AndroidManifest.xml:18:5-42
@@ -238,10 +238,8 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 	android:name
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:35:30-80
 application
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:37:5-387:19
-MERGED from [Synergy:volley:unspecified] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/Synergy/volley/unspecified/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:37:5-401:19
+MERGED from [com.android.volley:volley:1.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:8.4.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.4.0/AndroidManifest.xml:19:5-20
@@ -649,14 +647,6 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:179:13-45
 	android:name
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:178:13-77
-activity#com.mutech.synergy.activities.dashboard.GivingActivity
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:181:9-184:52
-	android:screenOrientation
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:184:13-49
-	android:label
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:183:13-45
-	android:name
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:182:13-64
 activity#com.mutech.synergy.activities.cellMasters.PartnerShipRecord
 ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:185:9-189:58
 	android:screenOrientation
@@ -675,14 +665,6 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:192:13-45
 	android:name
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:191:13-76
-activity#com.mutech.synergy.activities.MessageBroadcastActivity
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:194:9-197:52
-	android:screenOrientation
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:197:13-49
-	android:label
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:196:13-45
-	android:name
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:195:13-64
 activity#com.mutech.synergy.activities.LogoutActivity
 ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:198:9-201:52
 	android:screenOrientation
@@ -739,12 +721,6 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:228:13-67
 	android:name
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:227:13-76
-activity#com.mutech.filter.FilterActivity
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:229:9-231:61
-	android:label
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:231:13-58
-	android:name
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:230:13-60
 activity#com.mutech.synergy.activities.dashboard.NewConvertsYearActivity
 ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:232:9-234:72
 	android:label
@@ -1049,18 +1025,30 @@ ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:380:13-77
 	android:name
 		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:379:13-63
-activity#com.mutech.synergy.activities.GivingHistoryTest
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:381:9-383:74
+activity#com.mutech.synergy.activities.CAttendanceHistory
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:381:9-383:55
 	android:label
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:383:13-71
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:383:13-52
 	android:name
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:382:13-57
-activity#com.mutech.synergy.GivingTest
-ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:384:9-386:75
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:382:13-58
+activity#com.mutech.synergy.PartnershipRecordNew
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:392:9-394:77
 	android:label
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:386:13-63
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:394:13-74
 	android:name
-		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:385:13-39
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:393:13-49
+activity#com.mutech.synergy.activities.ChurchPastorMsg
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:395:9-397:72
+	android:label
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:397:13-69
+	android:name
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:396:13-55
+activity#com.mutech.synergy.activities.ShortBioChurch
+ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:398:9-400:80
+	android:label
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:400:13-68
+	android:name
+		ADDED from /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/AndroidManifest.xml:399:13-54
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:26:9-29:64
 	android:configChanges
