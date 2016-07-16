@@ -404,12 +404,12 @@
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_disabled.9.png"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-xhdpi-v4/new_born.png",
-        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/drawable-xhdpi/new_born.png"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_cast_on_1_light.png",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-xhdpi/ic_cast_on_1_light.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-xhdpi-v4/new_born.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/src/main/res/drawable-xhdpi/new_born.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",

@@ -63,7 +63,26 @@ public class ShortBioChurch extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_bio_church);
 
-        getSupportActionBar().setTitle("Cells/PCF");
+
+        switch(role) {
+            case "Church":
+                getSupportActionBar().setTitle("Cells/PCF");
+                break;
+
+            case "GroupChurch":
+                getSupportActionBar().setTitle("Churches");
+                break;
+
+            case "Zone":
+                getSupportActionBar().setTitle("Group Churches");
+                break;
+
+            case "Region":
+                getSupportActionBar().setTitle("Zones");
+                break;
+        }
+
+
         cellcode=getIntent().getStringExtra("cellcode");
 
         mProfSubModel=new ArrayList<MemberProfileModel.ProfileSubModel>();

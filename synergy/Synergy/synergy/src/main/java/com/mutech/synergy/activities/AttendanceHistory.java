@@ -164,13 +164,14 @@ public class AttendanceHistory extends ActionBarActivity {
                         startActivity(Int);
                         finish();
                         break;
-                    case "Church":
-                        Intent Int1 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
-                        Int1.putExtra("fdate", txtFromDate.getText().toString());
-                        Int1.putExtra("tdate", txtToDate.getText().toString());
-                        Int1.putExtra("fromah", "fromah");
-                        Int1.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
-                        startActivity(Int1);
+
+                    case "Cell Leader":
+                        Intent Int2 = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
+                        Int2.putExtra("fdate", txtFromDate.getText().toString());
+                        Int2.putExtra("tdate", txtToDate.getText().toString());
+                        Int2.putExtra("fromah", "fromah");
+//                        Int.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int2);
                         finish();
                         break;
 
@@ -184,18 +185,56 @@ public class AttendanceHistory extends ActionBarActivity {
                         Intent Int3 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
                         Int3.putExtra("fdate", txtFromDate.getText().toString());
                         Int3.putExtra("tdate", txtToDate.getText().toString());
+                        Int3.putExtra("role","Member");
+                        Int3.putExtra("attendance_type", "church Attendance");
                         Int3.putExtra("fromah", "fromah");
                         Int3.putExtra("cellcode", church);
                         startActivity(Int3);
                         finish();
                         break;
-                    case "Cell Leader":
-                        Intent Int2 = new Intent(AttendanceHistory.this, MyMeetingListActivity.class);
-                        Int2.putExtra("fdate", txtFromDate.getText().toString());
-                        Int2.putExtra("tdate", txtToDate.getText().toString());
-                        Int2.putExtra("fromah", "fromah");
-//                        Int.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
-                        startActivity(Int2);
+
+                    case "Church":
+                        Intent Int1 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int1.putExtra("fdate", txtFromDate.getText().toString());
+                        Int1.putExtra("tdate", txtToDate.getText().toString());
+                        Int1.putExtra("fromah", "fromah");
+                        Int1.putExtra("attendance_type", "church Attendance");
+                        Int1.putExtra("role","Church");
+                        Int1.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int1);
+                        finish();
+                        break;
+
+                    case "Group Church":
+                        Intent Int4 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int4.putExtra("fdate", txtFromDate.getText().toString());
+                        Int4.putExtra("tdate", txtToDate.getText().toString());
+                        Int4.putExtra("role","GroupChurch");
+                        Int4.putExtra("attendance_type", "church Attendance");
+                        Int4.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int4);
+                        finish();
+                        break;
+
+                    case "Zone":
+                        Intent Int5 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int5.putExtra("fdate", txtFromDate.getText().toString());
+                        Int5.putExtra("tdate", txtToDate.getText().toString());
+                        Int5.putExtra("role","Zone");
+                        Int5.putExtra("attendance_type", "church Attendance");
+                        Int5.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int5);
+                        finish();
+                        break;
+
+                    case "Region":
+                        Intent Int6 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int6.putExtra("fdate", txtFromDate.getText().toString());
+                        Int6.putExtra("tdate", txtToDate.getText().toString());
+                        Int6.putExtra("role","Region");
+                        Int6.putExtra("attendance_type", "church Attendance");
+                        Int6.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int6);
                         finish();
                         break;
                 }
@@ -210,7 +249,7 @@ public class AttendanceHistory extends ActionBarActivity {
                 // TODO Auto-generated method stub
                 Intent actInt = new Intent(AttendanceHistory.this, HomeActivity.class);
                 startActivity(actInt);
-                finish();
+            finish();
             }
         });
 

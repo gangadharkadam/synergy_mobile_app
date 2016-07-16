@@ -241,7 +241,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("churchah", "churchah");
-								Int.putExtra("role", "Church");
+								Int.putExtra("role", "Region");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -300,9 +300,9 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							public void onClick(View v) {
 
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
-								mPreferenceHelper.addString(Commons.CHURCH, name);
-								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
-								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								mPreferenceHelper.addString(Commons.REGION, name);
+								mPreferenceHelper.addString(Commons.USER_REGION, "true");
+								mPreferenceHelper.addString(Commons.USER_REGION1, "true");
 								Int.putExtra("fromactivity", "Allmemberlist");
 								startActivity(Int);
 								dialogPopup.dismiss();
@@ -349,7 +349,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("churchah", "churchah");
-								Int.putExtra("role", "Church");
+								Int.putExtra("role", "Zone");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -408,9 +408,9 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							public void onClick(View v) {
 
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
-								mPreferenceHelper.addString(Commons.CHURCH, name);
-								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
-								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								mPreferenceHelper.addString(Commons.ZONE, name);
+								mPreferenceHelper.addString(Commons.USER_ZONE, "true");
+								mPreferenceHelper.addString(Commons.USER_ZONE1, "true");
 								Int.putExtra("fromactivity", "Allmemberlist");
 								startActivity(Int);
 								dialogPopup.dismiss();
@@ -458,7 +458,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("churchah", "churchah");
-								Int.putExtra("role", "Church");
+								Int.putExtra("role", "Group Church");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -518,9 +518,9 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							public void onClick(View v) {
 
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
-								mPreferenceHelper.addString(Commons.CHURCH, name);
-								mPreferenceHelper.addString(Commons.USER_CHURCH, "true");
-								mPreferenceHelper.addString(Commons.USER_CHURCH1, "true");
+								mPreferenceHelper.addString(Commons.CHURCH_GROUP, name);
+								mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP, "true");
+								mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP1, "true");
 								Int.putExtra("fromactivity", "Allmemberlist");
 								startActivity(Int);
 								dialogPopup.dismiss();

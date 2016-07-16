@@ -317,6 +317,8 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 				try {
 
 					JSONObject jsonobj = new JSONObject(response);
+
+					if(jsonobj.has("message")){
 					jsonarray = jsonobj.getJSONArray("message");
 
 					//	int i=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
@@ -332,10 +334,9 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 						lvMyTasks.setAdapter(adpt);
 
 					} else {
-
 						Methods.longToast("No results found", getActivity());
-
-					}
+					}}else {
+						Methods.longToast("No results found", getActivity());}
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -375,6 +376,24 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 						mPreferenceHelper.addString(Commons.USER_CHURCH1, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("church",mPreferenceHelper.getString(Commons.CHURCH));
+							jsonobj.put("filters", jsonfilter);}}
+
+					if(mPreferenceHelper.getString(Commons.USER_REGION1).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_REGION1, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("region",mPreferenceHelper.getString(Commons.REGION));
+							jsonobj.put("filters", jsonfilter);}}
+
+				     if(mPreferenceHelper.getString(Commons.USER_ZONE1).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_ZONE1, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("zone",mPreferenceHelper.getString(Commons.ZONE));
+							jsonobj.put("filters", jsonfilter);}}
+
+				     if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP1).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP1, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("church_group",mPreferenceHelper.getString(Commons.CHURCH_GROUP));
 							jsonobj.put("filters", jsonfilter);}}
 					else
 					{

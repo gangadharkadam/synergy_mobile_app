@@ -309,6 +309,10 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 				try {
 
 					JSONObject jsonobj=new JSONObject(response);
+
+
+					if(jsonobj.has("message")){
+
 					jsonarray=jsonobj.getJSONArray("message");
 
 					Integer total=jsonarray.length();
@@ -323,7 +327,8 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 
 					}else{
 						Methods.longToast("No results found", getActivity());
-					}
+					}}else{
+						Methods.longToast("No results found", getActivity());}
 
 
 				} catch (JSONException e) {
@@ -367,6 +372,25 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 					JSONObject jsonfilter=new JSONObject();
 					jsonfilter.put("church",mPreferenceHelper.getString(Commons.CHURCH));
 					jsonobj.put("filters", jsonfilter);}}
+
+				    if(mPreferenceHelper.getString(Commons.USER_REGION).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_REGION, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("region",mPreferenceHelper.getString(Commons.REGION));
+							jsonobj.put("filters", jsonfilter);}}
+
+					if(mPreferenceHelper.getString(Commons.USER_ZONE).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_ZONE, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("zone",mPreferenceHelper.getString(Commons.ZONE));
+							jsonobj.put("filters", jsonfilter);}}
+
+					if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP).equals("true")){
+						mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP, "false");{
+							JSONObject jsonfilter=new JSONObject();
+							jsonfilter.put("church_group",mPreferenceHelper.getString(Commons.CHURCH_GROUP));
+							jsonobj.put("filters", jsonfilter);}}
+
 					else
 					{
 						jsonobj.put("flag","My");
@@ -385,8 +409,8 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 				params.put(GetAllTasksService.DATA, dataString);
 				return params;
 			}
-		}
-				;
+		};
+
 
 		App.getInstance().addToRequestQueue(reqTasksList, "reqTasksList");
 		reqTasksList.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));

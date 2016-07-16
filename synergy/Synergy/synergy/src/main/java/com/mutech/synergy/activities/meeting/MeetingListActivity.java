@@ -110,6 +110,8 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
     private Button[] btns;
     TextView tvTitle;
 	private Intent intent;
+	private String role;
+	String cellcode,attendance_type;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +135,9 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
 
 		intent = getIntent();
+		role = getIntent().getStringExtra("role");
+		cellcode=getIntent().getStringExtra("cellcode");
+		attendance_type=getIntent().getStringExtra("attendance_type");
 
 		if((!intent.hasExtra("fdate")))
 		{
@@ -198,23 +203,50 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 
+		switch(role) {
 
-		if(intent.hasExtra("fromah"))
-		{
-			fdate = getIntent().getStringExtra("fdate");
-			tdate = getIntent().getStringExtra("tdate");
-			if(!getIntent().getStringExtra("cellcode").contentEquals("")){
-				church = getIntent().getStringExtra("cellcode");}
-			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
-		}
+			case "Cell Leader":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cellcode,fdate,tdate,eventtype);
+				break;
 
-		if(intent.hasExtra("cellah"))
-		{
-			fdate = getIntent().getStringExtra("fdate");
-			tdate = getIntent().getStringExtra("tdate");
-			if(!getIntent().getStringExtra("cellcode").contentEquals("")){
-				cell = getIntent().getStringExtra("cellcode");}
-			getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+			case "Member":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				if(!getIntent().getStringExtra("cellcode").contentEquals("")){
+					church = getIntent().getStringExtra("cellcode");}
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				break;
+
+			case "Church":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,cellcode,pcf,srcell,cell,fdate,tdate,eventtype);
+				break;
+
+			case "GroupChurch":
+
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer",resion,zone,cellcode,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				break;
+
+
+			case "Zone":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer",resion,cellcode,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				break;
+
+
+			case "Region":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer",cellcode,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				break;
+
+
 		}
 
 		if(NetworkHelper.isOnline(this)){
@@ -1578,12 +1610,11 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 			if(!fdate.equals(""))
 				jsonfilter.put("from_date", fdate);
 
-			if(intent.hasExtra("fromah")){
-				jsonfilter.put("attendance_type", "church Attendance");}
+			if(intent.hasExtra("fdate")){
+				jsonfilter.put("attendance_type", attendance_type);}
 
-
-			if(intent.hasExtra("cellah")){
-				jsonfilter.put("attendance_type", "Cell Meeting");}
+			/*if(intent.hasExtra("cellah")){
+				jsonfilter.put("attendance_type", "Cell Meeting");}*/
 
 //			jsonfilter.put("event_type", eventtype);
 			

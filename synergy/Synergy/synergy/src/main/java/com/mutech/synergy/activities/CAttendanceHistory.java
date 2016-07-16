@@ -140,6 +140,8 @@ public class CAttendanceHistory extends ActionBarActivity {
                     Int.putExtra("fdate", txtFromDate.getText().toString());
                     Int.putExtra("tdate", txtToDate.getText().toString());
                     Int.putExtra("cellcode",cell);
+                    Int.putExtra("attendance_type", "Cell Meeting");
+                    Int.putExtra("role","Cell Leader");
                     Int.putExtra("cellah", "cellah");
                     startActivity(Int);
                     finish();

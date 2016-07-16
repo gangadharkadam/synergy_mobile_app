@@ -17,11 +17,17 @@ public class SynergyValues {
 		public static String FROM_ACTIVITY1="from_activity1";
 		public static String MEMBER_NO="member_no";
 		public static String CHURCH="church";
+		public static String ZONE="zone";
+		public static String CHURCH_GROUP="church_group";
+		public static String REGION="region";
 
-		public static String USER_ZONE="zone";
+		public static String USER_ZONE="userzone";
+		public static String USER_ZONE1="userzone1";
 		public static String USER_SENIOR_CELL="senior_cell";
-		public static String USER_CHURCH_GROUP="church_group";
-		public static String USER_REGION="region";
+		public static String USER_CHURCH_GROUP="userchurch_group";
+		public static String USER_CHURCH_GROUP1="userchurch_group1";
+		public static String USER_REGION="userregion";
+		public static String USER_REGION1="userregion1";
 		public static String USER_CHURCH="userchurch";
 		public static String USER_CHURCH1="userchurch1";
 		public static String USER_PCF="pcf";
