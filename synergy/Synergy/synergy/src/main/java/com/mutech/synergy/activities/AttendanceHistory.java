@@ -78,6 +78,10 @@ public class AttendanceHistory extends ActionBarActivity {
         cellcode=getIntent().getStringExtra("cellcode");
         role = getIntent().getStringExtra("role");
 
+        if(role.contentEquals("Membership Strength"))
+        {
+            getSupportActionBar().setTitle("Select Date for Membership Strength");
+        }
         btnsubmit = (Button) findViewById(R.id.submit);
         btncancel = (Button) findViewById(R.id.cancel);
 
@@ -156,11 +160,13 @@ public class AttendanceHistory extends ActionBarActivity {
 //                if (isValid()) {
                 switch(role) {
                     case "Membership Strength":
+
                         Intent Int = new Intent(AttendanceHistory.this, GraphTestActivity.class);
                         Int.putExtra("fdate", txtFromDate.getText().toString());
                         Int.putExtra("tdate", txtToDate.getText().toString());
                         Int.putExtra("fromah", "fromah");
                         Int.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        Int.putExtra("tbl", getIntent().getStringExtra("tbl"));
                         startActivity(Int);
                         finish();
                         break;
@@ -237,8 +243,18 @@ public class AttendanceHistory extends ActionBarActivity {
                         startActivity(Int6);
                         finish();
                         break;
-                }
 
+                    case "Cells":
+                        Intent Int7 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                        Int7.putExtra("fdate", txtFromDate.getText().toString());
+                        Int7.putExtra("tdate", txtToDate.getText().toString());
+                        Int7.putExtra("role","Cells");
+                        Int7.putExtra("attendance_type", "Cell Meeting");
+                        Int7.putExtra("cellcode", getIntent().getStringExtra("cellcode"));
+                        startActivity(Int7);
+                        finish();
+                        break;
+                }
                 }
            // }
         });

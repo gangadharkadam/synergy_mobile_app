@@ -397,7 +397,8 @@
             android:label="@string/title_activity_church_pastor_msg" />
         <activity
             android:name=".activities.ShortBioChurch"
-            android:label="@string/title_activity_short_bio_church"></activity>
+            android:label="@string/title_activity_short_bio_church">
+        </activity>
     </application>
 
 </manifest>

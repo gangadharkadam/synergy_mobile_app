@@ -141,7 +141,11 @@ public class PartnerShipRecord extends ActionBarActivity implements OnItemClickL
 
 		if(mPreferenceHelper.getString(Commons.FROM_ACTIVITY).equals("true")) {
 			tvTitle.setText("Partnership Records    ");
-		}else{
+		}else if(mPreferenceHelper.getString(Commons.FROM_ACTIVITY2).equals("true"))
+		{
+			tvTitle.setText("Partnership Records    ");
+		}
+		else{
 			tvTitle.setText("My Partnership Records    ");}
 
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);

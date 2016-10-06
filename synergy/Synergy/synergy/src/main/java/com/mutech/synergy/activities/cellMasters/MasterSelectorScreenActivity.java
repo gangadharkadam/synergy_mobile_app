@@ -501,11 +501,13 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		case R.id.btnAllMembers:
 			Log.d("NonStop", "Going to All Members");
 				Intent intAllMem=new Intent(this,AllMemberListActivity.class);
+				intAllMem.putExtra("role", "Member");
 				startActivity(intAllMem);
 			break;
 		case R.id.btnAllfirsttimer:
 			Log.d("NonStop", "Going to First Timer in Db");
 			Intent intAllfirsttimer=new Intent(this,FirstTimerInDatabaseActivity.class);
+			intAllfirsttimer.putExtra("role", "Member");
 			startActivity(intAllfirsttimer);
 			break;
 		case R.id.btnAddmember:

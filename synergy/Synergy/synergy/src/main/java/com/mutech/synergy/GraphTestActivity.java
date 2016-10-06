@@ -56,7 +56,7 @@ public class GraphTestActivity extends ActionBarActivity {
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
 	private ArrayList<String> monthnameslist,newConvertsList,totalMemberList;
-	String cellcode,fdate,tdate;
+	String cellcode,fdate,tdate,tbl;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,7 @@ public class GraphTestActivity extends ActionBarActivity {
 		cellcode=getIntent().getStringExtra("cellcode");
 		fdate = getIntent().getStringExtra("fdate");
 		tdate = getIntent().getStringExtra("tdate");
+		tbl = getIntent().getStringExtra("tbl");
 
 		monthnameslist=new ArrayList<String>();
 		newConvertsList=new ArrayList<String>();
@@ -194,7 +195,7 @@ public class GraphTestActivity extends ActionBarActivity {
 				MeetingListRequestModel model=new MeetingListRequestModel();
 				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
 				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				model.setTbl("Churches");
+				model.setTbl(tbl);
 				model.setName(cellcode);
 				model.setFrom_date(fdate);
 				model.setTo_date(tdate);

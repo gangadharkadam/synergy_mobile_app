@@ -58,6 +58,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.mutech.databasedetails.CellDetailsActivity;
 import com.mutech.databasedetails.ChurchDetail;
+import com.mutech.databasedetails.FirstTimerInDatabaseActivity;
 import com.mutech.databasedetails.GroupChurch;
 import com.mutech.databasedetails.PcfDetailsActivity;
 import com.mutech.databasedetails.RegionActivity;
@@ -103,7 +104,8 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 	//ImageView filterimg;
 
 	private Dialog dialogPopup=null;
-	private Button viewchurchattendancehistory,viewmembers,viewmembershipstrength,msgchurchpastor,viewnewconverts,viewpartnershipinfo,viewfirsttimers,viewcellspcf;
+	private Dialog dialogPopup1=null;
+	private Button viewchurchattendancehistory,viewmembers,viewmembershipstrength,msgchurchpastor,viewnewconverts,viewpartnershipinfo,viewfirsttimers,viewcellspcf,btncell,btnseniorcell,btnpcf;
 	
 	private ListView lvShowSearch;
 	private ArrayList<SearchResultSubModel> subModelList;
@@ -215,6 +217,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 					String type=jarray.getJSONObject(position).getString("type");
 					final String name=jarray.getJSONObject(position).getString("id");
 
+					mPreferenceHelper.addString(Commons.FROM_ACTIVITY2, "true");
 					dialogPopup = new Dialog(ShowSearchResultFunctionality.this);
 					dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
 					dialogPopup.setContentView(R.layout.custom_search_dialogbox);
@@ -230,7 +233,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 					
 					if(type.equals("Regions")){
 						viewchurchattendancehistory.setText("View Region attendance history");
-						msgchurchpastor.setText("Send message to the Region Pastor Remark");
+						msgchurchpastor.setText("Send message to the Region Pastor");
 						viewcellspcf.setText("View Zones in the Region");
 						dialogPopup.show();
 
@@ -251,7 +254,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AllMemberListActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Region");
 								startActivity(Int);
@@ -266,6 +269,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Membership Strength");
+								Int.putExtra("tbl", "Regions");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -275,7 +279,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Region New Converts");
 								startActivity(Int);
@@ -287,7 +291,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role", "Region First Timer");
 								startActivity(Int);
@@ -338,7 +342,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 					
 					if(type.equals("Zones")){
 						viewchurchattendancehistory.setText("View Zone attendance history");
-						msgchurchpastor.setText("Send message to the Zone Pastor Remark");
+						msgchurchpastor.setText("Send message to the Zone Pastor");
 						viewcellspcf.setText("View Group Churches in the Zone");
 						dialogPopup.show();
 
@@ -359,7 +363,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AllMemberListActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Zone");
 								startActivity(Int);
@@ -374,6 +378,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Membership Strength");
+								Int.putExtra("tbl", "Zones");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -383,7 +388,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Zone New Converts");
 								startActivity(Int);
@@ -395,7 +400,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role", "Zone First Timer");
 								startActivity(Int);
@@ -447,7 +452,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 					
 					if(type.equals("Group Churches")){
 						viewchurchattendancehistory.setText("View Group Church attendance history");
-						msgchurchpastor.setText("Send message to the Group Church Pastor Remark");
+						msgchurchpastor.setText("Send message to the Group Church Pastor");
 						viewcellspcf.setText("View churches in the Group Church");
 						dialogPopup.show();
 
@@ -468,7 +473,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AllMemberListActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Group Church");
 								startActivity(Int);
@@ -482,6 +487,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
+								Int.putExtra("tbl", "Group Churches");
 								Int.putExtra("role","Membership Strength");
 								startActivity(Int);
 								dialogPopup.dismiss();
@@ -493,7 +499,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Group Church New Converts");
 								startActivity(Int);
@@ -505,7 +511,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role", "Group Church First Timer");
 								startActivity(Int);
@@ -578,7 +584,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AllMemberListActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Church");
 								startActivity(Int);
@@ -593,6 +599,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","Membership Strength");
+								Int.putExtra("tbl", "Churches");
 								startActivity(Int);
 								dialogPopup.dismiss();
 							}
@@ -602,7 +609,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","New Converts");
 								startActivity(Int);
@@ -614,7 +621,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ViewMembers.class);
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
 								Int.putExtra("cellcode", name);
 								Int.putExtra("role","First Timer");
 								startActivity(Int);
@@ -652,12 +659,58 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 							@Override
 							public void onClick(View v) {
 
-								Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
-								Int.putExtra("role","Church");
-								Int.putExtra("cellcode", name);
-								Int.putExtra("tbl", "Churches");
-								startActivity(Int);
+								dialogPopup1 = new Dialog(ShowSearchResultFunctionality.this);
+								dialogPopup1.requestWindowFeature(Window.FEATURE_NO_TITLE);
+								dialogPopup1.setContentView(R.layout.custom_cell_pcf_dialogbox);
+
+								btncell= (Button) dialogPopup1.findViewById(R.id.cell);
+								btnpcf= (Button) dialogPopup1.findViewById(R.id.pcf);
+								btnseniorcell= (Button) dialogPopup1.findViewById(R.id.seniorcell);
+
+								dialogPopup1.show();
 								dialogPopup.dismiss();
+
+								btnseniorcell.setOnClickListener(new View.OnClickListener() {
+									@Override
+									public void onClick(View v) {
+
+										Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+										Int.putExtra("role", "Church");
+										Int.putExtra("cellcode", name);
+										Int.putExtra("tbl", "Churches");
+										Int.putExtra("key", "Senior Cells");
+										startActivity(Int);
+										dialogPopup1.dismiss();
+									}
+								});
+
+								btncell.setOnClickListener(new View.OnClickListener() {
+									@Override
+									public void onClick(View v) {
+
+										Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+										Int.putExtra("role", "Church");
+										Int.putExtra("cellcode", name);
+										Int.putExtra("tbl", "Churches");
+										Int.putExtra("key", "Cells");
+										startActivity(Int);
+										dialogPopup1.dismiss();
+									}
+								});
+
+								btnpcf.setOnClickListener(new View.OnClickListener() {
+									@Override
+									public void onClick(View v) {
+
+										Intent Int = new Intent(ShowSearchResultFunctionality.this, ShortBioChurch.class);
+										Int.putExtra("role", "Church");
+										Int.putExtra("cellcode", name);
+										Int.putExtra("tbl", "Churches");
+										Int.putExtra("key", "PCFs");
+										startActivity(Int);
+										dialogPopup1.dismiss();
+									}
+								});
 							}
 						});
 
@@ -673,9 +726,110 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 					if(type.equals("Senior Cells")){
 						startActivity(new Intent(ShowSearchResultFunctionality.this, SrCellDetailsActivity.class).putExtra("cellcode", memberid));
 					}
-					
+
 					if(type.equals("Cells")){
-						startActivity(new Intent(ShowSearchResultFunctionality.this, CellDetailsActivity.class).putExtra("cellcode", memberid));
+
+						viewchurchattendancehistory.setText("View Cell attendance history");
+						msgchurchpastor.setText("Send message to the Cell Pastor");
+						viewcellspcf.setVisibility(View.GONE);
+					//	viewcellspcf.setText("View Cell in the Region");
+						dialogPopup.show();
+
+
+						viewchurchattendancehistory.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Cells");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+				/*		viewmembers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AllMemberListActivity.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role","Cell Leader");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewmembershipstrength.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Membership Strength");
+								Int.putExtra("tbl", "Cells");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewnewconverts.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Cell Leader New Converts");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewfirsttimers.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, FirstTimerInDatabaseActivity.class);
+								Int.putExtra("cellcode", name);
+								Int.putExtra("role", "Cell Leader First Timer");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+						viewpartnershipinfo.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, PartnerShipRecord.class);
+								mPreferenceHelper.addString(Commons.REGION, name);
+								mPreferenceHelper.addString(Commons.USER_REGION, "true");
+								mPreferenceHelper.addString(Commons.USER_REGION1, "true");
+								Int.putExtra("fromactivity", "Allmemberlist");
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});
+
+
+						msgchurchpastor.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+
+								Intent Int = new Intent(ShowSearchResultFunctionality.this, ChurchPastorMsg.class);
+								Int.putExtra("cellcode", name);
+								startActivity(Int);
+								dialogPopup.dismiss();
+							}
+						});*/
+
+
+					/*	Intent Int = new Intent(ShowSearchResultFunctionality.this, AttendanceHistory.class);
+						Int.putExtra("cellcode", name);
+						Int.putExtra("role", "Cells");
+						startActivity(Int)*/;
+
+					//	startActivity(new Intent(ShowSearchResultFunctionality.this, CellDetailsActivity.class).putExtra("cellcode", memberid));
 					}
 
 					if(type.equals("Members")){

@@ -373,19 +373,19 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 					jsonfilter.put("church",mPreferenceHelper.getString(Commons.CHURCH));
 					jsonobj.put("filters", jsonfilter);}}
 
-				    if(mPreferenceHelper.getString(Commons.USER_REGION).equals("true")){
+				    else if(mPreferenceHelper.getString(Commons.USER_REGION).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_REGION, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("region",mPreferenceHelper.getString(Commons.REGION));
 							jsonobj.put("filters", jsonfilter);}}
 
-					if(mPreferenceHelper.getString(Commons.USER_ZONE).equals("true")){
+					else if(mPreferenceHelper.getString(Commons.USER_ZONE).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_ZONE, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("zone",mPreferenceHelper.getString(Commons.ZONE));
 							jsonobj.put("filters", jsonfilter);}}
 
-					if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP).equals("true")){
+					else if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("church_group",mPreferenceHelper.getString(Commons.CHURCH_GROUP));

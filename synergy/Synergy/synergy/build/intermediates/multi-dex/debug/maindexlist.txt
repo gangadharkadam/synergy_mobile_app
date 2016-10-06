@@ -41,6 +41,7 @@ com/mutech/synergy/activities/event/SingleEventDetails$3.class
 com/mutech/synergy/SynergyValues$Web.class
 com/mutech/synergy/activities/CAttendanceHistory$5.class
 com/mutech/databasedetails/CreateFirstTimerActivity$20.class
+android/support/multidex/MultiDexExtractor.class
 com/mutech/databasedetails/CreateNewMemberActivity$35.class
 com/mutech/synergy/activities/CellLeaderMsg$5.class
 com/google/android/gms/internal/zzfd.class
@@ -73,6 +74,7 @@ com/mutech/synergy/activities/dashboard/PledgeActivity$3.class
 com/google/android/gms/ads/internal/overlay/zzk.class
 com/mutech/partnershiprecord/MypartnershipPledgeActivity$3.class
 android/support/v4/app/FragmentActivity.class
+android/support/multidex/MultiDex.class
 com/mutech/synergy/activities/cellMasters/ShowSearchResultFunctionality$21.class
 com/github/mikephil/charting/data/ChartData.class
 android/support/v4/media/session/MediaSessionCompat$1.class
@@ -100,6 +102,7 @@ com/mutech/partnershiprecord/GivingActivity$32.class
 com/mutech/partnershiprecord/MypartnershipPledgeActivity$8.class
 com/mutech/synergy/activities/cellMasters/SearchFunctionActivity$16.class
 com/google/android/gms/ads/internal/client/zzl.class
+android/support/multidex/MultiDexExtractor$1.class
 com/mutech/synergy/activities/meeting/MarkMemberAttendanceActivity$12.class
 com/mutech/databasedetails/FirstTimerInDatabaseActivity$31.class
 com/mutech/databasedetails/PcfDetailsActivity.class
@@ -491,6 +494,7 @@ com/google/android/gms/internal/zzig.class
 com/mutech/synergy/activities/dashboard/DashboardListDetailsConvertsActivity$14.class
 com/mutech/partnershiprecord/Giving_or_pledge_DetailsActivity$28.class
 com/mutech/synergy/activities/dashboard/NewConvertsMonthActivity$23.class
+android/support/multidex/MultiDex$V19.class
 com/mutech/synergy/activities/dashboard/FirstTimesWeekActivity$9.class
 com/google/android/gms/nearby/messages/internal/zzn.class
 com/mutech/synergy/activities/meeting/CreateCellMeetingActivity$3.class
@@ -590,6 +594,7 @@ com/mutech/synergy/activities/dashboard/InviteesandContactsweekActivity$10.class
 com/google/android/gms/ads/internal/client/zzo.class
 com/mutech/synergy/SynergyValues$Web$GetEventMemberListService.class
 com/mutech/synergy/activities/dashboard/NewConvertsWeekActivity$20.class
+android/support/multidex/MultiDex$V14.class
 com/mutech/synergy/App$1.class
 com/google/android/gms/internal/zzdk.class
 com/google/android/gms/ads/AdRequest.class
@@ -901,6 +906,7 @@ com/mutech/synergy/activities/event/CreateEventActivity$3.class
 com/mutech/synergy/activities/cellMasters/NewCreateCellMasterActivity$3.class
 com/mutech/synergy/activities/HomeActivity$9.class
 com/mutech/synergy/activities/LoginActivity$2.class
+android/support/multidex/ZipUtil$CentralDirectory.class
 com/mutech/synergy/activities/dashboard/FirstTimesWeekActivity$28.class
 com/android/volley/Request.class
 com/google/android/gms/wearable/DataApi$DataListener.class
@@ -1013,6 +1019,7 @@ com/mutech/databasedetails/FirstTimerInDatabaseActivity$11.class
 com/mutech/synergy/SynergyValues$Web$GetMyMeetingService.class
 com/mutech/synergy/activities/event/MyEventListActivity$8.class
 android/support/v4/util/LogWriter.class
+android/support/multidex/MultiDex$V4.class
 com/mutech/synergy/activities/cellMasters/AllMemberListActivity$8.class
 com/google/android/gms/ads/internal/request/AdRequestInfoParcel$zza.class
 com/google/android/gms/internal/zzhk.class
@@ -2465,6 +2472,7 @@ com/mutech/synergy/activities/dashboard/InviteesandContactsweekActivity$7.class
 com/mutech/synergy/activities/profile/MyProfileActivity$2.class
 com/mutech/synergy/activities/dashboard/FirstTimersYearActivity$6.class
 android/support/annotation/WorkerThread.class
+android/support/multidex/ZipUtil.class
 com/mutech/synergy/activities/cellMasters/SearchFunctionActivity$26.class
 com/mutech/synergy/activities/dashboard/DashboardListDetailsConvertsActivity.class
 com/mutech/messagebraudcast/MessageBroadcastActivity$9.class

@@ -203,49 +203,58 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 		UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 
+		if((intent.hasExtra("role")))
+		{
 		switch(role) {
 
 			case "Cell Leader":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cellcode,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype);
 				break;
 
 			case "Member":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				if(!getIntent().getStringExtra("cellcode").contentEquals("")){
-					church = getIntent().getStringExtra("cellcode");}
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				if (!getIntent().getStringExtra("cellcode").contentEquals("")) {
+					church = getIntent().getStringExtra("cellcode");
+				}
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
 				break;
 
 			case "Church":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,cellcode,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, cellcode, pcf, srcell, cell, fdate, tdate, eventtype);
 				break;
 
 			case "GroupChurch":
 
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer",resion,zone,cellcode,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, cellcode, church, pcf, srcell, cell, fdate, tdate, eventtype);
 				break;
 
 
 			case "Zone":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer",resion,cellcode,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer", resion, cellcode, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
 				break;
 
 
 			case "Region":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer",cellcode,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer", cellcode, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
 				break;
 
+			case "Cells":
+				fdate = getIntent().getStringExtra("fdate");
+				tdate = getIntent().getStringExtra("tdate");
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype);
+				break;
+		    }
 
 		}
 

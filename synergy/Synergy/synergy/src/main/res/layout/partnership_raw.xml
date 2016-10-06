@@ -23,7 +23,7 @@
    	    android:layout_alignParentTop="true"
    	    android:textColor="@android:color/black"
         android:textSize="@dimen/textsize_16"
-   	    android:text="ASD" />
+   	    android:text="" />
    	
    	<TextView
    	    android:id="@+id/txtamount"
@@ -33,7 +33,7 @@
    	    android:layout_alignParentTop="true"
    	    android:textColor="@android:color/black"
         android:textSize="@dimen/textsize_16"
-   	    android:text="khkjh" />
+   	    android:text=" " />
 
 <!--
 	   <TextView

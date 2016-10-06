@@ -57,12 +57,21 @@ public class ShortBioChurch extends ActionBarActivity {
     private ListView lvAllMembers;
     private String role;
     private String tbl;
+    private String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_bio_church);
 
+        cellcode=getIntent().getStringExtra("cellcode");
+
+        mProfSubModel=new ArrayList<MemberProfileModel.ProfileSubModel>();
+        mPreferenceHelper=new PreferenceHelper(this);
+        gson=new Gson();
+        role = getIntent().getStringExtra("role");
+        tbl = getIntent().getStringExtra("tbl");
+        key = getIntent().getStringExtra("key");
 
         switch(role) {
             case "Church":
@@ -81,15 +90,6 @@ public class ShortBioChurch extends ActionBarActivity {
                 getSupportActionBar().setTitle("Zones");
                 break;
         }
-
-
-        cellcode=getIntent().getStringExtra("cellcode");
-
-        mProfSubModel=new ArrayList<MemberProfileModel.ProfileSubModel>();
-        mPreferenceHelper=new PreferenceHelper(this);
-        gson=new Gson();
-        role = getIntent().getStringExtra("role");
-        tbl = getIntent().getStringExtra("tbl");
 
         lvAllMembers=(ListView) findViewById(R.id.lvviewMembers);
 
@@ -183,7 +183,7 @@ public class ShortBioChurch extends ActionBarActivity {
                 model.setTbl(tbl);
                 model.setName(cellcode);
                 if(role.contentEquals("Church")){
-                model.setKey("Senior Cells");}
+                model.setKey(key);}
                 else{
                 model.setRole(role);}
                 model.setPage_no(pageno);

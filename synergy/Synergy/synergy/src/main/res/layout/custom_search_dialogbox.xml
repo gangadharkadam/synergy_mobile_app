@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text=" Send message to the Church Pastor Remark"
+            android:text=" Send message to the Church Pastor"
             android:background="#03afef"
             android:padding="2dp"
             android:layout_marginBottom="5dp"/>
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="View new converts history Remark "
+            android:text="View new converts history"
             android:padding="2dp"
             android:background="#03afef"
             android:layout_marginBottom="5dp"/>
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="View Partnership Information Remark"
+            android:text="View Partnership Information"
             android:padding="2dp"
             android:background="#03afef"
             android:layout_marginBottom="5dp"/>
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="View first timers history Remark"
+            android:text="View first timers history"
             android:padding="2dp"
             android:background="#03afef"
             android:layout_marginBottom="5dp"/>

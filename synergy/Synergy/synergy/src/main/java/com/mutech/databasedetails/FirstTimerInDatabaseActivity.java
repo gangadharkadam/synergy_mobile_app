@@ -82,6 +82,7 @@ public class FirstTimerInDatabaseActivity extends ActionBarActivity {
 	
 	ListView weeklist;
 	private PreferenceHelper mPreferenceHelper;
+	String name1,cellcode,role;
 	
 	String month;
 	private Gson gson;
@@ -118,6 +119,8 @@ public class FirstTimerInDatabaseActivity extends ActionBarActivity {
 	month=getIntent().getStringExtra("month");
 	gson=new Gson();
     jsonarray=new JSONArray();
+		cellcode=getIntent().getStringExtra("cellcode");
+		role = getIntent().getStringExtra("role");
 	
 	
 	
@@ -204,7 +207,13 @@ public class FirstTimerInDatabaseActivity extends ActionBarActivity {
 					
 					Log.e("Name", jsonarray.getJSONObject(position).getString("name"));
 					Intent it=new Intent(FirstTimerInDatabaseActivity.this,DashboardListDetailsActivity.class);
-					it.putExtra("title", "First Timers");
+
+					if(role.contentEquals("New Converts") ||role.contentEquals("Region New Converts") ||role.contentEquals("Zone New Converts")||role.contentEquals("Group Church New Converts") ){
+						it.putExtra("title", "New Converts");
+					}
+					else if(role.contentEquals("First Timer") ||role.contentEquals("Region First Timer") ||role.contentEquals("Zone First Timer")||role.contentEquals("Group Church First Timer") ){
+						it.putExtra("title", "First Timers");
+					} else {it.putExtra("title", "First Timers");}
 					it.putExtra("name", jsonarray.getJSONObject(position).getString("name"));
 					it.putExtra("tblename", "First Timer");
 					Log.d("Nonstopio", "Going to Indiv First Timer");
@@ -219,14 +228,72 @@ public class FirstTimerInDatabaseActivity extends ActionBarActivity {
 			
 		}
 	});
-	
-	if(NetworkHelper.isOnline(this)){
+
+		if(NetworkHelper.isOnline(FirstTimerInDatabaseActivity.this)){
+			Methods.showProgressDialog(FirstTimerInDatabaseActivity.this);
+
+			switch(role) {
+
+				case "Member":
+				//	getDashboardDataService("1");
+					getDashboardDataService("First Timer", "1", "", "", "", "", "", "", "", "", "");
+					break;
+
+				case "New Converts":
+					titletextView.setText("New Converts   ");
+					getDashboardDataService("New Converts", "1", "", "", "", cellcode, "", "", "", "", "");
+					break;
+
+				case "First Timer":
+					titletextView.setText("First Timers   ");
+					getDashboardDataService("First Timer", "1", "", "", "", cellcode, "", "", "", "", "");
+					break;
+
+				case "Region New Converts":
+					titletextView.setText("New Converts   ");
+					getDashboardDataService("New Converts", "1", cellcode, "", "", "", "", "", "", "", "");
+					break;
+
+				case "Zone New Converts":
+					titletextView.setText("New Converts   ");
+					getDashboardDataService("New Converts", "1", "", cellcode, "", "", "", "", "", "", "");
+					break;
+
+				case "Group Church New Converts":
+					titletextView.setText("New Converts   ");
+					getDashboardDataService("New Converts", "1", "", "", cellcode, "", "", "", "", "", "");
+					break;
+
+				case "Region First Timer":
+					titletextView.setText("First Timers   ");
+					getDashboardDataService("First Timer", "1", cellcode, "", "", "", "", "", "", "", "");
+					break;
+
+				case "Zone First Timer":
+					titletextView.setText("First Timers   ");
+					getDashboardDataService("First Timer", "1", "", cellcode, "", "", "", "", "", "", "");
+					break;
+
+				case "Group Church First Timer":
+					titletextView.setText("First Timers   ");
+					getDashboardDataService("First Timer", "1", "", "", cellcode, "", "", "", "", "","");
+					break;
+
+			}
+
+		}else{
+
+			Methods.longToast("Please connect to Internet", this);
+
+		}
+
+	/*if(NetworkHelper.isOnline(this)){
 		Methods.showProgressDialog(this);
 		getDashboardDataService("1");
 
 	}
 	else
-		Methods.longToast("Please connect to Internet", this);
+		Methods.longToast("Please connect to Internet", this);*/
 
 }
 	@Override
@@ -278,7 +345,7 @@ public class FirstTimerInDatabaseActivity extends ActionBarActivity {
 	}
 
 
-private void getDashboardDataService(final String pageno) {
+private void getDashboardDataService(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
 	StringRequest reqDashboard=new StringRequest(Method.POST,DashboardListDataService.SERVICE_URL,new Listener<String>() {
 
 		@Override
@@ -308,8 +375,13 @@ private void getDashboardDataService(final String pageno) {
 						jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
 						 
 						if(jsonarray.length()>0){
-							
-							titletextView.setText("First Timers("+i+")");
+
+							if(role.contentEquals("New Converts") ||role.contentEquals("Region New Converts") ||role.contentEquals("Zone New Converts")||role.contentEquals("Group Church New Converts") ){
+								titletextView.setText("New Converts ("+i+")");
+							}
+							else if(role.contentEquals("First Timer") ||role.contentEquals("Region First Timer") ||role.contentEquals("Zone First Timer")||role.contentEquals("Group Church First Timer") ){
+								titletextView.setText("First Timers ("+i+")");
+							}else {titletextView.setText("First Timers("+i+")");}
 							Btnfooter();
 							
 						jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
@@ -355,9 +427,40 @@ private void getDashboardDataService(final String pageno) {
 				
 				jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
 				jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				jsonobj.put("tbl", "First Timer");
+				jsonobj.put("tbl", tbl);
 				jsonobj.put("page_no",pageno);
-				
+
+				JSONObject jsonfilter=new JSONObject();
+
+				if(!resion.equals(""))
+					jsonfilter.put("region", resion);
+
+				if(!zone.equals(""))
+					jsonfilter.put("zone", zone);
+
+				if(!gchurch.equals(""))
+					jsonfilter.put("group_church", gchurch);
+
+				if(!church.equals(""))
+					jsonfilter.put("church", church);
+
+				if(!pcf.equals(""))
+					jsonfilter.put("pcf", pcf);
+
+				if(!srcell.equals(""))
+					jsonfilter.put("senior_cell", srcell);
+
+				if(!cell.equals(""))
+					jsonfilter.put("cell", cell);
+
+				if(!fdate.equals(""))
+					jsonfilter.put("from_date", fdate);
+
+				if(!todate.equals(""))
+					jsonfilter.put("to_date", todate);
+
+
+				jsonobj.put("filters", jsonfilter);
 				
 				
 				
@@ -480,7 +583,7 @@ private void Btnfooter()
             {
                	if(NetworkHelper.isOnline(FirstTimerInDatabaseActivity.this)){
         			Methods.showProgressDialog(FirstTimerInDatabaseActivity.this);
-        			getDashboardDataService( btns[j].getText().toString());
+					getDashboardDataService("First Timer", btns[j].getText().toString(), "", "", "", "", "","","","","");
         			
         		}else{
         			

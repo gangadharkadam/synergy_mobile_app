@@ -124,7 +124,7 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
 	private Dialog dialogPopup=null;
 	private Button btnviewgivinghistory,btnviewcellattendancehistory,btnviewchurchattendancehistory,btnviewprofile;
-	String name1;
+	String name1,cellcode,role;
 	String memberno = null;
 
 	@Override
@@ -146,8 +146,9 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 			
 			txtcount.setText("Members   ");
 			getSupportActionBar().setDisplayShowCustomEnabled(true);
-		
-		
+
+		cellcode=getIntent().getStringExtra("cellcode");
+		role = getIntent().getStringExtra("role");
 		
 		lvAllMembers=(ListView) findViewById(R.id.lvAllMembers);
 		lvAllMembers.setOnItemClickListener(this);
@@ -195,13 +196,87 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 
 		fromDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 		toDatePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-		if(NetworkHelper.isOnline(this)){
+
+		if(NetworkHelper.isOnline(AllMemberListActivity.this)){
+			Methods.showProgressDialog(AllMemberListActivity.this);
+
+			switch(role) {
+
+				case "Member":
+					getListNew("Member", "1", "", "", "", "", "", "", "", "", "");
+					break;
+
+				case "Church":
+					getListNew("Member","1","","","",cellcode,"","","","","");
+					break;
+
+				case "Region":
+					getListNew("Member","1",cellcode,"","","","","","","","");
+					break;
+
+				case "Zone":
+					getListNew("Member","1","",cellcode,"","","","","","","");
+					break;
+
+				case "Group Church":
+					getListNew("Member","1","","",cellcode,"","","","","","");
+					break;
+
+				case "New Converts":
+					txtcount.setText("New Converts   ");
+					getListNew("New Converts","1","","","",cellcode,"","","","","");
+					break;
+
+				case "First Timer":
+					txtcount.setText("First Timer   ");
+					getListNew("First Timer","1","","","",cellcode,"","","","","");
+					break;
+
+				case "Region New Converts":
+					txtcount.setText("New Converts   ");
+					getListNew("New Converts","1",cellcode,"","","","","","","","");
+					break;
+
+				case "Zone New Converts":
+					txtcount.setText("New Converts   ");
+					getListNew("New Converts","1","",cellcode,"","","","","","","");
+					break;
+
+				case "Group Church New Converts":
+					txtcount.setText("New Converts   ");
+					getListNew("New Converts","1","","",cellcode,"","","","","","");
+					break;
+
+				case "Region First Timer":
+					txtcount.setText("First Timer   ");
+					getListNew("First Timer","1",cellcode,"","","","","","","","");
+					break;
+
+				case "Zone First Timer":
+					txtcount.setText("First Timer   ");
+					getListNew("First Timer","1","",cellcode,"","","","","","","");
+					break;
+
+				case "Group Church First Timer":
+					txtcount.setText("First Timer   ");
+					getListNew("First Timer","1","","",cellcode,"","","","","","");
+					break;
+
+			}
+
+		}else{
+
+			Methods.longToast("Please connect to Internet", AllMemberListActivity.this);
+
+		}
+
+	/*	if (NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
 			getListNew("Member", "1", "", "", "", "", "", "", "", "", "");
 
 		}
 		else
-			Methods.longToast("Please connect to Internet", this);
+			Methods.longToast("Please connect to Internet", this);*/
 
 	}
 	
@@ -496,7 +571,17 @@ private void getList(final String tbl){
 					 TOTAL_LIST_ITEMS=Integer.parseInt(jsonobj.getJSONObject("message").getString("total_count"));
 					 
 					 Btnfooter();
-					 txtcount.setText("Members (" + i + ")");
+
+					 if(role.contentEquals("New Converts") ||role.contentEquals("Region New Converts") ||role.contentEquals("Zone New Converts")||role.contentEquals("Group Church New Converts") ){
+						 txtcount.setText("New Converts ("+i+")");
+					 }
+					 else if(role.contentEquals("First Timer") ||role.contentEquals("Region First Timer") ||role.contentEquals("Zone First Timer")||role.contentEquals("Group Church First Timer") ){
+						 txtcount.setText("First Timer ("+i+")");
+					 }else
+					 {
+						 txtcount.setText("Members ("+i+")");}
+
+
 					 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
 
 					  name1=jsonarray.getJSONObject(0).getString("name");

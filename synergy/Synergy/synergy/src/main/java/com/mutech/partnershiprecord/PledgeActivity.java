@@ -378,19 +378,19 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 							jsonfilter.put("church",mPreferenceHelper.getString(Commons.CHURCH));
 							jsonobj.put("filters", jsonfilter);}}
 
-					if(mPreferenceHelper.getString(Commons.USER_REGION1).equals("true")){
+					else if(mPreferenceHelper.getString(Commons.USER_REGION1).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_REGION1, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("region",mPreferenceHelper.getString(Commons.REGION));
 							jsonobj.put("filters", jsonfilter);}}
 
-				     if(mPreferenceHelper.getString(Commons.USER_ZONE1).equals("true")){
+				     else if(mPreferenceHelper.getString(Commons.USER_ZONE1).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_ZONE1, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("zone",mPreferenceHelper.getString(Commons.ZONE));
 							jsonobj.put("filters", jsonfilter);}}
 
-				     if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP1).equals("true")){
+				     else if(mPreferenceHelper.getString(Commons.USER_CHURCH_GROUP1).equals("true")){
 						mPreferenceHelper.addString(Commons.USER_CHURCH_GROUP1, "false");{
 							JSONObject jsonfilter=new JSONObject();
 							jsonfilter.put("church_group",mPreferenceHelper.getString(Commons.CHURCH_GROUP));
@@ -398,9 +398,10 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 					else
 					{
 						jsonobj.put("flag","My");
+						jsonobj.put("page_no", pageno);
 					}
 
-					jsonobj.put("page_no", pageno);
+
 
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -434,6 +435,9 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 			it.putExtra("value", jsonarray.getJSONObject(position).getString("partnership_arms"));}
 			else {it.putExtra("value","ASD");}
 			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
+
+			Log.d("PledgeCurrency" ,"Currency" +jsonarray.getJSONObject(position).getString("currency"));
+
 			startActivity(it);
 
 		} catch (JSONException e) {

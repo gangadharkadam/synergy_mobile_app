@@ -380,6 +380,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent it =new Intent(HomeActivity.this, AllMemberListActivity.class);
+                it.putExtra("role", "Member");
                 startActivity(it);
 
             }

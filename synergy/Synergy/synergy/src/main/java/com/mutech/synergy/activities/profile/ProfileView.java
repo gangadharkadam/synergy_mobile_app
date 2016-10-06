@@ -1,6 +1,5 @@
 package com.mutech.synergy.activities.profile;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -89,7 +88,6 @@ public class ProfileView extends ActionBarActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
         getSupportActionBar().setTitle("My Profile");
-//        getSupportActionBar().setDisplayShowCustomEnabled(true);
 
         mDrawerList = new ArrayList<DrawerItem>();
 

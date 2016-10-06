@@ -1,7 +1,9 @@
 package com.mutech.synergy;
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.support.multidex.MultiDex;
 import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 
@@ -75,7 +77,12 @@ public class App extends Application{
 		if (mRequestQueue != null) {
 			mRequestQueue.cancelAll(tag);
 		}
-	}   
+	}
 
+	@Override
+	protected void attachBaseContext(Context base) {
+		super.attachBaseContext(base);
+		MultiDex.install(this);
+	}
 
 }

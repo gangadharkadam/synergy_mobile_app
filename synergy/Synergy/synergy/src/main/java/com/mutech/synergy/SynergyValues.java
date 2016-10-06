@@ -15,6 +15,7 @@ public class SynergyValues {
 		public static String USER_IMAGE="Image";
 		public static String FROM_ACTIVITY="from_activity";
 		public static String FROM_ACTIVITY1="from_activity1";
+		public static String FROM_ACTIVITY2="from_activity2";
 		public static String MEMBER_NO="member_no";
 		public static String CHURCH="church";
 		public static String ZONE="zone";
@@ -70,7 +71,6 @@ public class SynergyValues {
 		public static String BASE_URL="http://verve.indictranstech.com/api/";
 		
 		public static String BASE_URL1="http://192.168.5.25:7001/api/";
-		
 
 		public static class LoginService{
 			public static String SERVICE_URL=BASE_URL+"method/login";

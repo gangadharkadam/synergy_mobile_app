@@ -401,7 +401,8 @@
             android:label="@string/title_activity_church_pastor_msg" />
         <activity
             android:name="com.mutech.synergy.activities.ShortBioChurch"
-            android:label="@string/title_activity_short_bio_church" />
+            android:label="@string/title_activity_short_bio_church" >
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
