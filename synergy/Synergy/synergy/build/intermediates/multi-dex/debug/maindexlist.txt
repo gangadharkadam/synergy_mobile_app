@@ -586,6 +586,7 @@ com/mutech/synergy/activities/cellMasters/CreateCellMasterActivity$2.class
 com/mutech/synergy/activities/dashboard/FirstTimersYearActivity$31.class
 com/mutech/partnershiprecord/Giving_or_pledge_DetailsActivity$23.class
 com/mutech/synergy/SynergyValues$Web$CreateCellService.class
+com/mutech/synergy/activities/AttendanceHistory$8.class
 com/mutech/synergy/activities/ChurchPastorMsg.class
 com/mutech/partnershiprecord/MypartnershipPledgeActivity$12.class
 com/mutech/synergy/activities/AttendanceHistory$5.class
@@ -1980,6 +1981,7 @@ com/google/android/gms/games/snapshot/SnapshotMetadata.class
 com/mutech/synergy/activities/cellMasters/SearchFunctionActivity$6.class
 com/mutech/databasedetails/CellDetailsActivity$3.class
 com/mutech/synergy/activities/task/CreateTaskActivity$13.class
+com/mutech/synergy/activities/CAttendanceHistory$8.class
 com/mutech/partnershiprecord/MyPartnershipGivingActivity$8.class
 com/mutech/synergy/activities/dashboard/InviteeandContactsMonthActivity$7.class
 com/google/android/gms/internal/zzit.class

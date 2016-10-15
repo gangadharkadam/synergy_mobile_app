@@ -130,21 +130,24 @@ public class CAttendanceHistory extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                String cell;
-                try{
-                    cell=spCell.getSelectedItem().toString();
-                }catch(Exception ex){
-                    cell="";
-                }
+
+                if(isValid()) {
+                    String cell;
+                    try {
+                        cell = spCell.getSelectedItem().toString();
+                    } catch (Exception ex) {
+                        cell = "";
+                    }
                     Intent Int = new Intent(CAttendanceHistory.this, MeetingListActivity.class);
                     Int.putExtra("fdate", txtFromDate.getText().toString());
                     Int.putExtra("tdate", txtToDate.getText().toString());
-                    Int.putExtra("cellcode",cell);
+                    Int.putExtra("cellcode", cell);
                     Int.putExtra("attendance_type", "Cell Meeting");
-                    Int.putExtra("role","Cell Leader");
+                    Int.putExtra("role", "Cell Leader");
                     Int.putExtra("cellah", "cellah");
                     startActivity(Int);
                     finish();
+                }
             }
         });
 
@@ -167,40 +170,36 @@ public class CAttendanceHistory extends ActionBarActivity {
                 mCellList.add(mPreferenceHelper.getString(SynergyValues.Commons.USER_DEFVALUE));
                 spCell.setVisibility(View.VISIBLE);
                 spCellTextView.setVisibility(View.GONE);
-                setAdapters();
+
+                ArrayAdapter<String> adaptercell = new ArrayAdapter<String>(CAttendanceHistory.this, android.R.layout.simple_spinner_item, mCellList);
+                adaptercell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spCell.setAdapter(adaptercell);
+
             }
         });
     }
 
-    private void setAdapters() {
 
-/*        ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mZoneList);
-        adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spzone.setAdapter(adapterZone);
+    public boolean isValid() {
 
-        ArrayAdapter<String> adapterRegion = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mRegionList);
-        adapterRegion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spresion.setAdapter(adapterRegion);
+        if(!InputValidation.spnHasText(spCell, "Cell")) {
+            AlertDialog dialog = new AlertDialog.Builder(CAttendanceHistory.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter Cell")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
-        ArrayAdapter<String> adapterChurch = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mChurchList);
-        adapterChurch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spchurch.setAdapter(adapterChurch);
+                        }
+                    })
+                    .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
+            return false;
+        }
 
-        ArrayAdapter<String> adapterSrCell = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mSeniorCellList);
-        adapterSrCell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spSeniorCell.setAdapter(adapterSrCell);
-
-        ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
-        adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spgroupchurch.setAdapter(adapterchurchgropu);
-
-        ArrayAdapter<String> adapterPCF = new ArrayAdapter<String>(AllMemberListActivity.this, android.R.layout.simple_spinner_item, mPCFList);
-        adapterPCF.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sppcf.setAdapter(adapterPCF);*/
-
-        ArrayAdapter<String> adaptercell = new ArrayAdapter<String>(CAttendanceHistory.this, android.R.layout.simple_spinner_item, mCellList);
-        adaptercell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spCell.setAdapter(adaptercell);
-
+        return true;
     }
+
 }

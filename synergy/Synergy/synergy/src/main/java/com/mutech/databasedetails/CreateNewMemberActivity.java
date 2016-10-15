@@ -106,6 +106,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 	TextView bapWhrTV, bapWhnTV;
 	Calendar dob, doj;
 	TextView txtBaptismInfo;
+	String seniorcell,churchgroup,church,region,zone,groupchurchname,cell,cellname,pcf;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -1011,24 +1012,24 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 					
 						obj.put("surname",txtMemberSurname.getText().toString());
 						obj.put("yearly_income",txtYearlyIncome.getText().toString());
-						obj.put("zone", "3A_Zone");
-						obj.put("group_church_name", "churchgroup");
-						obj.put("cell_name", "cell_name");
+						obj.put("zone", zone);
+						obj.put("group_church_name",groupchurchname);
+						obj.put("cell_name", cellname);
 						obj.put("email_id", txtEmailID1.getText().toString());
 						obj.put("core_competeance", txtCoreCompeteance.getText().toString());
 						obj.put("email_id2", txtEmailID2.getText().toString());
 						//obj.put("zone_name", "zone_name");
 						obj.put("employment_status", spnEmploymentStatus.getSelectedItem().toString());
 						obj.put("cell", "3A_Zone/CHR0001/CEL0001");
-						obj.put("pcf", "3A_Zone/CHR0001/PCF0001");
+						obj.put("pcf", pcf);
 						
 						obj.put("address", txtMemberHomeAddress.getText().toString());
-						obj.put("senior_cell", "3A_Zone/CHR0001/SCL0001");
-						obj.put("church", "3A_Zone/CHR0001");
+						obj.put("senior_cell",seniorcell);
+						obj.put("church", church);
 						obj.put("title", txttitle.getSelectedItem().toString());
 						obj.put("office_address", txtOfficeAddress.getText().toString());
 						obj.put("phone_1", txtMemberPhone1.getText().toString());
-						obj.put("region","Region 3");
+						obj.put("region",region);
 						obj.put("baptism_where", txtBaptisedWhere.getText().toString());
 
 						if(!txtBaptisedWhen.getText().toString().contentEquals("")) {
@@ -1078,7 +1079,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 
 //						obj.put("is_new_convert", spisnewconvert.getSelectedItem().toString());
 
-						obj.put("church_group", "3A_Zone/GRP0001");
+						obj.put("church_group", churchgroup);
 						
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -1202,26 +1203,18 @@ private void getSpinnerData(final String tbl,final String selval ){
 									spnCell.setVisibility(View.VISIBLE);
 								}
 								
-								
 							}else{
 								Methods.longToast("Resord Not Found", CreateNewMemberActivity.this);
 							}
-							
-					
 						
 					}
-					
-					
+
 					
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
-				
-				
-				
-				
+
 				setAdapters();
 
 			}
@@ -1361,19 +1354,27 @@ private void getTopHierarchy() {
 					//if(meetingmsg instanceof JSONArray){
 					mHHSubModel=mHHModel.getMessage();
 
-					for(int i=0;i<mHHSubModel.size();i++){			
+					for(int i=0;i<mHHSubModel.size();i++){
 						if(null !=mHHSubModel.get(i).getZone())
 							mZoneList.add(mHHSubModel.get(i).getZone());
+						zone=mHHSubModel.get(i).getZone();
 						if(null !=mHHSubModel.get(i).getRegion())
 							mRegionList.add(mHHSubModel.get(i).getRegion());
+						region=mHHSubModel.get(i).getRegion();
 						if(null !=mHHSubModel.get(i).getChurch())
 							mChurchList.add(mHHSubModel.get(i).getChurch());
+						church=mHHSubModel.get(i).getChurch();
 						if(null !=mHHSubModel.get(i).getChurch_group())
 							mGrpChurchList.add(mHHSubModel.get(i).getChurch_group());
+						churchgroup=mHHSubModel.get(i).getChurch_group();
 						if(null !=mHHSubModel.get(i).getPcf())
 							mPCFList.add(mHHSubModel.get(i).getPcf());
+						pcf=mHHSubModel.get(i).getPcf();
 						if(null !=mHHSubModel.get(i).getSenior_cell())
 							mSeniorCellList.add(mHHSubModel.get(i).getSenior_cell());
+						seniorcell=mHHSubModel.get(i).getSenior_cell();
+						if(null !=mHHSubModel.get(i).getGroup_church_name())
+							groupchurchname= mHHSubModel.get(i).getGroup_church_name();
 					}
 					
 				//	setAdapters();
@@ -1470,6 +1471,7 @@ private void getLowerHierarchy(){
 							}else if(defRole.equalsIgnoreCase("Regional Pastor")){
 								mRegionList.add(jsonarray.getJSONObject(i).getString("name"));
 							}
+							cellname=jsonarray.getJSONObject(i).getString("cell_name");
 						}
 						
 						setAdapters();

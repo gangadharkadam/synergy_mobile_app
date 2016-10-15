@@ -460,7 +460,6 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			selectItem(position);
-
 		}
 	}
 

@@ -548,8 +548,6 @@ private void getList(final String tbl){
 				Methods.closeProgressDialog();
 				Log.e("droid get reqResponce ---------------", response);
 
-				
-
 				if(response.contains("status"))
 				{
 					ResponseMessageModel2 respModel=gson.fromJson(response, ResponseMessageModel2.class);

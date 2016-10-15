@@ -181,23 +181,30 @@ public class AttendanceHistory extends ActionBarActivity {
                         finish();
                         break;
 
+
+
                     case "Member":
-                        String church;
-                        try{
-                            church=spchurch.getSelectedItem().toString();
-                        }catch(Exception ex){
-                            church="";
+
+                        if(isValid()) {
+                            String church;
+                            try {
+                                church = spchurch.getSelectedItem().toString();
+                            } catch (Exception ex) {
+                                church = "";
+                            }
+                            Intent Int3 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
+                            Int3.putExtra("fdate", txtFromDate.getText().toString());
+                            Int3.putExtra("tdate", txtToDate.getText().toString());
+                            Int3.putExtra("role", "Member");
+                            Int3.putExtra("attendance_type", "church Attendance");
+                            Int3.putExtra("fromah", "fromah");
+                            Int3.putExtra("cellcode", church);
+                            startActivity(Int3);
+                            finish();
                         }
-                        Intent Int3 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
-                        Int3.putExtra("fdate", txtFromDate.getText().toString());
-                        Int3.putExtra("tdate", txtToDate.getText().toString());
-                        Int3.putExtra("role","Member");
-                        Int3.putExtra("attendance_type", "church Attendance");
-                        Int3.putExtra("fromah", "fromah");
-                        Int3.putExtra("cellcode", church);
-                        startActivity(Int3);
-                        finish();
                         break;
+
+
 
                     case "Church":
                         Intent Int1 = new Intent(AttendanceHistory.this, MeetingListActivity.class);
@@ -314,6 +321,28 @@ public class AttendanceHistory extends ActionBarActivity {
         adaptercell.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spCell.setAdapter(adaptercell);*/
 
+    }
+
+    public boolean isValid() {
+
+        if(!InputValidation.spnHasText(spchurch, "Church")) {
+            AlertDialog dialog = new AlertDialog.Builder(AttendanceHistory.this)
+                    .setCancelable(false)
+                    .setTitle("Invalid Input")
+                    .setMessage("Please enter Church")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+            textView.setTextSize(18);
+            return false;
+        }
+
+        return true;
     }
 
 }

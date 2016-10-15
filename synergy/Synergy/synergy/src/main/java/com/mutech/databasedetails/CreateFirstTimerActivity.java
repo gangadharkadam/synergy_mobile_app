@@ -109,6 +109,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //	private Spinner spnSeniorCell,txtPCF,spnCell;
 	String defKey,defVal,defRole;
 	EditText txtMembershipNo;
+	String seniorcell,churchgroup,church,region,zone,groupchurchname,cell,cellname,pcf;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -117,15 +118,15 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 	
 		getSupportActionBar().hide();
 		
-		
-		
+
+
 //		lblzone=(TextView) findViewById(R.id.lblzone);
 //		lblgroupchurch=(TextView) findViewById(R.id.lblgroupchurch);
 //		lblchurch=(TextView) findViewById(R.id.lblchurch);
 //		lblpcf=(TextView) findViewById(R.id.lblpcf);
 //		lblseniorcell=(TextView) findViewById(R.id.lblseniorcell);
 //		lblcell=(TextView) findViewById(R.id.lblcell);
-		
+
 //		spnCell=(Spinner) findViewById(R.id.spnCell);
 //		spnSeniorCell=(Spinner) findViewById(R.id.spnSeniorCell);
 //		spnCellZone=(Spinner) findViewById(R.id.spnCellZone);
@@ -147,7 +148,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //		txtModeofIntroduce=(Spinner) findViewById(R.id.txtModeofIntroduce);
 //		txtTaskDescription=(EditText) findViewById(R.id.txtTaskDescription);
 //		txtNextActionPlan=(EditText) findViewById(R.id.txtNextActionPlan);
-		
+
 //		txtIncomeSegment=(Spinner) findViewById(R.id.txtIncomeSegment);
 		txtGender=(Spinner) findViewById(R.id.txtGender);
 		txtAgeGroup=(Spinner) findViewById(R.id.txtAgeGroup);
@@ -155,17 +156,17 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //		txtholyghost=(Spinner) findViewById(R.id.txtholyghost);
 //		txtBornAgain=(Spinner) findViewById(R.id.txtBornAgain);
 //		txtSchoolstatus=(Spinner) findViewById(R.id.txtSchoolstatus);
-		
+
 //		txtLandmarkforHomeAddress=(AutoCompleteTextView) findViewById(R.id.txtLandmarkforHomeAddress);
 //		txtLandmarkforOfficeAddress=(AutoCompleteTextView) findViewById(R.id.txtLandmarkforOfficeAddress);
 //		txtBaptisedWhen=(TextView) findViewById(R.id.txtBaptisedWhen);
 		txtDateofJoining=(TextView) findViewById(R.id.txtDateofJoining);
 //		txtYookosID=(EditText) findViewById(R.id.txtYookosID);
 //		txtBaptisedWhere=(EditText) findViewById(R.id.txtBaptisedWhere);
-		
-	
-	
-		
+
+
+
+
 //		txtDesignation=(EditText) findViewById(R.id.txtDesignation);
 	//	txtMembershipNo=(EditText) findViewById(R.id.txtMembershipNo);
 		txtMemberName=(EditText) findViewById(R.id.txtMemberfName);
@@ -319,7 +320,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //				mPlacesApiAdapter.getFilter();
 //			}
 //		});
-		
+
 //		txtempInfo.setOnClickListener(new OnClickListener() {
 //
 //			@Override
@@ -336,7 +337,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //					}
 //			}
 //		});
-		
+
 //		 if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
 //
 //
@@ -360,7 +361,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //
 //			}
-			
+
 //	      if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Senior Cell Leader")){
 //
 //
@@ -411,11 +412,11 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //				spnSeniorCell.setEnabled(false);
 //
 //			}
-	      
-	      
+
+
 	      //01-27 16:01:11.358: E/(4291): Role--Cell Leader
 
-	      
+
 //	      if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Church Pastor")){
 //
 //	    		lblzone.setVisibility(View.GONE);
@@ -483,8 +484,8 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //			}
 //		});
-	      
-	  	
+
+
 //	      lblgroupchurch.setOnClickListener(new OnClickListener() {
 //
 //			@Override
@@ -549,7 +550,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //	  		}
 //	  	});
-	    
+
 //	      lblpcf.setOnClickListener(new OnClickListener() {
 //
 //	    		@Override
@@ -579,7 +580,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //	    		}
 //	    	});
-	      
+
 //	      lblseniorcell.setOnClickListener(new OnClickListener() {
 //
 //	  		@Override
@@ -607,7 +608,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //	  		}
 //	  	});
-	      
+
 //	      lblcell.setOnClickListener(new OnClickListener() {
 //
 //		  		@Override
@@ -635,8 +636,8 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //		  		}
 //		  	});
-	      
-	      
+
+
 	      if(NetworkHelper.isOnline(this)){
 				Methods.showProgressDialog(this);
 				//getAllSeniorCell();
@@ -682,8 +683,8 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 					birthDatePickerDialog3.show();
 				}
 			});
-			
-			
+
+
 //			txtBaptisedWhen.setOnClickListener(new OnClickListener() {
 //
 //				@Override
@@ -693,7 +694,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //				}
 //			});
-			
+
 			
 			txtMemberDateOfBirth.setOnClickListener(new OnClickListener() {
 				
@@ -704,7 +705,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 					
 				}
 			});
-		
+
 //			txtdueDate.setOnClickListener(new OnClickListener() {
 //
 //				@Override
@@ -1116,7 +1117,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 					
 						obj.put("username",mPreferenceHelper.getString(Commons.USER_EMAILID));
 						obj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
-				  	    
+
 //						obj.put("mode_of_introduce", txtModeofIntroduce.getSelectedItem().toString());
 //
 //						obj.put("introduced_by",txtIntroducedBy.getText().toString());
@@ -1124,14 +1125,14 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //						obj.put("office_landmark", txtLandmarkforOfficeAddress.getText().toString());
 					
 						obj.put("surname",txtMemberSurname.getText().toString());
-					
+
 //						obj.put("yearly_income",txtIncomeSegment.getSelectedItem().toString());
 //
 //						obj.put("task_description", txtTaskDescription.getText().toString());
-						
-						obj.put("zone", "3A_Zone");
-						obj.put("group_church_name", "churchgroup");
-						obj.put("cell_name", "cell_name");
+
+						obj.put("zone", zone);
+						obj.put("group_church_name", groupchurchname);
+						obj.put("cell_name", cellname);
 						obj.put("email_id", txtEmailID1.getText().toString());
 //						obj.put("core_competeance", txtCoreCompeteance.getText().toString());
 						obj.put("email_id2", txtEmailID2.getText().toString());
@@ -1139,22 +1140,22 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //						obj.put("employment_status", spnEmploymentStatus.getSelectedItem().toString());
 					
 						obj.put("cell", "3A_Zone/CHR0001/CEL0001");
-						obj.put("pcf", "3A_Zone/CHR0001/PCF0001");
+						obj.put("pcf", pcf);
 						
 						obj.put("address", txtMemberHomeAddress.getText().toString());
-						
+
 //						obj.put("address_manual", txtLandmarkforHomeAddress.getText().toString());
-						obj.put("senior_cell", "3A_Zone/CHR0001/SCL0001");
-						obj.put("church", "3A_Zone/CHR0001");
+						obj.put("senior_cell", seniorcell);
+						obj.put("church", church);
 //						obj.put("title", txttitle.getSelectedItem().toString());
 						obj.put("office_address", txtOfficeAddress.getText().toString());
 						obj.put("phone_1", txtMemberPhone1.getText().toString());
-						obj.put("region","Region 3");
-						
+						obj.put("region",region);
+
 //						obj.put("baptism_where", txtBaptisedWhere.getText().toString());
-						
-						
-					
+
+
+
 //						obj.put("education_qualification", spnEducationalQualification.getSelectedItem().toString());
 //
 						obj.put("age_group", txtAgeGroup.getSelectedItem().toString());
@@ -1168,10 +1169,10 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 						
 						obj.put("phone_2", txtMemberPhone2.getText().toString());
 //						obj.put("experience_years",spnExperienceYears.getSelectedItem().toString() );
-				
+
 						//obj.put("member_designation", txtDesignation.getText().toString());
 						//obj.put("pcf_name", "pcf_name");
-						
+
 //						obj.put("school_status", txtSchoolstatus.getSelectedItem().toString());
 //						obj.put("industry_segment",spnIndustrySegment.getSelectedItem().toString());
 						//obj.put("church_name", value)
@@ -1179,7 +1180,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 						//obj.put("region_name", "region_name");
 //						obj.put("is_new_born", txtBornAgain.getSelectedItem().toString());
 						//obj.put("senior_cell_name", value)
-						
+
 						obj.put("first_contact_by", "");
 						
 						if(!txtMemberDateOfBirth.getText().equals("")){
@@ -1217,7 +1218,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 //
 //						obj.put("yokoo_id", txtYookosID.getText().toString());
 						
-						obj.put("church_group", "3A_Zone/GRP0001");
+						obj.put("church_group", churchgroup);
 						
 //						obj.put("ftv_type", txtftv_type.getSelectedItem().toString());
 						
@@ -1432,23 +1433,23 @@ private void setAdapters() {
 		}
 	}*/
 	
-	/*MasterSpinnerAdpter adapterZone=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mZoneList);
-	spnCellZone.setAdapter(adapterZone);
-	
-	MasterSpinnerAdpter adapterRegion=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mRegionList);
-	spnCellRegion.setAdapter(adapterRegion);
-	
-	MasterSpinnerAdpter adapterChurch=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mChurchList);
-	spnCellChurch.setAdapter(adapterChurch);
-	
-	MasterSpinnerAdpter adapterSrCell=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mSeniorCellList);
-	spnSeniorCell.setAdapter(adapterSrCell);
-	
-	MasterSpinnerAdpter adapterchurchgropu=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mGrpChurchList);
-	spnSeniorCellChurchgroup.setAdapter(adapterchurchgropu);
-	
-	MasterSpinnerAdpter adapterPCF=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mPCFList);
-	txtPCF.setAdapter(adapterPCF);*/
+//	MasterSpinnerAdpter adapterZone=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mZoneList);
+//	spnCellZone.setAdapter(adapterZone);
+//
+//	MasterSpinnerAdpter adapterRegion=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mRegionList);
+//	spnCellRegion.setAdapter(adapterRegion);
+//
+//	MasterSpinnerAdpter adapterChurch=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mChurchList);
+//	spnCellChurch.setAdapter(adapterChurch);
+//
+//	MasterSpinnerAdpter adapterSrCell=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mSeniorCellList);
+//	spnSeniorCell.setAdapter(adapterSrCell);
+//
+//	MasterSpinnerAdpter adapterchurchgropu=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mGrpChurchList);
+//	spnSeniorCellChurchgroup.setAdapter(adapterchurchgropu);
+//
+//	MasterSpinnerAdpter adapterPCF=new MasterSpinnerAdpter(CreateNewMemberActivity.this,mPCFList);
+//	txtPCF.setAdapter(adapterPCF);
 	
 	
 	
@@ -1508,16 +1509,28 @@ private void getTopHierarchy() {
 					for(int i=0;i<mHHSubModel.size();i++){			
 						if(null !=mHHSubModel.get(i).getZone())
 							mZoneList.add(mHHSubModel.get(i).getZone());
+						      zone=mHHSubModel.get(i).getZone();
 						if(null !=mHHSubModel.get(i).getRegion())
 							mRegionList.add(mHHSubModel.get(i).getRegion());
+						   region=mHHSubModel.get(i).getRegion();
 						if(null !=mHHSubModel.get(i).getChurch())
 							mChurchList.add(mHHSubModel.get(i).getChurch());
+						     church=mHHSubModel.get(i).getChurch();
 						if(null !=mHHSubModel.get(i).getChurch_group())
 							mGrpChurchList.add(mHHSubModel.get(i).getChurch_group());
+						    churchgroup=mHHSubModel.get(i).getChurch_group();
 						if(null !=mHHSubModel.get(i).getPcf())
 							mPCFList.add(mHHSubModel.get(i).getPcf());
+						    pcf=mHHSubModel.get(i).getPcf();
 						if(null !=mHHSubModel.get(i).getSenior_cell())
 							mSeniorCellList.add(mHHSubModel.get(i).getSenior_cell());
+						    seniorcell=mHHSubModel.get(i).getSenior_cell();
+						if(null !=mHHSubModel.get(i).getGroup_church_name())
+							 groupchurchname= mHHSubModel.get(i).getGroup_church_name();
+					/*	if(null !=mHHSubModel.get(i).getCell())
+							cell=mHHSubModel.get(i).getCell();
+						if(null !=mHHSubModel.get(i).getCell_name())
+							cellname=mHHSubModel.get(i).getCell_name();*/
 					}
 					
 				//	setAdapters();
@@ -1614,6 +1627,8 @@ private void getLowerHierarchy(){
 							}else if(defRole.equalsIgnoreCase("Regional Pastor")){
 								mRegionList.add(jsonarray.getJSONObject(i).getString("name"));
 							}
+
+							cellname=jsonarray.getJSONObject(i).getString("cell_name");
 						}
 						
 						setAdapters();
