@@ -1001,8 +1001,8 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 
 				MeetingListRequestModel model=new MeetingListRequestModel();
 				JSONObject obj=new JSONObject();
-				
-				
+
+
 				try {
 					
 						obj.put("username",mPreferenceHelper.getString(Commons.USER_EMAILID));
@@ -1020,7 +1020,7 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 						obj.put("email_id2", txtEmailID2.getText().toString());
 						//obj.put("zone_name", "zone_name");
 						obj.put("employment_status", spnEmploymentStatus.getSelectedItem().toString());
-						obj.put("cell", "3A_Zone/CHR0001/CEL0001");
+						obj.put("cell",mPreferenceHelper.getString(Commons.USER_DEFVALUE));
 						obj.put("pcf", pcf);
 						
 						obj.put("address", txtMemberHomeAddress.getText().toString());

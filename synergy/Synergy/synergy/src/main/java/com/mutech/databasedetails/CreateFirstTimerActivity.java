@@ -117,8 +117,6 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_create_first_timer);
 	
 		getSupportActionBar().hide();
-		
-
 
 //		lblzone=(TextView) findViewById(R.id.lblzone);
 //		lblgroupchurch=(TextView) findViewById(R.id.lblgroupchurch);
@@ -276,9 +274,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 			}
 
 		},newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-		
-		
-		
+
 		
 		mPlacesApiAdapter=new GooglePlacesApiAdapter(this,R.layout.list_item_autocomplete_for_google_places);
 //		txtLandmarkforHomeAddress.setAdapter(mPlacesApiAdapter);
@@ -1139,7 +1135,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 						//obj.put("zone_name", "zone_name");
 //						obj.put("employment_status", spnEmploymentStatus.getSelectedItem().toString());
 					
-						obj.put("cell", "3A_Zone/CHR0001/CEL0001");
+						obj.put("cell", mPreferenceHelper.getString(Commons.USER_DEFVALUE));
 						obj.put("pcf", pcf);
 						
 						obj.put("address", txtMemberHomeAddress.getText().toString());
