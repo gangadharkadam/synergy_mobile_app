@@ -438,6 +438,13 @@ public class PledgeActivity extends BaseFragment implements OnItemClickListener 
 
 			Log.d("PledgeCurrency" ,"Currency" +jsonarray.getJSONObject(position).getString("currency"));
 
+			it.putExtra("member",jsonarray.getJSONObject(position).getString("member"));
+			it.putExtra("name", jsonarray.getJSONObject(position).getString("name"));
+			it.putExtra("amount",jsonarray.getJSONObject(position).getString("amount"));
+			it.putExtra("date",jsonarray.getJSONObject(position).getString("date"));
+
+			Log.d("Nonstop", "Pledgenewdata" + jsonarray.getJSONObject(position).getString("member") + " " + jsonarray.getJSONObject(position).getString("name") + " "+jsonarray.getJSONObject(position).getString("amount")+ " "+jsonarray.getJSONObject(position).getString("date"));
+
 			startActivity(it);
 
 		} catch (JSONException e) {

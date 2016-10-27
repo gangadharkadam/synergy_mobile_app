@@ -430,6 +430,13 @@ public class GivingActivity extends BaseFragment implements OnItemClickListener 
 				it.putExtra("value",jsonarray.getJSONObject(position).getString("partnership_arms"));}
 			else {it.putExtra("value","ASD");}
 			it.putExtra("currency", jsonarray.getJSONObject(position).getString("currency"));
+			it.putExtra("member",jsonarray.getJSONObject(position).getString("member"));
+			it.putExtra("name", jsonarray.getJSONObject(position).getString("name"));
+			it.putExtra("amount",jsonarray.getJSONObject(position).getString("amount"));
+			it.putExtra("date",jsonarray.getJSONObject(position).getString("date"));
+
+			Log.d("Nonstop", "Givingnewdata" + jsonarray.getJSONObject(position).getString("member") + " " + jsonarray.getJSONObject(position).getString("name") + " "+jsonarray.getJSONObject(position).getString("amount")+ " "+jsonarray.getJSONObject(position).getString("date"));
+
 			startActivity(it);
 
 		} catch (JSONException e) {

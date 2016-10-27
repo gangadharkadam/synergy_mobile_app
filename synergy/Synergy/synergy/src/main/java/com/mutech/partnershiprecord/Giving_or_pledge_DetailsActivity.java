@@ -80,7 +80,7 @@ import android.widget.Toast;
 
 public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 
-	String type,value, currency;
+	String type,value, currency,member,name,amount,date;
 	private PreferenceHelper mPreferenceHelper;
 	JSONArray jsonarray;
 	Context context;
@@ -184,6 +184,10 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 		value=getIntent().getStringExtra("value");
 		recordtype=getIntent().getStringExtra("record");
 		currency = getIntent().getStringExtra("currency");
+		member=getIntent().getStringExtra("member");
+		name=getIntent().getStringExtra("name");
+		amount=getIntent().getStringExtra("amount");
+		date=getIntent().getStringExtra("date");
 
 		txttitle.setText(type+" - "+value);
 		
@@ -346,6 +350,10 @@ public class Giving_or_pledge_DetailsActivity extends ActionBarActivity {
 					jsonobj.put("giving_or_pledge",type);
 					jsonobj.put("partnership_arms",value);
 					jsonobj.put("currency", currency);
+					jsonobj.put("member", member);
+					jsonobj.put("name", name);
+					jsonobj.put("amount", amount);
+					jsonobj.put("date", date);
 
 					Log.d("NonStop", "User Role in Giving_or_pledge_DetailsActivity: " +
 							mPreferenceHelper.getString(Commons.USER_ROLE));
@@ -1481,6 +1489,11 @@ private void getUpdatedListMethod(final String resion,final String zone,final St
 			jsonobj.put("giving_or_pledge",type);
 			jsonobj.put("partnership_arms",value);
 			jsonobj.put("currency", currency);
+
+			jsonobj.put("member", member);
+			jsonobj.put("name", name);
+			jsonobj.put("amount", amount);
+			jsonobj.put("date", date);
 			
 			if(recordtype.equals("My"))
 			jsonobj.put("flag","My");
