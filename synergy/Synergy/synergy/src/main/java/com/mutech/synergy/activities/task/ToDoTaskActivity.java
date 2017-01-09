@@ -3,16 +3,12 @@ package com.mutech.synergy.activities.task;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -23,7 +19,6 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,24 +26,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.App;
@@ -65,26 +50,18 @@ import com.mutech.synergy.activities.MinistryMaterials;
 import com.mutech.synergy.activities.cellMasters.MasterSelectorScreenActivity;
 import com.mutech.synergy.activities.cellMasters.PartnerShipRecord;
 import com.mutech.synergy.activities.cellMasters.SearchFunctionActivity;
-import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
-import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.adapters.TODOAdapter;
 import com.mutech.synergy.models.DrawerItem;
-import com.mutech.synergy.models.EventParticipantsModel;
-import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.MyTasksResponseModel;
 import com.mutech.synergy.models.MyTasksResponseModel.Message;
-import com.mutech.synergy.models.ResponseMessageModel2;
-import com.mutech.synergy.utils.Methods;
-import com.mutech.synergy.utils.NetworkHelper;
 import com.mutech.synergy.utils.PreferenceHelper;
 import com.mutech.synergy.widget.SlidingTabLayout;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ToDoTaskActivity extends AppCompatActivity {
@@ -287,18 +264,13 @@ public class ToDoTaskActivity extends AppCompatActivity {
 
 			mDrawerList.add(item0);
 			mDrawerList.add(item1);
-		//	mDrawerList.add(item2);
 			mDrawerList.add(item3);
 			mDrawerList.add(item4);
 			mDrawerList.add(item5);
-		//	mDrawerList.add(item6);
 			mDrawerList.add(item2);
 			mDrawerList.add(item7);
 			
 		}else{
-
-
-
 
 			if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
 				Role=mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE);}
@@ -474,7 +446,6 @@ public class ToDoTaskActivity extends AppCompatActivity {
 			
 			}
 
-			
 		}else{
 		
 				switch (position) {
@@ -548,9 +519,6 @@ public class ToDoTaskActivity extends AppCompatActivity {
 						break;
 
 					case 10:
-//			mPreferenceHelper.addBoolean(Commons.ISUSER_LOGGEDIN, false);
-//			mPreferenceHelper.addString(Commons.USER_EMAILID, null);
-//			mPreferenceHelper.addString(Commons.USER_PASSWORD, null);
 
 						Intent intfeedback=new Intent(this,Feedback.class);
 						intfeedback.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -687,8 +655,6 @@ public class ToDoTaskActivity extends AppCompatActivity {
 
 				fdate=txtFromDate.getText().toString();
 				tdate=txtToDate.getText().toString();
-
-
 
 //				if(!checkValidation(fdate,tdate)){
 //					Methods.longToast("Please select any Filter",ToDoTaskActivity.this);

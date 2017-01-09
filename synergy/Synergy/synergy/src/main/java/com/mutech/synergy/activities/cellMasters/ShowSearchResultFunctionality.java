@@ -40,6 +40,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -113,6 +114,7 @@ public class ShowSearchResultFunctionality extends ActionBarActivity{
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
 	private String zone,region,church,group_church,search,member;
+	EditText etName;
 
 	JSONArray jarray;
 	
@@ -1230,7 +1232,8 @@ public void showDialog(){
 	spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 	spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 	spCell=(Spinner) promptView.findViewById(R.id.spCell);
-	
+	etName =(EditText) promptView.findViewById(R.id.etName);
+
 	String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 	Log.e("default user", str);
 	
@@ -1752,7 +1755,7 @@ public void showDialog(){
 	
 	public void onClick(DialogInterface dialog, int id) {
 		
-		String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+		String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",etname="";
 		
 		try{
 			resion=spresion.getSelectedItem().toString();
@@ -1795,8 +1798,9 @@ public void showDialog(){
 		
 		 fdate=txtFromDate.getText().toString();
 		 tdate=txtToDate.getText().toString();
+		 etname=etName.getText().toString();
 		
-		 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate)){
+		 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname)){
 				
 			 Methods.longToast("Please select any Filter",ShowSearchResultFunctionality.this);
 			 
@@ -1807,7 +1811,7 @@ public void showDialog(){
 		 
 				 Methods.showProgressDialog(ShowSearchResultFunctionality.this);
 				 
-				 getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+				 getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
 		
 				 dialog.cancel();
 			
@@ -2090,7 +2094,7 @@ reqgetTopHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 
 }
 
-private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String etname){
 
 StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,SearchService.SERVICE_URL,new Listener<String>() {
 
@@ -2213,6 +2217,9 @@ protected Map<String, String> getParams() throws AuthFailureError{
 		if(!todate.equals(""))
 			jsonfilter.put("to_date", todate);
 
+		if(!etname.equals(""))
+			jsonfilter.put("by_name", etname);
+
 		jsonobj.put("filters", jsonfilter);
 		
 	} catch (JSONException e) {
@@ -2230,7 +2237,6 @@ protected Map<String, String> getParams() throws AuthFailureError{
 
 App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
 reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-
 
 }
 
@@ -2260,40 +2266,44 @@ SpinnerDataFlag.Zones_flag=true;
 
 }
 
-boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate){
-if(resion.equals("")){
-	if(zone.equals("")){
-		if(groupchurch.equals("")){
-			if(church.equals("")){
-				if(pcf.equals("")){
-					if(srcell.equals("")){
-						if(cell.equals("")){
-							if(fdate.equals("") && tdate.equals("")){
-									return false;
+	boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate,String etname){
+		if(resion.equals("")){
+			if(zone.equals("")){
+				if(groupchurch.equals("")){
+					if(church.equals("")){
+						if(pcf.equals("")){
+							if(srcell.equals("")){
+								if(cell.equals("")){
+									if(fdate.equals("") && tdate.equals("")){
+										if(etname.equals("") ){
+											return false;
+										}else{
+											return true;
+										}
+									}else{
+										return true;
+									}
 								}else{
 									return true;
 								}
+							}else{
+								return true;
+							}
 						}else{
 							return true;
 						}
 					}else{
-							return true;
+						return true;
 					}
 				}else{
-						return true;
-					  }
+					return true;
+				}
 			}else{
 				return true;
-				}
+			}
 		}else{
 			return true;
-	  }
-	}else{
-		return true;
+		}
 	}
-}else{
-	return true;
-}	
-}
 	
 }

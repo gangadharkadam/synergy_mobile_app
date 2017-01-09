@@ -111,6 +111,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 	EditText txtMembershipNo;
 	String seniorcell,churchgroup,church,region,zone,groupchurchname,cell,cellname,pcf;
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -1150,8 +1151,6 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 
 //						obj.put("baptism_where", txtBaptisedWhere.getText().toString());
 
-
-
 //						obj.put("education_qualification", spnEducationalQualification.getSelectedItem().toString());
 //
 						obj.put("age_group", txtAgeGroup.getSelectedItem().toString());
@@ -1160,9 +1159,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 						obj.put("ftv_name", txtMemberName.getText().toString());
 					
 						obj.put("sex", txtGender.getSelectedItem().toString());
-						
-						
-						
+
 						obj.put("phone_2", txtMemberPhone2.getText().toString());
 //						obj.put("experience_years",spnExperienceYears.getSelectedItem().toString() );
 
@@ -1626,30 +1623,16 @@ private void getLowerHierarchy(){
 
 							cellname=jsonarray.getJSONObject(i).getString("cell_name");
 						}
-						
 						setAdapters();
-						
 					}else{
 						
 						Methods.longToast("Record Not Found ", CreateFirstTimerActivity.this);
-						
 					}
-					
 				}
-			
-				
-			
-			
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
-			
-			
-
 		}
 	},new ErrorListener() {
 
@@ -1674,8 +1657,6 @@ private void getLowerHierarchy(){
 			MeetingListRequestModel model=new MeetingListRequestModel();
 			model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
 			model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-			
-			
 			
 			if( defRole.equalsIgnoreCase("Zonal Pastor")){
 				model.setTbl("Zones");

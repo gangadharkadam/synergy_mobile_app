@@ -511,8 +511,8 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			break;
 		case R.id.btnAddmember:
 				Log.d("NonStop", "Going to Adding Member");
-				Intent createMenber=new Intent(this,CreateNewMemberActivity.class);
-				startActivity(createMenber);
+				Intent createMember=new Intent(this,CreateNewMemberActivity.class);
+				startActivity(createMember);
 				break;
 			case R.id.btnAddFirsttimer:
 				Log.d("NonStop", "Going to Adding First Timer");

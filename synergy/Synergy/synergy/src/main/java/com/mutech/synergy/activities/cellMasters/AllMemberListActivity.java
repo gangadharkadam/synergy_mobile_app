@@ -44,7 +44,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -120,6 +119,7 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 	//ImageView filterimg;
 	TextView txtcount;
 	TextView txtFromDate,txtToDate;
+	EditText etName;
 	Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
 	private Dialog dialogPopup=null;
@@ -203,63 +203,63 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 			switch(role) {
 
 				case "Member":
-					getListNew("Member", "1", "", "", "", "", "", "", "", "", "");
+					getListNew("Member", "1", "", "", "", "", "", "", "", "", "","");
 					break;
 
 				case "Church":
-					getListNew("Member","1","","","",cellcode,"","","","","");
+					getListNew("Member","1","","","",cellcode,"","","","","","");
 					break;
 
 				case "Region":
-					getListNew("Member","1",cellcode,"","","","","","","","");
+					getListNew("Member","1",cellcode,"","","","","","","","","");
 					break;
 
 				case "Zone":
-					getListNew("Member","1","",cellcode,"","","","","","","");
+					getListNew("Member","1","",cellcode,"","","","","","","","");
 					break;
 
 				case "Group Church":
-					getListNew("Member","1","","",cellcode,"","","","","","");
+					getListNew("Member","1","","",cellcode,"","","","","","","");
 					break;
 
 				case "New Converts":
 					txtcount.setText("New Converts   ");
-					getListNew("New Converts","1","","","",cellcode,"","","","","");
+					getListNew("New Converts","1","","","",cellcode,"","","","","","");
 					break;
 
 				case "First Timer":
 					txtcount.setText("First Timer   ");
-					getListNew("First Timer","1","","","",cellcode,"","","","","");
+					getListNew("First Timer","1","","","",cellcode,"","","","","","");
 					break;
 
 				case "Region New Converts":
 					txtcount.setText("New Converts   ");
-					getListNew("New Converts","1",cellcode,"","","","","","","","");
+					getListNew("New Converts","1",cellcode,"","","","","","","","","");
 					break;
 
 				case "Zone New Converts":
 					txtcount.setText("New Converts   ");
-					getListNew("New Converts","1","",cellcode,"","","","","","","");
+					getListNew("New Converts","1","",cellcode,"","","","","","","","");
 					break;
 
 				case "Group Church New Converts":
 					txtcount.setText("New Converts   ");
-					getListNew("New Converts","1","","",cellcode,"","","","","","");
+					getListNew("New Converts","1","","",cellcode,"","","","","","","");
 					break;
 
 				case "Region First Timer":
 					txtcount.setText("First Timer   ");
-					getListNew("First Timer","1",cellcode,"","","","","","","","");
+					getListNew("First Timer","1",cellcode,"","","","","","","","","");
 					break;
 
 				case "Zone First Timer":
 					txtcount.setText("First Timer   ");
-					getListNew("First Timer","1","",cellcode,"","","","","","","");
+					getListNew("First Timer","1","",cellcode,"","","","","","","","");
 					break;
 
 				case "Group Church First Timer":
 					txtcount.setText("First Timer   ");
-					getListNew("First Timer","1","","",cellcode,"","","","","","");
+					getListNew("First Timer","1","","",cellcode,"","","","","","","");
 					break;
 
 			}
@@ -286,8 +286,6 @@ public class AllMemberListActivity extends ActionBarActivity implements OnItemCl
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_todo, menu);
 		String roll=mPreferenceHelper.getString(Commons.USER_ROLE);
-
-
 
 
 			MenuItem item = (MenuItem) menu.findItem(R.id.menu_addTo);
@@ -412,7 +410,7 @@ private void getList(final String tbl){
 	}
 
 
-	private void getListNew2(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate, final String name){
+	private void getListNew2(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate, final String name,final String etname){
 
 		//	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
 		StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST, SynergyValues.Web.SearchService.SERVICE_URL,new Listener<String>() {
@@ -510,6 +508,7 @@ private void getList(final String tbl){
                         jsonobj.put("zone", zone);
                     if(!resion.equals(""))
                         jsonobj.put("region", resion);
+
                     if(!name.equals(""))
                         jsonobj.put("member", name);
 
@@ -517,9 +516,14 @@ private void getList(final String tbl){
 
 					if(!fdate.equals(""))
 						jsonfilter.put("from_date", fdate);
+
 					if(!todate.equals(""))
 						jsonfilter.put("to_date", todate);
-                    if(!fdate.equals("") || !todate.equals(""))
+
+			/*		if(!etname.equals(""))
+						jsonfilter.put("by_name", etname);*/
+
+                    if(!fdate.equals("") || !todate.equals("") || !etname.equals(""))
 					    jsonobj.put("filters", jsonfilter);
 
 				}catch(Exception ex){
@@ -538,7 +542,7 @@ private void getList(final String tbl){
 		reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 
-	private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+	private void getListNew(final String tbl,final String pageno,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String etname){
 
 	//	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMastersService.SERVICE_URL,new Listener<String>() {
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllListMastersService.SERVICE_URL,new Listener<String>() {
@@ -671,8 +675,10 @@ private void getList(final String tbl){
 					
 					if(!todate.equals(""))
 						jsonfilter.put("to_date", todate);
-					
-					
+
+			       /*   if(!etname.equals(""))
+					       jsonfilter.put("by_name", etname); */
+
 					jsonobj.put("filters", jsonfilter);
 		
 			}catch(Exception ex){
@@ -954,7 +960,7 @@ private void Btnfooter()
             	if(NetworkHelper.isOnline(AllMemberListActivity.this)){
         			Methods.showProgressDialog(AllMemberListActivity.this);
         			       				
-        				getListNew("Member",btns[j].getText().toString(),"","","","","","","","","");
+        				getListNew("Member",btns[j].getText().toString(),"","","","","","","","","","");
         			
         		}else{
         			Methods.longToast("Please connect to Internet", AllMemberListActivity.this);
@@ -1001,7 +1007,7 @@ public void showDialog(){
 	LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 	LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
 	LinearLayout layoutname=(LinearLayout) promptView.findViewById(R.id.nameLayout);
-	layoutname.setVisibility(View.GONE);
+//	layoutname.setVisibility(View.GONE);
 
 	final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 	final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
@@ -1021,6 +1027,7 @@ public void showDialog(){
 	spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 	spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 	spCell=(Spinner) promptView.findViewById(R.id.spCell);
+	etName =(EditText) promptView.findViewById(R.id.etName);
 	
 	String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 	Log.e("default user", str);
@@ -1568,7 +1575,7 @@ public void showDialog(){
 	
 	public void onClick(DialogInterface dialog, int id) {
 		
-		String name="", resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+		String name="", resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",etname="";
 
 		name = nameET.getText().toString();
 
@@ -1624,8 +1631,9 @@ public void showDialog(){
 		
 		 fdate=txtFromDate.getText().toString();
 		 tdate=txtToDate.getText().toString();
-				
-		 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate, name)){
+		 etname=etName.getText().toString();
+
+		if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname)){
 				
 			 Methods.longToast("Please select any Filter",AllMemberListActivity.this);
 			 
@@ -1633,9 +1641,9 @@ public void showDialog(){
 			if(NetworkHelper.isOnline(AllMemberListActivity.this)){
 				Methods.showProgressDialog(AllMemberListActivity.this);
                 if(name.equals(""))
-				    getListNew("Member","1",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+				    getListNew("Member","1",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
                 else
-                    getListNew2("Member", "1", resion, zone, groupchurch,church,pcf,srcell,cell,fdate,tdate, name);
+                    getListNew2("Member", "1", resion, zone, groupchurch,church,pcf,srcell,cell,fdate,tdate, name,etname);
 
 				dialog.cancel();
 	
@@ -1665,45 +1673,46 @@ public void showDialog(){
 
 }
 
-boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate, String name){
-	if(resion.equals("")){
-		if(zone.equals("")){
-			if(groupchurch.equals("")){
-				if(church.equals("")){
-					if(pcf.equals("")){
-						if(srcell.equals("")){
-							if(cell.equals("")){
-								if(fdate.equals("") && tdate.equals("")){
-										if(name.equals("")) {
+	boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate,String etname){
+		if(resion.equals("")){
+			if(zone.equals("")){
+				if(groupchurch.equals("")){
+					if(church.equals("")){
+						if(pcf.equals("")){
+							if(srcell.equals("")){
+								if(cell.equals("")){
+									if(fdate.equals("") && tdate.equals("")){
+										if(etname.equals("") ){
 											return false;
-										} else {
+										}else{
 											return true;
 										}
 									}else{
 										return true;
 									}
+								}else{
+									return true;
+								}
 							}else{
 								return true;
 							}
 						}else{
-								return true;
+							return true;
 						}
 					}else{
-							return true;
-						  }
+						return true;
+					}
 				}else{
 					return true;
-					}
+				}
 			}else{
 				return true;
-		  }
+			}
 		}else{
 			return true;
 		}
-	}else{
-		return true;
- }	
-}
+	}
+
 private void getUpdatedSpinnerData(final String tblname,final String name) {
 	Methods.closeProgressDialog();
 	StringRequest reqgetTopHierarchy=new StringRequest(Method.POST,LowerHierarchyService.SERVICE_URL,new Listener<String>() {

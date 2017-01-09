@@ -32,6 +32,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -95,6 +96,7 @@ public class TeamTaskFragment extends BaseFragment {
 	
 	TextView txtFromDate,txtToDate;
 	String UserRoll;
+	EditText etName;
 	
 	private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
 	private SimpleDateFormat dateFormatter,dateFormatter01;
@@ -532,7 +534,7 @@ public void showDialog(){
 		spCell=(Spinner) promptView.findViewById(R.id.spCell);
 		sppriority=(Spinner) promptView.findViewById(R.id.sppriority);
 		spstatus=(Spinner) promptView.findViewById(R.id.spstatus);
-		
+	    etName =(EditText) promptView.findViewById(R.id.etName);
 		
 		String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		Log.e("default user", str);
@@ -540,9 +542,7 @@ public void showDialog(){
 		priorityLayout.setVisibility(View.VISIBLE);
 		statusLayout.setVisibility(View.VISIBLE);
 		
-	
-		
-		
+
 		ArrayList<String> priorityList=new ArrayList<String>();
 		priorityList.add("Low");
 		priorityList.add("Medium");
@@ -565,11 +565,7 @@ public void showDialog(){
 		ArrayAdapter<String> adapterStatus = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, statusList);
 		adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spstatus.setAdapter(adapterStatus);
-		
-		
-		
-		
-		
+
 		
 		spzone.setOnItemSelectedListener(new OnItemSelectedListener() {
 
@@ -1104,7 +1100,7 @@ public void showDialog(){
 		
 		public void onClick(DialogInterface dialog, int id) {
 			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",prority="",status="";
+			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",prority="",status="",etname="";
 			
 			try{
 				resion=spresion.getSelectedItem().toString();
@@ -1159,14 +1155,13 @@ public void showDialog(){
 			
 			 fdate=txtFromDate.getText().toString();
 			 tdate=txtToDate.getText().toString();
-					
+			 etname=etName.getText().toString();
 			
 			if(NetworkHelper.isOnline(getActivity())){
 				Methods.showProgressDialog(getActivity());
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,prority,status,fdate,tdate);
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,prority,status,fdate,tdate,etname);
 		
 
-				
 			}else{
 			
 				Methods.longToast("Please connect to Internet",getActivity());
@@ -1445,7 +1440,7 @@ private void getSpinnerData(final String tblname,final String name) {
 
 }
 
-private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String prority,final String status,final String fdate,final String todate){
+private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String prority,final String status,final String fdate,final String todate,final String etname){
 
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllTasksService.SERVICE_URL1,new Listener<String>() {
 
@@ -1575,8 +1570,10 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 			
 			if(!todate.equals(""))
 				jsonfilter.put("to_date", todate);
-			
-			
+
+			if(!etname.equals(""))
+				jsonfilter.put("by_name", etname);
+
 			jsonobj.put("filters", jsonfilter);
 			
 		} catch (JSONException e) {

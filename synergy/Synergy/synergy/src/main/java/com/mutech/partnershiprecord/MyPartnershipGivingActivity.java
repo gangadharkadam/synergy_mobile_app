@@ -62,6 +62,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -96,6 +97,7 @@ public class MyPartnershipGivingActivity extends BaseFragment implements OnItemC
 	
 	TextView txtFromDate,txtToDate;
 	String UserRoll;
+	EditText etName;
 	
 	private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
 	private SimpleDateFormat dateFormatter,dateFormatter01;
@@ -144,7 +146,7 @@ public class MyPartnershipGivingActivity extends BaseFragment implements OnItemC
 		
 		jsonarray=new JSONArray();
 		
-UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
+        UserRoll=mPreferenceHelper.getString(Commons.USER_ROLE);
 		
 		mZoneList=new ArrayList<String>();
 		mRegionList=new ArrayList<String>();
@@ -365,8 +367,7 @@ public void showDialog(){
 		LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 		LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
 		
-		
-		
+
 		final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 		final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
 		final TextView spgroupchurchTextView=(TextView) promptView.findViewById(R.id.spgroupchurchTextView);
@@ -384,6 +385,7 @@ public void showDialog(){
 		spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 		spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 		spCell=(Spinner) promptView.findViewById(R.id.spCell);
+	    etName =(EditText) promptView.findViewById(R.id.etName);
 		
 		String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		Log.e("default user", str);
@@ -897,7 +899,7 @@ public void showDialog(){
 		
 		public void onClick(DialogInterface dialog, int id) {
 			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",etname="";
 			
 			try{
 				resion=spresion.getSelectedItem().toString();
@@ -940,11 +942,11 @@ public void showDialog(){
 			
 			 fdate=txtFromDate.getText().toString();
 			 tdate=txtToDate.getText().toString();
-					
+			 etname=etName.getText().toString();
 			
 			if(NetworkHelper.isOnline(getActivity())){
 				Methods.showProgressDialog(getActivity());
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
 			
 				dialog.cancel();
 
@@ -1227,7 +1229,7 @@ public void showDialog(){
 
 	}
 
-	private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+	private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String etname){
 
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllListMastersService.SERVICE_URL,new Listener<String>() {
 
@@ -1344,7 +1346,9 @@ public void showDialog(){
 			
 			if(!cell.equals(""))
 				jsonfilter.put("cell", cell);
-			
+
+			if(!etname.equals(""))
+				jsonfilter.put("by_name", etname);
 			
 			jsonobj.put("filters", jsonfilter);
 			

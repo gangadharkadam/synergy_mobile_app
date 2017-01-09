@@ -31,6 +31,11 @@ public class HigherHierarchyRespModel {
 		private String group_church_name;
 		private String cell;
 		private String cell_name;
+		private String region_name;
+		private String zone_name;
+		private String church_name;
+		private String pcf_name;
+		private String senior_cell_name;
 
 		public String getZone() {
 			return zone;
@@ -98,6 +103,46 @@ public class HigherHierarchyRespModel {
 
 		public void setCell_name(String cell_name) {
 			this.cell_name = cell_name;
+		}
+
+		public String getRegion_name() {
+			return region_name;
+		}
+
+		public void setRegion_name(String region_name) {
+			this.region_name = region_name;
+		}
+
+		public String getZone_name() {
+			return zone_name;
+		}
+
+		public void setZone_name(String zone_name) {
+			this.zone_name = zone_name;
+		}
+
+		public String getChurch_name() {
+			return church_name;
+		}
+
+		public void setChurch_name(String church_name) {
+			this.church_name = church_name;
+		}
+
+		public String getPcf_name() {
+			return pcf_name;
+		}
+
+		public void setPcf_name(String pcf_name) {
+			this.pcf_name = pcf_name;
+		}
+
+		public String getSenior_cell_name() {
+			return senior_cell_name;
+		}
+
+		public void setSenior_cell_name(String senior_cell_name) {
+			this.senior_cell_name = senior_cell_name;
 		}
 	}
 

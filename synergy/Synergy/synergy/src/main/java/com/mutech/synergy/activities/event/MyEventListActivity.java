@@ -44,6 +44,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -113,14 +114,15 @@ public class MyEventListActivity extends AppCompatActivity {
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 	
-	 Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
-		private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList,meventtype;
+	Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
+	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList,meventtype;
 		
-		TextView txtFromDate,txtToDate;
+	TextView txtFromDate,txtToDate;
+	EditText etName;
 		
-		private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
-		private SimpleDateFormat dateFormatter,dateFormatter01;
-		Calendar newCalendar;	
+	private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
+	private SimpleDateFormat dateFormatter,dateFormatter01;
+	Calendar newCalendar;
 	
 	JSONArray jsonarray;
 	String str;
@@ -1041,7 +1043,8 @@ public void showDialog(){
 		spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 		spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 		spCell=(Spinner) promptView.findViewById(R.id.spCell);
-		
+	    etName =(EditText) promptView.findViewById(R.id.etName);
+
 		String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		Log.e("default user", str);
 		
@@ -1566,7 +1569,7 @@ public void showDialog(){
 		
 		public void onClick(DialogInterface dialog, int id) {
 			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private";
+			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private",etname="";
 			
 			try{
 				eventtype=spresion.getSelectedItem().toString();
@@ -1615,11 +1618,12 @@ public void showDialog(){
 			
 			 fdate=txtFromDate.getText().toString();
 			 tdate=txtToDate.getText().toString();
+			 etname=etName.getText().toString();
 					
 			
 			if(NetworkHelper.isOnline(MyEventListActivity.this)){
 				Methods.showProgressDialog(MyEventListActivity.this);
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype,etname);
 			
 				dialog.cancel();
 
@@ -1902,7 +1906,7 @@ private void getSpinnerData(final String tblname,final String name) {
 
 }
 
-private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String eventtype){
+private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String eventtype,final String etname){
 
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetMyEventListService.SERVICE_URL,new Listener<String>() {
 
@@ -2027,6 +2031,9 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 
 			if(!fdate.equals(""))
 				jsonfilter.put("from_date", fdate);
+
+			if(!etname.equals(""))
+				jsonfilter.put("by_name", etname);
 
 //			jsonfilter.put("event_type", eventtype);
 			

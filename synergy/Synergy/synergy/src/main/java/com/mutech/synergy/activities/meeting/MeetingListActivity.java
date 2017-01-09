@@ -39,6 +39,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -87,14 +88,15 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 	private MeetingListAdapter mMeetingListAdapter;
 	private PreferenceHelper mPreferenceHelper;
 	private Gson gson;
-	String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private";
+	String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",eventtype="Private",etname="";
 	
 	JSONArray jsonarray;
 	String str;
 	
 	Spinner spresion,spzone,sppcf,spgroupchurch,spchurch,spSeniorCell,spCell,speventtype;
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList,meventtype;
-	
+
+	EditText etName;
 	TextView txtFromDate,txtToDate;
 	String UserRoll;
 	//ImageView filterimg;
@@ -210,7 +212,7 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 			case "Cell Leader":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype,etname);
 				break;
 
 			case "Member":
@@ -219,40 +221,40 @@ public class MeetingListActivity extends ActionBarActivity implements OnItemClic
 				if (!getIntent().getStringExtra("cellcode").contentEquals("")) {
 					church = getIntent().getStringExtra("cellcode");
 				}
-				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype,etname);
 				break;
 
 			case "Church":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", resion, zone, groupchurch, cellcode, pcf, srcell, cell, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, cellcode, pcf, srcell, cell, fdate, tdate, eventtype,etname);
 				break;
 
 			case "GroupChurch":
 
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", resion, zone, cellcode, church, pcf, srcell, cell, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, cellcode, church, pcf, srcell, cell, fdate, tdate, eventtype,etname);
 				break;
 
 
 			case "Zone":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", resion, cellcode, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, cellcode, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype,etname);
 				break;
 
 
 			case "Region":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", cellcode, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", cellcode, zone, groupchurch, church, pcf, srcell, cell, fdate, tdate, eventtype,etname);
 				break;
 
 			case "Cells":
 				fdate = getIntent().getStringExtra("fdate");
 				tdate = getIntent().getStringExtra("tdate");
-				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype);
+				getUpdatedListMethod("First Timer", resion, zone, groupchurch, church, pcf, srcell, cellcode, fdate, tdate, eventtype,etname);
 				break;
 		    }
 
@@ -637,6 +639,7 @@ public void showDialog(){
 		spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 		spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 		spCell=(Spinner) promptView.findViewById(R.id.spCell);
+	    etName =(EditText) promptView.findViewById(R.id.etName);
 		
 		String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		Log.e("default user", str);
@@ -1209,11 +1212,11 @@ public void showDialog(){
 			
 			 fdate=txtFromDate.getText().toString();
 			 tdate=txtToDate.getText().toString();
-					
-			
+			 etname=etName.getText().toString();
+
 			if(NetworkHelper.isOnline(MeetingListActivity.this)){
 				Methods.showProgressDialog(MeetingListActivity.this);
-				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype);
+				getUpdatedListMethod("First Timer",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,eventtype,etname);
 
 				dialog.cancel();
 
@@ -1496,7 +1499,7 @@ private void getSpinnerData(final String tblname,final String name) {
 
 }
 
-private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String eventtype){
+private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String eventtype,final String etname){
 
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllMeetingService.SERVICE_URL,new Listener<String>() {
 
@@ -1621,6 +1624,9 @@ private void getUpdatedListMethod(final String tbl,final String resion,final Str
 
 			if(intent.hasExtra("fdate")){
 				jsonfilter.put("attendance_type", attendance_type);}
+
+			if(!etname.equals(""))
+				jsonfilter.put("by_name", etname);
 
 			/*if(intent.hasExtra("cellah")){
 				jsonfilter.put("attendance_type", "Cell Meeting");}*/

@@ -106,7 +106,8 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 	TextView bapWhrTV, bapWhnTV;
 	Calendar dob, doj;
 	TextView txtBaptismInfo;
-	String seniorcell,churchgroup,church,region,zone,groupchurchname,cell,cellname,pcf;
+	String seniorcell,churchgroup,church,region,zone,groupchurchname,cell,cellname,pcf,regionname,zonename,churchname,pcfname,seniorcellname;
+	private EditText edtregionname,edtzonename,edtgroupchurchname,edtchurchname,edtpcfname,edtseniorcellname,edtcellname;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -183,6 +184,15 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 
 		bapWhnTV = (TextView) findViewById(R.id.bapWhnTV);
 		bapWhrTV = (TextView) findViewById(R.id.bapWhrTV);
+
+		edtregionname=(EditText)findViewById(R.id.txtRegionname);
+		edtzonename=(EditText) findViewById(R.id.txtZonename);
+		edtgroupchurchname=(EditText) findViewById(R.id.txtGroupChurchname);
+		edtchurchname=(EditText) findViewById(R.id.txtChurchName);
+		edtpcfname=(EditText) findViewById(R.id.txtPCFname);
+		edtseniorcellname=(EditText) findViewById(R.id.txtSeniorcellname);
+		edtcellname=(EditText) findViewById(R.id.txtCellname);
+
 
 		lblphoto.setVisibility(View.GONE);
 		imgProfilePic.setVisibility(View.GONE);
@@ -919,8 +929,16 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 		  			
 		  		}
 		  	});
-	      
-	      
+
+
+		edtcellname.setEnabled(false);
+		edtchurchname.setEnabled(false);
+		edtgroupchurchname.setEnabled(false);
+		edtpcfname.setEnabled(false);
+		edtregionname.setEnabled(false);
+		edtzonename.setEnabled(false);
+		edtseniorcellname.setEnabled(false);
+
 	      if(NetworkHelper.isOnline(this)){
 				Methods.showProgressDialog(this);
 				//getAllSeniorCell();
@@ -1015,6 +1033,11 @@ public class CreateNewMemberActivity extends AppCompatActivity {
 						obj.put("zone", zone);
 						obj.put("group_church_name",groupchurchname);
 						obj.put("cell_name", cellname);
+					    obj.put("region_name",regionname);
+					    obj.put("zone_name",zonename);
+					    obj.put("church_name",churchname);
+					    obj.put("pcf_name",pcfname);
+					    obj.put("senior_cell_name",seniorcellname);
 						obj.put("email_id", txtEmailID1.getText().toString());
 						obj.put("core_competeance", txtCoreCompeteance.getText().toString());
 						obj.put("email_id2", txtEmailID2.getText().toString());
@@ -1375,12 +1398,30 @@ private void getTopHierarchy() {
 						seniorcell=mHHSubModel.get(i).getSenior_cell();
 						if(null !=mHHSubModel.get(i).getGroup_church_name())
 							groupchurchname= mHHSubModel.get(i).getGroup_church_name();
+						if(null !=mHHSubModel.get(i).getRegion_name())
+							regionname= mHHSubModel.get(i).getRegion_name();
+						if(null !=mHHSubModel.get(i).getZone_name())
+							zonename= mHHSubModel.get(i).getZone_name();
+						if(null !=mHHSubModel.get(i).getChurch_name())
+							churchname= mHHSubModel.get(i).getChurch_name();
+						if(null !=mHHSubModel.get(i).getPcf_name())
+							pcfname= mHHSubModel.get(i).getPcf_name();
+						if(null !=mHHSubModel.get(i).getSenior_cell_name())
+							seniorcellname= mHHSubModel.get(i).getSenior_cell_name();
+
+						edtgroupchurchname.setText(groupchurchname);
+						edtseniorcellname.setText(seniorcellname);
+						edtzonename.setText(zonename);
+						edtregionname.setText(regionname);
+						edtpcfname.setText(pcfname);
+						edtchurchname.setText(churchname);
+
 					}
 					
 				//	setAdapters();
 
 				}else{
-					
+					Methods.longToast("Record Not Found ", CreateNewMemberActivity.this);
 				}
 			}
 			Methods.showProgressDialog(CreateNewMemberActivity.this);
@@ -1471,7 +1512,9 @@ private void getLowerHierarchy(){
 							}else if(defRole.equalsIgnoreCase("Regional Pastor")){
 								mRegionList.add(jsonarray.getJSONObject(i).getString("name"));
 							}
+
 							cellname=jsonarray.getJSONObject(i).getString("cell_name");
+							edtcellname.setText(cellname);
 						}
 						
 						setAdapters();
@@ -1481,21 +1524,12 @@ private void getLowerHierarchy(){
 						Methods.longToast("Record Not Found ", CreateNewMemberActivity.this);
 						
 					}
-					
 				}
-			
-				
-			
 			
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
-			
-			
 
 		}
 	},new ErrorListener() {
@@ -1549,7 +1583,6 @@ private void getLowerHierarchy(){
 
 	App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
 	reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-
 
 }
 
@@ -1786,12 +1819,130 @@ private void getLowerHierarchy(){
 			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
 			textView.setTextSize(18);
 			return false;
-		}
-		if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
+		}if (!InputValidation.isPhoneNumber(txtMemberPhone2, false)) {
 			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
 					.setCancelable(false)
 					.setTitle("Invalid Input")
 					.setMessage("Please enter a valid phone number")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtregionname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Region name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtzonename)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Zone name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtgroupchurchname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Group church name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtchurchname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Church name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtpcfname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Pcf name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtseniorcellname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Senior cell name")
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+
+						}
+					})
+					.show();
+			TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+			textView.setTextSize(18);
+			return false;
+		}
+
+		if (!InputValidation.hasText(edtcellname)) {
+			AlertDialog dialog =new AlertDialog.Builder(CreateNewMemberActivity.this)
+					.setCancelable(false)
+					.setTitle("Invalid Input")
+					.setMessage("Please enter Cell name")
 					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialogInterface, int i) {

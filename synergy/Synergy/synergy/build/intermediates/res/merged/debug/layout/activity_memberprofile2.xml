@@ -71,27 +71,6 @@
                                 android:layout_margin="@dimen/dimen_10"
                                 />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Membership No"-->
-                            <!--android:textColor="@android:color/black"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtMembershipNo"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:enabled="false"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -176,25 +155,6 @@
                                 android:inputType="textMultiLine"
                                 android:textSize="@dimen/font_size_small" />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Baptised Where ?"-->
-                            <!--android:textColor="@android:color/black"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtBaptisedWhere"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -453,42 +413,6 @@
 
                             </LinearLayout>
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Password"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<LinearLayout-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:orientation="horizontal"-->
-                            <!--android:weightSum="1" >-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtPassword"-->
-                            <!--android:layout_width="0dip"-->
-                            <!--android:layout_weight="0.9"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:enabled="false"-->
-                            <!--android:hint="Password"-->
-                            <!--android:inputType="textPassword"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
-
-                            <!--<ImageView-->
-                            <!--android:id="@+id/editPassword"-->
-                            <!--android:layout_width="30dp"-->
-                            <!--android:layout_height="30dp"-->
-                            <!--android:src="@drawable/pencil" />-->
-                            <!--</LinearLayout>-->
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -547,20 +471,6 @@
                                 android:background="@drawable/rectangle1"
                                 android:padding="@dimen/dimen_10"
                                 android:textSize="@dimen/font_size_small" />
-
-
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/text_background_greyborder"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:text="Pick My Location"-->
-                            <!--android:textColor="@android:color/black"-->
-                            <!--android:textSize="@dimen/textsize_18"-->
-                            <!--android:visibility="gone" />-->
 
 
                             <TextView
@@ -627,30 +537,6 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small" />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Region Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtregionname"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
-
-
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -672,30 +558,6 @@
                                 android:padding="@dimen/dimen_10"
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small"/>
-
-
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Zone Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtzonename"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
-
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -719,29 +581,6 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small" />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Group Church Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtchurch_group_name"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
-
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -764,27 +603,6 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small"/>
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Church Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtChurch_name"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -808,27 +626,6 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small" />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Pcf Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtpcf_name"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -852,27 +649,6 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small"/>
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Senior Cell Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtsenior_cell_name"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -896,28 +672,145 @@
                                 android:singleLine="true"
                                 android:textSize="@dimen/font_size_small" />
 
-                            <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_margin="@dimen/dimen_10"-->
-                            <!--android:text="Cell Name"-->
-                            <!--android:textColor="@color/darkgrey_textcolor"-->
-                            <!--android:textSize="@dimen/textsize_18" />-->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Region Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
 
-                            <!--<EditText-->
-                            <!--android:id="@+id/txtcell_name"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginBottom="@dimen/dimen_10"-->
-                            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                            <!--android:layout_marginRight="@dimen/dimen_10"-->
-                            <!--android:background="@drawable/rectangle1"-->
-                            <!--android:inputType="textMultiLine"-->
-                            <!--android:maxLines="1"-->
-                            <!--android:padding="@dimen/dimen_10"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textSize="@dimen/textsize_16" />-->
+                            <EditText
+                                android:id="@+id/txtRegionname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Zone Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtZonename"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Group Church Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtGroupChurchname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Church Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtChurchName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="PCF Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtPCFname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Senior Cell Name "
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtSeniorcellname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_10"
+                                android:text="Cell Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/txtCellname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:background="@drawable/rectangle1"
+                                android:padding="@dimen/dimen_10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/font_size_small"/>
 
                             <TextView
                                 android:layout_width="match_parent"

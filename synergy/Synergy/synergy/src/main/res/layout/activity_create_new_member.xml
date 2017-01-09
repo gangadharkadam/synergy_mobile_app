@@ -852,6 +852,147 @@
                             android:visibility="gone"
                             />
 
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Region Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtRegionname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Zone Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtZonename"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Group Church Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtGroupChurchname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Church Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtChurchName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="PCF Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtPCFname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Senior Cell Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtSeniorcellname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:text="Cell Name (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <EditText
+                            android:id="@+id/txtCellname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:background="@drawable/rectangle1"
+                            android:padding="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

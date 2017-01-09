@@ -43,6 +43,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -112,6 +113,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 	private ArrayList<String> mZoneList,mRegionList,mChurchList,mSeniorCellList,mGrpChurchList,mPCFList,mCellList;
 	
 	TextView txtFromDate,txtToDate;
+	EditText etName;
 	private DatePickerDialog fromDatePickerDialog,toDatePickerDialog;
 	private SimpleDateFormat dateFormatter,dateFormatter01;
 	Calendar newCalendar;
@@ -719,7 +721,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 
 	}
 
-	private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate){
+	private void getUpdatedListMethod(final String tbl,final String resion,final String zone,final String gchurch,final String church,final String pcf,final String srcell,final String cell,final String fdate,final String todate,final String etname){
 
 		StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,GetAllListMastersService.SERVICE_URL,new Listener<String>() {
 
@@ -858,8 +860,12 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 				
 				if(!todate.equals(""))
 					jsonfilter.put("to_date", todate);
-				
-				
+
+				if(!etname.equals(""))
+					jsonfilter.put("by_name", etname);
+
+			//	jsonfilter.put("by_name", todate);
+
 				jsonobj.put("filters", jsonfilter);
 				
 			} catch (JSONException e) {
@@ -1236,6 +1242,7 @@ public void showDialog(){
 		spchurch =(Spinner) promptView.findViewById(R.id.spchurch);
 		spSeniorCell=(Spinner) promptView.findViewById(R.id.spSeniorCell);
 		spCell=(Spinner) promptView.findViewById(R.id.spCell);
+	    etName =(EditText) promptView.findViewById(R.id.etName);
 		
 		String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		Log.e("default user", str);
@@ -1978,7 +1985,7 @@ public void showDialog(){
 		
 		public void onClick(DialogInterface dialog, int id) {
 			
-			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="";
+			String resion="",zone="",groupchurch="",church="",pcf="",srcell="",cell="",fdate="",tdate="",etname="";
 			
 			try{
 				if(spresionTextView.getVisibility()==View.GONE)
@@ -2031,8 +2038,9 @@ public void showDialog(){
 			
 			 fdate=txtFromDate.getText().toString();
 			 tdate=txtToDate.getText().toString();
+			 etname=etName.getText().toString();
 					
-			 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate)){
+			 if(!checkValidation(resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname)){
 				
 				 Methods.longToast("Please select any Filter",DisplayMastersListActivity.this);
 				 
@@ -2043,15 +2051,15 @@ public void showDialog(){
 					
 						if(optionSelected.equalsIgnoreCase("PCF")){
 						
-							getUpdatedListMethod("PCFs",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+							getUpdatedListMethod("PCFs",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
 						
 						}else if(optionSelected.equalsIgnoreCase("Sr Cell")){
 						
-							getUpdatedListMethod("Senior Cells",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+							getUpdatedListMethod("Senior Cells",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
 					
 						}else if(optionSelected.equalsIgnoreCase("Cell")){
 							
-							getUpdatedListMethod("Cells",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate);
+							getUpdatedListMethod("Cells",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
 						}
 					
 						dialog.cancel();
@@ -2083,7 +2091,7 @@ public void showDialog(){
 
 
 
-boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate){
+boolean checkValidation(String resion,String zone,String groupchurch,String church,String pcf,String srcell,String cell,String fdate,String tdate,String etname){
 	if(resion.equals("")){
 		if(zone.equals("")){
 			if(groupchurch.equals("")){
@@ -2092,10 +2100,11 @@ boolean checkValidation(String resion,String zone,String groupchurch,String chur
 						if(srcell.equals("")){
 							if(cell.equals("")){
 								if(fdate.equals("") && tdate.equals("")){
-										
-									
-									
+									if(etname.equals("") ){
 										return false;
+									}else{
+										return true;
+									}
 									}else{
 										return true;
 									}
@@ -2358,7 +2367,7 @@ private void CheckBtnBackGroud(int index)
             btns[i].setTextColor(getResources().getColor(android.R.color.black));
         }
     }
-     
+
 }
 	
 }

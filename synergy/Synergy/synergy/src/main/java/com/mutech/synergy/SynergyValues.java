@@ -58,18 +58,24 @@ public class SynergyValues {
 	}
 
 	public static class ImageUrl{
-		public static String imageUrl = "http://loveworldsynergy.org";
-		public static String imageUrl2 = "http://verve.indictranstech.com";
-		public static String imageUrl1 = "http://192.168.5.25:7001/";
+		public static String imageUrl3 = "http://loveworldsynergy.org";
+		public static String imageUrl = "http://verve.indictranstech.com";
+		public static String imageUrl4 = "http://192.168.5.25:7001/";
+		public static String imageUrl2 = "http://192.168.5.18:7001/";
+		public static String imageUrl1= "http://212.129.63.220:7001/";
 	}
 
 	public static class Web{
 		
-		public static String BASE_URL="http://loveworldsynergy.org/api/";
+		public static String BASE_URL3="http://loveworldsynergy.org/api/";
 
-		public static String BASE_URL2="http://verve.indictranstech.com/api/";
+		public static String BASE_URL="http://verve.indictranstech.com/api/";
 		
-		public static String BASE_URL1="http://192.168.5.25:7001/api/";
+		public static String BASE_URL4="http://192.168.5.25:7001/api/";
+
+		public static String BASE_URL2="http://192.168.5.18:7001/api/";
+
+		public static String BASE_URL1="http://212.129.63.220:7001/api/";
 
 		public static class LoginService{
 			public static String SERVICE_URL=BASE_URL+"method/login";

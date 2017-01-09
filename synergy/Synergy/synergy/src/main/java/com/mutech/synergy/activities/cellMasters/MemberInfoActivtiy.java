@@ -67,7 +67,6 @@ import com.mutech.synergy.SynergyValues.ImageUrl;
 import com.mutech.synergy.SynergyValues.Web.GetMemberProfileService;
 import com.mutech.synergy.SynergyValues.Web.ProfilePicUploadService;
 import com.mutech.synergy.SynergyValues.Web.ShowMembersDetailsService;
-import com.mutech.synergy.activities.profile.MyProfileActivity;
 import com.mutech.synergy.models.MeetingListRequestModel;
 import com.mutech.synergy.models.MemberProfileModel;
 import com.mutech.synergy.models.MemberProfileModel.ProfileSubModel;
@@ -121,6 +120,8 @@ public class MemberInfoActivtiy extends ActionBarActivity{
     Calendar dob, doj;
 
 	TextView bapWhrTV, bapWhnTV;
+	private EditText edtregionname,edtzonename,edtgroupchurchname,edtchurchname,edtpcfname,edtseniorcellname,edtcellname;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -226,6 +227,14 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 //		bapWhnTV.setEnabled(false);
 //		bapWhrTV.setEnabled(false);
 
+		edtregionname=(EditText)findViewById(R.id.txtRegionname);
+		edtzonename=(EditText) findViewById(R.id.txtZonename);
+		edtgroupchurchname=(EditText) findViewById(R.id.txtGroupChurchname);
+		edtchurchname=(EditText) findViewById(R.id.txtChurchName);
+		edtpcfname=(EditText) findViewById(R.id.txtPCFname);
+		edtseniorcellname=(EditText) findViewById(R.id.txtSeniorcellname);
+		edtcellname=(EditText) findViewById(R.id.txtCellname);
+
 		txttitle.setEnabled(true);
 		txtMemberfName.setEnabled(true);
 		txtMemberlName.setEnabled(true);
@@ -264,6 +273,13 @@ public class MemberInfoActivtiy extends ActionBarActivity{
         txtpcf.setEnabled(false);
         txtsenior_cell.setEnabled(false);
         txtcell.setEnabled(false);
+		edtcellname.setEnabled(false);
+		edtchurchname.setEnabled(false);
+		edtgroupchurchname.setEnabled(false);
+		edtpcfname.setEnabled(false);
+		edtregionname.setEnabled(false);
+		edtzonename.setEnabled(false);
+		edtseniorcellname.setEnabled(false);
 
         btnSaveMemberInfo.setOnClickListener(new OnClickListener() {
             @Override
@@ -1020,46 +1036,45 @@ public class MemberInfoActivtiy extends ActionBarActivity{
 							if(null !=mProfSubModel.get(i).getRegion())
 								txtregion.setText(mProfSubModel.get(i).getRegion());
 							
-//							if(null !=mProfSubModel.get(i).getRegion_name())
-//								txtregionname.setText(mProfSubModel.get(i).getRegion());
+							if(null !=mProfSubModel.get(i).getRegion_name())
+								edtregionname.setText(mProfSubModel.get(i).getRegion());
 							
 							if(null !=mProfSubModel.get(i).getZone())
 								txtzone.setText(mProfSubModel.get(i).getZone());
 							
-//							if(null !=mProfSubModel.get(i).getZone_name())
-//								txtzonename.setText(mProfSubModel.get(i).getZone_name());
+							if(null !=mProfSubModel.get(i).getZone_name())
+    							edtzonename.setText(mProfSubModel.get(i).getZone_name());
 							
 							if(null !=mProfSubModel.get(i).getChurch_group())
 							    txtchurch_group.setText(mProfSubModel.get(i).getChurch_group());
 							
-//							if(null !=mProfSubModel.get(i).getGroup_church_name())
-//								txtchurch_group_name.setText(mProfSubModel.get(i).getGroup_church_name());
+							if(null !=mProfSubModel.get(i).getGroup_church_name())
+								edtgroupchurchname.setText(mProfSubModel.get(i).getGroup_church_name());
 							
 							if(null !=mProfSubModel.get(i).getChurch())
 							   txtChurch.setText(mProfSubModel.get(i).getChurch());
 							
-//							if(null !=mProfSubModel.get(i).getChurch_name())
-//								txtChurch_name.setText(mProfSubModel.get(i).getChurch_name());
+					    	if(null !=mProfSubModel.get(i).getChurch_name())
+								edtchurchname.setText(mProfSubModel.get(i).getChurch_name());
 							
 							if(null !=mProfSubModel.get(i).getPcf())
 								txtpcf.setText(mProfSubModel.get(i).getPcf());
 							
-//							if(null !=mProfSubModel.get(i).getPcf_name())
-//								txtpcf_name.setText(mProfSubModel.get(i).getPcf_name());
+							if(null !=mProfSubModel.get(i).getPcf_name())
+								edtpcfname.setText(mProfSubModel.get(i).getPcf_name());
 							
 							
 							if(null !=mProfSubModel.get(i).getSenior_cell())
 								txtsenior_cell.setText(mProfSubModel.get(i).getSenior_cell());
 							
-//							if(null !=mProfSubModel.get(i).getSenior_cell_name())
-//								txtsenior_cell_name.setText(mProfSubModel.get(i).getSenior_cell_name());
-							
+							if(null !=mProfSubModel.get(i).getSenior_cell_name())
+    							edtseniorcellname.setText(mProfSubModel.get(i).getSenior_cell_name());
 						
 							if(null !=mProfSubModel.get(i).getCell())
 								txtcell.setText(mProfSubModel.get(i).getCell());
 							
-//							if(null !=mProfSubModel.get(i).getCell_name())
-//								txtcell_name.setText(mProfSubModel.get(i).getCell_name());
+     						if(null !=mProfSubModel.get(i).getCell_name())
+    							edtcellname.setText(mProfSubModel.get(i).getCell_name());
 							
 							if(null !=mProfSubModel.get(i).getShort_bio())
 								txtShortbio.setText(mProfSubModel.get(i).getShort_bio());
@@ -1207,7 +1222,7 @@ public class MemberInfoActivtiy extends ActionBarActivity{
                 Methods.closeProgressDialog();
 
 
-                Log.e("responce droid","get reqGetProfile ---------------"+ response);
+                Log.e("responce droid","get requpdateprofile ---------------"+ response);
 
                 try {
 
