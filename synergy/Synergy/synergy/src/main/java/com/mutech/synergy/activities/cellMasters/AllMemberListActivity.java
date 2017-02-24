@@ -12,8 +12,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ActionBar.LayoutParams;
@@ -68,22 +66,13 @@ import com.mutech.synergy.SynergyValues.Web.GetAllListMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetAllMastersService;
 import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
-import com.mutech.synergy.SynergyValues.Web.ShowAllMembersService;
 
 import com.mutech.synergy.activities.AttendanceHistory;
 import com.mutech.synergy.activities.CAttendanceHistory;
-import com.mutech.synergy.activities.CellLeaderMsg;
-import com.mutech.synergy.activities.ChurchAttendanceHistory;
-import com.mutech.synergy.activities.MemberProfile;
 import com.mutech.synergy.activities.ShortBio;
-import com.mutech.synergy.activities.ShortBioSrCell;
-import com.mutech.synergy.activities.ViewMembers;
-import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity;
-import com.mutech.synergy.activities.dashboard.FirstTimeMonthActivity.SpinnerDataFlag;
 import com.mutech.synergy.activities.event.CreateEventActivity;
 import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.adapters.MastersListAdapter;
-import com.mutech.synergy.models.AllMembersResponseModel;
 import com.mutech.synergy.models.AllMembersResponseModel.AllMemSubResponseModel;
 import com.mutech.synergy.models.MeetingModel.MeetingListModel;
 import com.mutech.synergy.models.MeetingListRequestModel;
@@ -520,6 +509,9 @@ private void getList(final String tbl){
 					if(!todate.equals(""))
 						jsonfilter.put("to_date", todate);
 
+					if(!name.equals(""))
+						jsonobj.put("by_name", name);
+
 			/*		if(!etname.equals(""))
 						jsonfilter.put("by_name", etname);*/
 
@@ -676,8 +668,8 @@ private void getList(final String tbl){
 					if(!todate.equals(""))
 						jsonfilter.put("to_date", todate);
 
-			       /*   if(!etname.equals(""))
-					       jsonfilter.put("by_name", etname); */
+			         if(!etname.equals(""))
+					       jsonfilter.put("by_name", etname);
 
 					jsonobj.put("filters", jsonfilter);
 		

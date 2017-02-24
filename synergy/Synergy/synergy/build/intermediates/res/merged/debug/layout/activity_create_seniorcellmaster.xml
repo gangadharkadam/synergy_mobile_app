@@ -82,10 +82,37 @@
                     android:orientation="horizontal"
                     android:weightSum="1" >
 
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Region (Mandatory)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spnSeniorCellRegion"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_8"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
                         android:layout_weight="0.5"
                         android:orientation="vertical" >
 
@@ -120,31 +147,6 @@
                              />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical" >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Region (Mandatory)"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/font_size_small"
-                            android:textStyle="bold" />
-
-                        <Spinner
-                            android:id="@+id/spnSeniorCellRegion"
-                           android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:background="@drawable/rectangle1"
-                            android:maxLines="1"
-                            android:padding="@dimen/dimen_8"
-                            android:singleLine="true"
-                            android:textSize="@dimen/font_size_small" />
-                    </LinearLayout>
                 </LinearLayout>
                 
                 

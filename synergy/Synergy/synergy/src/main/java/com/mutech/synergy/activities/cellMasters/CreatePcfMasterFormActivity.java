@@ -425,13 +425,13 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 
 				 }
 
-				if(spinner.getId() == R.id.spnGroupChurch){
+			/*	if(spinner.getId() == R.id.spnGroupChurch){
 
 					lblchurch.setVisibility(View.VISIBLE);
 
 					spnCellChurch.setVisibility(View.GONE);
 
-			 }
+			 }*/
 
 			}
 
@@ -749,13 +749,11 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 		String defVal=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		String defRole=mPreferenceHelper.getString(Commons.USER_ROLE);
 
-	
-		
-		
-		ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mZoneList);
+
+	/*	ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mZoneList);
 		adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spnPCFZone.setAdapter(adapterZone);
-		lblzone.setText(spnPCFZone.getSelectedItem().toString());
+		spnPCFZone.setAdapter(adapterZone);*/
+		//lblzone.setText(spnPCFZone.getSelectedItem().toString());
 
 		ArrayAdapter<String> adapterRegion = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mRegionList);
 		adapterRegion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -769,7 +767,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 		ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(CreatePcfMasterFormActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
 		adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnSeniorCellChurchgroup.setAdapter(adapterchurchgropu);
-		lblgroupchurch.setText(spnSeniorCellChurchgroup.getSelectedItem().toString());
+		//lblgroupchurch.setText(spnSeniorCellChurchgroup.getSelectedItem().toString());
 
 	}
 	
@@ -869,9 +867,7 @@ public class CreatePcfMasterFormActivity extends ActionBarActivity implements On
 							}else{
 								Methods.longToast("Resord Not Found", CreatePcfMasterFormActivity.this);
 							}
-							
-					
-						
+
 					}
 					
 					

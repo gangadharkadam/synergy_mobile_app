@@ -15,22 +15,18 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.StringRequest;
-//import com.google.android.gms.internal.df;
 import com.google.gson.Gson;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
-import com.mutech.synergy.R.id;
-import com.mutech.synergy.R.layout;
-import com.mutech.synergy.R.menu;
 import com.mutech.synergy.SynergyValues.Commons;
 import com.mutech.synergy.SynergyValues.Web.CreateCellService;
 import com.mutech.synergy.SynergyValues.Web.GetHigherHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.LowerHierarchyService;
 import com.mutech.synergy.SynergyValues.Web.fillLoginSpinner;
-import com.mutech.synergy.adapters.MasterSpinnerAdpter;
 import com.mutech.synergy.models.CreateCellModel;
 import com.mutech.synergy.models.HigherHierarchyRespModel;
 import com.mutech.synergy.models.MeetingListRequestModel;
+import com.mutech.synergy.models.ResponseMessageModel;
 import com.mutech.synergy.models.ResponseMessageModel2;
 import com.mutech.synergy.models.HigherHierarchyRespModel.HHSubModel;
 import com.mutech.synergy.utils.InputValidation;
@@ -40,14 +36,10 @@ import com.mutech.synergy.utils.PreferenceHelper;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.ActionBarActivity;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -92,6 +84,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 			textView.setTextSize(18);
 			return false;
 		}*/
+
 		if(!InputValidation.hasText(txtCellName)) {
 			AlertDialog dialog = new AlertDialog.Builder(NewCreateCellMasterActivity.this)
 					.setCancelable(false)
@@ -285,7 +278,7 @@ public class NewCreateCellMasterActivity extends AppCompatActivity {
 			}
 		});
 		
-if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
+     if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
 			
 			
 			lblzone.setVisibility(View.GONE);
@@ -347,11 +340,8 @@ if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
 			spnCellChurch.setVisibility(View.VISIBLE);
 		//	txtPCF.setVisibility(View.VISIBLE);
 		//	spnSeniorCell.setVisibility(View.VISIBLE);
-    	  
-    	  
-    	  
-    	  
-    	  
+
+
 			spnCellZone.setEnabled(false);
 			spnCellRegion.setEnabled(false);
 			spnSeniorCellChurchgroup.setEnabled(false);
@@ -594,55 +584,6 @@ if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
 						spnSeniorCell.setVisibility(View.GONE);
          	    	 
          	     }
-        	     
-        	     
-        	     
-              /* switch (arg2) {
-                  case 1:
-                	  
-                	  //if(zonesp){
-      					
-  						
-  						
-  					//}
-  				  				
-  					zonesp=true;
-  					
-                      break;
-                  case 2:
-                	 
-        				
-                		  
-    						
-    				
-    			
-    				
-                	         
-                      break;
-                  case 3:
-                	  //if(churchsp){
-          				
-                		
-    						
-    						
-    					//}
-    			
-                	  churchsp=true;  
-                      break;
-                  case 4:
-                	  //if(pcfsp){
-            		
-                		
-  						
-  					//}
-  			
-              	  churchsp=true;  
-                      break;
-                  case 5:
-                      Toast.makeText(NewCreateCellMasterActivity.this, "Spinner 2", Toast.LENGTH_LONG).show();
-                      break;
-                  }
-*/
           }
 
           @Override
@@ -917,28 +858,7 @@ if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
 	
 	private void setAdapters() {
 
-		
-		
-		/*if(null !=defVal){
-			if( defKey.equalsIgnoreCase("PCFs")){
-				mPCFList.add(defVal);
-			}else if(defKey.equalsIgnoreCase("Senior Cells")){
-				mSeniorCellList.add(defVal);
-			}else if(defKey.equalsIgnoreCase("Churches")){
-				mChurchList.add(defVal);
-			}else if(defKey.equalsIgnoreCase("Group Churches")){
-				mGrpChurchList.add(defVal);
-			}else if(defKey.equalsIgnoreCase("Zones")){
-				mZoneList.add(defVal);
-			}else if(defKey.equalsIgnoreCase("Regions")){
-				mRegionList.add(defVal);
-			}
-		}*/
-	
-		
-		
-		
-		
+
 		ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(NewCreateCellMasterActivity.this, android.R.layout.simple_spinner_item, mZoneList);
 		adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnCellZone.setAdapter(adapterZone);
@@ -1029,6 +949,7 @@ private void getSpinnerData(final String tbl,final String selval ){
 										
 									}
 								}
+
 							//	setAdapters();
 											
 								if(tbl.equalsIgnoreCase("Regions")){
@@ -1044,7 +965,7 @@ private void getSpinnerData(final String tbl,final String selval ){
 								    spnCellZone.setVisibility(View.VISIBLE);
 								
 								}else{
-									Log.e("condistion match"," not condistion match");
+									Log.e("condition match"," not condistion match");
 								}
 									
 								
@@ -1091,8 +1012,7 @@ private void getSpinnerData(final String tbl,final String selval ){
 									lblseniorcell.setVisibility(View.GONE);
 									spnSeniorCell.setVisibility(View.VISIBLE);
 								}
-								
-								
+
 								
 							}else{
 								Methods.longToast("Resord Not Found", NewCreateCellMasterActivity.this);
@@ -1158,17 +1078,25 @@ protected void saveCellMaster() {
 		@Override
 		public void onResponse(String response) {
 			Methods.closeProgressDialog();
-			Log.d("droid","get reqsaveCellMaster ---------------"+ response);
+			Log.d("droid", "get reqsaveCellMaster ---------------" + response);
 
-			ResponseMessageModel2 model=gson.fromJson(response, ResponseMessageModel2.class);
-			if(null !=model.getMessage().getMessage() && model.getMessage().getMessage().trim().length() >0){
-				Methods.longToast(model.getMessage().getMessage(), NewCreateCellMasterActivity.this);
+			if (response.contains("status")) {
+				ResponseMessageModel2 model = gson.fromJson(response, ResponseMessageModel2.class);
+				if (null != model.getMessage().getMessage() && model.getMessage().getMessage().trim().length() > 0) {
+					Methods.longToast(model.getMessage().getMessage(), NewCreateCellMasterActivity.this);
+				}
+			} else {
+				ResponseMessageModel model = gson.fromJson(response, ResponseMessageModel.class);
+
+				if (null != model.getMessage() && model.getMessage().trim().length() > 0) {
+					Methods.longToast(model.getMessage(), NewCreateCellMasterActivity.this);
+				}
+				finish();
+				Intent intForm = new Intent(NewCreateCellMasterActivity.this, DisplayMastersListActivity.class);
+				intForm.putExtra("OptionSelected", "Cell");
+				startActivity(intForm);
+
 			}
-			finish();
-			Intent intForm=new Intent(NewCreateCellMasterActivity.this,DisplayMastersListActivity.class);
-			intForm.putExtra("OptionSelected", "Cell");
-			startActivity(intForm);
-
 		}
 	},new ErrorListener() {
 
@@ -1244,6 +1172,7 @@ private boolean validateFields() {
 
 	/*if(txtCellCode.getText().toString().trim().length() > 0)
 	{*/
+
 		if(txtCellName.getText().toString().trim().length() >0)
 		{
 

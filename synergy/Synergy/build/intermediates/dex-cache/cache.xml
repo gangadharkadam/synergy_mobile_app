@@ -250,7 +250,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="003c34f99f727cf81b0f7314f288ca5ce66c1ee9">
+        sha1="04c0219badf5f7554669e55c2a79c29300a61578">
         <dex dex="/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ab4e0dc69f3e4d44b70f9fc979afa5a477042e00/classes.dex" />
     </item>
     <item
@@ -466,7 +466,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="5952a2864025facdeaff659266c5a6f07a3ff221">
+        sha1="5e86fb507c6a98eb538d5ebbbbc0c85947e12605">
         <dex dex="/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a549685cf99ed97cb64eac2fc682026ec0ef2cc9/classes.dex" />
     </item>
     <item

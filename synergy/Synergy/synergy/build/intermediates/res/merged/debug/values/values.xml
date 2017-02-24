@@ -786,9 +786,12 @@
     <string name="title_activity_church_attendance_history">Church Attendance History</string>
     <string name="title_activity_church_detail">ChurchDetail</string>
     <string name="title_activity_church_pastor_msg">Send Message</string>
+    <string name="title_activity_create_church_master_form">CreateChurchMasterFormActivity</string>
     <string name="title_activity_create_first_timer">CreateFirstTimerActivity</string>
     <string name="title_activity_create_new_member">CreateNewMemberActivity</string>
     <string name="title_activity_create_partnership">CreatePartnershipActivity</string>
+    <string name="title_activity_create_region_master_form">CreateRegionMasterFormActivity</string>
+    <string name="title_activity_create_zone_master_form">CreateZoneMasterFormActivity</string>
     <string name="title_activity_dashboard_list_details">DashboardListDetailsActivity</string>
     <string name="title_activity_dashboard_list_details_converts">
         DashboardListDetailsConvertsActivity

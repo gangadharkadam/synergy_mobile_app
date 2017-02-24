@@ -139,9 +139,6 @@ public class ShortBioCell extends ActionBarActivity {
                 }
                 else
                     Methods.longToast("Some Error Occured,please try again later", ShortBioCell.this);
-
-
-
             }
 
         }){
@@ -170,3 +167,4 @@ public class ShortBioCell extends ActionBarActivity {
 
 
 }
+

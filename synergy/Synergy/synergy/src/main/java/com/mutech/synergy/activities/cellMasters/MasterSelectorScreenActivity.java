@@ -1,4 +1,3 @@
-
 //Package name of the class
 package com.mutech.synergy.activities.cellMasters;
 
@@ -38,46 +37,39 @@ import com.mutech.messagebraudcast.MessageBroadcastActivity;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues;
 import com.mutech.synergy.SynergyValues.Commons;
-import com.mutech.synergy.activities.AttendanceHistory;
-import com.mutech.synergy.activities.CellLeaderMsg;
 import com.mutech.synergy.activities.Feedback;
 import com.mutech.synergy.activities.FoundationSchool;
 import com.mutech.synergy.activities.HomeActivity;
 import com.mutech.synergy.activities.LogoutActivity;
 import com.mutech.synergy.activities.MessageLogs;
 import com.mutech.synergy.activities.MinistryMaterials;
-import com.mutech.synergy.activities.ShortBio;
-import com.mutech.synergy.activities.ViewMembers;
-import com.mutech.synergy.activities.event.EventListActivity;
 import com.mutech.synergy.activities.event.MyEventListActivity;
 import com.mutech.synergy.activities.meeting.MyMeetingListActivity;
-import com.mutech.synergy.activities.profile.MyProfileActivity;
-import com.mutech.synergy.activities.profile.ProfileView;
 import com.mutech.synergy.activities.task.ToDoTaskActivity;
 import com.mutech.synergy.adapters.CustomDrawerAdapter;
 import com.mutech.synergy.models.DrawerItem;
 import com.mutech.synergy.utils.PreferenceHelper;
 
 
-//class extend with the ActionBarActivity with Onclicklistener
-public class MasterSelectorScreenActivity extends ActionBarActivity implements OnClickListener{
+ //class extend with the ActionBarActivity with Onclicklistener
+ public class MasterSelectorScreenActivity extends ActionBarActivity implements OnClickListener{
 
 	//Button variables 
-	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer;
+	private Button btnPCFMaster,btnSrCellMaster,btnCellMaster,btnAllMembers,btnAllfirsttimer,btnRegion,btnZoneMaster,btnGroupChurchMaster,btnChurchMaster;
 	//Sharedpreference object
 	private PreferenceHelper mPreferenceHelper;
 	//ImageView variables
-	private ImageView btnAddSrCellMaster,btnAddCellMaster,btnAddPCFMaster,btnAddmember,btnAddFirsttimer;
+	private ImageView btnAddSrCellMaster,btnAddCellMaster,btnAddPCFMaster,btnAddmember,btnAddFirsttimer,btnAddChurchMaster,btnAddGroupChurchMaster,btnAddZoneMaster,btnAddRegion;
 	//Linearlayout
-	private LinearLayout llAllMembers,llCell,llSrCell,llPCF;
-	
+	private LinearLayout llAllMembers,llCell,llSrCell,llPCF,llRegion,llZone,llGroupChurch,llChurch;
+
 	//ArrayList variables for DrawerList
 	private ArrayList<DrawerItem> mDrawerList;
 	//Adapater object
 	private CustomDrawerAdapter mCustomDrawerAdapter;
 	//Listview variables
 	private ListView mLvDrawer;
-	private DrawerLayout mDrawerLayout; 
+	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 	String str;
 	private String Role,Name,Status,Designation,Image;
@@ -92,7 +84,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		initialize();
 	}
 
-   //initization of variables method
+	//initization of variables method
 	@SuppressLint("NewApi")
 	private void initialize() {
 //		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -105,9 +97,9 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		getSupportActionBar().setHomeAsUpIndicator(R.drawable.actiontop);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 		tvTitle.setText("Database       ");
-		
+
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
-		
+
 		getSupportActionBar().setDisplayShowCustomEnabled(true);
 		btnAllfirsttimer=(Button) findViewById(R.id.btnAllfirsttimer);
 		btnPCFMaster=(Button) findViewById(R.id.btnPCFMaster);
@@ -119,7 +111,17 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		btnAllMembers=(Button) findViewById(R.id.btnAllMembers);
 		btnAddmember=(ImageView) findViewById(R.id.btnAddmember);
 		btnAddFirsttimer=(ImageView) findViewById(R.id.btnAddFirsttimer);
-		
+
+		btnChurchMaster=(Button) findViewById(R.id.btnChurchMaster);
+		btnGroupChurchMaster=(Button) findViewById(R.id.btnGroupChurchMaster);
+		btnZoneMaster=(Button) findViewById(R.id.btnZoneMaster);
+		btnRegion=(Button) findViewById(R.id.btnRegion);
+		btnAddChurchMaster=(ImageView) findViewById(R.id.btnAddChurchMaster);
+		btnAddGroupChurchMaster=(ImageView) findViewById(R.id.btnAddGroupChurchMaster);
+		btnAddZoneMaster=(ImageView) findViewById(R.id.btnAddZoneMaster);
+		btnAddRegion=(ImageView) findViewById(R.id.btnAddRegion);
+
+
 		btnAddFirsttimer.setOnClickListener(this);
 		btnAddmember.setOnClickListener(this);
 		btnPCFMaster.setOnClickListener(this);
@@ -134,54 +136,110 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		llCell=(LinearLayout) findViewById(R.id.llCell);
 		llSrCell=(LinearLayout) findViewById(R.id.llSrCell);
 		llPCF=(LinearLayout) findViewById(R.id.llPCF);
-		
+
+		btnAddChurchMaster.setOnClickListener(this);
+		btnAddGroupChurchMaster.setOnClickListener(this);
+		btnAddZoneMaster.setOnClickListener(this);
+		btnAddRegion.setOnClickListener(this);
+		btnChurchMaster.setOnClickListener(this);
+		btnGroupChurchMaster.setOnClickListener(this);
+		btnZoneMaster.setOnClickListener(this);
+		btnRegion.setOnClickListener(this);
+
+		llChurch=(LinearLayout) findViewById(R.id.llChurch);
+		llGroupChurch=(LinearLayout) findViewById(R.id.llGroupChurch);
+		llZone=(LinearLayout) findViewById(R.id.llZone);
+		llRegion=(LinearLayout) findViewById(R.id.llRegion);
 
 		mPreferenceHelper=new PreferenceHelper(this);
-		
+
 		str=mPreferenceHelper.getString(Commons.USER_ROLE);
-		
+
 		String str=mPreferenceHelper.getString(Commons.USER_ROLE);
 
 		Log.e(null, "Role--"+str);
 		//Role--Cell Leader,Senior Cell Leader
-//btnAddPCFMaster
-	//	01-14 18:30:29.183: E/list(30706): Zonal Pastor
+  //btnAddPCFMaster
+		//	01-14 18:30:29.183: E/list(30706): Zonal Pastor
 
-		if(str.equalsIgnoreCase("Group Church Pastor") || str.equals("Zonal Pastor")|| str.equalsIgnoreCase("Regional Pastor")|| str.equalsIgnoreCase("Church Pastor")){
-			btnAddPCFMaster.setVisibility(View.VISIBLE);
-				
+		if(str.equalsIgnoreCase("administrator")){
+			btnAddRegion.setVisibility(View.VISIBLE);
 		}
-		
+
+		if(str.equalsIgnoreCase("Regional Pastor")){
+			btnAddRegion.setVisibility(View.GONE);
+		}
+
+		if(str.equalsIgnoreCase("Zonal Pastor")){
+			llRegion.setVisibility(View.GONE);
+			btnAddZoneMaster.setVisibility(View.GONE);
+		}
+
+		if(str.equalsIgnoreCase("Group Church Pastor")){
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			btnAddGroupChurchMaster.setVisibility(View.GONE);
+		}
+
+		if(str.equalsIgnoreCase("Church Pastor")){
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			llGroupChurch.setVisibility(View.GONE);
+			btnAddChurchMaster.setVisibility(View.GONE);
+
+		}
+
+		if(str.equalsIgnoreCase("PCF Leader")){
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			llGroupChurch.setVisibility(View.GONE);
+			llChurch.setVisibility(View.GONE);
+			btnAddPCFMaster.setVisibility(View.GONE);
+
+		}
+
 		if(str.equalsIgnoreCase("Cell Leader")){
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			llGroupChurch.setVisibility(View.GONE);
+			llChurch.setVisibility(View.GONE);
 			llPCF.setVisibility(View.GONE);
 			llSrCell.setVisibility(View.GONE);
 			btnAddCellMaster.setVisibility(View.GONE);
-					
+
 		}
-		
-			if(str.equalsIgnoreCase("Member")){
+
+		if(str.equalsIgnoreCase("Member")){
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			llGroupChurch.setVisibility(View.GONE);
+			llChurch.setVisibility(View.GONE);
 			llPCF.setVisibility(View.GONE);
 			llSrCell.setVisibility(View.GONE);
-			llCell.setVisibility(View.GONE);		
+			llCell.setVisibility(View.GONE);
 			llAllMembers.setVisibility(View.GONE);
 			Toast.makeText(MasterSelectorScreenActivity.this, "NOT ACCESSIBLE FOR MEMBER", Toast.LENGTH_SHORT).show();
 		}
-			
-			if(str.equals("Senior Cell Leader")){
-				
-				llPCF.setVisibility(View.GONE);
-				btnAddSrCellMaster.setVisibility(View.GONE);
-				
-			}
-			
-		
+
+		if(str.equals("Senior Cell Leader")){
+
+			llRegion.setVisibility(View.GONE);
+			llZone.setVisibility(View.GONE);
+			llGroupChurch.setVisibility(View.GONE);
+			llChurch.setVisibility(View.GONE);
+			llPCF.setVisibility(View.GONE);
+			btnAddSrCellMaster.setVisibility(View.GONE);
+
+		}
+
+
 		mDrawerList = new ArrayList<DrawerItem>();
-		
+
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //		actionBar.setHomeAsUpIndicator(R.drawable.actiontop);
 		getSupportActionBar().setIcon(
-				   new ColorDrawable(getResources().getColor(android.R.color.transparent))); 
-	
+				new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+
 
 		//Adding drawer item
 		addDrawerListData();
@@ -196,10 +254,10 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		mDrawerToggle = new ActionBarDrawerToggle(
 				this,
 				mDrawerLayout,
-				R.drawable.dashboard, 
-				R.string.app_name, 
-				R.string.app_name 
-				) {
+				R.drawable.dashboard,
+				R.string.app_name,
+				R.string.app_name
+		) {
 
 			/** Called when a drawer has settled in a completely closed state. */
 			public void onDrawerClosed(View view) {
@@ -214,10 +272,10 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 			}
 		};
 
-		mDrawerLayout.setDrawerListener(mDrawerToggle);		
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
-	
-	
+
+
 	private void addDrawerListData() {
 
 		if(mPreferenceHelper.getString(SynergyValues.Commons.USER_ROLE) != null){
@@ -241,7 +299,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 
 		DrawerItem item01 = new DrawerItem();
 		item01.setItemName("Dashboard");
-		item01.setImgResID(R.drawable.dashboard);		
+		item01.setImgResID(R.drawable.dashboard);
 
 		DrawerItem item05 = new DrawerItem();
 		item05.setItemName("My Profile");
@@ -275,7 +333,7 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 		DrawerItem item9 = new DrawerItem();
 		item9.setItemName("To Do");
 		item9.setImgResID(R.drawable.todo);
-		
+
 		DrawerItem item10 = new DrawerItem();
 		item10.setItemName("Broadcast Message");
 		item10.setImgResID(R.drawable.msg);
@@ -437,91 +495,145 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 				startActivity(intmsglogs);
 				break;
 
-		case 14://logout
-			Intent intLogout=new Intent(this,LogoutActivity.class);
-			intLogout.putExtra("classname","MasterSelectorScreenActivity");
-			startActivity(intLogout);
-			finish();
-			break;
+			case 14://logout
+				Intent intLogout=new Intent(this,LogoutActivity.class);
+				intLogout.putExtra("classname","MasterSelectorScreenActivity");
+				startActivity(intLogout);
+				finish();
+				break;
 
 
-		default:
-			break;
+			default:
+				break;
 		}
 
 		mDrawerLayout.closeDrawer(mLvDrawer);
 //		getSupportActionBar().invalidateOptionsMenu();
 	}
 
-  //Listener class
+	//Listener class
 	private class DrawerItemClickListener implements
-	ListView.OnItemClickListener {
+			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
-				long id) {
+								long id) {
 			selectItem(position);
 		}
 	}
 
-	
+
 	//Onclick method when particular button is clicked depending id
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btnAddPCFMaster:
-			Intent intpcf=new Intent(this,CreatePcfMasterFormActivity.class);
-			startActivity(intpcf);
-			break;
-		case R.id.btnAddSrCellMaster:
-			Intent intSrCell=new Intent(this,CreateSeniorCellMasterActivity.class);
-			startActivity(intSrCell);
-			break;
-		case R.id.btnAddCellMaster:
-			Log.d("NonStop", "Going to AddCellMaster");
-			Intent intCell=new Intent(this,NewCreateCellMasterActivity.class);
-			startActivity(intCell);
-			break;
-		case R.id.btnPCFMaster:
-			Intent intPcflist=new Intent(this,DisplayMastersListActivity.class);
-			intPcflist.putExtra("OptionSelected", "PCF");
-			startActivity(intPcflist);
-			break;
-		case R.id.btnCellMaster:
-			Log.d("NonStop", "Going to CellMaster");
-            Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
-			intCelllist.putExtra("OptionSelected", "Cell");
-			startActivity(intCelllist);
-			break;
-		case R.id.btnSrCellMaster:
-			Intent intSrCelllist=new Intent(this,DisplayMastersListActivity.class);
-			intSrCelllist.putExtra("OptionSelected", "Sr Cell");
-			startActivity(intSrCelllist);
-			break;
-		case R.id.btnAllMembers:
-			Log.d("NonStop", "Going to All Members");
+
+			case R.id.btnAddRegion:
+				Intent intregion=new Intent(this,CreateRegionMasterFormActivity.class);
+				startActivity(intregion);
+				break;
+
+			case R.id.btnAddZoneMaster:
+				Intent intzone=new Intent(this,CreateZoneMasterFormActivity.class);
+				startActivity(intzone);
+				break;
+
+			case R.id.btnAddGroupChurchMaster:
+				Intent intgroupchurch=new Intent(this,CreateGroupChurchMasterFormActivity.class);
+				startActivity(intgroupchurch);
+				break;
+
+			case R.id.btnAddChurchMaster:
+				Intent intchurch=new Intent(this,CreateChurchMasterFormActivity.class);
+				startActivity(intchurch);
+				break;
+
+			case R.id.btnAddPCFMaster:
+				Intent intpcf=new Intent(this,CreatePcfMasterFormActivity.class);
+				startActivity(intpcf);
+				break;
+
+			case R.id.btnAddSrCellMaster:
+				Intent intSrCell=new Intent(this,CreateSeniorCellMasterActivity.class);
+				startActivity(intSrCell);
+				break;
+
+			case R.id.btnAddCellMaster:
+				Log.d("NonStop", "Going to AddCellMaster");
+				Intent intCell=new Intent(this,NewCreateCellMasterActivity.class);
+				startActivity(intCell);
+				break;
+
+			case R.id.btnRegion:
+				Intent intRegionlist=new Intent(this,DisplayMastersListActivity.class);
+				intRegionlist.putExtra("OptionSelected", "Regions");
+				startActivity(intRegionlist);
+				break;
+
+			case R.id.btnZoneMaster:
+				Intent intZonelist=new Intent(this,DisplayMastersListActivity.class);
+				intZonelist.putExtra("OptionSelected", "Zones");
+				startActivity(intZonelist);
+				break;
+
+			case R.id.btnChurchMaster:
+				Intent intChurchlist=new Intent(this,DisplayMastersListActivity.class);
+				intChurchlist.putExtra("OptionSelected", "Churches");
+				startActivity(intChurchlist);
+				break;
+
+			case R.id.btnGroupChurchMaster:
+				Intent intGrChurchlist=new Intent(this,DisplayMastersListActivity.class);
+				intGrChurchlist.putExtra("OptionSelected", "Group Churches");
+				startActivity(intGrChurchlist);
+				break;
+
+			case R.id.btnPCFMaster:
+				Intent intPcflist=new Intent(this,DisplayMastersListActivity.class);
+				intPcflist.putExtra("OptionSelected", "PCF");
+				startActivity(intPcflist);
+				break;
+
+			case R.id.btnCellMaster:
+				Log.d("NonStop", "Going to CellMaster");
+				Intent intCelllist=new Intent(this,DisplayMastersListActivity.class);
+				intCelllist.putExtra("OptionSelected", "Cell");
+				startActivity(intCelllist);
+				break;
+
+			case R.id.btnSrCellMaster:
+				Intent intSrCelllist=new Intent(this,DisplayMastersListActivity.class);
+				intSrCelllist.putExtra("OptionSelected", "Sr Cell");
+				startActivity(intSrCelllist);
+				break;
+
+			case R.id.btnAllMembers:
+				Log.d("NonStop", "Going to All Members");
 				Intent intAllMem=new Intent(this,AllMemberListActivity.class);
 				intAllMem.putExtra("role", "Member");
 				startActivity(intAllMem);
-			break;
-		case R.id.btnAllfirsttimer:
-			Log.d("NonStop", "Going to First Timer in Db");
-			Intent intAllfirsttimer=new Intent(this,FirstTimerInDatabaseActivity.class);
-			intAllfirsttimer.putExtra("role", "Member");
-			startActivity(intAllfirsttimer);
-			break;
-		case R.id.btnAddmember:
+				break;
+
+			case R.id.btnAllfirsttimer:
+				Log.d("NonStop", "Going to First Timer in Db");
+				Intent intAllfirsttimer=new Intent(this,FirstTimerInDatabaseActivity.class);
+				intAllfirsttimer.putExtra("role", "Member");
+				startActivity(intAllfirsttimer);
+				break;
+
+			case R.id.btnAddmember:
 				Log.d("NonStop", "Going to Adding Member");
 				Intent createMember=new Intent(this,CreateNewMemberActivity.class);
 				startActivity(createMember);
 				break;
+
 			case R.id.btnAddFirsttimer:
 				Log.d("NonStop", "Going to Adding First Timer");
 				Intent createfirsttimer=new Intent(this,CreateFirstTimerActivity.class);
 				startActivity(createfirsttimer);
 				break;
-			
-		default:
-			break;
+
+			default:
+				break;
 		}
 	}
 
@@ -550,3 +662,4 @@ public class MasterSelectorScreenActivity extends ActionBarActivity implements O
 	}
 
 }
+

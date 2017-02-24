@@ -92,6 +92,32 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="Region"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spnPCFRegion"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle1"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_8"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="Zone"
                             android:textColor="@android:color/black"
                             android:textSize="@dimen/font_size_small"
@@ -121,31 +147,6 @@
                         
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical" >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Region"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/font_size_small"
-                            android:textStyle="bold" />
-
-                        <Spinner
-                            android:id="@+id/spnPCFRegion"
-                           android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:background="@drawable/rectangle1"
-                            android:maxLines="1"
-                            android:padding="@dimen/dimen_8"
-                            android:singleLine="true"
-                            android:textSize="@dimen/font_size_small"/>
-                    </LinearLayout>
                 </LinearLayout>
                 
                  <TextView
@@ -291,7 +292,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen_10"
-                    android:background="@color/parrot_green"
+                    android:background="#03afef"
                     android:gravity="center"
                     android:padding="@dimen/dimen_10"
                     android:singleLine="true"

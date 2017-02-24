@@ -527,8 +527,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-
-
     private void getDashboardDataService() {
         StringRequest reqDashboard=new StringRequest(Method.POST,DashboardDataService.SERVICE_URL,new Listener<String>() {
 

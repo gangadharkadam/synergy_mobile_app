@@ -404,12 +404,12 @@
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-hdpi-v4/quantum_ic_stop_grey600_48.png",
-        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-hdpi-v4/quantum_ic_stop_grey600_48.png"
-    },
-    {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-hdpi-v4/quantum_ic_volume_up_grey600_36.png",
         "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-hdpi-v4/quantum_ic_volume_up_grey600_36.png"
+    },
+    {
+        "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-hdpi-v4/quantum_ic_stop_grey600_48.png",
+        "source": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-hdpi-v4/quantum_ic_stop_grey600_48.png"
     },
     {
         "merged": "/home/nonstop/AndroidStudioProjects/Synergy27.6.2016/synergy/synergy/Synergy/synergy/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_speaker_group_light.png",

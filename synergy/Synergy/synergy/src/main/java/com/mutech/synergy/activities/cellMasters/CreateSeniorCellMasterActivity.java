@@ -68,7 +68,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 	boolean mSelected=false;
 	OnItemSelectedListener myListener;
 	TextView lblzone,lblgroupchurch,lblchurch,lblpcf;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -206,7 +206,7 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 			textView.setTextSize(18);
 			return false;
 		}
-		
+
 		return true;
 	}
 	@SuppressLint("NewApi")
@@ -216,24 +216,24 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 		getSupportActionBar().setCustomView(R.layout.custom_actionbar);
 		TextView tvTitle=(TextView)getSupportActionBar().getCustomView().findViewById(R.id.title_text);
 		tvTitle.setText("Senior Cells      ");
-		
+
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2E9AFE")));
-		
-		getSupportActionBar().setDisplayShowCustomEnabled(true);	
+
+		getSupportActionBar().setDisplayShowCustomEnabled(true);
 
 		lblzone=(TextView) findViewById(R.id.lblzone);
 		lblgroupchurch=(TextView) findViewById(R.id.lblgroupchurch);
 		lblchurch=(TextView) findViewById(R.id.lblchurch);
 		lblpcf=(TextView) findViewById(R.id.lblpcf);
-		
-	//	txtSeniorCellCode=(EditText) findViewById(R.id.txtSeniorCellCode);
+
+		//	txtSeniorCellCode=(EditText) findViewById(R.id.txtSeniorCellCode);
 		txtSeniorCellName=(EditText) findViewById(R.id.txtSeniorCellName);
 		spnSeniorCellZone=(Spinner) findViewById(R.id.spnSeniorCellZone);
 		spnSeniorCellRegion=(Spinner) findViewById(R.id.spnSeniorCellRegion);
 		spnSeniorCellChurch=(Spinner) findViewById(R.id.spnSeniorCellChurch);
 		spnSeniorCellPCF=(Spinner) findViewById(R.id.spnSeniorCellPCF);
 		spnSeniorCellChurchgroup=(Spinner) findViewById(R.id.spnSeniorCellChurchgroup);
-		
+
 		txtSeniorCellMeetingLoc=(EditText) findViewById(R.id.txtSeniorCellMeetingLoc);
 		txtSrCellContactPhn=(EditText) findViewById(R.id.txtSrCellContactPhn);
 		txtSrCellContactEmailId=(EditText) findViewById(R.id.txtSrCellContactEmailId);
@@ -255,387 +255,387 @@ public class CreateSeniorCellMasterActivity extends ActionBarActivity implements
 		defKey=mPreferenceHelper.getString(Commons.USER_DEFKEY);
 		defVal=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 		defRole=mPreferenceHelper.getString(Commons.USER_ROLE);
-		
+
 		if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("PCF Leader")){
-			
-			
+
+
 			lblzone.setVisibility(View.GONE);
 			lblgroupchurch.setVisibility(View.GONE);
 			lblchurch.setVisibility(View.GONE);
 			lblpcf.setVisibility(View.GONE);
 			//lblseniorcell.setVisibility(View.GONE);
-			
+
 			spnSeniorCellZone.setVisibility(View.VISIBLE);
 			spnSeniorCellRegion.setVisibility(View.VISIBLE);
 			spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
 			spnSeniorCellChurch.setVisibility(View.VISIBLE);
 			spnSeniorCellPCF.setVisibility(View.VISIBLE);
-			
-			
+
+
 			spnSeniorCellZone.setEnabled(false);
 			spnSeniorCellRegion.setEnabled(false);
 			spnSeniorCellChurchgroup.setEnabled(false);
 			spnSeniorCellChurch.setEnabled(false);
 			spnSeniorCellPCF.setEnabled(false);
-			
+
 		}
 		if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Senior Cell Leader")){
-    	  
-    	  
-    	  	lblzone.setVisibility(View.GONE);
+
+
+			lblzone.setVisibility(View.GONE);
 			lblgroupchurch.setVisibility(View.GONE);
 			lblchurch.setVisibility(View.GONE);
 			lblpcf.setVisibility(View.GONE);
-			
-			
+
+
 			spnSeniorCellZone.setVisibility(View.VISIBLE);
 			spnSeniorCellRegion.setVisibility(View.VISIBLE);
 			spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
 			spnSeniorCellChurch.setVisibility(View.VISIBLE);
 			spnSeniorCellPCF.setVisibility(View.VISIBLE);
-			
-			
+
+
 			spnSeniorCellZone.setEnabled(false);
 			spnSeniorCellRegion.setEnabled(false);
 			spnSeniorCellChurchgroup.setEnabled(false);
 			spnSeniorCellChurch.setEnabled(false);
 			spnSeniorCellPCF.setEnabled(false);
-			
+
 		}
-      
-     	if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Church Pastor")){
-			
-    		lblzone.setVisibility(View.GONE);
+
+		if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Church Pastor")){
+
+			lblzone.setVisibility(View.GONE);
 			lblgroupchurch.setVisibility(View.GONE);
 			lblchurch.setVisibility(View.GONE);
-		//	lblpcf.setVisibility(View.GONE);
-		//	lblseniorcell.setVisibility(View.GONE);
-			
+			//	lblpcf.setVisibility(View.GONE);
+			//	lblseniorcell.setVisibility(View.GONE);
+
 			spnSeniorCellZone.setVisibility(View.VISIBLE);
 			spnSeniorCellRegion.setVisibility(View.VISIBLE);
 			spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
 			spnSeniorCellChurch.setVisibility(View.VISIBLE);
-		//	txtPCF.setVisibility(View.VISIBLE);
-		//	spnSeniorCell.setVisibility(View.VISIBLE);
-    	  
-    	  
-    	  
-    	  
-    	  
+			//	txtPCF.setVisibility(View.VISIBLE);
+			//	spnSeniorCell.setVisibility(View.VISIBLE);
+
+
+
+
+
 			spnSeniorCellZone.setEnabled(false);
 			spnSeniorCellRegion.setEnabled(false);
 			spnSeniorCellChurchgroup.setEnabled(false);
 			//spnCellChurch.setEnabled(false);
 			//txtPCF.setEnabled(false);
-			
+
 		}
-		
-      	if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Group Church Pastor")){
-			
-    	  
-    		lblzone.setVisibility(View.GONE);
+
+		if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Group Church Pastor")){
+
+
+			lblzone.setVisibility(View.GONE);
 			lblgroupchurch.setVisibility(View.GONE);
-		//	lblchurch.setVisibility(View.GONE);
-		//	lblpcf.setVisibility(View.GONE);
-		//	lblseniorcell.setVisibility(View.GONE);
-			
+			//	lblchurch.setVisibility(View.GONE);
+			//	lblpcf.setVisibility(View.GONE);
+			//	lblseniorcell.setVisibility(View.GONE);
+
 			spnSeniorCellZone.setVisibility(View.VISIBLE);
 			spnSeniorCellRegion.setVisibility(View.VISIBLE);
 			spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
-		//	spnCellChurch.setVisibility(View.VISIBLE);
-		//	txtPCF.setVisibility(View.VISIBLE);
-		//	spnSeniorCell.setVisibility(View.VISIBLE);
-    	  
-    	  
+			//	spnCellChurch.setVisibility(View.VISIBLE);
+			//	txtPCF.setVisibility(View.VISIBLE);
+			//	spnSeniorCell.setVisibility(View.VISIBLE);
+
+
 			spnSeniorCellZone.setEnabled(false);
 			spnSeniorCellRegion.setEnabled(false);
-		//	spnSeniorCellChurchgroup.setEnabled(false);
+			//	spnSeniorCellChurchgroup.setEnabled(false);
 			//spnCellChurch.setEnabled(false);
 			//txtPCF.setEnabled(false);
-			
+
 		}
-      
-      	if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Zonal Pastor")){
-			
-    	  
-    		lblzone.setVisibility(View.GONE);
-		
-    		spnSeniorCellRegion.setEnabled(false);
-    		spnSeniorCellZone.setVisibility(View.VISIBLE);
-    		spnSeniorCellRegion.setEnabled(false);
+
+		if(mPreferenceHelper.getString(Commons.USER_ROLE).equals("Zonal Pastor")){
+
+
+			lblzone.setVisibility(View.GONE);
+
+			spnSeniorCellRegion.setEnabled(false);
+			spnSeniorCellZone.setVisibility(View.VISIBLE);
+			spnSeniorCellRegion.setEnabled(false);
 		}
-		
-      	lblzone.setOnClickListener(new OnClickListener() {
-  		
-  		@Override
-  		public void onClick(View v) {
-  			// TODO Auto-generated method stub
-  			
-  			if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
-  				
-  				String selval=spnSeniorCellRegion.getSelectedItem().toString();
-  				
-  				Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
-  				getSpinnerData("Regions",selval );
 
-  			}else
-  			{
-  				Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
-  			}
-  			
-  			
-  		}
-  		});
-        
-    	
-        lblgroupchurch.setOnClickListener(new OnClickListener() {
-  		
-  		@Override
-  		public void onClick(View v) {
-  			// TODO Auto-generated method stub
-  			
-  			String selval="";
-  		
-  			if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
-  			
-  				if(lblzone.getVisibility()==View.VISIBLE){
-  				
-  					
-  					Methods.smallToast("Please Select Zone", CreateSeniorCellMasterActivity.this);
-  					
-  					
-  				
-  				}else{
-  					
-  					selval=spnSeniorCellZone.getSelectedItem().toString();
-  					Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
-  					getSpinnerData("Zones",selval );
+		lblzone.setOnClickListener(new OnClickListener() {
 
-  				}
-  				
-  			
-  			}else
-  			{
-  				Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
-  			}
-  			
-  			
-  		}
-  	});
-        
-        lblchurch.setOnClickListener(new OnClickListener() {
-    		
-    		@Override
-    		public void onClick(View v) {
-    			// TODO Auto-generated method stub
-    			
-    			String selval="";
-    		
-    			if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
-    			
-    				if(lblgroupchurch.getVisibility()==View.VISIBLE){
-    					
-  					Methods.smallToast("Please Select Group Church", CreateSeniorCellMasterActivity.this);
-  				
-  				}else{
-  					
-  					selval=spnSeniorCellChurchgroup.getSelectedItem().toString();
-  					Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
-  					getSpinnerData("Group Churches",selval );
-  			
-  				}
-    			}else
-    			{
-    				Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
-    			}
-    			
-    			
-    		}
-    	});
-      
-        lblpcf.setOnClickListener(new OnClickListener() {
-      		
-      		@Override
-      		public void onClick(View v) {
-      			// TODO Auto-generated method stub
-      			
-      			String selval="";
-      		
-      			if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
-      				
-      				if(lblchurch.getVisibility()==View.VISIBLE){
-        					
-      					Methods.smallToast("Please Select Church", CreateSeniorCellMasterActivity.this);
-      				
-      				}else{
-      				
-      					selval=spnSeniorCellChurch.getSelectedItem().toString();
-      					Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
-      					getSpinnerData("Churches",selval );
-      				}
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 
-      			}else
-      			{
-      				Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
-      			}
-      			
-      			
-      		}
-      	});
-      
-        myListener=new OnItemSelectedListener() {
+				if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
 
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View arg1, int arg2,long arg3) {
-            	
-            	
-            	Spinner spinner = (Spinner) parent;
-       	     if(spinner.getId() == R.id.spnSeniorCellZone){
-       	    	 
-       	    	lblgroupchurch.setVisibility(View.VISIBLE);
-				lblchurch.setVisibility(View.VISIBLE);
-				lblpcf.setVisibility(View.VISIBLE);
-				
-				
-			//	spnCellZone.setVisibility(View.GONE);
-		//		spnCellRegion.setVisibility(View.VISIBLE);
-				spnSeniorCellChurchgroup.setVisibility(View.GONE);
-				spnSeniorCellChurch.setVisibility(View.GONE);
-				spnSeniorCellPCF.setVisibility(View.GONE);
-       	    	 
-       	     }
-                
-       	  if(spinner.getId() == R.id.spnSeniorCellChurchgroup){
-       		  
-       		lblchurch.setVisibility(View.VISIBLE);
-				lblpcf.setVisibility(View.VISIBLE);
-				
-		
-				spnSeniorCellChurch.setVisibility(View.GONE);
-				spnSeniorCellPCF.setVisibility(View.GONE);
-       		  
-       	  }
-       	  
-       	  if(spinner.getId() == R.id.spnSeniorCellChurch){
-      		  
-       		 	lblpcf.setVisibility(View.VISIBLE);
-				
-				
-				spnSeniorCellPCF.setVisibility(View.GONE);
-        		  
-        	  }
-       	 
+					String selval=spnSeniorCellRegion.getSelectedItem().toString();
+
+					Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
+					getSpinnerData("Regions",selval );
+
+				}else
+				{
+					Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
+				}
+
+
+			}
+		});
+
+
+		lblgroupchurch.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				String selval="";
+
+				if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
+
+					if(lblzone.getVisibility()==View.VISIBLE){
+
+
+						Methods.smallToast("Please Select Zone", CreateSeniorCellMasterActivity.this);
+
+
+
+					}else{
+
+						selval=spnSeniorCellZone.getSelectedItem().toString();
+						Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
+						getSpinnerData("Zones",selval );
+
+					}
+
+
+				}else
+				{
+					Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
+				}
+
+
+			}
+		});
+
+		lblchurch.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				String selval="";
+
+				if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
+
+					if(lblgroupchurch.getVisibility()==View.VISIBLE){
+
+						Methods.smallToast("Please Select Group Church", CreateSeniorCellMasterActivity.this);
+
+					}else{
+
+						selval=spnSeniorCellChurchgroup.getSelectedItem().toString();
+						Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
+						getSpinnerData("Group Churches",selval );
+
+					}
+				}else
+				{
+					Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
+				}
+
+
+			}
+		});
+
+		lblpcf.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				String selval="";
+
+				if(NetworkHelper.isOnline(CreateSeniorCellMasterActivity.this)){
+
+					if(lblchurch.getVisibility()==View.VISIBLE){
+
+						Methods.smallToast("Please Select Church", CreateSeniorCellMasterActivity.this);
+
+					}else{
+
+						selval=spnSeniorCellChurch.getSelectedItem().toString();
+						Methods.showProgressDialog(CreateSeniorCellMasterActivity.this);
+						getSpinnerData("Churches",selval );
+					}
+
+				}else
+				{
+					Methods.longToast("Please connect to Internet",CreateSeniorCellMasterActivity.this);
+				}
+
+
+			}
+		});
+
+		myListener=new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View arg1, int arg2,long arg3) {
+
+
+				Spinner spinner = (Spinner) parent;
+				if(spinner.getId() == R.id.spnSeniorCellZone){
+
+					lblgroupchurch.setVisibility(View.VISIBLE);
+					lblchurch.setVisibility(View.VISIBLE);
+					lblpcf.setVisibility(View.VISIBLE);
+
+
+					//	spnCellZone.setVisibility(View.GONE);
+					//		spnCellRegion.setVisibility(View.VISIBLE);
+					spnSeniorCellChurchgroup.setVisibility(View.GONE);
+					spnSeniorCellChurch.setVisibility(View.GONE);
+					spnSeniorCellPCF.setVisibility(View.GONE);
+
+				}
+
+				if(spinner.getId() == R.id.spnSeniorCellChurchgroup){
+
+					lblchurch.setVisibility(View.VISIBLE);
+					lblpcf.setVisibility(View.VISIBLE);
+
+
+					spnSeniorCellChurch.setVisibility(View.GONE);
+					spnSeniorCellPCF.setVisibility(View.GONE);
+
+				}
+
+				if(spinner.getId() == R.id.spnSeniorCellChurch){
+
+					lblpcf.setVisibility(View.VISIBLE);
+
+
+					spnSeniorCellPCF.setVisibility(View.GONE);
+
+				}
+
        	 	/*if(spinner.getId() == R.id.spnSeniorCellPCF){
-     		  
+
        		lblseniorcell.setVisibility(View.VISIBLE);
 			spnSeniorCell.setVisibility(View.GONE);
-			
+
      	  }*/
-       	  
-            	
+
+
             	/*switch (arg2) {
                     case 0:
-                  	  
+
                   	  //if(zonesp){
-        				
+
     						lblgroupchurch.setVisibility(View.VISIBLE);
     						lblchurch.setVisibility(View.VISIBLE);
     						lblpcf.setVisibility(View.VISIBLE);
-    						
-    						
+
+
     					//	spnCellZone.setVisibility(View.GONE);
     				//		spnCellRegion.setVisibility(View.VISIBLE);
     						spnSeniorCellChurchgroup.setVisibility(View.GONE);
     						spnSeniorCellChurch.setVisibility(View.GONE);
     						spnSeniorCellPCF.setVisibility(View.GONE);
-    						
-    						
+
+
     					//}
-    				  				
-    					
-    					
+
+
+
                         break;
                     case 1:
-                  	 
-          				
+
+
                   		  //churchsp
                   		  	lblchurch.setVisibility(View.VISIBLE);
       						lblpcf.setVisibility(View.VISIBLE);
-      						
-      				
+
+
       						spnSeniorCellChurch.setVisibility(View.GONE);
       						spnSeniorCellPCF.setVisibility(View.GONE);
-      						
-      						
-      				
-      			
-      				
-                  	         
+
+
+
+
+
+
                         break;
                     case 2:
                   	  //if(churchsp){
-            				
-                  		
+
+
       						lblpcf.setVisibility(View.VISIBLE);
-      						
-      					
+
+
       						spnSeniorCellPCF.setVisibility(View.GONE);
-      						
-      						
+
+
       					//}
-      			
-                  	   
+
+
                         break;
                     case 4:
                   	  //if(pcfsp){
-              		
+
                   		lblseniorcell.setVisibility(View.VISIBLE);
     						spnSeniorCell.setVisibility(View.GONE);
-    						
+
     					//}
-    			
-                	  churchsp=true;  
+
+                	  churchsp=true;
                         break;
                     case 5:
                         Toast.makeText(CreateSeniorCellMasterActivity.this, "Spinner 2", Toast.LENGTH_LONG).show();
                         break;
                     }
 */
-            }
+			}
 
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-                // TODO Auto-generated method stub
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
 
-            }
-        };
-        
-        spnSeniorCellZone.setOnItemSelectedListener(myListener);
-        spnSeniorCellChurchgroup.setOnItemSelectedListener(myListener);
-        spnSeniorCellChurch.setOnItemSelectedListener(myListener);
-        spnSeniorCellPCF.setOnItemSelectedListener(myListener);
-        
-      
-      
+			}
+		};
+
+		spnSeniorCellZone.setOnItemSelectedListener(myListener);
+		spnSeniorCellChurchgroup.setOnItemSelectedListener(myListener);
+		spnSeniorCellChurch.setOnItemSelectedListener(myListener);
+		spnSeniorCellPCF.setOnItemSelectedListener(myListener);
+
+
+
 		if(NetworkHelper.isOnline(this)){
 			Methods.showProgressDialog(this);
-		
+
 			if(defRole.equals("Regional Pastor")){
 				getLowerHierarchy();
 			}else{
 				getTopHierarchy();
 			}
-			
-			//	
+
+			//
 		}else
 		{
 			Methods.longToast("Please connect to Internet", this);
 		}
 
 	}
-	
-private void getSpinnerData(final String tbl,final String selval ){
-		
+
+	private void getSpinnerData(final String tbl,final String selval ){
+
 		StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,LowerHierarchyService.SERVICE_URL,new Listener<String>() {
 
 			@Override
@@ -645,127 +645,127 @@ private void getSpinnerData(final String tbl,final String selval ){
 
 				HigherHierarchyRespModel mHHModel=gson.fromJson(response, HigherHierarchyRespModel.class);
 				//Object meetingmsg=mMeetingModel.getMessage();
-			
+
 				try {
 					JSONObject jsonobj=new JSONObject(response);
 					if(response.contains("status")){
-						
+
 						String status=jsonobj.get("status").toString();
-						if(status.equals("401"))						
+						if(status.equals("401"))
 							Methods.longToast("User name or Password is incorrect", CreateSeniorCellMasterActivity.this);
-					
+
 					}
 					else
 					{
-							
-							JSONArray jsonarray=jsonobj.getJSONArray("message");
-							
-							if(jsonarray.length()>0){
-								
-								
-								if(tbl.equalsIgnoreCase("Churches"))
-									mPCFList.clear();
-								if(tbl.equalsIgnoreCase("Group Churches"))
-									mChurchList.clear();
-								if(tbl.equalsIgnoreCase("Zones"))
-									mGrpChurchList.clear();
-								if(tbl.equalsIgnoreCase("Regions"))
-									mZoneList.clear();
-								
-								
-								for(int i=0;i<jsonarray.length();i++){
-									 if(tbl.equalsIgnoreCase("Churches")){
-										
-										mPCFList.add(jsonarray.getJSONObject(i).getString("name"));
-										
-									}else if(tbl.equalsIgnoreCase("Group Churches")){
-										
-										mChurchList.add(jsonarray.getJSONObject(i).getString("name"));
-										
-									}else if(tbl.equalsIgnoreCase("Zones")){
-										
-										mGrpChurchList.add(jsonarray.getJSONObject(i).getString("name"));
-										
-									}else if(tbl.equalsIgnoreCase("Regions")){
-										
-										mZoneList.add(jsonarray.getJSONObject(i).getString("name"));
-										
-									}
-								}
-							//	setAdapters();
-											
-								if(tbl.equalsIgnoreCase("Regions")){
-									
-									Log.e("condistion match","condistion match");
-								 
 
-									ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mZoneList);
-									adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-									spnSeniorCellZone.setAdapter(adapterZone);
-									
-									lblzone.setVisibility(View.GONE);
-									spnSeniorCellZone.setVisibility(View.VISIBLE);
-								
-								}else{
-									Log.e("condistion match"," not condistion match");
-								}
-									
-								
-								if(tbl.equalsIgnoreCase("Zones")){
-									Log.e("lable gone", "lable gone");
-									
-									ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
-									adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-									spnSeniorCellChurchgroup.setAdapter(adapterchurchgropu);
+						JSONArray jsonarray=jsonobj.getJSONArray("message");
 
-									
-									lblgroupchurch.setVisibility(View.GONE);
-									spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
-									
-									
-								}
-							
-								if(tbl.equalsIgnoreCase("Group Churches")){
-									
-									ArrayAdapter<String> adapterChurch = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mChurchList);
-									adapterChurch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-									spnSeniorCellChurch.setAdapter(adapterChurch);
-									
-									lblchurch.setVisibility(View.GONE);
-									spnSeniorCellChurch.setVisibility(View.VISIBLE);
-								}
-								
+						if(jsonarray.length()>0){
+
+
+							if(tbl.equalsIgnoreCase("Churches"))
+								mPCFList.clear();
+							if(tbl.equalsIgnoreCase("Group Churches"))
+								mChurchList.clear();
+							if(tbl.equalsIgnoreCase("Zones"))
+								mGrpChurchList.clear();
+							if(tbl.equalsIgnoreCase("Regions"))
+								mZoneList.clear();
+
+
+							for(int i=0;i<jsonarray.length();i++){
 								if(tbl.equalsIgnoreCase("Churches")){
-									
-									ArrayAdapter<String> adapterPCF = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mPCFList);
-									adapterPCF.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-									spnSeniorCellPCF.setAdapter(adapterPCF);
-									
-									lblpcf.setVisibility(View.GONE);
-									spnSeniorCellPCF.setVisibility(View.VISIBLE);
+
+									mPCFList.add(jsonarray.getJSONObject(i).getString("name"));
+
+								}else if(tbl.equalsIgnoreCase("Group Churches")){
+
+									mChurchList.add(jsonarray.getJSONObject(i).getString("name"));
+
+								}else if(tbl.equalsIgnoreCase("Zones")){
+
+									mGrpChurchList.add(jsonarray.getJSONObject(i).getString("name"));
+
+								}else if(tbl.equalsIgnoreCase("Regions")){
+
+									mZoneList.add(jsonarray.getJSONObject(i).getString("name"));
+
 								}
-								
-								
-								
-								
-							}else{
-								Methods.longToast("Resord Not Found", CreateSeniorCellMasterActivity.this);
 							}
-							
-					
-						
+							//	setAdapters();
+
+							if(tbl.equalsIgnoreCase("Regions")){
+
+								Log.e("condistion match","condistion match");
+
+
+								ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mZoneList);
+								adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+								spnSeniorCellZone.setAdapter(adapterZone);
+
+								lblzone.setVisibility(View.GONE);
+								spnSeniorCellZone.setVisibility(View.VISIBLE);
+
+							}else{
+								Log.e("condistion match"," not condistion match");
+							}
+
+
+							if(tbl.equalsIgnoreCase("Zones")){
+								Log.e("lable gone", "lable gone");
+
+								ArrayAdapter<String> adapterchurchgropu = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
+								adapterchurchgropu.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+								spnSeniorCellChurchgroup.setAdapter(adapterchurchgropu);
+
+
+								lblgroupchurch.setVisibility(View.GONE);
+								spnSeniorCellChurchgroup.setVisibility(View.VISIBLE);
+
+
+							}
+
+							if(tbl.equalsIgnoreCase("Group Churches")){
+
+								ArrayAdapter<String> adapterChurch = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mChurchList);
+								adapterChurch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+								spnSeniorCellChurch.setAdapter(adapterChurch);
+
+								lblchurch.setVisibility(View.GONE);
+								spnSeniorCellChurch.setVisibility(View.VISIBLE);
+							}
+
+							if(tbl.equalsIgnoreCase("Churches")){
+
+								ArrayAdapter<String> adapterPCF = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mPCFList);
+								adapterPCF.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+								spnSeniorCellPCF.setAdapter(adapterPCF);
+
+								lblpcf.setVisibility(View.GONE);
+								spnSeniorCellPCF.setVisibility(View.VISIBLE);
+							}
+
+
+
+
+						}else{
+							Methods.longToast("Resord Not Found", CreateSeniorCellMasterActivity.this);
+						}
+
+
+
 					}
-					
-					
-					
+
+
+
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
-				
-				
-				
+
+
+
+
 				/*
 				if(null != mHHModel.getStatus() && mHHModel.getStatus().trim().length() >0){
 
@@ -779,7 +779,7 @@ private void getSpinnerData(final String tbl,final String selval ){
 						mHHSubModel=mHHModel.getMessage();
 
 
-						//						for(int i=0;i<mHHSubModel.size();i++){	
+						//						for(int i=0;i<mHHSubModel.size();i++){
 						//							if(null !=mHHSubModel.get(i).getZone())
 						//								mZoneList.add(mHHSubModel.get(i).getZone());
 						//							if(null !=mHHSubModel.get(i).getRegion())
@@ -844,7 +844,7 @@ private void getSpinnerData(final String tbl,final String selval ){
 				String dataString=gson.toJson(model, MeetingListRequestModel.class);
 
 //				Log.e(null, "111--"+spnSeniorCell.getSelectedItemPosition());
-				
+
 				Log.e("droid", dataString);
 				params.put(GetHigherHierarchyService.DATA, dataString);
 				return params;
@@ -857,155 +857,153 @@ private void getSpinnerData(final String tbl,final String selval ){
 
 	}
 
-private void getTopHierarchy() {
+	private void getTopHierarchy() {
 
-	StringRequest reqgetTopHierarchy=new StringRequest(Method.POST,GetHigherHierarchyService.SERVICE_URL,new Listener<String>() {
+		StringRequest reqgetTopHierarchy=new StringRequest(Method.POST,GetHigherHierarchyService.SERVICE_URL,new Listener<String>() {
 
-		@Override
-		public void onResponse(String response) {
-			Methods.closeProgressDialog();
-			Log.e("responce","get reqgetTopHierarchy ---------------"+ response);
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+				Log.e("responce","get reqgetTopHierarchy ---------------"+ response);
 
-			HigherHierarchyRespModel mHHModel=gson.fromJson(response, HigherHierarchyRespModel.class);
-			//Object meetingmsg=mMeetingModel.getMessage();
-			if(null != mHHModel.getStatus() && mHHModel.getStatus().trim().length() >0){
+				HigherHierarchyRespModel mHHModel=gson.fromJson(response, HigherHierarchyRespModel.class);
+				//Object meetingmsg=mMeetingModel.getMessage();
+				if(null != mHHModel.getStatus() && mHHModel.getStatus().trim().length() >0){
 
-				if(mHHModel.getStatus()=="401"){
-					Methods.longToast("User name or Password is incorrect", CreateSeniorCellMasterActivity.this);
-				}
-			}else{
-				if(null !=mHHModel.getMessage() && mHHModel.getMessage().size() >0){
-					ArrayList<HHSubModel> mHHSubModel=new ArrayList<HHSubModel>();
-					//if(meetingmsg instanceof JSONArray){
-					mHHSubModel=mHHModel.getMessage();
-
-					for(int i=0;i<mHHSubModel.size();i++){			
-						if(null !=mHHSubModel.get(i).getZone())
-							mZoneList.add(mHHSubModel.get(i).getZone());
-						if(null !=mHHSubModel.get(i).getRegion())
-							mRegionList.add(mHHSubModel.get(i).getRegion());
-						if(null !=mHHSubModel.get(i).getChurch())
-							mChurchList.add(mHHSubModel.get(i).getChurch());
-						if(null !=mHHSubModel.get(i).getChurch_group())
-							mGrpChurchList.add(mHHSubModel.get(i).getChurch_group());
-						if(null !=mHHSubModel.get(i).getPcf())
-							mPCFList.add(mHHSubModel.get(i).getPcf());
-						
-					}
-					
-				//	setAdapters();
-
-				}else{
-					
-				}
-			}
-			//Methods.showProgressDialog(CreateCellMasterActivity.this);
-			getLowerHierarchy();
-		}
-	},new ErrorListener() {
-
-		@Override
-		public void onErrorResponse(VolleyError error) {
-			Methods.closeProgressDialog();
-			Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
-
-			if(error.networkResponse.statusCode==403){
-				//		Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
-			}
-			//else
-				//		Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
-
-			//	Methods.showProgressDialog(CreateCellMasterActivity.this);
-			getLowerHierarchy();
-		}
-
-	}){
-		@Override
-		protected Map<String, String> getParams() throws AuthFailureError{
-			Map<String, String> params = new HashMap<String, String>();
-
-			MeetingListRequestModel model=new MeetingListRequestModel();
-			model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-			model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-			model.setTbl(mPreferenceHelper.getString(Commons.USER_DEFKEY));
-			model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
-
-			String dataString=gson.toJson(model, MeetingListRequestModel.class);
-
-			Log.e("Request", dataString);
-			params.put(GetHigherHierarchyService.DATA, dataString);
-			return params;
-		}
-	};
-
-	App.getInstance().addToRequestQueue(reqgetTopHierarchy, "reqgetTopHierarchy");
-	reqgetTopHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
-
-}
-
-
-private void getLowerHierarchy(){
-
-
-	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,fillLoginSpinner.SERVICE_URL,new Listener<String>() {
-
-		@Override
-		public void onResponse(String response) {
-			Methods.closeProgressDialog();
-			Log.e("droid","get reqgetLowerHierarchy ---------------"+ response);
-
-			HigherHierarchyRespModel mHHModel=gson.fromJson(response, HigherHierarchyRespModel.class);
-			try {
-				JSONObject jsonobj=new JSONObject(response);
-				
-				if(response.contains("status")){
-					String status=jsonobj.getString("status");
-					if(status.equals("401")){
+					if(mHHModel.getStatus()=="401"){
 						Methods.longToast("User name or Password is incorrect", CreateSeniorCellMasterActivity.this);
 					}
-					
 				}else{
-					
-					JSONArray jsonarray=jsonobj.getJSONArray("message");
-					
-					if(jsonarray.length()>0){
-						
-						for(int i=0;i<jsonarray.length();i++){
-							
-							if( defRole.equalsIgnoreCase("Zonal Pastor")){
-								mZoneList.add(jsonarray.getJSONObject(i).getString("name"));
-							}else if(defRole.equalsIgnoreCase("Group Church Pastor")){
-								mGrpChurchList.add(jsonarray.getJSONObject(i).getString("name"));
-							}else if(defRole.equalsIgnoreCase("Church Pastor")){
-								mChurchList.add(jsonarray.getJSONObject(i).getString("name"));
-							}else if(defRole.equalsIgnoreCase("PCF Leader")){
-								mPCFList.add(jsonarray.getJSONObject(i).getString("name"));
-							}else if(defRole.equalsIgnoreCase("Regional Pastor")){
-								mRegionList.add(jsonarray.getJSONObject(i).getString("name"));
-							}
+					if(null !=mHHModel.getMessage() && mHHModel.getMessage().size() >0){
+						ArrayList<HHSubModel> mHHSubModel=new ArrayList<HHSubModel>();
+						//if(meetingmsg instanceof JSONArray){
+						mHHSubModel=mHHModel.getMessage();
+
+						for(int i=0;i<mHHSubModel.size();i++){
+							if(null !=mHHSubModel.get(i).getZone())
+								mZoneList.add(mHHSubModel.get(i).getZone());
+							if(null !=mHHSubModel.get(i).getRegion())
+								mRegionList.add(mHHSubModel.get(i).getRegion());
+							if(null !=mHHSubModel.get(i).getChurch())
+								mChurchList.add(mHHSubModel.get(i).getChurch());
+							if(null !=mHHSubModel.get(i).getChurch_group())
+								mGrpChurchList.add(mHHSubModel.get(i).getChurch_group());
+							if(null !=mHHSubModel.get(i).getPcf())
+								mPCFList.add(mHHSubModel.get(i).getPcf());
+
 						}
-						
-						setAdapters();
-						
+
+						//	setAdapters();
+
 					}else{
-						
-						Methods.longToast("Record Not Found ", CreateSeniorCellMasterActivity.this);
-						
+
 					}
-					
 				}
-			
-				
-			
-			
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//Methods.showProgressDialog(CreateCellMasterActivity.this);
+				getLowerHierarchy();
 			}
-			
-			
-			
-			
+		},new ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetTopHierarchy error---------------"+ error.getCause());
+
+				if(error.networkResponse.statusCode==403){
+					//		Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+				}
+				//else
+				//		Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+
+				//	Methods.showProgressDialog(CreateCellMasterActivity.this);
+				getLowerHierarchy();
+			}
+
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError{
+				Map<String, String> params = new HashMap<String, String>();
+
+				MeetingListRequestModel model=new MeetingListRequestModel();
+				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
+				model.setTbl(mPreferenceHelper.getString(Commons.USER_DEFKEY));
+				model.setName(mPreferenceHelper.getString(Commons.USER_DEFVALUE));
+
+				String dataString=gson.toJson(model, MeetingListRequestModel.class);
+
+				Log.e("Request", dataString);
+				params.put(GetHigherHierarchyService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqgetTopHierarchy, "reqgetTopHierarchy");
+		reqgetTopHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
+	}
+
+
+	private void getLowerHierarchy(){
+
+
+		StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,fillLoginSpinner.SERVICE_URL,new Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Methods.closeProgressDialog();
+				Log.e("droid","get reqgetLowerHierarchy ---------------"+ response);
+
+				HigherHierarchyRespModel mHHModel=gson.fromJson(response, HigherHierarchyRespModel.class);
+				try {
+					JSONObject jsonobj=new JSONObject(response);
+
+					if(response.contains("status")){
+						String status=jsonobj.getString("status");
+						if(status.equals("401")){
+							Methods.longToast("User name or Password is incorrect", CreateSeniorCellMasterActivity.this);
+						}
+
+					}else{
+
+						JSONArray jsonarray=jsonobj.getJSONArray("message");
+
+						if(jsonarray.length()>0){
+
+							for(int i=0;i<jsonarray.length();i++){
+
+								if( defRole.equalsIgnoreCase("Zonal Pastor")){
+									mZoneList.add(jsonarray.getJSONObject(i).getString("name"));
+								}else if(defRole.equalsIgnoreCase("Group Church Pastor")){
+									mGrpChurchList.add(jsonarray.getJSONObject(i).getString("name"));
+								}else if(defRole.equalsIgnoreCase("Church Pastor")){
+									mChurchList.add(jsonarray.getJSONObject(i).getString("name"));
+								}else if(defRole.equalsIgnoreCase("PCF Leader")){
+									mPCFList.add(jsonarray.getJSONObject(i).getString("name"));
+								}else if(defRole.equalsIgnoreCase("Regional Pastor")){
+									mRegionList.add(jsonarray.getJSONObject(i).getString("name"));
+								}
+							}
+
+							setAdapters();
+
+						}else{
+
+							Methods.longToast("Record Not Found ", CreateSeniorCellMasterActivity.this);
+
+						}
+
+					}
+
+
+
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+
 			/*//Object meetingmsg=mMeetingModel.getMessage();
 			if(null != mHHModel.getStatus() && mHHModel.getStatus().trim().length() >0){
 
@@ -1039,59 +1037,59 @@ private void getLowerHierarchy(){
 			}
 			setAdapters();*/
 
-		}
-	},new ErrorListener() {
-
-		@Override
-		public void onErrorResponse(VolleyError error) {
-			Methods.closeProgressDialog();
-			Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
-
-			if(error.networkResponse.statusCode==403){
-				//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
 			}
-			//else
-			//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
-			setAdapters();
-		}
+		},new ErrorListener() {
 
-	}){
-		@Override
-		protected Map<String, String> getParams() throws AuthFailureError{
-			Map<String, String> params = new HashMap<String, String>();
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Methods.closeProgressDialog();
+				Log.d("droid","get reqgetLowerHierarchy error---------------"+ error.getCause());
 
-			MeetingListRequestModel model=new MeetingListRequestModel();
-			model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
-			model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
-			
-			
-			
-			if( defRole.equalsIgnoreCase("Zonal Pastor")){
-				model.setTbl("Zones");
-			}else if(defRole.equalsIgnoreCase("Group Church Pastor")){
-				model.setTbl("Group Churches");
-			}else if(defRole.equalsIgnoreCase("Church Pastor")){
-				model.setTbl("Churches");
-			}else if(defRole.equalsIgnoreCase("PCF Leader")){
-				model.setTbl("PCFs");
-			}else if(defRole.equalsIgnoreCase("Senior Cell Leader")){
-				model.setTbl("Senior Cells");
-			}else if(defRole.equalsIgnoreCase("Regional Pastor")){
-				model.setTbl("Regions");
+				if(error.networkResponse.statusCode==403){
+					//	Methods.longToast("Access Denied", CreateSeniorCellMasterActivity.this);
+				}
+				//else
+				//	Methods.longToast("Some Error Occured,please try again later", CreateSeniorCellMasterActivity.this);
+				setAdapters();
 			}
-			
-			String dataString=gson.toJson(model, MeetingListRequestModel.class);
-			Log.e("droid", dataString);
-			params.put(GetHigherHierarchyService.DATA, dataString);
-			return params;
-		}
-	};
 
-	App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
-	reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+		}){
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError{
+				Map<String, String> params = new HashMap<String, String>();
+
+				MeetingListRequestModel model=new MeetingListRequestModel();
+				model.setUsername(mPreferenceHelper.getString(Commons.USER_EMAILID));
+				model.setUserpass(mPreferenceHelper.getString(Commons.USER_PASSWORD));
 
 
-}
+
+				if( defRole.equalsIgnoreCase("Zonal Pastor")){
+					model.setTbl("Zones");
+				}else if(defRole.equalsIgnoreCase("Group Church Pastor")){
+					model.setTbl("Group Churches");
+				}else if(defRole.equalsIgnoreCase("Church Pastor")){
+					model.setTbl("Churches");
+				}else if(defRole.equalsIgnoreCase("PCF Leader")){
+					model.setTbl("PCFs");
+				}else if(defRole.equalsIgnoreCase("Senior Cell Leader")){
+					model.setTbl("Senior Cells");
+				}else if(defRole.equalsIgnoreCase("Regional Pastor")){
+					model.setTbl("Regions");
+				}
+
+				String dataString=gson.toJson(model, MeetingListRequestModel.class);
+				Log.e("droid", dataString);
+				params.put(GetHigherHierarchyService.DATA, dataString);
+				return params;
+			}
+		};
+
+		App.getInstance().addToRequestQueue(reqgetLowerHierarchy, "reqgetLowerHierarchy");
+		reqgetLowerHierarchy.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
+
+
+	}
 
 	private void setAdapters() {
 		String defKey=mPreferenceHelper.getString(Commons.USER_DEFKEY);
@@ -1114,11 +1112,11 @@ private void getLowerHierarchy(){
 			}else if(defKey.equalsIgnoreCase("Regions")){
 				mRegionList.add(defVal);
 			}
-			
+
 		}*/
 
 		Log.e("size",mPCFList.size()+"");
-		
+
 		ArrayAdapter<String> adapterZone = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mZoneList);
 		adapterZone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnSeniorCellZone.setAdapter(adapterZone);
@@ -1134,7 +1132,7 @@ private void getLowerHierarchy(){
 		ArrayAdapter<String> adapterPcf = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mPCFList);
 		adapterPcf.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnSeniorCellPCF.setAdapter(adapterPcf);
-		
+
 		ArrayAdapter<String> adapterchurchgroup = new ArrayAdapter<String>(CreateSeniorCellMasterActivity.this, android.R.layout.simple_spinner_item, mGrpChurchList);
 		adapterPcf.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnSeniorCellChurchgroup.setAdapter(adapterchurchgroup);
@@ -1143,53 +1141,53 @@ private void getLowerHierarchy(){
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btnSeniorCellSave:
-			if(isValid()) {
-				if(validateFields()){
-					if(NetworkHelper.isOnline(this)){
-						Methods.showProgressDialog(this);
-						saveCellMaster();
-					}else{
-						Methods.longToast("Please connect to Internet", this);
+			case R.id.btnSeniorCellSave:
+				if(isValid()) {
+					if(validateFields()){
+						if(NetworkHelper.isOnline(this)){
+							Methods.showProgressDialog(this);
+							saveCellMaster();
+						}else{
+							Methods.longToast("Please connect to Internet", this);
+						}
 					}
 				}
-			}
-			break;
+				break;
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 
 	private boolean validateFields() {
 		/*if(txtSeniorCellCode.getText().toString().trim().length() > 0)
 		{*/
-			if(txtSeniorCellName.getText().toString().trim().length() >0)
-			{
+		if(txtSeniorCellName.getText().toString().trim().length() >0)
+		{
 
-				if(txtSrCellContactPhn.getText().toString().trim().length() > 0){
-					if(txtSrCellContactEmailId.getText().toString().trim().length() > 0){
-						if(Methods.isValidEmail(txtSrCellContactEmailId.getText().toString())){
-							if(txtSeniorCellMeetingLoc.getText().toString().trim().length() >0)
-							{
-								return true;
-							}else
-							{
-								Methods.longToast("Please enter Meeting Location", this);
-							}
-						}else{
-							Methods.longToast("Please enter Valid email id", this);
+			if(txtSrCellContactPhn.getText().toString().trim().length() > 0){
+				if(txtSrCellContactEmailId.getText().toString().trim().length() > 0){
+					if(Methods.isValidEmail(txtSrCellContactEmailId.getText().toString())){
+						if(txtSeniorCellMeetingLoc.getText().toString().trim().length() >0)
+						{
+							return true;
+						}else
+						{
+							Methods.longToast("Please enter Meeting Location", this);
 						}
 					}else{
-						Methods.longToast("Please enter Email Id", this);
+						Methods.longToast("Please enter Valid email id", this);
 					}
 				}else{
-					Methods.longToast("Please enter Contact No.", this);
+					Methods.longToast("Please enter Email Id", this);
 				}
-
 			}else{
-				Methods.longToast("Please enter Senior Name", this);
+				Methods.longToast("Please enter Contact No.", this);
 			}
+
+		}else{
+			Methods.longToast("Please enter Senior Name", this);
+		}
 		/*}else
 		{
 			Methods.longToast("Please enter Senior Cell Code", this);
@@ -1372,7 +1370,7 @@ private void getLowerHierarchy(){
 			}
 		});
 		App.getInstance().addToRequestQueue(reqGetPCF, "reqGetPCF");
-		reqGetPCF.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));		
+		reqGetPCF.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}
 
 	//	private void getPCFTopHierarchy() {
@@ -1466,7 +1464,7 @@ private void getLowerHierarchy(){
 				Map<String, String> params = new HashMap<String, String>();
 
 				CreateSrCellModel srCellModel=new CreateSrCellModel();
-			//	srCellModel.setSenior_cell_code(txtSeniorCellCode.getText().toString().trim());
+				//	srCellModel.setSenior_cell_code(txtSeniorCellCode.getText().toString().trim());
 				srCellModel.setSenior_cell_name(txtSeniorCellName.getText().toString().trim());
 				srCellModel.setContact_email_id(txtSrCellContactEmailId.getText().toString().trim());
 				srCellModel.setContact_phone_no(txtSrCellContactPhn.getText().toString().trim());
@@ -1499,7 +1497,7 @@ private void getLowerHierarchy(){
 				//				params.put(CreateSeniorCellService.PCF, "0");
 				return params;
 			}
-		};	
+		};
 		App.getInstance().addToRequestQueue(reqsaveCellMaster, "reqsaveCellMaster");
 		reqsaveCellMaster.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
 	}

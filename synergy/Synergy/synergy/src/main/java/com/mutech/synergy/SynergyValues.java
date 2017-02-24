@@ -39,7 +39,7 @@ public class SynergyValues {
 		public static String USER_TBL_LABEL_CHURCH="Churches";
 		public static String USER_TBL_LABEL_GRPCHURCH="Group Churches";
 		public static String USER_TBL_LABEL_ZONE="Zones";
-		public static String USER_TBL_LABEL_REGION="Region";
+		public static String USER_TBL_LABEL_REGION="Regions";
 
 	}
 
@@ -58,8 +58,8 @@ public class SynergyValues {
 	}
 
 	public static class ImageUrl{
-		public static String imageUrl3 = "http://loveworldsynergy.org";
-		public static String imageUrl = "http://verve.indictranstech.com";
+		public static String imageUrl = "http://loveworldsynergy.org";
+		public static String imageUrl3= "http://verve.indictranstech.com";
 		public static String imageUrl4 = "http://192.168.5.25:7001/";
 		public static String imageUrl2 = "http://192.168.5.18:7001/";
 		public static String imageUrl1= "http://212.129.63.220:7001/";
@@ -67,9 +67,9 @@ public class SynergyValues {
 
 	public static class Web{
 		
-		public static String BASE_URL3="http://loveworldsynergy.org/api/";
+		public static String BASE_URL="http://loveworldsynergy.org/api/";
 
-		public static String BASE_URL="http://verve.indictranstech.com/api/";
+		public static String BASE_URL3="http://verve.indictranstech.com/api/";
 		
 		public static String BASE_URL4="http://192.168.5.25:7001/api/";
 
@@ -158,6 +158,67 @@ public class SynergyValues {
 			public static String PCF="pcf";
 			public static String DATA="data";
 		}
+
+		public static class CreateChurchService{
+			//public static String SERVICE_URL=BASE_URL+"resource/Senior%20Cells/";
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.create_church/";
+			public static String SENIOR_CELL_CODE="senior_cell_code";
+			public static String SENIOR_CELL_NAME="senior_cell_name";
+			public static String CONTACT_PHONE_NO="contact_phone_no";
+			public static String CONTACT_EMAIL_ID="contact_email_id";
+			public static String CHURCH="church";
+			public static String CHURCH_GROUP="church_group";
+			public static String REGION="region";
+			public static String ZONE="zone";
+			public static String PCF="pcf";
+			public static String DATA="data";
+		}
+
+		public static class CreateGroupChurchService{
+			//public static String SERVICE_URL=BASE_URL+"resource/Senior%20Cells/";
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.create_group_church/";
+			public static String SENIOR_CELL_CODE="senior_cell_code";
+			public static String SENIOR_CELL_NAME="senior_cell_name";
+			public static String CONTACT_PHONE_NO="contact_phone_no";
+			public static String CONTACT_EMAIL_ID="contact_email_id";
+			public static String CHURCH="church";
+			public static String CHURCH_GROUP="church_group";
+			public static String REGION="region";
+			public static String ZONE="zone";
+			public static String PCF="pcf";
+			public static String DATA="data";
+		}
+
+		public static class CreateZoneService{
+			//public static String SERVICE_URL=BASE_URL+"resource/Senior%20Cells/";
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.create_zones/";
+			public static String SENIOR_CELL_CODE="senior_cell_code";
+			public static String SENIOR_CELL_NAME="senior_cell_name";
+			public static String CONTACT_PHONE_NO="contact_phone_no";
+			public static String CONTACT_EMAIL_ID="contact_email_id";
+			public static String CHURCH="church";
+			public static String CHURCH_GROUP="church_group";
+			public static String REGION="region";
+			public static String ZONE="zone";
+			public static String PCF="pcf";
+			public static String DATA="data";
+		}
+
+		public static class CreateRegionService{
+			//public static String SERVICE_URL=BASE_URL+"resource/Senior%20Cells/";
+			public static String SERVICE_URL=BASE_URL+"method/church_ministry.church_ministry.doctype.member.member.create_regions/";
+			public static String SENIOR_CELL_CODE="senior_cell_code";
+			public static String SENIOR_CELL_NAME="senior_cell_name";
+			public static String CONTACT_PHONE_NO="contact_phone_no";
+			public static String CONTACT_EMAIL_ID="contact_email_id";
+			public static String CHURCH="church";
+			public static String CHURCH_GROUP="church_group";
+			public static String REGION="region";
+			public static String ZONE="zone";
+			public static String PCF="pcf";
+			public static String DATA="data";
+		}
+
 
 		public static class GetTopHierarchyPCFService{
 			public static String SERVICE_URL=BASE_URL+"resource/PCFs/";

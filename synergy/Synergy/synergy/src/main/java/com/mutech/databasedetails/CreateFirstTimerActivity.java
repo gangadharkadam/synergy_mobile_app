@@ -1061,8 +1061,7 @@ public class CreateFirstTimerActivity extends AppCompatActivity {
 					JSONObject jsonobj=new JSONObject(response);
 					
 					if(response.contains("status")){
-					
-						
+
 						String status=jsonobj.getString("status");
 						if(status.equals("401")){
 							Methods.longToast("User name or Password is incorrect", CreateFirstTimerActivity.this);
@@ -1578,7 +1577,6 @@ private void getTopHierarchy() {
 
 
 private void getLowerHierarchy(){
-
 
 	StringRequest reqgetLowerHierarchy=new StringRequest(Method.POST,fillLoginSpinner.SERVICE_URL,new Listener<String>() {
 

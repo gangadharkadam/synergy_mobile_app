@@ -59,12 +59,7 @@ import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
-import com.github.mikephil.charting.data.LineRadarDataSet;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.mutech.databasedetails.CellDetailsActivity;
-import com.mutech.databasedetails.PcfDetailsActivity;
-import com.mutech.databasedetails.SrCellDetailsActivity;
 import com.mutech.synergy.App;
 import com.mutech.synergy.R;
 import com.mutech.synergy.SynergyValues.Commons;
@@ -171,6 +166,14 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 			textView1.setText("Senior Cells");
 		}else if(optionSelected.equalsIgnoreCase("Cell")){
 			textView1.setText("Cells");
+		}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+			textView1.setText("Group Churches");
+		}else if(optionSelected.equalsIgnoreCase("Churches")){
+			textView1.setText("Churches");
+		}else if(optionSelected.equalsIgnoreCase("Zones")){
+			textView1.setText("Zones");
+		}else if(optionSelected.equalsIgnoreCase("Regions")){
+			textView1.setText("Regions");
 		}
 
 		/*filterimg.setOnClickListener(new OnClickListener() {
@@ -435,9 +438,9 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						
-						
+
 						//getAllSrCellMaster();
+
 					}else if(optionSelected.equalsIgnoreCase("Cell")){
 						
 						/*String name=mResultList.get(position).getName();
@@ -521,8 +524,98 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
+
 						
-						
+					}
+
+					else if(optionSelected.equalsIgnoreCase("Group Churches")){
+
+
+				}else if(optionSelected.equalsIgnoreCase("Churches")){
+
+				}else if(optionSelected.equalsIgnoreCase("Zones")){
+
+				}else if(optionSelected.equalsIgnoreCase("Regions")){
+
+						final String name;
+						try {
+							//String name=mResultList.get(position).getName();
+							name = jsonarray.getJSONObject(position).getString("name");
+							Log.d("NonStop", "Going to Cell. Name: " + name);
+
+							dialogPopup = new Dialog(DisplayMastersListActivity.this);
+							dialogPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+							dialogPopup.setContentView(R.layout.custom_cell_dialogbox);
+
+							btnviewprofile= (Button) dialogPopup.findViewById(R.id.viewprofile);
+							btnviewattendancehistory= (Button) dialogPopup.findViewById(R.id.viewattendancehistory);
+							btncellleaderprofile= (Button) dialogPopup.findViewById(R.id.cellleaderprofile);
+							btncellleadermsg= (Button) dialogPopup.findViewById(R.id.msgcellleader);
+							btnviewmembers= (Button) dialogPopup.findViewById(R.id.viewmembers);
+
+							btnviewprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBioCell.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewattendancehistory.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, AttendanceHistory.class);
+									Int.putExtra("role", "Cell Leader");
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btncellleaderprofile.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ShortBio.class);
+									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Cell Leader");
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btncellleadermsg.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, CellLeaderMsg.class);
+									Int.putExtra("cellcode", name);
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							btnviewmembers.setOnClickListener(new View.OnClickListener() {
+								@Override
+								public void onClick(View v) {
+
+									Intent Int = new Intent(DisplayMastersListActivity.this, ViewMembers.class);
+									Int.putExtra("cellcode", name);
+									Int.putExtra("role","Region");
+									startActivity(Int);
+									dialogPopup.dismiss();
+								}
+							});
+
+							dialogPopup.show();
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+
 					}
 					
 					Methods.closeProgressDialog();
@@ -552,6 +645,14 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 				//getList(Commons.USER_TBL_LABEL_CELLS);
 				getListNewMethod(Commons.USER_TBL_LABEL_CELLS,"1");
 				//getAllCellMaster();
+			}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+				getListNewMethod(Commons.USER_TBL_LABEL_GRPCHURCH,"1");
+			}else if(optionSelected.equalsIgnoreCase("Churches")){
+				getListNewMethod(Commons.USER_TBL_LABEL_CHURCH,"1");
+			}else if(optionSelected.equalsIgnoreCase("Zones")){
+				getListNewMethod(Commons.USER_TBL_LABEL_ZONE,"1");
+			}else if(optionSelected.equalsIgnoreCase("Regions")){
+				getListNewMethod(Commons.USER_TBL_LABEL_REGION,"1");
 			}
 		}else{
 			Methods.longToast("Please connect to Internet", this);
@@ -650,6 +751,14 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 									textView1.setText("Senior Cells "+"("+i+")");
 								}else if(optionSelected.equalsIgnoreCase("Cell")){
 									textView1.setText("Cells "+"("+i+")");
+								}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+									textView1.setText("Group Churches"+"("+i+")");
+								}else if(optionSelected.equalsIgnoreCase("Churches")){
+									textView1.setText("Churches"+"("+i+")");
+								}else if(optionSelected.equalsIgnoreCase("Zones")){
+									textView1.setText("Zones"+"("+i+")");
+								}else if(optionSelected.equalsIgnoreCase("Regions")){
+									textView1.setText("Regions"+"("+i+")");
 								}
 								
 							
@@ -766,9 +875,24 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 						}else if(optionSelected.equalsIgnoreCase("Cell")){
 							
 							textView1.setText("Cells("+TOTAL_LIST_ITEMS+")");
+						}else if(optionSelected.equalsIgnoreCase("Regions")){
+
+							textView1.setText("Regions("+TOTAL_LIST_ITEMS+")");
+
+						}else if(optionSelected.equalsIgnoreCase("Zones")){
+
+							textView1.setText("Zones("+TOTAL_LIST_ITEMS+")");
+
+						}else if(optionSelected.equalsIgnoreCase("Churches")){
+
+							textView1.setText("Churches("+TOTAL_LIST_ITEMS+")");
+
+						}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+
+							textView1.setText("Group Churches("+TOTAL_LIST_ITEMS+")");
+
 						}
-						
-						 
+
 						 jsonarray=jsonobj.getJSONObject("message").getJSONArray("records");
 					
 						if(jsonarray.length()>0){
@@ -828,7 +952,7 @@ public class DisplayMastersListActivity extends ActionBarActivity{
 				jsonobj.put("username", mPreferenceHelper.getString(Commons.USER_EMAILID));
 				jsonobj.put("userpass", mPreferenceHelper.getString(Commons.USER_PASSWORD));
 			
-				jsonobj.put("tbl",tbl);
+				jsonobj.put("tb" + "l",tbl);
 				
 				
 				//resion, zone,gchurch, church, pcf,srcell,cell,fdate, todate)
@@ -1222,8 +1346,7 @@ public void showDialog(){
 		LinearLayout layoutzone=(LinearLayout) promptView.findViewById(R.id.layoutzone);
 		LinearLayout layoutchurchgroup=(LinearLayout) promptView.findViewById(R.id.layoutchurchgroup);
 		LinearLayout layoutchurch=(LinearLayout) promptView.findViewById(R.id.layoutchurch);
-		
-		
+
 		
 		final TextView spzoneTextView=(TextView) promptView.findViewById(R.id.spzoneTextView);
 		final TextView spresionTextView=(TextView) promptView.findViewById(R.id.spresionTextView);
@@ -1585,7 +1708,6 @@ public void showDialog(){
 						}catch(NullPointerException ex){
 							
 							Toast.makeText(DisplayMastersListActivity.this, "Please Select Church", Toast.LENGTH_LONG).show();
-						
 						}
 						
 					}
@@ -1651,17 +1773,13 @@ public void showDialog(){
 							Toast.makeText(DisplayMastersListActivity.this, "Please Select PCF", Toast.LENGTH_LONG).show();
 						
 						}
-						
 					}
-					
 				
 				}else{
-					
-					
+
 					spSeniorCell.setVisibility(View.VISIBLE);
 					spSeniorCellTextView.setVisibility(View.GONE);
 					setAdapters();
-					
 					
 				}
 			}
@@ -1873,11 +1991,7 @@ public void showDialog(){
 			layoutchurch.setVisibility(View.GONE);
 			cellLayout.setVisibility(View.GONE);				
 		}
-		
-				
-		
 
-		
 		
 		//Login with Senior Cell Leader and serch in pcf
 		
@@ -2060,6 +2174,23 @@ public void showDialog(){
 						}else if(optionSelected.equalsIgnoreCase("Cell")){
 							
 							getUpdatedListMethod("Cells",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
+
+						}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+
+							getUpdatedListMethod("Group Churches",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
+
+						}else if(optionSelected.equalsIgnoreCase("Churches")){
+
+							getUpdatedListMethod("Churches",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
+
+						}else if(optionSelected.equalsIgnoreCase("Zones")){
+
+							getUpdatedListMethod("Zones",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
+
+						}else if(optionSelected.equalsIgnoreCase("Regions")){
+
+							getUpdatedListMethod("Regions",resion,zone,groupchurch,church,pcf,srcell,cell,fdate,tdate,etname);
+
 						}
 					
 						dialog.cancel();
@@ -2234,9 +2365,65 @@ public class DetailAdapter extends BaseAdapter {
 		
 
 		try {
+
+			if(optionSelected.equalsIgnoreCase("Regions")){
+				txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
+				//	txtMasterName1.setText(jsonarray.getJSONObject(position).getString("pcf_name"));
+
+				txtMasterName1.setText((jsonarray.getJSONObject(position).getString("region_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("region_name").toString());
+
+				txtuserid.setVisibility(View.GONE);
+				txtid.setVisibility(View.GONE);
+
+				//	txtuserid.setText(jsonarray.getJSONObject(position).getString("church"));
+				//	txtid.setText(jsonarray.getJSONObject(position).getString("church_name"));
+
+				//	txtid.setText((jsonarray.getJSONObject(position).getString("church_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("church_name").toString());
+			}
+
+			if(optionSelected.equalsIgnoreCase("Zones")){
+				txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
+				//	txtMasterName1.setText(jsonarray.getJSONObject(position).getString("pcf_name"));
+
+				txtMasterName1.setText((jsonarray.getJSONObject(position).getString("zone_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("zone_name").toString());
+
+				txtuserid.setVisibility(View.GONE);
+				txtid.setVisibility(View.GONE);
+
+				//	txtuserid.setText(jsonarray.getJSONObject(position).getString("church"));
+				//	txtid.setText(jsonarray.getJSONObject(position).getString("church_name"));
+
+				//	txtid.setText((jsonarray.getJSONObject(position).getString("church_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("church_name").toString());
+			}
+
+			if(optionSelected.equalsIgnoreCase("Churches")){
+				txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
+				//	txtMasterName1.setText(jsonarray.getJSONObject(position).getString("pcf_name"));
+
+				txtMasterName1.setText((jsonarray.getJSONObject(position).getString("church_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("church_name").toString());
+
+				txtuserid.setVisibility(View.GONE);
+				txtid.setVisibility(View.GONE);
+
+				//	txtuserid.setText(jsonarray.getJSONObject(position).getString("church"));
+				//	txtid.setText(jsonarray.getJSONObject(position).getString("church_name"));
+
+				//	txtid.setText((jsonarray.getJSONObject(position).getString("church_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("church_name").toString());
+			}
+
+			if(optionSelected.equalsIgnoreCase("Group Churches")){
+				txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
+				//	txtMasterName1.setText(jsonarray.getJSONObject(position).getString("pcf_name"));
+
+				txtMasterName1.setText((jsonarray.getJSONObject(position).getString("church_group").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("church_group").toString());
+
+				txtuserid.setVisibility(View.GONE);
+				txtid.setVisibility(View.GONE);
+
+			}
 			
 			if(optionSelected.equalsIgnoreCase("PCF")){
-				txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
+    		txtMasterName.setText(jsonarray.getJSONObject(position).getString("name"));
 			//	txtMasterName1.setText(jsonarray.getJSONObject(position).getString("pcf_name"));
 			
 				txtMasterName1.setText((jsonarray.getJSONObject(position).getString("pcf_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("pcf_name").toString());
@@ -2276,9 +2463,11 @@ public class DetailAdapter extends BaseAdapter {
 			//	txtuserid.setText(jsonarray.getJSONObject(position).getString("senior_cell"));
 			//	txtid.setText((jsonarray.getJSONObject(position).getString("senior_cell_name").toString().equals("null"))?"":jsonarray.getJSONObject(position).getString("senior_cell_name").toString());
 			}
-		
-		
-	
+
+
+
+
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -2336,8 +2525,24 @@ private void Btnfooter()
         			}else if(optionSelected.equalsIgnoreCase("Cell")){
         				
         				getListNewMethod(Commons.USER_TBL_LABEL_CELLS,btns[j].getText().toString());
-        				
-        			}
+
+					}else if(optionSelected.equalsIgnoreCase("Group Churches")){
+
+						getListNewMethod(Commons.USER_TBL_LABEL_GRPCHURCH,btns[j].getText().toString());
+
+					}else if(optionSelected.equalsIgnoreCase("Churches")){
+
+						getListNewMethod(Commons.USER_TBL_LABEL_CHURCH,btns[j].getText().toString());
+
+					}else if(optionSelected.equalsIgnoreCase("Zones")){
+
+					getListNewMethod(Commons.USER_TBL_LABEL_ZONE,btns[j].getText().toString());
+
+					}else if(optionSelected.equalsIgnoreCase("Regions")){
+
+						getListNewMethod(Commons.USER_TBL_LABEL_REGION,btns[j].getText().toString());
+
+					}
         		}else{
         			Methods.longToast("Please connect to Internet", DisplayMastersListActivity.this);
         		}

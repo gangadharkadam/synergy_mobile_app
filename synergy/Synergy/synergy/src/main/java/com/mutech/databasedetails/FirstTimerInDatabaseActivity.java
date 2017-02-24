@@ -658,8 +658,7 @@ public void showDialog(){
 	String str=mPreferenceHelper.getString(Commons.USER_DEFVALUE);
 	Log.e("default user", str);
 	
-	
-	
+
 	spzone.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 		@Override

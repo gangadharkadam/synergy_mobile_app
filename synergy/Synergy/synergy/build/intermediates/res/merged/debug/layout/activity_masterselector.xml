@@ -22,6 +22,205 @@
                 android:layout_margin="@dimen/dimen_10"
                 android:orientation="vertical" >
 
+
+                <LinearLayout
+                    android:id="@+id/llRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/rectangle"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/pcfs" />
+
+                        <Button
+                            android:id="@+id/btnRegion"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:layout_weight="0.8"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/dimen_5"
+                            android:text="Regions"
+                            android:textSize="@dimen/textsize_18" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btnAddRegion"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@drawable/rectangle"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:src="@drawable/add"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/rectangle"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/pcfs" />
+
+                        <Button
+                            android:id="@+id/btnZoneMaster"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:layout_weight="0.8"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/dimen_5"
+                            android:text="Zones"
+                            android:textSize="@dimen/textsize_18" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btnAddZoneMaster"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@drawable/rectangle"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:src="@drawable/add"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llGroupChurch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="horizontal" >
+
+                 <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/rectangle"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:src="@drawable/pcfs" />
+
+                    <Button
+                        android:id="@+id/btnGroupChurchMaster"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="0.8"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/dimen_5"
+                        android:text="Group Churchs"
+                        android:textSize="@dimen/textsize_18" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnAddGroupChurchMaster"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:background="@drawable/rectangle"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:src="@drawable/add"
+                    />
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llChurch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="horizontal" >
+
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/rectangle"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/pcfs" />
+
+                        <Button
+                            android:id="@+id/btnChurchMaster"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:layout_weight="0.8"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/dimen_5"
+                            android:text="Churchs"
+                            android:textSize="@dimen/textsize_18" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btnAddChurchMaster"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@drawable/rectangle"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:src="@drawable/add"
+                        />
+
+                </LinearLayout>
+
+
                 <LinearLayout
                      android:id="@+id/llPCF"
                      android:layout_width="match_parent"
@@ -65,20 +264,9 @@
                         android:background="@drawable/rectangle"
                         android:gravity="center"
                         android:padding="@dimen/dimen_10"
-                        android:src="@drawable/add" 
-                        android:visibility="gone"
+                        android:src="@drawable/add"
                         />
-                    
-                   <!--  <Button
-                        android:id="@+id/btnAddPCFMaster"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.2"
-                        android:background="@drawable/text_background_greyborder"
-                        android:gravity="center"
-                        android:text="Add"
-                        android:visibility="gone" /> -->
+
                 </LinearLayout>
 
                 <LinearLayout

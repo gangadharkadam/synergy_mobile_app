@@ -333,35 +333,44 @@
             android:label="@string/title_activity_dashboard_list_details_first_timers" />
         <activity
             android:name=".activities.Feedback"
-            android:label="@string/title_activity_feedaback" />
+            android:label="@string/title_activity_feedaback"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.CellLeaderMsg"
-            android:label="@string/title_activity_cell_leader_msg" />
+            android:label="@string/title_activity_cell_leader_msg"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.AttendanceHistory"
             android:label="@string/title_activity_attendance_history"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.ShortBio"
-            android:label="@string/title_activity_short_bio" />
+            android:label="@string/title_activity_short_bio"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Messages"
-            android:label="@string/title_activity_messages" />
+            android:label="@string/title_activity_messages"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ViewMembers"
-            android:label="@string/title_activity_view_members" />
+            android:label="@string/title_activity_view_members"
+            android:screenOrientation="portrait" />
         <activity android:name=".activities.profile.ProfileView" />
         <activity android:name=".activities.ShortBioCell" />
         <activity android:name=".activities.ShortBioSrCell" />
         <activity
             android:name=".activities.ShortBioPCF"
-            android:label="@string/title_activity_short_bio_pcf" />
+            android:label="@string/title_activity_short_bio_pcf"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.MessageLogs"
-            android:label="@string/title_activity_message_logs" />
+            android:label="@string/title_activity_message_logs"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.MessageInformation"
-            android:label="@string/title_activity_message_information" />
+            android:label="@string/title_activity_message_information"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.MinistryMaterials"
             android:label="@string/title_activity_ministry_materials"
@@ -374,13 +383,16 @@
             android:theme="@style/CustomActivityTheme" />
         <activity
             android:name=".activities.MemberProfile"
-            android:label="@string/title_activity_member_profile" />
+            android:label="@string/title_activity_member_profile"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ChurchAttendanceHistory"
-            android:label="@string/title_activity_church_attendance_history" />
+            android:label="@string/title_activity_church_attendance_history"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.CAttendanceHistory"
-            android:label="Cell Attendance History" />
+            android:label="Cell Attendance History"
+            android:screenOrientation="portrait" />
         <!--
             <activity
             android:name=".activities.GivingHistoryTest"
@@ -391,14 +403,28 @@
         -->
         <activity
             android:name=".PartnershipRecordNew"
-            android:label="@string/title_activity_partnership_record_new" />
+            android:label="@string/title_activity_partnership_record_new"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ChurchPastorMsg"
-            android:label="@string/title_activity_church_pastor_msg" />
+            android:label="@string/title_activity_church_pastor_msg"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ShortBioChurch"
-            android:label="@string/title_activity_short_bio_church">
-        </activity>
+            android:label="@string/title_activity_short_bio_church"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.cellMasters.CreateChurchMasterFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.cellMasters.CreateGroupChurchMasterFormActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.cellMasters.CreateZoneMasterFormActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.cellMasters.CreateRegionMasterFormActivity"
+            android:label="@string/title_activity_create_region_master_form"></activity>
     </application>
 
 </manifest>

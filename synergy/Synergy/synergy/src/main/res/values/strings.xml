@@ -84,4 +84,7 @@
     <string name="title_activity_partnership_record_new">Partnership Records</string>
     <string name="title_activity_church_pastor_msg">Send Message</string>
     <string name="title_activity_short_bio_church">ShortBioChurch</string>
+    <string name="title_activity_create_church_master_form">CreateChurchMasterFormActivity</string>
+    <string name="title_activity_create_zone_master_form">CreateZoneMasterFormActivity</string>
+    <string name="title_activity_create_region_master_form">CreateRegionMasterFormActivity</string>
 </resources>

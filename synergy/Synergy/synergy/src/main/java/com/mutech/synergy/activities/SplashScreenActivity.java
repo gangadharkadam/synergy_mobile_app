@@ -27,7 +27,7 @@ public class SplashScreenActivity extends Activity{
 
 		mPreferenceHelper=new PreferenceHelper(this);
 		
-		 str=mPreferenceHelper.getString(Commons.USER_ROLE);
+		str=mPreferenceHelper.getString(Commons.USER_ROLE);
 
 		Thread screenTimer = new Thread() {
 			@Override
